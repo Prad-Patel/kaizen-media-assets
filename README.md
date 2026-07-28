@@ -58,6 +58,19 @@ Timeline: hook 0–4.5s, three points 4.5–13.5s, stat 13.5–17.5s, end card
 17.5–22.0s. Keep hook lines to three or four words, points to about six words,
 and `stat.big` to three words, or the type will wrap badly.
 
+### Featured images
+
+```bash
+cd engine
+./render_image.sh image_config.json ../image/2026-07-28-slug.jpg 1200 630
+```
+
+Same brand system, rendered as a single frame. Takes
+`{ "kicker": "...", "headline": ["line", "line"], "tagline": "..." }`. Use
+1200x630 for the WordPress featured image and Google Business, and 1080x1080
+if you want a square card for X. Two headline lines read best; the second is
+picked out in electric blue.
+
 ### Brand
 
 Navy base `#0A1628`, electric blue `#2E7CF6`, teal `#34D3A6`, alert red
