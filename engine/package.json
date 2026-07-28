@@ -1,0 +1,19 @@
+{
+  "name": "kaizen-daily-video-engine",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Framer Motion 9:16 social video engine for Kaizen AI Consulting daily posts. Text is real typography rendered in headless Chromium, never AI-generated pixels, so it is always sharp and never distorted.",
+  "scripts": {
+    "build": "esbuild ./src/app_social.jsx --bundle --outfile=dist/bundle.js --loader:.jsx=jsx --define:process.env.NODE_ENV='\"production\"'",
+    "capture": "node capture.js"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "framer-motion": "^11.3.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.0",
+    "playwright-core": "^1.46.0"
+  }
+}

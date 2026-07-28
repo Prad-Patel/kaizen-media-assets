@@ -1,0 +1,12 @@
+{
+  "hook": ["YOUR BUSINESS COULD", "RUN ITSELF."],
+  "points": [
+    ["AI answers your calls at 2am."],
+    ["Quotes drafted in minutes."],
+    ["Invoices chased automatically."]
+  ],
+  "stat": { "pre": "MOST BUSINESSES TRY AI ONCE.", "big": "THEN GIVE UP.", "post": "THE RIGHT ONE PAYS FOR ITSELF." },
+  "cta": "FREE 30-MIN AI AUDIT",
+  "tagline": "Find the automation that pays for itself.",
+  "url": "kaizenaiconsulting.com"
+}

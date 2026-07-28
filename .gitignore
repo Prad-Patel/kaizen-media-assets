@@ -1,0 +1,6 @@
+engine/node_modules/
+engine/dist/
+engine/frames/
+engine/index.html
+engine/music.wav
+engine/package-lock.json
