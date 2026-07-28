@@ -24,7 +24,9 @@ const ENTRY = path.join(__dirname, 'index.html');
   for (let i = 0; i < total; i++) {
     await page.evaluate((tt) => window.__seek(tt), i / FPS);
     await page.waitForTimeout(8);
-    await page.screenshot({ path: path.join(OUT, `f${String(i).padStart(4, '0')}.png`) });
+    // omitBackground keeps the canvas transparent so ffmpeg can composite this
+    // typography layer straight over the b-roll base track.
+    await page.screenshot({ path: path.join(OUT, `f${String(i).padStart(4, '0')}.png`), omitBackground: true });
     if (i % 150 === 0) console.log(`frame ${i}/${total}`);
   }
   await browser.close();
