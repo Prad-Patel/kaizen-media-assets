@@ -15,11 +15,17 @@ image/YYYY-MM-DD-slug.jpg    featured image (WordPress + Google Business + X)
 engine/                      the Framer Motion video engine (see below)
 ```
 
-Raw URL pattern:
+URL patterns. Use jsDelivr for **video**, because raw.githubusercontent serves
+MP4 as `application/octet-stream` and Zernio cannot then detect it as a video.
+jsDelivr serves the correct `video/mp4`.
 
 ```
-https://raw.githubusercontent.com/Prad-Patel/kaizen-media-assets/main/video/2026-07-28-example.mp4
+video  https://cdn.jsdelivr.net/gh/Prad-Patel/kaizen-media-assets@main/video/2026-07-28-example.mp4
+image  https://raw.githubusercontent.com/Prad-Patel/kaizen-media-assets/main/image/2026-07-28-example.jpg
 ```
+
+jsDelivr caches, so a re-pushed file under the same name can serve stale for a
+while. Always use a fresh dated filename rather than overwriting one.
 
 ## engine/
 
@@ -56,7 +62,9 @@ encodes the MP4. Expect roughly six minutes end to end.
 
 Timeline: hook 0–4.5s, three points 4.5–13.5s, stat 13.5–17.5s, end card
 17.5–22.0s. Keep hook lines to three or four words, points to about six words,
-and `stat.big` to three words, or the type will wrap badly.
+and `stat.big` to three words, or the type will wrap badly. The end-card
+tagline auto-shrinks past 42 characters and wraps inside a 900px box, so a
+longer tagline is safe, but under about 55 characters still reads best.
 
 ### Featured images
 
