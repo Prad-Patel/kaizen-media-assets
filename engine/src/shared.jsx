@@ -59,7 +59,7 @@ export function EndCard({ tLogo, tTag, tBtn, tUrl, tagline, cta = "FREE 30-MIN A
       <motion.div style={{ opacity: wmO, y: wmY, textAlign: "center", position: "relative" }}>
         <img src="brand/logo.png" style={{ width: 780, display: "block", filter: "drop-shadow(0 10px 40px rgba(0,0,0,.55))" }} />
       </motion.div>
-      <motion.div style={{ ...SUB, fontSize: 46, marginTop: 90, opacity: tagO, color: "#DCE8FF", fontWeight: 500 }}>
+      <motion.div style={{ ...SUB, fontSize: (tagline || "").length > 42 ? 38 : 46, lineHeight: 1.25, maxWidth: 900, textAlign: "center", marginTop: 90, opacity: tagO, color: "#DCE8FF", fontWeight: 500 }}>
         {tagline}
       </motion.div>
       <motion.div style={{ scale: btnPulse, marginTop: 46 }}>
