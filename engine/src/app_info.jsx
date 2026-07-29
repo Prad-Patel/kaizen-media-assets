@@ -12,7 +12,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { motion, useTransform } from "framer-motion";
-import { T, seg, easeOutBack, easeOutCubic, easeInCubic, ACCENT, TEAL, RED, EndCard } from "./shared";
+import { T, seg, easeOutBack, easeOutCubic, easeInCubic, ACCENT, TEAL, RED } from "./shared";
 
 const C = window.__CONFIG;
 const W = 1080, CH = 1920;
@@ -304,7 +304,9 @@ function Labels() {
 }
 
 function Progress() {
-  const w = useTransform(T, (t) => Math.max(0, Math.min(1, t / (C.duration || 22))) * (W - 2 * RAIL));
+  // fills across the infographic and reads full exactly as the sweep starts,
+  // so a longer end card does not leave it stranded part-way
+  const w = useTransform(T, (t) => Math.max(0, Math.min(1, t / T_SWEEP)) * (W - 2 * RAIL));
   const o = useTransform(T, (t) => seg(t, 0.6, 1.2) * (1 - seg(t, T_SWEEP - 0.2, T_SWEEP + 0.2)));
   return (
     <motion.div style={{ position: "absolute", left: RAIL, top: 1806, width: W - 2 * RAIL, height: 6, borderRadius: 3, background: "#D2DEEF", opacity: o }}>
@@ -352,6 +354,96 @@ function Sweep() {
   return <motion.div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: h, background: NAVY }} />;
 }
 
+// ----------------------------------------------------------------- end card
+
+// The blog video has three jobs: get the like, get the follow, get the click
+// through to the article. So the end card asks for all three, cheapest first,
+// with the article as the one filled button because that is the conversion.
+const T_LOGO = 17.85, T_TAG = 18.65, T_CHIP = 19.45, T_BTN = 20.5, T_URL = 21.5;
+
+const ICONS = {
+  // filled heart
+  heart: { fill: "M12 20.6S3.9 15.5 3.9 9.9C3.9 7 6 5 8.5 5c1.6 0 2.9.8 3.5 2 .6-1.2 1.9-2 3.5-2C18 5 20.1 7 20.1 9.9c0 5.6-8.1 10.7-8.1 10.7z" },
+  // plus
+  plus: { stroke: "M12 5.2v13.6M5.2 12h13.6" },
+  // arrow
+  arrow: { stroke: "M4.6 12h13.2M11.6 5.6L18 12l-6.4 6.4" },
+};
+
+function Icon({ name, size = 40, color }) {
+  const d = ICONS[name];
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" style={{ display: "block", flex: "none" }}>
+      {d.fill
+        ? <path d={d.fill} fill={color} />
+        : <path d={d.stroke} fill="none" stroke={color} strokeWidth={2.6} strokeLinecap="round" strokeLinejoin="round" />}
+    </svg>
+  );
+}
+
+// outlined pill for the two soft asks
+function Chip({ t0, icon, color, children }) {
+  const o = useTransform(T, (t) => seg(t, t0, t0 + 0.4));
+  const s = useTransform(T, (t) => 0.88 + 0.12 * seg(t, t0, t0 + 0.5, easeOutBack));
+  return (
+    <motion.div style={{
+      display: "flex", alignItems: "center", gap: 18, padding: "22px 44px", borderRadius: 100,
+      border: `3px solid ${color}`, background: "rgba(255,255,255,0.05)", opacity: o, scale: s,
+      fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: 40, color: "#fff", whiteSpace: "nowrap",
+    }}>
+      <Icon name={icon} color={color} />
+      {children}
+    </motion.div>
+  );
+}
+
+function EndCardSocial() {
+  const logoO = useTransform(T, (t) => seg(t, T_LOGO, T_LOGO + 0.5));
+  const logoY = useTransform(T, (t) => (1 - seg(t, T_LOGO, T_LOGO + 0.6)) * 40);
+  const tagO = useTransform(T, (t) => seg(t, T_TAG, T_TAG + 0.45));
+  const btnO = useTransform(T, (t) => seg(t, T_BTN, T_BTN + 0.4));
+  const btnS = useTransform(T, (t) => 0.86 + 0.14 * seg(t, T_BTN, T_BTN + 0.5, easeOutBack));
+  const btnPulse = useTransform(T, (t) => 1 + 0.022 * Math.sin((t - T_BTN - 0.6) * 5.0) * (t > T_BTN + 0.6 ? 1 : 0));
+  const urlO = useTransform(T, (t) => seg(t, T_URL, T_URL + 0.4));
+  const tag = C.tagline || "";
+  return (
+    <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", paddingBottom: 90 }}>
+      <motion.img src="brand/logo.png" style={{ width: 660, display: "block", opacity: logoO, y: logoY }} />
+
+      <motion.div style={{
+        fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: tag.length > 42 ? 38 : 44,
+        lineHeight: 1.28, maxWidth: 880, textAlign: "center", marginTop: 72, opacity: tagO, color: "#DCE8FF",
+      }}>
+        {tag}
+      </motion.div>
+
+      <div style={{ display: "flex", gap: 28, marginTop: 74 }}>
+        <Chip t0={T_CHIP} icon="heart" color={RED}>LIKE</Chip>
+        <Chip t0={T_CHIP + 0.28} icon="plus" color={TEAL}>FOLLOW</Chip>
+      </div>
+
+      <motion.div style={{ scale: btnPulse, marginTop: 40 }}>
+        <motion.div style={{
+          display: "flex", alignItems: "center", gap: 22, padding: "30px 62px", borderRadius: 100,
+          background: ACCENT, opacity: btnO, scale: btnS,
+          fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: 48, color: "#fff",
+          boxShadow: `0 0 90px ${ACCENT}77, 0 14px 50px rgba(0,0,0,.45)`, whiteSpace: "nowrap",
+        }}>
+          {C.cta || "READ THE FULL ARTICLE"}
+          <Icon name="arrow" size={44} color="#fff" />
+        </motion.div>
+      </motion.div>
+
+      <motion.div style={{
+        fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: 36, marginTop: 44,
+        opacity: urlO, color: "#9FB6DC", letterSpacing: "0.04em",
+      }}>
+        {C.url || "kaizenaiconsulting.com"}
+      </motion.div>
+    </div>
+  );
+}
+
 // ---------------------------------------------------------------------- app
 
 function App() {
@@ -367,7 +459,7 @@ function App() {
       <Stat />
       <Progress />
       <Sweep />
-      <EndCard tLogo={17.85} tTag={18.95} tBtn={19.65} tUrl={20.5} tagline={C.tagline} cta={C.cta} />
+      <EndCardSocial />
     </div>
   );
 }
