@@ -30,27 +30,31 @@ while. Always use a fresh dated filename rather than overwriting one.
 
 ## engine/
 
-The self-contained renderer for the daily 9:16 video. It builds two layers and
-composites them, the same way the Campaign 1 and Campaign 2 ads were made.
+The self-contained renderer for the daily 9:16 video.
 
-The base is cinematic b-roll from `broll/`, cut into six segments on the
-section beats, cropped to 1080x1920, graded toward the Kaizen navy and
-vignetted. The overlay is the typography, rendered by Framer Motion in headless
-Chromium and captured as transparent PNGs, so text is always pixel-sharp. No
-text is ever AI-generated, which is what used to cause the distorted lettering.
+The house style is the **animated infographic**: the same flat-vector look
+Kaizen already uses on its posts, but drawn as real vector art and animated
+rather than generated as a picture. Light paper background, navy ink, electric
+blue and teal. A monitor running everyday software sits above an engine bay
+where the model underneath is swapped out, dashed leader lines run to a rail in
+the left margin, and the three points land on it one at a time.
 
-The navy wash over the footage is a global grade across the whole frame, never
-a panel sitting behind the text.
+Everything in frame is drawn by Framer Motion in headless Chromium and captured
+as deterministic PNGs. Nothing is AI-painted, so lettering is never distorted or
+misspelled and the brand colours are exact.
 
 ```bash
 cd engine
-./render.sh config.json ../video/2026-07-28-slug.mp4 22.0
+./render_info.sh config.json ../video/2026-07-28-slug.mp4 22.0
 ```
 
-`render.sh` installs dependencies on first run, bundles the composition,
-injects the config, picks and grades the b-roll, captures 660 transparent
-frames, generates the in-house music bed and composites the MP4. Expect roughly
-six minutes end to end.
+`render_info.sh` installs dependencies on first run, bundles the composition,
+injects the config, captures 660 frames, generates the in-house music bed and
+encodes the MP4. Expect roughly four minutes end to end.
+
+`render.sh` is the older two-layer build, which composites the typography over
+cinematic b-roll from `broll/`. It still works and is kept for the campaign-ad
+treatment, but it is not what the daily post uses.
 
 ### config.json
 
@@ -65,21 +69,19 @@ six minutes end to end.
              "post": "THE RIGHT ONE PAYS FOR ITSELF." },
   "cta":     "FREE 30-MIN AI AUDIT",
   "tagline": "Find the automation that pays for itself.",
-  "url":     "kaizenaiconsulting.com",
-  "clips":   ["01-server-rack-lights.mp4", "07-empty-office-night.mp4",
-              "06-hands-keyboard-macro.mp4", "02-office-dawn-laptop.mp4",
-              "05-london-rooftops-dusk.mp4", "08-workshop-dawn-figure.mp4"]
+  "url":     "kaizenaiconsulting.com"
 }
 ```
 
-`clips` is optional and names six files in `broll/`, one per section, so the
-footage can be matched to the story. Leave it out and `pick_broll.py` seeds a
-deterministic pick from the day's slug, which keeps re-runs reproducible while
-consecutive days look different.
+`clips` is only read by the older `render.sh` b-roll build. It names six files
+in `broll/`, one per section; leave it out and `pick_broll.py` seeds a
+deterministic pick from the day's slug.
 
-Timeline: hook 0–4.5s, three points 4.5–13.5s, stat 13.5–17.5s, end card
-17.5–22.0s. The footage cuts on those same boundaries. Keep hook lines to three
-or four words, points to about six words,
+Timeline: hook 0–4.5s, three points 4.5–13.5s, stat 13.5–17.5s, navy sweep and
+end card 17.5–22.0s. The scene beats on the same boundaries: the old model
+lifts out at 5.0s, the new one seats at 6.5s, the software panels light up on
+point two, and the outer shell is picked out on point three. Keep hook lines to
+three or four words, points to about six words,
 and `stat.big` to three words, or the type will wrap badly. The end-card
 tagline auto-shrinks past 42 characters and wraps inside a 900px box, so a
 longer tagline is safe, but under about 55 characters still reads best.
@@ -100,7 +102,9 @@ picked out in electric blue.
 ### Brand
 
 Navy base `#0A1628`, electric blue `#2E7CF6`, teal `#34D3A6`, alert red
-`#FF5A5F`. Space Grotesk for headlines, Inter for supporting copy. Shadows hug
-the glyphs only, never a block-wide scrim behind the text.
+`#FF5A5F`. The infographic runs on light paper `#EAF0F9` with navy ink and no
+shadows at all. Space Grotesk for headlines, Inter for supporting copy. Where
+type does sit over imagery, shadows hug the glyphs only, never a block-wide
+scrim behind the text.
 
 Assets are kept for history. Nothing here is secret.
