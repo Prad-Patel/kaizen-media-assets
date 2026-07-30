@@ -10,8 +10,9 @@ is marketing material intended to be public.
 ## Layout
 
 ```
-video/YYYY-MM-DD-slug.mp4    9:16 1080x1920 daily social video
-image/YYYY-MM-DD-slug.jpg    featured image (WordPress + Google Business + X)
+video/YYYY-MM-DD-slug.mp4         9:16 1080x1920 daily social video, silent
+image/YYYY-MM-DD-slug-4x5.jpg     1080x1350 social card (X and the feeds)
+image/YYYY-MM-DD-slug-wide.jpg    1200x630 featured image (WordPress + GMB)
 broll/                       cinematic 9:16 clips used as the video base track
 engine/                      the Framer Motion video engine (see below)
 ```
@@ -86,18 +87,43 @@ and `stat.big` to three words, or the type will wrap badly. The end-card
 tagline auto-shrinks past 42 characters and wraps inside a 900px box, so a
 longer tagline is safe, but under about 55 characters still reads best.
 
-### Featured images
+The daily video is **silent**. Feeds autoplay muted and the captions carry the
+argument, so a bed under 22 seconds of infographic added nothing. The in-house
+`musicgen_daily.py` bed is still there for a one-off: `MUSIC=1 ./render_info.sh …`.
+
+### Still cards
 
 ```bash
 cd engine
-./render_image.sh image_config.json ../image/2026-07-28-slug.jpg 1200 630
+./render_card.sh card_config.json ../image/2026-07-28-slug-4x5.jpg  1080 1350
+./render_card.sh card_config.json ../image/2026-07-28-slug-wide.jpg 1200 630
 ```
 
-Same brand system, rendered as a single frame. Takes
-`{ "kicker": "...", "headline": ["line", "line"], "tagline": "..." }`. Use
-1200x630 for the WordPress featured image and Google Business, and 1080x1080
-if you want a square card for X. Two headline lines read best; the second is
-picked out in electric blue.
+`render_card.sh` freezes the same animated-infographic drawing: light paper,
+navy ink, the monitor above the engine bay, the dashed rail carrying the
+points, and a navy footer bar. It is literally the same vector geometry the
+video uses, so the still and the video read as one piece.
+
+```json
+{
+  "kicker":   "Microsoft's in-house AI models",
+  "headline": ["Same Copilot.", "New brain."],
+  "points":   [["Microsoft swapped the model underneath."],
+               ["Code tasks: 60% fewer tokens."],
+               ["Excel and Outlook are switching too."]],
+  "url":      "kaizenaiconsulting.com"
+}
+```
+
+`points` takes the same shape as the video config, so both configs can be built
+from one set of lines. Ratios: **1080x1350 (4:5)** is the default and what the
+social posts use, 1080x1920 for a 9:16 story card, 1200x630 for the landscape
+WordPress featured image and Google Business. The layout reflows between
+portrait and landscape on its own. Two headline lines read best, the second is
+picked out in electric blue, and points want about six words each.
+
+`render_image.sh` is the older dark-gradient card. It is kept for reference but
+is not what the daily post uses.
 
 ### Brand
 

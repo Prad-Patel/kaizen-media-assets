@@ -34,18 +34,29 @@ PY
 echo "==> capturing frames"
 rm -rf frames && DUR="$DUR" OUT=frames FPS="$FPS" node capture.js
 
-echo "==> generating music bed"
-python3 musicgen_daily.py "$DUR" music.wav
-
-echo "==> encoding"
-ffmpeg -y -loglevel error \
-  -framerate "$FPS" -i frames/f%04d.png \
-  -i music.wav \
-  -filter_complex "[0:v]format=yuv420p[v];[1:a]loudnorm=I=-14:TP=-1.5:LRA=11[a]" \
-  -map "[v]" -map "[a]" \
-  -c:v libx264 -preset slow -crf 19 -pix_fmt yuv420p \
-  -c:a aac -b:a 192k -shortest -movflags +faststart \
-  "$OUTMP4"
+# The daily post is silent. Feeds autoplay muted, the captions carry the
+# argument, and a bed under a 22 second infographic added nothing. Set
+# MUSIC=1 to bring the in-house bed back for a one-off.
+if [ "${MUSIC:-0}" = "1" ]; then
+  echo "==> generating music bed"
+  python3 musicgen_daily.py "$DUR" music.wav
+  echo "==> encoding (with music)"
+  ffmpeg -y -loglevel error \
+    -framerate "$FPS" -i frames/f%04d.png \
+    -i music.wav \
+    -filter_complex "[0:v]format=yuv420p[v];[1:a]loudnorm=I=-14:TP=-1.5:LRA=11[a]" \
+    -map "[v]" -map "[a]" \
+    -c:v libx264 -preset slow -crf 19 -pix_fmt yuv420p \
+    -c:a aac -b:a 192k -shortest -movflags +faststart \
+    "$OUTMP4"
+else
+  echo "==> encoding (silent)"
+  ffmpeg -y -loglevel error \
+    -framerate "$FPS" -i frames/f%04d.png \
+    -c:v libx264 -preset slow -crf 19 -pix_fmt yuv420p \
+    -movflags +faststart \
+    "$OUTMP4"
+fi
 
 rm -rf frames
 echo "==> done: $OUTMP4"
