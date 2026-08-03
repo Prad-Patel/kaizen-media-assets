@@ -58,7 +58,19 @@ const SCENE_KEY = ["engine", "choice"].includes(C.scene) ? C.scene : "engine";
 // vector scene stay out of the way until the stat, and the type gets a light
 // halo hugging the glyphs for readability over the moving image.
 const HYBRID = !!C.hybrid;
-const HALO = HYBRID ? "0 1px 0 rgba(234,240,249,.95), 0 0 12px rgba(234,240,249,.9), 0 0 30px rgba(234,240,249,.75)" : "none";
+
+// Per-element text tones, decided by pick_text_style.py from the footage
+// behind each block: "ink" (navy type, light halo) on light backgrounds,
+// "light" (white type, dark glyph shadow) on dark ones.
+const PLAN = C.textPlan || {};
+const HALO_LIGHT = "0 1px 0 rgba(234,240,249,.95), 0 0 14px rgba(234,240,249,.95), 0 0 34px rgba(234,240,249,.85), 0 0 64px rgba(234,240,249,.6)";
+const HALO_DARK = "0 1px 2px rgba(4,10,20,.95), 0 0 12px rgba(4,10,20,.9), 0 0 30px rgba(4,10,20,.8), 0 0 58px rgba(4,10,20,.55)";
+const toneStyle = (tone, accent) => {
+  if (!HYBRID) return { color: accent ? ACCENT : undefined, textShadow: "none" };
+  return tone === "light"
+    ? { color: accent ? "#8FBAFF" : "#FFFFFF", textShadow: HALO_DARK }
+    : { color: accent ? ACCENT : undefined, textShadow: HALO_LIGHT };
+};
 
 // choice scene geometry
 const CH_BX = [300, 540, 780];
@@ -425,12 +437,16 @@ function Hook() {
   const lines = C.hook || [];
   return (
     <div style={{ position: "absolute", top: 168, left: RAIL, right: 96 }}>
-      <div style={{ ...HL, fontSize: 92, textShadow: HALO }}>
-        {lines.map((l, i) => (
-          <div key={i} style={{ color: i === lines.length - 1 ? ACCENT : INK }}>
-            {l.split(" ").map((w, j) => <Word key={j} t0={0.9 + i * 0.42 + j * 0.1} dur={0.4}>{w}</Word>)}
-          </div>
-        ))}
+      <div style={{ ...HL, fontSize: 92 }}>
+        {lines.map((l, i) => {
+          const accent = i === lines.length - 1;
+          const ts = toneStyle(PLAN.hook, accent);
+          return (
+            <div key={i} style={{ color: ts.color || INK, textShadow: ts.textShadow }}>
+              {l.split(" ").map((w, j) => <Word key={j} t0={0.9 + i * 0.42 + j * 0.1} dur={0.4}>{w}</Word>)}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -444,7 +460,7 @@ function Labels() {
         const words = p.join(" ").split(" ");
         return (
           <div key={i} style={{ position: "absolute", left: RAIL + 54, right: 90, top: ROWS[i] - 84, height: 168, display: "flex", alignItems: "center" }}>
-            <div style={{ ...BODY, fontSize: 54, maxWidth: 810, textShadow: HALO }}>
+            <div style={{ ...BODY, fontSize: 54, maxWidth: 810, color: toneStyle((PLAN.labels || [])[i]).color || INK, textShadow: toneStyle((PLAN.labels || [])[i]).textShadow }}>
               {words.map((w, j) => <Word key={j} t0={t0 + j * 0.1} dur={0.36}>{w}</Word>)}
             </div>
           </div>

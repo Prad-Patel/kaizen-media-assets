@@ -25,20 +25,25 @@ echo "==> bundling"
 ./node_modules/.bin/esbuild ./src/app_info.jsx --bundle --outfile=dist/bundle.js \
   --loader:.jsx=jsx --define:process.env.NODE_ENV='"production"' >/dev/null
 
+echo "==> building ping-pong base from clip"
+ffmpeg -y -loglevel error -i "$CLIP" \
+  -filter_complex "[0:v]fps=${FPS},scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,split[a][b];[b]reverse[r];[a][r]concat=n=2:v=1[v]" \
+  -map "[v]" -an -c:v libx264 -preset fast -crf 18 pingpong.mp4
+
+echo "==> picking text tones from the footage"
+python3 pick_text_style.py pingpong.mp4 > textplan.json
+cat textplan.json; echo
+
 echo "==> injecting config (hybrid)"
 python3 - "$CONFIG" "$DUR" <<'PY'
 import json, sys, pathlib
 cfg = json.load(open(sys.argv[1]))
 cfg["duration"] = float(sys.argv[2])
 cfg["hybrid"] = True
+cfg["textPlan"] = json.load(open("textplan.json"))
 tpl = pathlib.Path("index.template.html").read_text()
 pathlib.Path("index.html").write_text(tpl.replace("/*__CONFIG__*/", json.dumps(cfg, ensure_ascii=False)))
 PY
-
-echo "==> building ping-pong base from clip"
-ffmpeg -y -loglevel error -i "$CLIP" \
-  -filter_complex "[0:v]fps=${FPS},scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,split[a][b];[b]reverse[r];[a][r]concat=n=2:v=1[v]" \
-  -map "[v]" -an -c:v libx264 -preset fast -crf 18 pingpong.mp4
 
 echo "==> capturing typography frames"
 rm -rf frames && DUR="$DUR" OUT=frames FPS="$FPS" node capture.js
@@ -54,6 +59,6 @@ ffmpeg -y -loglevel error \
   -c:a aac -b:a 128k -t "$DUR" -movflags +faststart \
   "$OUTMP4"
 
-rm -rf frames pingpong.mp4
+rm -rf frames pingpong.mp4 textplan.json
 echo "==> done: $OUTMP4"
 ffprobe -v error -show_entries format=duration,size -of default=nw=1 "$OUTMP4"
