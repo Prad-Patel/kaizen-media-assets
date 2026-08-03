@@ -47,6 +47,16 @@ const RAIL = 96;
 const ANCHOR = [[BAY.x, 1125], [MON.x, 720], [BAY.x, 1195]];
 const DOTC = [ACCENT, TEAL, ACCENT];
 
+// Which scene to draw. "engine" is the original monitor-over-engine-bay
+// diagram; "choice" is three cases on a bench, each revealing a different
+// mechanism, for comparison topics. New scenes get added here as topics
+// need them - the rail, typography and timeline stay identical across all.
+const SCENE_KEY = ["engine", "choice"].includes(C.scene) ? C.scene : "engine";
+
+// choice scene geometry
+const CH_BX = [300, 540, 780];
+const CH_BOX = { w: 190, h: 120, topY: 790, benchY: 910 };
+
 // ---------------------------------------------------------------- primitives
 
 function gearPath(cx, cy, r, teeth) {
@@ -253,17 +263,136 @@ function Overlay() {
   );
 }
 
+// -------------------------------------------------------------- choice scene
+// Three cases on a bench, each one opening to show a different mechanism:
+// a single gear, a cluster of modules, a network of nodes. Comparison topics.
+
+function ChoiceBench() {
+  return (
+    <g>
+      <rect x={150} y={CH_BOX.benchY} width={780} height={16} rx={8} fill={EDGE} />
+      <rect x={205} y={CH_BOX.benchY + 16} width={20} height={96} fill={EDGE} />
+      <rect x={855} y={CH_BOX.benchY + 16} width={20} height={96} fill={EDGE} />
+    </g>
+  );
+}
+
+function ChoiceBox({ i }) {
+  const bx = CH_BX[i];
+  const t0 = P0 + i * PGAP + 0.25;
+  const lidY = useTransform(T, (t) => -seg(t, t0, t0 + 0.6, easeOutCubic) * 70);
+  const lidO = useTransform(T, (t) => 1 - 0.85 * seg(t, t0 + 0.25, t0 + 0.75));
+  const lit = useTransform(T, (t) => seg(t, t0 + 0.35, t0 + 0.9));
+  return (
+    <g>
+      <rect x={bx - CH_BOX.w / 2} y={CH_BOX.topY} width={CH_BOX.w} height={CH_BOX.h} rx={16} fill={CARD} stroke={EDGE} strokeWidth={4} />
+      <rect x={bx - CH_BOX.w / 2 + 14} y={CH_BOX.topY + 14} width={CH_BOX.w - 28} height={CH_BOX.h - 28} rx={10} fill="none" stroke={EDGE} strokeWidth={2} strokeDasharray="8 9" />
+      <motion.rect x={bx - CH_BOX.w / 2 - 8} y={CH_BOX.topY - 22} width={CH_BOX.w + 16} height={30} rx={10} fill="#8FA6C4" style={{ y: lidY, opacity: lidO }} />
+      <motion.rect x={bx - CH_BOX.w / 2} y={CH_BOX.topY} width={CH_BOX.w} height={CH_BOX.h} rx={16} fill="none" stroke={i === 1 ? TEAL : ACCENT} strokeWidth={5} style={{ opacity: lit }} />
+    </g>
+  );
+}
+
+function ChoiceGlow({ i }) {
+  const t0 = P0 + i * PGAP + 0.4;
+  const o = useTransform(T, (t) => 0.5 * seg(t, t0, t0 + 0.7));
+  const color = i === 1 ? TEAL : ACCENT;
+  return (
+    <motion.div style={{ position: "absolute", left: CH_BX[i] - 130, top: 540, width: 260, height: 260, borderRadius: "50%", opacity: o, background: `radial-gradient(circle, ${color}2E 0%, ${color}00 70%)` }} />
+  );
+}
+
+function RiseIn({ t0, cx, cy, rise = 190, children }) {
+  const o = useTransform(T, (t) => seg(t, t0, t0 + 0.5));
+  const y = useTransform(T, (t) => (1 - seg(t, t0, t0 + 0.8, easeOutCubic)) * rise);
+  return (
+    <motion.div style={{ position: "absolute", left: cx - 90, top: cy - 90, width: 180, height: 180, opacity: o, y, display: "flex", alignItems: "center", justifyContent: "center" }}>
+      {children}
+    </motion.div>
+  );
+}
+
+function ModulesGlyph() {
+  const sq = (x, y, c, r = 22) => <rect key={x + "-" + y} x={x} y={y} width={54} height={54} rx={r ? 12 : 0} fill={c} />;
+  return (
+    <svg width={150} height={150} viewBox="0 0 150 150">
+      {sq(14, 14, ACCENT)}{sq(82, 14, TEAL)}{sq(14, 82, TEAL)}{sq(82, 82, "#8FA6C4")}
+    </svg>
+  );
+}
+
+function NetworkGlyph() {
+  const N = [[75, 16], [22, 62], [128, 58], [46, 122], [104, 124], [75, 74]];
+  const L = [[0, 5], [1, 5], [2, 5], [3, 5], [4, 5], [0, 2], [1, 3], [2, 4]];
+  return (
+    <svg width={150} height={150} viewBox="0 0 150 150">
+      {L.map(([a, b], k) => <line key={k} x1={N[a][0]} y1={N[a][1]} x2={N[b][0]} y2={N[b][1]} stroke={TEAL} strokeWidth={3.5} />)}
+      {N.map(([x, y], k) => <circle key={k} cx={x} cy={y} r={k === 5 ? 15 : 11} fill={k === 5 ? ACCENT : TEAL} />)}
+    </svg>
+  );
+}
+
+function ChoiceMechs() {
+  const beats = [0, 1, 2].map((i) => P0 + i * PGAP + 0.45);
+  return (
+    <div style={{ position: "absolute", inset: 0 }}>
+      {[0, 1, 2].map((i) => <ChoiceGlow key={"g" + i} i={i} />)}
+      <Gear cx={CH_BX[0]} cy={650} r={58} teeth={14} color={ACCENT} speed={22} dir={1} tIn={beats[0]} rise={200} hole={PAPER} />
+      <RiseIn t0={beats[1]} cx={CH_BX[1]} cy={650}><ModulesGlyph /></RiseIn>
+      <RiseIn t0={beats[2]} cx={CH_BX[2]} cy={650}><NetworkGlyph /></RiseIn>
+    </div>
+  );
+}
+
+function ChoiceOverlay() {
+  return (
+    <svg width={W} height={CH} style={{ position: "absolute", inset: 0 }}>
+      <Rail />
+      {C.points.map((_, i) => {
+        const t0 = P0 + i * PGAP;
+        const ax = CH_BX[i], ay = CH_BOX.benchY + 30;
+        return (
+          <g key={i}>
+            <Leader x1={ax} y1={ay} x2={ax} y2={ROWS[i]} t0={t0} dur={0.34} />
+            <Leader x1={ax} y1={ROWS[i]} x2={RAIL} y2={ROWS[i]} t0={t0 + 0.32} dur={0.34} />
+            <Dot x={RAIL} y={ROWS[i]} t0={t0 + 0.62} color={DOTC[i]} />
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
+function SceneChoice() {
+  return (
+    <>
+      <svg width={W} height={CH} style={{ position: "absolute", inset: 0 }}>
+        <ChoiceBench />
+        {[0, 1, 2].map((i) => <ChoiceBox key={i} i={i} />)}
+      </svg>
+      <ChoiceMechs />
+      <ChoiceOverlay />
+    </>
+  );
+}
+
 function Scene() {
   const o = useTransform(T, (t) => seg(t, 0.5, 1.2));
   const s = useTransform(T, (t) => 0.955 + 0.045 * seg(t, 0.5, 1.4, easeOutCubic));
   return (
     <motion.div style={{ position: "absolute", inset: 0, opacity: o, scale: s }}>
-      <svg width={W} height={CH} style={{ position: "absolute", inset: 0 }}>
-        <Screen />
-        <BayCard />
-      </svg>
-      <Gears />
-      <Overlay />
+      {SCENE_KEY === "choice" ? (
+        <SceneChoice />
+      ) : (
+        <>
+          <svg width={W} height={CH} style={{ position: "absolute", inset: 0 }}>
+            <Screen />
+            <BayCard />
+          </svg>
+          <Gears />
+          <Overlay />
+        </>
+      )}
     </motion.div>
   );
 }
