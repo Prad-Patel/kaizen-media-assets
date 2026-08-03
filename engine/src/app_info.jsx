@@ -599,7 +599,7 @@ function EndCardSocial() {
 
 function App() {
   return (
-    <div style={{ position: "relative", width: W, height: CH, overflow: "hidden", background: PAPER }}>
+    <div style={{ position: "relative", width: W, height: CH, overflow: "hidden", background: HYBRID ? "transparent" : PAPER }}>
       <Backdrop />
       <Paper>
         <Scene />
