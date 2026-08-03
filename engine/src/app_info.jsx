@@ -53,6 +53,13 @@ const DOTC = [ACCENT, TEAL, ACCENT];
 // need them - the rail, typography and timeline stay identical across all.
 const SCENE_KEY = ["engine", "choice"].includes(C.scene) ? C.scene : "engine";
 
+// Hybrid mode: the first section plays over generated footage of the day's
+// illustration (composited by render_hybrid.sh), so the paper backdrop and the
+// vector scene stay out of the way until the stat, and the type gets a light
+// halo hugging the glyphs for readability over the moving image.
+const HYBRID = !!C.hybrid;
+const HALO = HYBRID ? "0 1px 0 rgba(234,240,249,.95), 0 0 12px rgba(234,240,249,.9), 0 0 30px rgba(234,240,249,.75)" : "none";
+
 // choice scene geometry
 const CH_BX = [300, 540, 780];
 const CH_BOX = { w: 190, h: 120, topY: 790, benchY: 910 };
@@ -145,7 +152,9 @@ function Paper({ children }) {
 // ------------------------------------------------------------------- backdrop
 
 function Backdrop() {
-  const o = useTransform(T, (t) => 1 - seg(t, T_SWEEP, T_SWEEP + 0.5));
+  const o = useTransform(T, (t) => HYBRID
+    ? seg(t, T_CLEAR, T_CLEAR + 0.4) * (1 - seg(t, T_SWEEP, T_SWEEP + 0.5))
+    : 1 - seg(t, T_SWEEP, T_SWEEP + 0.5));
   return (
     <motion.div style={{ position: "absolute", inset: 0, background: PAPER, opacity: o }}>
       <svg width={W} height={CH} style={{ position: "absolute", inset: 0 }}>
@@ -376,9 +385,22 @@ function SceneChoice() {
   );
 }
 
+function HybridOverlay() {
+  // over footage there is nothing to point at, so just the rail and the dots
+  return (
+    <svg width={W} height={CH} style={{ position: "absolute", inset: 0 }}>
+      <Rail />
+      {C.points.map((_, i) => (
+        <Dot key={i} x={RAIL} y={ROWS[i]} t0={P0 + i * PGAP + 0.62} color={DOTC[i]} />
+      ))}
+    </svg>
+  );
+}
+
 function Scene() {
   const o = useTransform(T, (t) => seg(t, 0.5, 1.2));
   const s = useTransform(T, (t) => 0.955 + 0.045 * seg(t, 0.5, 1.4, easeOutCubic));
+  if (HYBRID) return <HybridOverlay />;
   return (
     <motion.div style={{ position: "absolute", inset: 0, opacity: o, scale: s }}>
       {SCENE_KEY === "choice" ? (
@@ -403,7 +425,7 @@ function Hook() {
   const lines = C.hook || [];
   return (
     <div style={{ position: "absolute", top: 168, left: RAIL, right: 96 }}>
-      <div style={{ ...HL, fontSize: 92 }}>
+      <div style={{ ...HL, fontSize: 92, textShadow: HALO }}>
         {lines.map((l, i) => (
           <div key={i} style={{ color: i === lines.length - 1 ? ACCENT : INK }}>
             {l.split(" ").map((w, j) => <Word key={j} t0={0.9 + i * 0.42 + j * 0.1} dur={0.4}>{w}</Word>)}
@@ -422,7 +444,7 @@ function Labels() {
         const words = p.join(" ").split(" ");
         return (
           <div key={i} style={{ position: "absolute", left: RAIL + 54, right: 90, top: ROWS[i] - 84, height: 168, display: "flex", alignItems: "center" }}>
-            <div style={{ ...BODY, fontSize: 54, maxWidth: 810 }}>
+            <div style={{ ...BODY, fontSize: 54, maxWidth: 810, textShadow: HALO }}>
               {words.map((w, j) => <Word key={j} t0={t0 + j * 0.1} dur={0.36}>{w}</Word>)}
             </div>
           </div>
