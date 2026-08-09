@@ -452,6 +452,11 @@ function Hook() {
   );
 }
 
+// Fixed rail geometry (ROWS/ANCHOR) stays identical across every daily video,
+// so when a specific day's footage or scene leaves less clearance than usual,
+// dial this down in config (labelFontSize) rather than reworking the layout.
+const LABEL_FONT = C.labelFontSize || 54;
+
 function Labels() {
   return (
     <>
@@ -460,7 +465,7 @@ function Labels() {
         const words = p.join(" ").split(" ");
         return (
           <div key={i} style={{ position: "absolute", left: RAIL + 54, right: 90, top: ROWS[i] - 84, height: 168, display: "flex", alignItems: "center" }}>
-            <div style={{ ...BODY, fontSize: 54, maxWidth: 810, color: toneStyle((PLAN.labels || [])[i]).color || INK, textShadow: toneStyle((PLAN.labels || [])[i]).textShadow }}>
+            <div style={{ ...BODY, fontSize: LABEL_FONT, maxWidth: 810, color: toneStyle((PLAN.labels || [])[i]).color || INK, textShadow: toneStyle((PLAN.labels || [])[i]).textShadow }}>
               {words.map((w, j) => <Word key={j} t0={t0 + j * 0.1} dur={0.36}>{w}</Word>)}
             </div>
           </div>

@@ -201,11 +201,20 @@ word stays real typography; the footage never contains text.
    already the navy sweep). If the generation warped or drifted off-style,
    regenerate once with the same prompt; if it is still bad, fall back to the
    pure vector build (`render_info.sh` with a suitable `scene`) so the 8am
-   run never stalls.
+   run never stalls. If the illustration leaves less clearance than usual and
+   the three points still crowd its bottom edge after one illustration
+   regeneration, do not keep spending Higgsfield credits on further attempts:
+   drop `labelFontSize` in config.json (try 44) for a smaller footprint on the
+   same fixed rail geometry, or cut to two points, rather than re-rolling the
+   art again. Learned 2026-08-09 rebuilding the blocked 2026-08-05 Canva post:
+   the illustration needed three regenerations to clear the rail, and Prad
+   asked for this as the standing fallback so it does not take that long
+   again.
 
-`config.json` is `{ hook, points, stat, cta, tagline, url }`; `scene` is only
-used by the fallback. `render_hybrid.sh` sets `hybrid: true` and the text plan
-itself.
+`config.json` is `{ hook, points, stat, cta, tagline, url, labelFontSize }`;
+`labelFontSize` is optional, defaults to 54, and only needs setting when a
+day's illustration is unusually bottom-heavy. `scene` is only used by the
+fallback. `render_hybrid.sh` sets `hybrid: true` and the text plan itself.
 
 **Render engine** — `engine/` in this repository, self-contained:
 
