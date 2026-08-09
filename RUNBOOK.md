@@ -456,3 +456,16 @@ hands it over.
   moving this runbook out of the Claude project and into the repository so the
   routine session can read it. Lesson recorded as step 0 of the daily
   sequence: check push access before spending credits.
+- 2026-08-09 — cleared the blocked backlog, sheet row 295, "Canva AI 2.0: The
+  Biggest Canva Change in a Decade and What It Means for Your Marketing".
+  Push access verified working first. Rebuilt all assets from the durable
+  sources in `PENDING-PUBLISH.md`; the 9:16 illustration needed three
+  regenerations to leave the rail enough clearance, and Prad asked for the
+  `labelFontSize` config fallback (see the render engine section) so that
+  does not take as long again. Blog post 6800, Google Business post,
+  LinkedIn `6a78f2152b1c759cef3b1cce`, Instagram `6a78f27d9c10bde49d381e65`,
+  TikTok `6a78f289a617b08ccfb42bfd`, X `6a78f2b59c10bde49d382f1c`. Three
+  false 409s on LinkedIn, Instagram and TikTok, all confirmed actually
+  published per the known false-409 behaviour. `PENDING-PUBLISH.md` deleted.
+  Row 295 Complete. No new topic drafted today; the backlog took the full
+  session.
