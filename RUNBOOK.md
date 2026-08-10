@@ -469,3 +469,26 @@ hands it over.
   published per the known false-409 behaviour. `PENDING-PUBLISH.md` deleted.
   Row 295 Complete. No new topic drafted today; the backlog took the full
   session.
+- 2026-08-10 — sixth live run, sheet row 296, "Cursor 3.9 Automations:
+  Turning Vibe Coding Into Always-On Business Agents". Draft stage flagged a
+  real layout bug: the still cover's top-left headline and a video point
+  label were both overlapping the illustration. Fixed at the engine level
+  rather than per-day: `render_cover.sh` and `app_info.jsx` now put the
+  kicker/headline and the point-label column on the right, right-aligned,
+  with illustrations generated subject-left instead. Also fixed two
+  illustration-generation regressions hit while iterating: a vertical
+  background seam where the "confined" and "clear" zones met (fixed by
+  describing one flat canvas with a vignette added on top, not two zones in
+  the prompt), and the model overshooting the requested left-confinement
+  percentage by ~20 points (now generate a tight ask and verify with actual
+  pixel measurement before animating). Also dropped the "gentlest push in"
+  camera instruction for hybrid video generation: the slow zoom drifted the
+  frame enough over 10 seconds to walk the subject into the text column by
+  mid-clip; camera is locked static now. Cost about 45 Higgsfield credits
+  across five image regenerations and two video regenerations to land the
+  fix; balance finished at 8.69, below the ~35 floor, flagged to Prad.
+  Blog post 6803, Google Business post, LinkedIn `6a7a482da05f4d65770459ff`,
+  Instagram `6a7a4876b6494c5ddf38bf28`, TikTok `6a7a488079e68e76a8f511c7`,
+  X `6a7a48b479e68e76a8f51d43`. Two false 409s, LinkedIn and TikTok, both
+  confirmed actually published per the known false-409 behaviour. Row 296
+  Complete.
