@@ -77,7 +77,7 @@ if footer:
 
 logo_html = ""
 if not footer:
-    logo_html = ('<img src="%s" style="position:absolute;top:%dpx;right:%dpx;width:%dpx;'
+    logo_html = ('<img src="%s" style="position:absolute;top:%dpx;left:%dpx;width:%dpx;'
                  'filter:drop-shadow(0 2px 10px rgba(234,240,249,.9))">' % (logo_data, pad, pad, logo_w))
 
 html = """<!doctype html><html><head><meta charset="utf-8"><style>
@@ -85,7 +85,7 @@ html = """<!doctype html><html><head><meta charset="utf-8"><style>
 html,body{margin:0;padding:0}
 #stage{position:relative;width:%dpx;height:%dpx;overflow:hidden;background:#EAF0F9}
 #bg{position:absolute;inset:0;width:100%%;height:100%%;object-fit:cover}
-#copy{position:absolute;top:%dpx;left:%dpx;right:%dpx}
+#copy{position:absolute;top:%dpx;left:%dpx;right:%dpx;text-align:right}
 #kicker{font-family:'Inter',sans-serif;font-weight:600;font-size:%dpx;letter-spacing:.14em;
   text-transform:uppercase;color:#0FA47E;text-shadow:%s;margin-bottom:%dpx}
 #head{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:%dpx;line-height:1.04;

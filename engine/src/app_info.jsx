@@ -43,7 +43,11 @@ const BAY = { x: 250, y: 1030, w: 580, h: 190 };
 const HUB = { cx: 540, cy: 1125, r: 66 };
 const SAT = [{ cx: 440, cy: 1089, r: 40, dir: -1 }, { cx: 640, cy: 1089, r: 40, dir: -1 }];
 const ROWS = [1305, 1470, 1635];
-const RAIL = 96;
+const MARGIN = 96;
+// Text reads on the right so the illustration/footage can carry the left
+// side of the frame without the two colliding; the rail and its dots sit
+// near the right margin, labels hang to the left of the rail, right-aligned.
+const RAIL = W - MARGIN - 24;
 const ANCHOR = [[BAY.x, 1125], [MON.x, 720], [BAY.x, 1195]];
 const DOTC = [ACCENT, TEAL, ACCENT];
 
@@ -436,7 +440,7 @@ function Scene() {
 function Hook() {
   const lines = C.hook || [];
   return (
-    <div style={{ position: "absolute", top: 168, left: RAIL, right: 96 }}>
+    <div style={{ position: "absolute", top: 168, left: MARGIN, right: MARGIN, textAlign: "right" }}>
       <div style={{ ...HL, fontSize: 92 }}>
         {lines.map((l, i) => {
           const accent = i === lines.length - 1;
@@ -455,7 +459,12 @@ function Hook() {
 // Fixed rail geometry (ROWS/ANCHOR) stays identical across every daily video,
 // so when a specific day's footage or scene leaves less clearance than usual,
 // dial this down in config (labelFontSize) rather than reworking the layout.
-const LABEL_FONT = C.labelFontSize || 54;
+// The label column is kept narrow and hugs the right margin (ending just
+// short of the rail) so it stays inside the clear strip the illustration
+// leaves down the right side, rather than spanning the full width and
+// crossing over whatever the footage is doing in the middle of the frame.
+const LABEL_FONT = C.labelFontSize || 44;
+const LABEL_COL = 420;
 
 function Labels() {
   return (
@@ -464,8 +473,8 @@ function Labels() {
         const t0 = P0 + i * PGAP + 0.72;
         const words = p.join(" ").split(" ");
         return (
-          <div key={i} style={{ position: "absolute", left: RAIL + 54, right: 90, top: ROWS[i] - 84, height: 168, display: "flex", alignItems: "center" }}>
-            <div style={{ ...BODY, fontSize: LABEL_FONT, maxWidth: 810, color: toneStyle((PLAN.labels || [])[i]).color || INK, textShadow: toneStyle((PLAN.labels || [])[i]).textShadow }}>
+          <div key={i} style={{ position: "absolute", left: RAIL - 30 - LABEL_COL, width: LABEL_COL, top: ROWS[i] - 84, height: 168, display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
+            <div style={{ ...BODY, fontSize: LABEL_FONT, maxWidth: LABEL_COL, textAlign: "right", color: toneStyle((PLAN.labels || [])[i]).color || INK, textShadow: toneStyle((PLAN.labels || [])[i]).textShadow }}>
               {words.map((w, j) => <Word key={j} t0={t0 + j * 0.1} dur={0.36}>{w}</Word>)}
             </div>
           </div>
@@ -478,10 +487,10 @@ function Labels() {
 function Progress() {
   // fills across the infographic and reads full exactly as the sweep starts,
   // so a longer end card does not leave it stranded part-way
-  const w = useTransform(T, (t) => Math.max(0, Math.min(1, t / T_SWEEP)) * (W - 2 * RAIL));
+  const w = useTransform(T, (t) => Math.max(0, Math.min(1, t / T_SWEEP)) * (W - 2 * MARGIN));
   const o = useTransform(T, (t) => seg(t, 0.6, 1.2) * (1 - seg(t, T_SWEEP - 0.2, T_SWEEP + 0.2)));
   return (
-    <motion.div style={{ position: "absolute", left: RAIL, top: 1806, width: W - 2 * RAIL, height: 6, borderRadius: 3, background: "#D2DEEF", opacity: o }}>
+    <motion.div style={{ position: "absolute", left: MARGIN, top: 1806, width: W - 2 * MARGIN, height: 6, borderRadius: 3, background: "#D2DEEF", opacity: o }}>
       <motion.div style={{ height: 6, borderRadius: 3, width: w, background: `linear-gradient(90deg, ${ACCENT}, ${TEAL})` }} />
     </motion.div>
   );
@@ -489,7 +498,7 @@ function Progress() {
 
 function Mark() {
   const o = useTransform(T, (t) => 0.85 * seg(t, 0.8, 1.4));
-  return <motion.img src="brand/logo_small.png" style={{ position: "absolute", top: 150, right: 90, width: 96, opacity: o }} />;
+  return <motion.img src="brand/logo_small.png" style={{ position: "absolute", top: 150, left: 90, width: 96, opacity: o }} />;
 }
 
 // --------------------------------------------------------------------- stat
