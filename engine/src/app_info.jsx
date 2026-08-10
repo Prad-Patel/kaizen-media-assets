@@ -463,8 +463,8 @@ function Hook() {
 // short of the rail) so it stays inside the clear strip the illustration
 // leaves down the right side, rather than spanning the full width and
 // crossing over whatever the footage is doing in the middle of the frame.
-const LABEL_FONT = C.labelFontSize || 44;
-const LABEL_COL = 420;
+const LABEL_FONT = C.labelFontSize || 40;
+const LABEL_COL = 300;
 
 function Labels() {
   return (
