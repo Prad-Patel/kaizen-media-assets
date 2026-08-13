@@ -183,11 +183,31 @@ word stays real typography; the footage never contains text.
    answer with a `preset_recommendation` notice instead of submitting; for the
    daily pipeline always decline by retrying the same params with
    `declined_preset_id` set to the offered preset id.
+2a. **If the Higgsfield balance is below the ~15 credit cost of one
+    generation, do not attempt the i2v call.** Prad's standing instruction
+    (2026-08-13): build the video anyway using the static illustration
+    instead of animated footage, rather than blocking the whole draft on a
+    top-up. `render_hybrid.sh` does not care whether its `clip.mp4` moves,
+    only that it exists, so make one with ffmpeg: `ffmpeg -y -loop 1 -i
+    illustration-9x16.jpg -t 11 -r 30 -pix_fmt yuv420p -vf
+    "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920"
+    static_clip.mp4`, then pass that as the clip argument exactly as if it
+    were the Higgsfield clip. **The clip must be at least 11 seconds**:
+    `pick_text_style.py` samples the ping-pong footage out to ~12.8s (built
+    for a 10s source clip pingponged to ~20s), and a shorter static clip
+    makes `ffmpeg -ss` seek past end-of-file, which silently writes a 0-byte
+    PNG and crashes `convert` with "improper image header" (hit and fixed
+    2026-08-13, cost about 20 minutes of debugging). Only run the real
+    Higgsfield `generate_video` call once the balance covers it; this static
+    fallback is not a replacement for the animated build, just what runs
+    when credit does not allow it.
 3. Pull the finished clip into the session via n8n workflow
    `T89V0h08JMpWkCE5`, "Kaizen — Media Fetch (Cowork)": `execute_workflow`
    with body `{ url }`, read `fileBase64` from the "Media to Base64" node of
    the execution and decode. (The Higgsfield CDN is unreachable from the
-   session; n8n fetches it and hands it over as base64.)
+   session; n8n fetches it and hands it over as base64.) Skip this step
+   entirely when using the static-stills fallback above; there is no clip to
+   fetch.
 4. `./engine/render_hybrid.sh config.json clip.mp4 out.mp4 22.0`. The clip is
    ping-pong looped under the first section; from the stat onwards the paper
    backdrop is opaque. The script also runs `pick_text_style.py`
@@ -396,7 +416,22 @@ servers can reach jsDelivr even though the session cannot, which is why the
 video URL works. Every design decision above follows from these limits. MCP
 connector traffic routes through Anthropic's servers rather than the session
 network, so the n8n, Zernio, Google Drive and Higgsfield connectors work
-regardless of the environment's allowlist.
+regardless of the environment's allowlist. `WebFetch` on arbitrary article
+URLs is blocked by the egress proxy even though plain web search works; use
+`WebSearch` for research and accept its synthesized snippets with citations
+rather than trying to fetch the source pages directly.
+
+The Claude Code routine's container does not ship `ffmpeg`, `ffprobe` or
+ImageMagick's `convert` by default, all of which the render engine needs.
+`apt-get install ffmpeg` can fail on unrelated broken mirror packages (run
+`apt-get update` first, which usually fixes it); if it still fails, `pip3
+install imageio-ffmpeg` gets a static ffmpeg binary
+(`python3 -c "import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())"`)
+that can be symlinked to `/usr/local/bin/ffmpeg`. `pick_text_style.py` needs
+real `ffprobe` far less than it needs `convert` (ImageMagick); `apt-get
+install imagemagick` after `apt-get update` is the reliable path. Check for
+all three with `which` at the start of the render steps so this is not
+rediscovered mid-run.
 
 Media the session cannot fetch directly (Gemini images, Higgsfield clips)
 comes in through n8n as base64: the image generator returns its own output,
