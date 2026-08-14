@@ -527,3 +527,21 @@ hands it over.
   X `6a7a48b479e68e76a8f51d43`. Two false 409s, LinkedIn and TikTok, both
   confirmed actually published per the known false-409 behaviour. Row 296
   Complete.
+- 2026-08-14 — seventh live run, sheet row 298, "Lovable 2.0 for Small Teams:
+  What the Latest Update Actually Lets You Build". Found an orphaned
+  2026-08-13 draft (covers and a static-fallback hybrid video, built under
+  the credit-blocked fallback) that had been rendered and pushed to main but
+  never logged, never published, and never recorded in `PENDING-PUBLISH.md`.
+  Confirmed via Zernio that nothing had gone live, reused the existing
+  covers, and rewrote the blog post and captions from scratch since the
+  original text was not persisted anywhere. Presented the draft for approval
+  before touching the publish stage, per the same live-consent rule that
+  applies to `PENDING-PUBLISH.md`. Once Higgsfield balance had recovered to
+  508 credits, replaced the static-stills fallback with a real
+  `kling3_0_turbo` animation (camera locked static per the 2026-08-10 fix)
+  before publishing, pushed as `-r2` to avoid touching the original filename.
+  Blog post 6806, Google Business post, LinkedIn `6a7ecbd0ef1f05c31ea059a9`,
+  Instagram `6a7ecbf48a69875cd455e62e`, TikTok `6a7ecbf8e959c796b1076979`,
+  X `6a7ecbf08a69875cd455e49e`. Two false 409s, LinkedIn and TikTok, both
+  confirmed actually published per the known false-409 behaviour. Row 298
+  Complete.
