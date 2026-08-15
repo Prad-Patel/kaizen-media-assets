@@ -1,12 +1,12 @@
 {
-  "hook": ["SORA IS GONE.", "SIX MONTHS IN."],
+  "hook": ["EDIT VIDEO", "BY TALKING."],
   "points": [
-    ["Sora burned $15M a day."],
-    ["It made $2.1M, total."],
-    ["Any AI vendor could be next."]
+    ["No re-rolling from scratch."],
+    ["About $0.10 a second, via API."],
+    ["Plans start at $4.99 a month."]
   ],
-  "stat": { "pre": "58% OF UK SMALL FIRMS USE AI.", "big": "MARKETING IS THE #1 USE CASE.", "post": "DON'T BUILD IT ON ONE VENDOR." },
+  "stat": { "pre": "MARKETING IS AI'S #1 USE CASE.", "big": "58% OF UK FIRMS USE AI NOW.", "post": "TEST ONE CAMPAIGN BEFORE YOU COMMIT." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Don't build on one AI vendor.",
+  "tagline": "Try it before you build on it.",
   "url": "kaizenaiconsulting.com"
 }
