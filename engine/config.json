@@ -1,12 +1,12 @@
 {
-  "hook": ["LOVABLE JUST WENT", "MULTIPLAYER."],
+  "hook": ["SORA IS GONE.", "SIX MONTHS IN."],
   "points": [
-    ["Up to 20 people, one workspace."],
-    ["The agent plans before it edits."],
-    ["A security scan runs at publish."]
+    ["Sora burned $15M a day."],
+    ["It made $2.1M, total."],
+    ["Any AI vendor could be next."]
   ],
-  "stat": { "pre": "UK AI ADOPTION HIT 54%.", "big": "SMALL FIRMS STILL LAG.", "post": "THE GAP IS KNOWLEDGE, NOT TOOLS." },
-  "cta": "FREE 30-MIN STRATEGY CALL",
-  "tagline": "Build software as a team, not alone.",
+  "stat": { "pre": "58% OF UK SMALL FIRMS USE AI.", "big": "MARKETING IS THE #1 USE CASE.", "post": "DON'T BUILD IT ON ONE VENDOR." },
+  "cta": "FREE 30-MIN AI AUDIT",
+  "tagline": "Don't build on one AI vendor.",
   "url": "kaizenaiconsulting.com"
 }
