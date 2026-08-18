@@ -545,3 +545,31 @@ hands it over.
   X `6a7ecbf08a69875cd455e49e`. Two false 409s, LinkedIn and TikTok, both
   confirmed actually published per the known false-409 behaviour. Row 298
   Complete.
+- 2026-08-18 — eighth live run, sheet row 298, "Sora Is Gone: What the AI
+  Video Shake-Up Means for Small Business Marketing in 2026". Found a second
+  orphaned draft on the same topic from 2026-08-15/16 (covers, a 9:16 base
+  illustration, and two video iterations) that had been rendered and pushed
+  to main but never logged, published, or recorded in `PENDING-PUBLISH.md`,
+  same pattern as the 8/13 incident. Confirmed via Zernio (`posts_list`,
+  nothing published) and the sheet (row still Pending) that nothing had gone
+  live, then reused the existing 08-15 covers and 9:16 illustration rather
+  than regenerating art. Did not reuse the 08-16 video: its stat card claimed
+  Sora cost "$15M a day", a figure that could not be sourced cleanly, so
+  `engine/config.json` was corrected to the $1M/day net burn rate reported by
+  the WSJ and TechXplore (matching $2.1M total lifetime revenue and the
+  <500K user figure), and the animation was rebuilt with `kling3_0_turbo`
+  from the existing illustration. Blog post, captions and summary were
+  written fresh this run using the corrected figure throughout, then
+  presented for approval before touching the publish stage. `ffmpeg`,
+  `ffprobe` and `imagemagick` needed reinstalling on this container; also hit
+  a persistent `SignatureDoesNotMatch` on Higgsfield's `media_import_url` for
+  the 9:16 illustration (three attempts, not transient), worked around by
+  routing a heavily downsized copy through `media_upload` + the generic PUT
+  workflow `BsFqwIIUIQbtn735` + `media_confirm` instead. Blog post 6809,
+  https://kaizenaiconsulting.com/sora-shutdown-ai-video-small-business-marketing/,
+  Google Business post (accepted, PROCESSING at submission), LinkedIn
+  `6a840d2273ed1df9a0322ce5`, Instagram `6a840d4890b5768b3760377e`, TikTok
+  `6a840d4c90b5768b3760387b`, X `6a840d43d18501cd6dd1500a`. Two false 409s,
+  LinkedIn and TikTok, both confirmed actually published per the known
+  false-409 behaviour; TikTok's `platformPostUrl` also came back empty on
+  `posts_get`, which is the known non-failure case. Row 298 Complete.
