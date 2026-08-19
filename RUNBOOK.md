@@ -573,3 +573,29 @@ hands it over.
   LinkedIn and TikTok, both confirmed actually published per the known
   false-409 behaviour; TikTok's `platformPostUrl` also came back empty on
   `posts_get`, which is the known non-failure case. Row 298 Complete.
+- 2026-08-19 — ninth live run, sheet row 299, "Google Gemini Omni: How to
+  Make and Edit Marketing Videos Just by Talking". Found a third orphaned
+  draft (covers, 9:16 illustration, and a static-fallback video, all dated
+  2026-08-15) rendered and pushed to main but never logged or published,
+  same pattern as 8/13 and 8/15-16. Confirmed via Zernio (`posts_list`,
+  nothing published) and the sheet (row still Pending) that nothing had
+  gone live, reused the existing covers and 9:16 illustration, and rewrote
+  the blog post and captions from scratch. Caught a bad stat in the
+  orphaned draft's video: the stat card claimed "58% of UK firms use AI",
+  which did not match any sourced figure; corrected to 54%, the BCC/Atos
+  2026 figure, in `engine/config.json` before rebuilding. Attempted a real
+  `kling3_0_turbo` animation since Higgsfield balance was healthy (433
+  credits): `media_import_url` hit the same persistent
+  `SignatureDoesNotMatch` from 8/18 (confirmed non-transient again), and
+  the `media_upload` + PUT workaround got the image uploaded but
+  `media_confirm` then failed three times running ("Something went wrong",
+  no further detail). Fell back to the static-clip build per the runbook's
+  2a fallback rather than keep burning attempts; QC passed cleanly. Blog
+  post 6812, https://kaizenaiconsulting.com/gemini-omni-video-editing/,
+  Google Business post (accepted, PROCESSING at submission), LinkedIn
+  `6a855d17deea8e545e6e0e9a`, Instagram `6a855d3b0b2c2a2e424e7de3`, TikTok
+  `6a855d3ea1d94c25288f901c`, X `6a855d370b2c2a2e424e7cf5`. One false 409
+  on LinkedIn, confirmed actually published per the known false-409
+  behaviour; TikTok's `platformPostUrl` also came back empty on
+  `posts_get`, the known non-failure case, confirmed published via the raw
+  `posts_get_post` status field instead. Row 299 Complete.
