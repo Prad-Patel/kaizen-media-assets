@@ -1,12 +1,12 @@
 {
-  "hook": ["EDIT VIDEO", "BY TALKING."],
+  "hook": ["WE USE IT DAILY.", "HERE'S THE TRUTH."],
   "points": [
-    ["No re-rolling from scratch."],
-    ["About $0.10 a second, via API."],
-    ["Plans start at $4.99 a month."]
+    ["Two builds failed this week."],
+    ["1 in 5 reviews are one star."],
+    ["Billing, not quality, is the risk."]
   ],
-  "stat": { "pre": "MARKETING IS AI'S #1 USE CASE.", "big": "54% OF UK FIRMS USE AI NOW.", "post": "TEST ONE CLIP BEFORE YOU COMMIT." },
-  "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Test it before you build on it.",
+  "stat": { "pre": "REVIEW SENTIMENT IS SPLIT.", "big": "20% OF REVIEWS ARE ONE STAR.", "post": "MOSTLY OVER BILLING, NOT QUALITY." },
+  "cta": "FREE 30-MIN STRATEGY CALL",
+  "tagline": "Build a fallback before you need one.",
   "url": "kaizenaiconsulting.com"
 }
