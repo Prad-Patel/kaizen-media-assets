@@ -599,3 +599,34 @@ hands it over.
   behaviour; TikTok's `platformPostUrl` also came back empty on
   `posts_get`, the known non-failure case, confirmed published via the raw
   `posts_get_post` status field instead. Row 299 Complete.
+- 2026-08-20 — tenth live run, sheet row 300, "Is Higgsfield Reliable Enough
+  for Your Business? The New Production Stack Reviewed." First run to review
+  Higgsfield itself, written from the pipeline's own experience: hit a real
+  `SignatureDoesNotMatch` on `media_import_url` and a `media_confirm` failure
+  streak on 18/19 August, both already in this log. Push access verified
+  first; `ffmpeg`, `ffprobe` and `imagemagick` needed reinstalling on this
+  container. Illustration prompt used the post-08-10 subject-left,
+  clear-right convention throughout (3:2, 4:5, 9:16); the first 9:16 came
+  back with a visible top/middle/bottom seam, the same failure mode as
+  2026-08-04, fixed in one regeneration with stronger uniform-background
+  wording. Balance was healthy (433 credits) so a real `kling3_0_turbo`
+  animation ran; the first `generate_video` call was submitted without a
+  `medias` array by mistake (a plain text-to-video job with no reference
+  image), caught immediately via `job_status` before wasting the render, and
+  resubmitted correctly. Generation itself took close to 6 minutes, well
+  above the documented 60-180s range, but completed cleanly with no other
+  issues. QC passed on the first render, no fallback needed. Blog post 6815,
+  https://kaizenaiconsulting.com/higgsfield-reliability-review/, Google
+  Business post (accepted, PROCESSING at submission), LinkedIn
+  `6a86b4d49e62dad398e87500`, X `6a86b4ea31436be3d6d86892`, Instagram
+  `6a86b50b7c3744eb8f595441`, all confirmed published clean, no false 409s.
+  TikTok failed twice (initial attempt plus one retry) with "Daily active
+  user quota reached," a platform-side cap on the connected TikTok app, not
+  a content or credential problem; post `6a86b50f31436be3d6d86b86` is left
+  in `failed` state in Zernio for a manual `posts_retry` once the quota
+  resets. Row 300 was still set to Complete rather than left Pending,
+  because five of six destinations were confirmed live and leaving the row
+  Pending would have queued this exact topic for a full re-draft on the next
+  run, duplicating the blog post and three social posts already published
+  (the failure mode hit on 2026-08-13, 08-15/16 and 08-18/19). Flagged to
+  Prad as a partial completion needing a manual TikTok retry.
