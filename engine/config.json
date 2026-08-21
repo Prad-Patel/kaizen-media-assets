@@ -1,12 +1,13 @@
 {
   "hook": ["A £3,000 AD.", "A £1 AI CLIP."],
   "points": [
-    ["Kling 3.0 generates video and dialogue together."],
-    ["Seedance 2.0 lip-syncs in 8+ languages at once."],
-    ["A 10-second clip costs about a pound."]
+    ["Video and dialogue, one pass."],
+    ["Lip-synced in 8+ languages."],
+    ["A clip costs about £1."]
   ],
   "stat": { "pre": "A UK VIDEO AD AVERAGES £3,000-£8,000.", "big": "A 10-SEC AI CLIP: ABOUT £1.", "post": "THE COST OF TESTING AN IDEA JUST COLLAPSED." },
   "cta": "FREE 30-MIN STRATEGY CALL",
+  "labelFontSize": 44,
   "tagline": "Test the idea before you spend the budget.",
   "url": "kaizenaiconsulting.com"
 }
