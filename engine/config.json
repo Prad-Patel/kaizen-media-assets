@@ -1,12 +1,12 @@
 {
-  "hook": ["WE USE IT DAILY.", "HERE'S THE TRUTH."],
+  "hook": ["A £3,000 AD.", "A £1 AI CLIP."],
   "points": [
-    ["Two builds failed this week."],
-    ["1 in 5 reviews are one star."],
-    ["Billing, not quality, is the risk."]
+    ["Kling 3.0 generates video and dialogue together."],
+    ["Seedance 2.0 lip-syncs in 8+ languages at once."],
+    ["A 10-second clip costs about a pound."]
   ],
-  "stat": { "pre": "REVIEW SENTIMENT IS SPLIT.", "big": "20% OF REVIEWS ARE ONE STAR.", "post": "MOSTLY OVER BILLING, NOT QUALITY." },
+  "stat": { "pre": "A UK VIDEO AD AVERAGES £3,000-£8,000.", "big": "A 10-SEC AI CLIP: ABOUT £1.", "post": "THE COST OF TESTING AN IDEA JUST COLLAPSED." },
   "cta": "FREE 30-MIN STRATEGY CALL",
-  "tagline": "Build a fallback before you need one.",
+  "tagline": "Test the idea before you spend the budget.",
   "url": "kaizenaiconsulting.com"
 }
