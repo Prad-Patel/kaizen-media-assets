@@ -630,3 +630,32 @@ hands it over.
   run, duplicating the blog post and three social posts already published
   (the failure mode hit on 2026-08-13, 08-15/16 and 08-18/19). Flagged to
   Prad as a partial completion needing a manual TikTok retry.
+- 2026-08-21 — eleventh live run, sheet row 301, "Kling 3.0 vs Seedance 2.0:
+  Cheaper, Audio-Native AI Video for UK Small Businesses." Push access
+  verified first (a stale local `main` ref briefly looked like a
+  non-fast-forward problem; a fresh `git fetch origin main` showed local
+  HEAD and `origin/main` already matched, so it was a caching artefact, not
+  a real access issue). `ffmpeg` and `imagemagick` needed reinstalling on
+  this container. Illustration prompt used the subject-left,
+  clear-right/clear-column convention; the first 9:16 generation left the
+  hand and arm reaching too far into the right-hand label column, fixed in
+  one regeneration with an explicit "confine the whole scene to the left
+  35% of the frame" instruction. Higgsfield balance was healthy (403
+  credits) so a real `kling3_0_turbo` animation ran cleanly on the first
+  attempt, no `SignatureDoesNotMatch` this time. First hybrid render caught
+  a genuine layout bug: two of the three point labels overlapped on screen
+  because the label text wrapped to 4 lines each, taller than the fixed row
+  spacing. Fixed by shortening the point text and dropping `labelFontSize`
+  to 44 per the existing runbook fallback, then rebuilt from the same
+  footage (no extra Higgsfield spend) and re-QC'd clean. Draft presented
+  and approved by Prad in-session before any publish call. Blog post 6818,
+  https://kaizenaiconsulting.com/kling-seedance-ai-video-uk-small-business/,
+  Google Business post (accepted, PROCESSING at submission), LinkedIn
+  `6a880060ef2054625e53a994`, X `6a88006dd056b371d3b591ee`, Instagram
+  `6a8800790febbe6ad5e2f6cc`, all published clean with no false 409s.
+  TikTok returned the known false 409 on `posts_create_post` but had
+  actually been created (`6a88007dd056b371d3b596cb`, confirmed via
+  `posts_list`); it then sat in `publishing` for close to 5 minutes,
+  longer than any prior run, likely genuine TikTok-side video processing
+  plus the server-side cover-image stitch, and confirmed published on
+  a later poll rather than being retried. Row 301 Complete.
