@@ -659,3 +659,26 @@ hands it over.
   longer than any prior run, likely genuine TikTok-side video processing
   plus the server-side cover-image stitch, and confirmed published on
   a later poll rather than being retried. Row 301 Complete.
+- 2026-08-22 — twelfth live run, sheet row 302, "68% of Google Searches Now
+  End Without a Click: What UK Trades Should Do About It". Push access
+  verified first (a stale local `main` ref was behind `origin/main`, same
+  caching artefact as 2026-08-21, fixed with `git branch -f main
+  origin/main`). `ffmpeg` and `imagemagick` needed reinstalling on this
+  container. No `PENDING-PUBLISH.md` backlog to clear. Illustration used
+  the subject-left, clear-right convention throughout (3:2, 4:5, 9:16): a
+  UK tradesperson checking a glowing map-pin/star result on their phone
+  outside a job. All three illustrations, both covers and the hybrid
+  video QC'd clean on the first generation, no regenerations needed.
+  Higgsfield balance was healthy (388 credits) so a real `kling3_0_turbo`
+  animation ran; `media_import_url` worked cleanly this time, no
+  `SignatureDoesNotMatch`. Draft presented and approved by Prad in-session
+  before any publish call. Blog post 6821,
+  https://kaizenaiconsulting.com/zero-click-search-uk-trades/, Google
+  Business post (accepted, PROCESSING at submission), LinkedIn
+  `6a894fa5847c49f94972fdad`, Instagram `6a894fb9407e16b5aa42c438`
+  (reel confirmed at instagram.com/reel/DcVYLeTEVzS), X
+  `6a894fee07d2bd4487538785`, all published clean. TikTok returned the
+  known false 409 on `posts_create_post` but had actually been created
+  (`6a894fc2847c49f94972fefc`), confirmed via `posts_list` and then via
+  `posts_get_post` (status published, cover image applied, empty
+  `platformPostUrl` the known non-failure case). Row 302 Complete.
