@@ -1,13 +1,12 @@
 {
-  "hook": ["A £3,000 AD.", "A £1 AI CLIP."],
+  "hook": ["68% WON'T CLICK", "THROUGH ANYMORE."],
   "points": [
-    ["Video and dialogue, one pass."],
-    ["Lip-synced in 8+ languages."],
-    ["A clip costs about £1."]
+    ["AI Overviews answer the question first."],
+    ["Google Business Profile wins the job."],
+    ["A missed call is a missed booking."]
   ],
-  "stat": { "pre": "A UK VIDEO AD AVERAGES £3,000-£8,000.", "big": "A 10-SEC AI CLIP: ABOUT £1.", "post": "THE COST OF TESTING AN IDEA JUST COLLAPSED." },
-  "cta": "FREE 30-MIN STRATEGY CALL",
-  "labelFontSize": 44,
-  "tagline": "Test the idea before you spend the budget.",
+  "stat": { "pre": "GOOGLE SEARCHES ENDING WITHOUT A CLICK:", "big": "68%", "post": "UP FROM 60% JUST TWO YEARS AGO." },
+  "cta": "FREE 30-MIN AI AUDIT",
+  "tagline": "Get found without the click.",
   "url": "kaizenaiconsulting.com"
 }
