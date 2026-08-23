@@ -1,12 +1,12 @@
 {
-  "hook": ["68% WON'T CLICK", "THROUGH ANYMORE."],
+  "hook": ["1 BILLION PEOPLE", "SEARCH LIKE THIS."],
   "points": [
-    ["AI Overviews answer the question first."],
-    ["Google Business Profile wins the job."],
-    ["A missed call is a missed booking."]
+    ["Google's AI now answers first."],
+    ["Top 10 rankings barely matter."],
+    ["Almost no UK business has adapted."]
   ],
-  "stat": { "pre": "GOOGLE SEARCHES ENDING WITHOUT A CLICK:", "big": "68%", "post": "UP FROM 60% JUST TWO YEARS AGO." },
+  "stat": { "pre": "UK SMEs OPTIMISED FOR AI SEARCH:", "big": "UNDER 5%", "post": "THE GAP WON'T STAY OPEN." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Get found without the click.",
+  "tagline": "Get found in the answer, not just the search.",
   "url": "kaizenaiconsulting.com"
 }
