@@ -1,12 +1,12 @@
 {
-  "hook": ["1 BILLION PEOPLE", "SEARCH LIKE THIS."],
+  "hook": ["EUROPE GETS", "CHATGPT ADS."],
   "points": [
-    ["Google's AI now answers first."],
-    ["Top 10 rankings barely matter."],
-    ["Almost no UK business has adapted."]
+    ["The UK's had it since June."],
+    ["Clicks are still under $5."],
+    ["That changes tomorrow."]
   ],
-  "stat": { "pre": "UK SMEs OPTIMISED FOR AI SEARCH:", "big": "UNDER 5%", "post": "THE GAP WON'T STAY OPEN." },
+  "stat": { "pre": "UK HEAD START ON CHATGPT ADS:", "big": "10 WEEKS", "post": "THE WINDOW IS CLOSING." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Get found in the answer, not just the search.",
+  "tagline": "Test it before everyone else does.",
   "url": "kaizenaiconsulting.com"
 }
