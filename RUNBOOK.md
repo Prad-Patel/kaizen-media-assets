@@ -316,8 +316,21 @@ those captions should point at the bio.
    gone live, clear that first. Rebuild and present it for approval in the
    current session before drafting anything new. The approval recorded in that
    file is a historical record, not live consent.
-2. Read the topic queue and take the first Pending row. If there are none,
-   stop and tell Prad the queue is empty rather than inventing a topic.
+2. Before pulling from the queue, spend one web search checking whether
+   something more timely is worth leading with instead: a genuine AI or
+   small-business story breaking in the last 24 to 48 hours (a major product
+   launch, a regulatory change, a fresh UK-relevant stat or report) that is
+   clearly stronger than whatever sits next in the queue. Sense-check it
+   against the Run log below so the same ground isn't covered twice. If
+   something clearly beats the queue, write it up as today's topic instead of
+   the next Pending row. It does not need a queue row: the Google Sheet
+   connector can only update Status on an existing row, not insert a new one,
+   so a dynamic topic is tracked in the Run log at the end of the day, same as
+   every other run, and the queue's next Pending row stays untouched for a
+   future day rather than being consumed or marked Complete. If nothing
+   clearly beats it, read the topic queue and take the first Pending row as
+   before. If the queue is empty and nothing timely surfaced either, stop and
+   tell Prad rather than inventing a topic with no grounding.
 3. Research the topic on the web. Prefer UK sources, current figures, and
    anything that gives a concrete number worth building the video around.
 4. Write the blog post: 900 to 1,400 words of HTML, British spelling, a clear
