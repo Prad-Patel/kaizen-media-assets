@@ -1,12 +1,12 @@
 {
-  "hook": ["EUROPE GETS", "CHATGPT ADS."],
+  "hook": ["EUROPE GETS", "CHATGPT ADS TODAY."],
   "points": [
     ["The UK's had it since June."],
-    ["Clicks are still under $5."],
-    ["That changes tomorrow."]
+    ["Recommended bids: $3 to $5 a click."],
+    ["31 more countries just joined."]
   ],
-  "stat": { "pre": "UK HEAD START ON CHATGPT ADS:", "big": "10 WEEKS", "post": "THE WINDOW IS CLOSING." },
+  "stat": { "pre": "UK HEAD START ON CHATGPT ADS:", "big": "11 WEEKS", "post": "THE WINDOW HAS CLOSED." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Test it before everyone else does.",
+  "tagline": "You've already tested it. Now use the lead.",
   "url": "kaizenaiconsulting.com"
 }
