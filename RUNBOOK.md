@@ -723,3 +723,31 @@ hands it over.
   branch). Followed this runbook and pushed straight to `main` as every
   prior run has, all fast-forward merges, and flagged the conflict to Prad
   for future sessions.
+- 2026-08-24 — fourteenth run. No fresh queue topic drafted; found a second
+  orphaned draft (fourth time this pattern has hit: 08-13, 08-15/16, 08-19,
+  now 08-23), a same-day second run on 2026-08-23 via the dynamic-topic step
+  ("ChatGPT Ads Europe") that built and pushed full assets to `main` but was
+  never logged or published. Confirmed via `posts_list` (published, draft,
+  scheduled, failed) and the sheet that nothing had gone live, then cleared
+  it per the backlog-first rule instead of drafting the next Pending row
+  (confirmed as "Selling Inside ChatGPT: What Agentic Commerce Means for
+  Small UK Retailers" for a future run). The original assets were written a
+  day early and said the EU rollout "changes tomorrow" with a "10 weeks" UK
+  head start; since this recovery run itself fell on the actual expansion
+  date, corrected to present-tense copy and the precise ~11-week gap (6 June
+  to 24 Aug) across both covers and the video. Re-fetched the original
+  Higgsfield footage via `T89V0h08JMpWkCE5` and regenerated fresh 3:2/4:5
+  Gemini illustrations rather than reusing the stale-copy ones, so no new
+  Higgsfield credits were spent, only Gemini. Pushed corrected assets as
+  `-r2`, originals left untouched. Draft presented and approved by Prad
+  in-session before any publish call. Blog post 6827,
+  https://kaizenaiconsulting.com/chatgpt-ads-europe-uk-head-start/, Google
+  Business post (accepted, PROCESSING at submission), LinkedIn
+  `6a8bf45e0a23f3bf451af642`, X `6a8bf46fe8e81a09eb22987b`, Instagram
+  `6a8bf4730a23f3bf451af94e`, TikTok `6a8bf477ece2b4c42b46b3f7`. TikTok
+  returned the known false 409 on `posts_create_post` but had actually been
+  created, confirmed via `posts_list`. No sheet row updated since this was a
+  dynamic topic outside the queue, consistent with the runbook's dynamic-
+  topic handling.</new_string>
+</invoke>
+
