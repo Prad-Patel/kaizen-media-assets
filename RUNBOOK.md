@@ -776,3 +776,37 @@ hands it over.
   `posts_list`; it then sat in `publishing` for several minutes (server-side
   cover-image stitch, same pattern as 2026-08-21) before confirming published.
   Row 304 Complete.
+- 2026-08-26 — sixteenth live run, sheet row 305, "The Amazon v Perplexity
+  Ruling: What the First Agentic Shopping Case Means for You". No
+  `PENDING-PUBLISH.md` backlog to clear. Push access verified first (local
+  `main` ref was stale again, same recurring caching artefact, fixed with
+  `git branch -f main origin/main`). `ffmpeg` and `imagemagick` needed
+  reinstalling on this container. Timeliness check found nothing fresher than
+  the queued topic, so took the next Pending row as normal; the row number
+  the sheet updater returned (305) did not match the row this session counted
+  by hand from the sheet dump (306), an off-by-one in counting markdown table
+  lines rather than a sheet problem — the updater matches by Topic text, so
+  the correct row was set regardless. Illustration used the subject-left,
+  clear-right convention throughout (3:2, 4:5, 9:16): a small business owner
+  watching a friendly AI robot place items in a basket, with scales of
+  justice nearby for the ruling. The 4:5 came back on the first pass with the
+  known top/bottom background seam (2026-08-04/08-20/08-23/08-25 failure
+  mode); fixed in one regeneration with stronger single-flat-colour wording.
+  Higgsfield balance was healthy (328.69 credits) so a real `kling3_0_turbo`
+  animation ran; `media_import_url` worked cleanly, no `SignatureDoesNotMatch`.
+  Generation took close to 4 minutes. Hybrid video QC'd clean on the first
+  render across all checked frames (2.5s/6s/12.5s/15.5s/17.3s/17.6s/20s), no
+  fallback needed. This session's git identity, harness-level branch policy
+  and unpushed-commit check were handled the same way as 2026-08-23/08-25:
+  committed and pushed straight to `main` per this runbook, then synced and
+  pushed the feature branch too. Draft presented and approved by Prad
+  in-session before any publish call. Blog post 6833,
+  https://kaizenaiconsulting.com/amazon-perplexity-ruling-ai-shopping-agents/,
+  Google Business post (accepted, PROCESSING at submission), LinkedIn
+  `6a8e98f7cf3df689083e459a`, X `6a8e9906cf3df689083e4a12`, both published
+  clean with no false 409s. Instagram `6a8e9940ff7011f0668618eb` published
+  clean. TikTok `6a8e994eff7011f066861dd6` returned the known false 409 on
+  `posts_create_post` but had actually been created, confirmed via
+  `posts_list`; it sat in `publishing` for a few minutes (server-side
+  cover-image stitch, same pattern as prior runs) before confirming
+  published. Row 305 Complete.
