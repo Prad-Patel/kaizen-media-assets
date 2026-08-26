@@ -1,12 +1,12 @@
 {
-  "hook": ["CHATGPT QUIETLY", "GAVE UP ON CHECKOUT."],
+  "hook": ["A COURT JUST RULED", "ON AI SHOPPING AGENTS."],
   "points": [
-    ["AI orders to Shopify: up 11x since 2025."],
-    ["OpenAI pulled checkout out of ChatGPT."],
-    ["You just need clean product data now."]
+    ["Amazon tried to block AI shopping bots."],
+    ["A court ruled the shopper is responsible."],
+    ["64% want AI to shop. Only 24% trust it."]
   ],
-  "stat": { "pre": "AI-ATTRIBUTED SHOPIFY ORDERS:", "big": "11X", "post": "SINCE JANUARY 2025." },
+  "stat": { "pre": "UK SHOPPERS WHO TRUST AI TO BUY:", "big": "24%", "post": "OUT OF 64% WHO WANT TO." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Get your product data AI-ready before your competitors do.",
+  "tagline": "Get your product data ready before an AI agent reads it.",
   "url": "kaizenaiconsulting.com"
 }
