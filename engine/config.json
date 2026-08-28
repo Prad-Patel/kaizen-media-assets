@@ -1,9 +1,9 @@
 {
   "hook": ["AI JUST MADE A CALL.", "WAS ANYONE CHECKING?"],
   "points": [
-    ["New UK rules on AI decisions took effect in February."],
-    ["The ICO found most employers using AI aren't compliant."],
-    ["Fines run up to £17.5m, or 4% of global turnover."]
+    ["New AI rules now live."],
+    ["Most firms fall short."],
+    ["Fines up to £17.5m."]
   ],
   "stat": { "pre": "MAXIMUM FINE FOR NON-COMPLIANT AI DECISIONS:", "big": "£17.5M", "post": "OR 4% OF GLOBAL TURNOVER." },
   "cta": "FREE 30-MIN AI AUDIT",
