@@ -224,17 +224,24 @@ word stays real typography; the footage never contains text.
    run never stalls. If the illustration leaves less clearance than usual and
    the three points still crowd its bottom edge after one illustration
    regeneration, do not keep spending Higgsfield credits on further attempts:
-   drop `labelFontSize` in config.json (try 44) for a smaller footprint on the
-   same fixed rail geometry, or cut to two points, rather than re-rolling the
-   art again. Learned 2026-08-09 rebuilding the blocked 2026-08-05 Canva post:
-   the illustration needed three regenerations to clear the rail, and Prad
-   asked for this as the standing fallback so it does not take that long
-   again.
+   drop `labelFontSize` in config.json (try 32-34, below the 40 default) for
+   a smaller footprint on the same fixed rail geometry, or cut point text to
+   three or four words each so it wraps to at most two lines, or cut to two
+   points, rather than re-rolling the art again. Learned 2026-08-09 rebuilding
+   the blocked 2026-08-05 Canva post: the illustration needed three
+   regenerations to clear the rail, and Prad asked for this as the standing
+   fallback so it does not take that long again. Corrected 2026-08-28: the
+   code default is 40, not 54 as this section previously said, so setting
+   `labelFontSize` to a value above 40 (44 was tried) makes the crowding
+   worse, not better; the row box is 168px tall on a 165px row gap, so
+   anything beyond two wrapped lines collides with the next point.
 
 `config.json` is `{ hook, points, stat, cta, tagline, url, labelFontSize }`;
-`labelFontSize` is optional, defaults to 54, and only needs setting when a
-day's illustration is unusually bottom-heavy. `scene` is only used by the
-fallback. `render_hybrid.sh` sets `hybrid: true` and the text plan itself.
+`labelFontSize` is optional, defaults to 40 (`engine/src/app_info.jsx`,
+`LABEL_FONT`), and only needs setting when a day's illustration is unusually
+bottom-heavy, in which case lower it rather than raise it. `scene` is only
+used by the fallback. `render_hybrid.sh` sets `hybrid: true` and the text
+plan itself.
 
 **Render engine** — `engine/` in this repository, self-contained:
 
@@ -810,3 +817,43 @@ hands it over.
   `posts_list`; it sat in `publishing` for a few minutes (server-side
   cover-image stitch, same pattern as prior runs) before confirming
   published. Row 305 Complete.
+- 2026-08-28 — seventeenth live run, sheet row 306, "New UK Rules on AI
+  Decisions Are Live: The Data (Use and Access) Act Explained for SMEs". No
+  `PENDING-PUBLISH.md` backlog to clear. Push access verified first (local
+  `main` was already in sync with `origin/main`, no stale-ref issue this
+  run). `ffmpeg` and `imagemagick` needed reinstalling on this container.
+  Timeliness check found nothing fresher than the queued topic, so took the
+  next Pending row as normal. Illustration used the subject-left, clear-right
+  convention throughout (3:2, 4:5, 9:16): a UK small business owner reviewing
+  a printed decision report with a magnifying glass beside a tablet showing a
+  paused AI icon and warning triangle. The first 9:16 generation came back
+  with a broken face, a blank outline circle instead of the filled
+  flat-shaded head used in the other two ratios, a new failure mode not
+  previously logged; fixed in one regeneration with an explicit instruction
+  against outline-only shapes. The first 4:5 generation had the known
+  background seam; a first regeneration with stronger flat-colour wording
+  alone was not enough (confirmed by sampling pixels either side of the
+  seam), fixed on a second regeneration using the "single canvas with a
+  vignette, not two zones" technique recorded from 2026-08-10. Higgsfield
+  balance was healthy (313.69 credits) so a real `kling3_0_turbo` animation
+  ran; `media_import_url` worked cleanly, no `SignatureDoesNotMatch`. First
+  hybrid render caught a genuine layout bug: all three point labels
+  overlapped and were unreadable at the 12.5s mark. Root cause traced to a
+  mistaken `labelFontSize` increase: the runbook's render-engine section
+  said the default was 54 and to "try 44" to shrink crowded labels, but the
+  actual code default (`engine/src/app_info.jsx`, `LABEL_FONT`) is 40, so
+  the 44 override made the text bigger and the overlap worse, not better.
+  Fixed by removing the override and cutting point text to three or four
+  words each so it wraps to at most two lines within the 168px row box (165px
+  row gap), then rebuilt from the same footage at no extra Higgsfield spend;
+  QC passed clean on the rebuild across all checked frames. Corrected the
+  runbook's render-engine section with the true default and the row-box/
+  row-gap math so this is not mis-fixed again. Draft presented and approved
+  by Prad in-session before any publish call. Blog post 6836,
+  https://kaizenaiconsulting.com/duaa-ai-decisions-sme-rules/, Google
+  Business post (accepted, PROCESSING at submission), LinkedIn
+  `6a913ccc0d8b1996ffcf42c0`, X `6a913cdc0d8b1996ffcf489e`, both published
+  clean with no false 409s. Instagram `6a913ce72245fecf4cb52ff3` published
+  clean. TikTok `6a913cf10d8b1996ffcf4e40` returned the known false 409 on
+  `posts_create_post` but had actually been created, confirmed via
+  `posts_list`. Row 306 Complete.
