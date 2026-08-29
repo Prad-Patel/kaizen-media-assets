@@ -1,12 +1,12 @@
 {
-  "hook": ["AI JUST MADE A CALL.", "WAS ANYONE CHECKING?"],
+  "hook": ["NO UK AI ACT.", "STILL FULLY REGULATED."],
   "points": [
-    ["New AI rules now live."],
-    ["Most firms fall short."],
-    ["Fines up to £17.5m."]
+    ["83% have zero AI policy."],
+    ["UK GDPR still applies."],
+    ["Fines hit 4% turnover."]
   ],
-  "stat": { "pre": "MAXIMUM FINE FOR NON-COMPLIANT AI DECISIONS:", "big": "£17.5M", "post": "OR 4% OF GLOBAL TURNOVER." },
+  "stat": { "pre": "UK AI USERS WITH NO STAFF POLICY AT ALL:", "big": "83%", "post": "ONLY 17% HAVE ANY POLICY AT ALL." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Know what your AI is deciding before the ICO asks.",
+  "tagline": "Know which rules already apply to your AI.",
   "url": "kaizenaiconsulting.com"
 }
