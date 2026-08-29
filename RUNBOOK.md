@@ -857,3 +857,29 @@ hands it over.
   clean. TikTok `6a913cf10d8b1996ffcf4e40` returned the known false 409 on
   `posts_create_post` but had actually been created, confirmed via
   `posts_list`. Row 306 Complete.
+- 2026-08-29 — eighteenth live run, sheet row 307, "There's Still No UK AI
+  Act: Here's the Regulation That Actually Applies to Your Business". No
+  `PENDING-PUBLISH.md` backlog to clear. Push access failed on the first
+  `git push --dry-run origin main` with a non-fast-forward rejection; a
+  `git fetch origin main` showed local `main` two commits behind
+  `origin/main`, the same stale-ref caching artefact logged on 2026-08-21/
+  08-22/08-26, fixed with `git branch -f main origin/main`. `ffmpeg`,
+  `ffprobe` and `imagemagick` were already present on this container, no
+  reinstall needed. Timeliness check found nothing fresher than the queued
+  topic, so took the next Pending row as normal. Illustration used the
+  subject-left, clear-right convention throughout (3:2, 4:5, 9:16): a UK
+  small business owner examining an open ledger with a magnifying glass
+  beside a glowing circuit-pattern AI orb. All three illustrations, both
+  covers and the hybrid video QC'd clean on the first generation and first
+  render, no regenerations needed. Higgsfield balance was healthy (298.69
+  credits) so a real `kling3_0_turbo` animation ran; `media_import_url`
+  worked cleanly, no `SignatureDoesNotMatch`. Generation took a little over
+  4 minutes. Draft presented and approved by Prad in-session before any
+  publish call. Blog post 6839,
+  https://kaizenaiconsulting.com/uk-ai-regulation-no-ai-act-what-applies/,
+  Google Business post (accepted, PROCESSING at submission), LinkedIn
+  `6a92903e68cedd96535573eb`, X `6a92904aa225b15929e36767`, Instagram
+  `6a929061980343a2bf0a7f2d`, all published clean with no false 409s.
+  TikTok `6a929065a19e30d32ed9207b` returned the known false 409 on
+  `posts_create_post` but had actually been created, confirmed via
+  `posts_list` and then via `posts_get`. Row 307 Complete.
