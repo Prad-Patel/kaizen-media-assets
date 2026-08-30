@@ -883,3 +883,31 @@ hands it over.
   TikTok `6a929065a19e30d32ed9207b` returned the known false 409 on
   `posts_create_post` but had actually been created, confirmed via
   `posts_list` and then via `posts_get`. Row 307 Complete.
+- 2026-08-30 — nineteenth run, sheet row 308, "The EU AI Act Delay: What the
+  Digital Omnibus Means for UK Firms Selling Into Europe". Push access
+  verified first (same recurring stale-local-`main` caching artefact as
+  2026-08-21/22/26/29, fixed with `git branch -f main origin/main`). No
+  `PENDING-PUBLISH.md` backlog, no orphaned prior-day assets. `ffmpeg` and
+  `imagemagick` needed reinstalling on this container. Timeliness check found
+  nothing fresher than the queued topic. Illustration used the subject-left,
+  clear-right convention throughout (3:2, 4:5, 9:16): a UK business owner
+  examining a stamped compliance document beside a paused hourglass, with
+  shipping crates and a cargo ship visible through a window. The first 9:16
+  generation had the known top/bottom/top background seam (recurring since
+  2026-08-04), confirmed by pixel sampling and fixed in one regeneration with
+  the "one continuous sheet of paper" single-canvas wording. Higgsfield
+  balance was healthy (283.69 credits) so a real `kling3_0_turbo` animation
+  ran; `media_import_url` worked cleanly, no `SignatureDoesNotMatch`. Hybrid
+  video QC'd clean on the first render across all checked frames. Full draft
+  (blog post, captions, both covers, video) built, pushed to `main`, and
+  presented for approval in-session. **Prad then asked to skip this topic
+  instead of publishing it and move straight to the next one.** Sheet row 308
+  was set to Complete via the sheet updater per that explicit instruction,
+  without any publish step run: no WordPress/Google Business post, no Zernio
+  posts, for this topic. The covers, 9:16 illustration and hybrid video for
+  this topic remain committed on `main` at `image/2026-08-30-eu-ai-act-delay-
+  {3x2,4x5,9x16}.jpg` and `video/2026-08-30-eu-ai-act-delay.mp4`, built but
+  intentionally never published. Noting this explicitly so a future run does
+  not mistake these for an orphaned draft in the pattern hit repeatedly on
+  2026-08-13, 08-15/16, 08-19 and 08-23/24: this one was seen and deliberately
+  skipped, not missed.
