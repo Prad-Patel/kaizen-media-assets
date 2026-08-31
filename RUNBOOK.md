@@ -911,3 +911,57 @@ hands it over.
   not mistake these for an orphaned draft in the pattern hit repeatedly on
   2026-08-13, 08-15/16, 08-19 and 08-23/24: this one was seen and deliberately
   skipped, not missed.
+- 2026-08-31 — twentieth run. Push access verified first (local `main` was
+  badly stale, well behind `origin/main`; fixed with `git fetch origin main`
+  and `git branch -f main origin/main`). `ffmpeg` and `imagemagick` needed
+  reinstalling on this container. Found a new instance of the orphaned-draft
+  pattern (previously hit 08-13, 08-15/16, 08-19, 08-23/24): after the
+  2026-08-30 EU AI Act Delay topic was logged as skipped, the same session
+  went on to build two more full asset sets ("BigChange Lightning/Cooper AI
+  launch" and "OpenAI Astra math breakthrough," both covers + 9:16 + hybrid
+  video) that were pushed to `main` but never logged, never presented, and
+  never published, the first time two orphaned topics landed in one day.
+  Confirmed via `posts_list` that neither had gone live, then rebuilt text
+  for both from scratch and presented both drafts for approval before
+  touching the topic queue, per the backlog-first rule; no new topic drafted,
+  consistent with the 2026-08-09 precedent. QC on the pre-built videos
+  surfaced a real accuracy question: their stat cards carried specific claims
+  ("fix rate 75% to 90%," "renewal price up 25%, up from a 15% launch rate,"
+  "reviews so far: mixed," "verified by a Fields Medalist," "same lab was
+  wrong before") that had not been sourced in this session. Verified all of
+  them against fresh web search rather than trusting or discarding them
+  blind: every one checked out, and the OpenAI search surfaced a materially
+  important fact the original blog draft had missed entirely, that the
+  August 2026 Astra release has already drawn research-misconduct allegations
+  from mathematicians (an uncredited-reuse claim from a Yeshiva University
+  professor) on top of a genuine prior incident (an October 2025 false GPT-5
+  Erdős-problem claim that OpenAI retracted). Rewrote both blog posts and all
+  captions to lead with the better-sourced numbers and fold in that
+  credibility caveat, replacing weaker or unsupported figures used in the
+  first draft pass. Both drafts approved by Prad in-session, with an explicit
+  instruction to publish both, staggered six hours apart, in either order.
+  Zernio's `posts_create`/`posts_create_post` support native per-post
+  scheduling (`schedule_minutes` / `scheduled_for`), which is robust
+  regardless of session lifetime; the WP + GMB publisher workflow has no
+  scheduling field and publishes immediately on call, and a session-side
+  multi-hour delay was judged unreliable in this environment given container
+  reclaim on inactivity. Published BigChange/Cooper's blog, Google Business
+  post and all four social posts immediately; published OpenAI Astra's blog
+  and Google Business post immediately too (no reliable way to delay those)
+  but scheduled all four of its social posts for 2026-08-31 14:03 UTC, six
+  hours out. Flagged this asymmetry to Prad. BigChange/Cooper: blog post
+  6842, https://kaizenaiconsulting.com/bigchange-cooper-ai-cost/, Google
+  Business post (accepted, PROCESSING at submission), LinkedIn
+  `6a9534bc85d057650eef5f80`, X `6a9534ce743d63692081ca03`, Instagram
+  `6a9534e9e137981c80476948`, all published clean with no false 409s. TikTok
+  `6a9534f61845afb2403f8691` returned the known false 409 on
+  `posts_create_post` but had actually been created, confirmed via
+  `posts_list`. OpenAI Astra: blog post 6845,
+  https://kaizenaiconsulting.com/openai-astra-math-breakthroughs/, Google
+  Business post (accepted, PROCESSING at submission), LinkedIn
+  `6a95355e22b2a41418ab8b76`, X `6a95356390f12d116af2271b`, Instagram
+  `6a95356c5eb6762c9b4dd114`, TikTok `6a95356f90f12d116af22b0e`, all
+  scheduled cleanly for 14:03 UTC. No sheet row updated for either topic,
+  both dynamic/backlog topics outside the queue, consistent with prior
+  dynamic-topic handling. The queue's next Pending row remains untouched for
+  a future run.
