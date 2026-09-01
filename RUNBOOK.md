@@ -965,3 +965,33 @@ hands it over.
   both dynamic/backlog topics outside the queue, consistent with prior
   dynamic-topic handling. The queue's next Pending row remains untouched for
   a future run.
+- 2026-09-01 — twenty-first live run, sheet row 310, "Checkatrade's Free
+  TradeMore App: Free AI Job Management for Every UK Tradesperson". No
+  `PENDING-PUBLISH.md` backlog, but a related bookkeeping issue turned up: the
+  queue's first Pending row (309, "BigChange Lightning and Cooper") was still
+  marked Pending even though that exact content was already researched,
+  drafted and published the previous day (2026-08-31) as a dynamic/backlog
+  topic. Set that row to Complete via the sheet updater before drafting
+  anything, to avoid duplicating a post that had already gone live, then took
+  the following Pending row (310) as today's topic. Push access verified
+  first; `ffmpeg`, `ffprobe` and `imagemagick` needed reinstalling on this
+  container. Timeliness check (DeepSeek funding, an Anthropic account
+  security incident, an OpenAI internal-agent reward-hacking report,
+  California AI legislation, a ransomware group's misuse of Cursor Agent)
+  found nothing clearly stronger than the queue topic for a UK small-business
+  audience, so proceeded with the queue as normal. Illustration used the
+  subject-left, clear-right convention throughout (3:2, 4:5, 9:16): a UK
+  electrician beside his van and toolbox, checking a phone showing a chat
+  bubble and quote/invoice icon. All three illustrations, both covers and the
+  hybrid video QC'd clean on the first generation and first render, no
+  regenerations needed. Higgsfield balance was healthy (238.69 credits) so a
+  real `kling3_0_turbo` animation ran; `media_import_url` worked cleanly, no
+  `SignatureDoesNotMatch`. Draft presented and approved by Prad in-session
+  before any publish call. Blog post 6848,
+  https://kaizenaiconsulting.com/checkatrade-trademore-free-ai-job-management/,
+  Google Business post (accepted, PROCESSING at submission), LinkedIn
+  `6a96828b6306791a13042a8a`, X `6a968299a7daed7813907cb3`, Instagram
+  `6a9682c0d5e1aa5d411b7bd1`, all published clean with no false 409s. TikTok
+  `6a9682ca04e784fa465495a7` returned the known false 409 on
+  `posts_create_post` but had actually been created, confirmed via
+  `posts_list` and then via `posts_get`. Row 310 Complete.
