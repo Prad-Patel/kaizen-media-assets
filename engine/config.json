@@ -1,12 +1,12 @@
 {
-  "hook": ["NO UK AI ACT.", "STILL FULLY REGULATED."],
+  "hook": ["FREE AI FOR", "EVERY TRADE."],
   "points": [
-    ["83% have zero AI policy."],
-    ["UK GDPR still applies."],
-    ["Fines hit 4% turnover."]
+    ["One inbox for everything."],
+    ["Auto quotes and invoices."],
+    ["Free tier, real limits."]
   ],
-  "stat": { "pre": "UK AI USERS WITH NO STAFF POLICY AT ALL:", "big": "83%", "post": "ONLY 17% HAVE ANY POLICY AT ALL." },
+  "stat": { "pre": "UK TRADES LOSE TO ADMIN EACH WEEK:", "big": "8 HOURS", "post": "WORTH OVER £17,000 A YEAR." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Know which rules already apply to your AI.",
+  "tagline": "Know what to check before you switch.",
   "url": "kaizenaiconsulting.com"
 }
