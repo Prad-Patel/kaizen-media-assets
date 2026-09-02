@@ -995,3 +995,38 @@ hands it over.
   `6a9682ca04e784fa465495a7` returned the known false 409 on
   `posts_create_post` but had actually been created, confirmed via
   `posts_list` and then via `posts_get`. Row 310 Complete.
+- 2026-09-02 — twenty-second live run, sheet row 311, "How One AI Voice Agent
+  Booked $74,000 of Work From 1,300 Calls". Push access verified first (local
+  `main` was two commits behind `origin/main`, a plain fast-forward, not the
+  proxy-auth failure the check guards against). Also found and cleared a
+  bookkeeping gap: row 309 ("BigChange Lightning and Cooper") was still
+  Pending even though that exact content had already been published on
+  2026-08-31 as a dynamic/backlog topic, so it was set to Complete before
+  drafting anything new, same pattern as the row-309-adjacent fix on
+  2026-09-01. No `PENDING-PUBLISH.md` backlog. `ffmpeg`, `ffprobe` and
+  `imagemagick` needed reinstalling on this container. The queue topic's
+  headline figure, "$74,000 of Work From 1,300 Calls," could not be sourced
+  to anything real after several searches, the same failure mode as the Sora
+  "$15M a day" figure on 2026-08-18 and the "58% of UK firms" figure on
+  2026-08-19, so the post was built instead around well-corroborated UK
+  missed-call figures: an average £24,000 a year lost per trades business
+  (Digital X Marketing), rising to £33,000 for electricians specifically
+  (ClearCall), 62% of inbound calls going unanswered, 85% of callers who hit
+  voicemail not leaving a message, and a lead contacted within five minutes
+  being 21 times more likely to convert (RadiusBoost). Illustration used the
+  subject-left, clear-right convention throughout (3:2, 4:5, 9:16): a UK
+  plumber working under a kitchen sink beside a smartphone showing an AI
+  agent answering the call automatically. All three illustrations, both
+  covers and the hybrid video QC'd clean on the first generation and first
+  render, no regenerations needed; the 9:16 measured ~30% clear top and ~27%
+  clear bottom by pixel bounding box, comfortably inside spec. Higgsfield
+  balance was healthy (219.69 credits) so a real `kling3_0_turbo` animation
+  ran; `media_import_url` worked cleanly, no `SignatureDoesNotMatch`. Draft
+  presented and approved by Prad in-session before any publish call. Blog
+  post 6851, https://kaizenaiconsulting.com/ai-phone-agents-missed-calls-uk-trades/,
+  Google Business post (accepted, PROCESSING at submission), LinkedIn
+  `6a97d1fd50bd9194dbaabed7`, X `6a97d20e9eb5feeccc23f8e1`, Instagram
+  `6a97d231938c46d7b5738b77`, all published clean with no false 409s. TikTok
+  `6a97d2355fc7cc8411099539` returned the known false 409 on
+  `posts_create_post` but had actually been created, confirmed via
+  `posts_list` and then via `posts_get`. Row 311 Complete.
