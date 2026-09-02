@@ -998,12 +998,8 @@ hands it over.
 - 2026-09-02 — twenty-second live run, sheet row 311, "How One AI Voice Agent
   Booked $74,000 of Work From 1,300 Calls". Push access verified first (local
   `main` was two commits behind `origin/main`, a plain fast-forward, not the
-  proxy-auth failure the check guards against). Also found and cleared a
-  bookkeeping gap: row 309 ("BigChange Lightning and Cooper") was still
-  Pending even though that exact content had already been published on
-  2026-08-31 as a dynamic/backlog topic, so it was set to Complete before
-  drafting anything new, same pattern as the row-309-adjacent fix on
-  2026-09-01. No `PENDING-PUBLISH.md` backlog. `ffmpeg`, `ffprobe` and
+  proxy-auth failure the check guards against). No `PENDING-PUBLISH.md`
+  backlog. `ffmpeg`, `ffprobe` and
   `imagemagick` needed reinstalling on this container. The queue topic's
   headline figure, "$74,000 of Work From 1,300 Calls," could not be sourced
   to anything real after several searches, the same failure mode as the Sora
