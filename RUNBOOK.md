@@ -1026,3 +1026,40 @@ hands it over.
   `6a97d2355fc7cc8411099539` returned the known false 409 on
   `posts_create_post` but had actually been created, confirmed via
   `posts_list` and then via `posts_get`. Row 311 Complete.
+- 2026-09-03 — twenty-third live run, sheet row 312, "46% of UK Construction
+  Pros Now Use AI: Inside the £23,000 Productivity Gap". Push access verified
+  first (local `main` was 7 commits behind `origin/main`, the same recurring
+  stale-ref caching artefact logged repeatedly since 2026-08-21, fixed with
+  `git branch -f main origin/main`). No `PENDING-PUBLISH.md` backlog and
+  nothing built past 2026-09-02 (already confirmed live in the previous
+  entry), so no orphaned drafts to clear. `ffmpeg`, `ffprobe` and
+  `imagemagick` needed reinstalling on this container. Timeliness check found
+  nothing from the prior 24-48h clearly stronger for this audience than the
+  queued topic (checked Astra's cybersecurity benchmark, Gemini video
+  updates, and the Anthropic/Sony-Warner Chappell suit; none UK-small-
+  business-actionable), so took the next Pending row as normal. Illustration
+  used the subject-left, clear-right convention throughout (3:2, 4:5, 9:16):
+  a UK construction site supervisor checking a glowing AI assistant icon on
+  a tablet beside a timber-frame house under scaffolding. All three
+  illustrations were clean on the first generation, no regenerations needed.
+  The first 3:2 cover render caught a genuine layout bug: the second
+  headline line ("£23k saved a year.") ran into the roofline artwork on the
+  right-cropped 3:2 composite, the same "long line runs into artwork"
+  failure mode logged on 2026-08-04/08-05; fixed by shortening the line to
+  "£23k a year." and re-rendering, clean on the rebuild. Higgsfield balance
+  was healthy (204.69 credits pre-generation, 189.69 after) so a real
+  `kling3_0_turbo` animation ran; `media_import_url` worked cleanly, no
+  `SignatureDoesNotMatch`. Hybrid video QC'd clean on the first render across
+  all checked frames (2.5s/6s/12.5s/17.3s/17.6s/20s). Draft presented and
+  approved by Prad in-session before any publish call. This session's
+  harness-level branch policy again defaulted to a feature branch (same
+  conflict logged 2026-08-23 onward); pushed straight to `main` as every
+  prior run has, all fast-forward, then also synced the feature branch to
+  satisfy the harness's own unpushed-commit check. Blog post 6854,
+  https://kaizenaiconsulting.com/uk-construction-ai-productivity-gap/,
+  Google Business post (accepted, PROCESSING at submission), LinkedIn
+  `6a99261a54fe6944941744fd`, X `6a99262906a98eddbd93de7e`, Instagram
+  `6a992646ab8f26aa642e02cc`, all published clean with no false 409s. TikTok
+  `6a99264a7b8c53715d7a1089` returned the known false 409 on
+  `posts_create_post` but had actually been created, confirmed via
+  `posts_list` and then via `posts_get`. Row 312 Complete.
