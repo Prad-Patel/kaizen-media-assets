@@ -1063,3 +1063,38 @@ hands it over.
   `6a99264a7b8c53715d7a1089` returned the known false 409 on
   `posts_create_post` but had actually been created, confirmed via
   `posts_list` and then via `posts_get`. Row 312 Complete.
+- 2026-09-04 — twenty-fourth live run, sheet row 313, "Deepfake Scams Are Now
+  a Top Fraud Threat: How to Protect Your Trades Business". No
+  `PENDING-PUBLISH.md` backlog and nothing orphaned since the 2026-09-03 run
+  (confirmed already live). Push access failed on the first `git push
+  --dry-run origin main` with a non-fast-forward rejection; local `main` was
+  one commit behind `origin/main`, the same recurring stale-ref caching
+  artefact logged repeatedly since 2026-08-21, fixed with `git branch -f main
+  origin/main`. `ffmpeg`, `ffprobe` and `imagemagick` needed installing on
+  this container. Timeliness check (Fable 5.1/Mythos 5.1 launch, OpenAI
+  GPT-Live, a Danish competition-authority AI statement) found nothing
+  clearly stronger for a UK small-business audience than the queued topic, so
+  took the next Pending row as normal. Sourced the piece around UK Finance's
+  Annual Fraud Report 2026 rather than the weaker vendor-blog stats that
+  first surfaced in search: £1.28bn total UK payment fraud losses in 2025 (up
+  4%), APP/impersonation fraud up 19% to £576.4m, and invoice/mandate fraud
+  specifically at £41.3m across 2,305 cases, averaging almost £18,000 a hit.
+  Illustration used the subject-left, clear-right convention throughout (3:2,
+  4:5, 9:16): a UK tradesperson beside his van, warily eyeing a phone with a
+  pulsing incoming-call ripple and a warning-triangle icon. All three
+  illustrations, both covers and the hybrid video QC'd clean on the first
+  generation and first render, no regenerations needed. Higgsfield balance
+  was healthy (189.69 credits) so a real `kling3_0_turbo` animation ran;
+  `media_import_url` worked cleanly, no `SignatureDoesNotMatch`. Draft
+  presented and approved by Prad in-session before any publish call. Blog
+  post 6857, https://kaizenaiconsulting.com/deepfake-scams-uk-trades-protection/,
+  Google Business post (accepted, PROCESSING at submission), LinkedIn
+  `6a9a76e158012b405d85d9f8`, X `6a9a76f0b70edd0947d1392c`, both published
+  clean with no false 409s. Instagram `6a9a7718068f4118c8df7564` published
+  clean but took roughly 11 minutes to leave `publishing`/`processing`
+  status, well beyond the usual few minutes for a cover-image stitch;
+  confirmed via `posts_get_post` throughout that it was still in-flight
+  (`publishAttempts: 0`, no `errorMessage`) rather than stuck, so waited it
+  out rather than retrying. TikTok `6a9a771c068f4118c8df7670` returned the
+  known false 409 on `posts_create_post` but had actually been created,
+  confirmed via `posts_list` and then via `posts_get`. Row 313 Complete.
