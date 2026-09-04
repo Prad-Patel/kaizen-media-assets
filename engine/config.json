@@ -1,12 +1,12 @@
 {
-  "hook": ["FREE AI FOR", "EVERY TRADE."],
+  "hook": ["THAT VOICE MIGHT", "NOT BE REAL."],
   "points": [
-    ["One inbox for everything."],
-    ["Auto quotes and invoices."],
-    ["Free tier, real limits."]
+    ["Voices cloned in seconds."],
+    ["£1.28bn lost to fraud."],
+    ["Always call back first."]
   ],
-  "stat": { "pre": "UK TRADES LOSE TO ADMIN EACH WEEK:", "big": "8 HOURS", "post": "WORTH OVER £17,000 A YEAR." },
+  "stat": { "pre": "INVOICE SCAMS AVERAGE:", "big": "£18,000", "post": "LOST PER INCIDENT IN THE UK." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Know what to check before you switch.",
+  "tagline": "Verify before you pay. Every time.",
   "url": "kaizenaiconsulting.com"
 }
