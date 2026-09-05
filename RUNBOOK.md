@@ -1098,3 +1098,36 @@ hands it over.
   out rather than retrying. TikTok `6a9a771c068f4118c8df7670` returned the
   known false 409 on `posts_create_post` but had actually been created,
   confirmed via `posts_list` and then via `posts_get`. Row 313 Complete.
+- 2026-09-05 — twenty-fifth live run, sheet row 314, "54% of UK Firms Use AI
+  But Only 12% Earn More: Closing the Productivity-Profit Gap". No
+  `PENDING-PUBLISH.md` backlog and nothing orphaned since the 2026-09-04 run
+  (confirmed already live). Push access verified first, clean, no stale-ref
+  issue today. `ffmpeg` and `imagemagick` needed installing on this container.
+  Timeliness check found nothing clearly stronger for a UK small-business
+  audience than the queued topic, so took the next Pending row as normal.
+  Sourced the piece around the BCC/Atos "Future of Work" report (March 2026):
+  54% of UK firms now use AI (up from 35%), 75% report a productivity gain,
+  but only 12% see any revenue increase, with marketing and admin (72% each)
+  the two most common uses. Illustration used the subject-left, clear-right
+  convention throughout (3:2, 4:5, 9:16): a UK small business owner working
+  quickly at a laptop surrounded by productivity checkmarks while a small
+  stack of coins stays flat and stationary. The first 4:5 generation came
+  back with the known top/bottom background seam plus a stray doodle mark
+  near the figure's hand, fixed in one regeneration with the stronger
+  single-canvas wording; the 3:2 and 9:16 were clean on the first pass.
+  Higgsfield balance was healthy (174.69 credits) so a real `kling3_0_turbo`
+  animation ran; `media_import_url` worked cleanly, no `SignatureDoesNotMatch`.
+  Hybrid video QC'd clean on the first render across all checked frames. Hit
+  the harness's feature-branch default again (same conflict logged repeatedly
+  since 08-23): pushed straight to `main` as the runbook requires for both the
+  covers/9:16 commit and the video commit, then synced the feature branch
+  each time. Draft presented and approved by Prad in-session before any
+  publish call. Blog post 6860,
+  https://kaizenaiconsulting.com/ai-productivity-profit-gap/, Google Business
+  post (accepted, PROCESSING at submission), LinkedIn
+  `6a9bc96c53e41f024a45de9b`, X `6a9bc9790e57b4a521fb7110`, Instagram
+  `6a9bc9863cffc18395464d49`, all published clean with no false 409s. TikTok's
+  `posts_create_post` call itself timed out client-side after 60s; checked
+  `posts_list` before retrying per the runbook's guidance and found the post
+  had actually been created (`6a9bc98a3cffc18395464e8b`), confirmed published
+  via `posts_get`, so no duplicate was sent. Row 314 Complete.
