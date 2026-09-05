@@ -1,12 +1,12 @@
 {
-  "hook": ["THAT VOICE MIGHT", "NOT BE REAL."],
+  "hook": ["AI ADOPTION IS UP.", "PROFIT ISN'T."],
   "points": [
-    ["Voices cloned in seconds."],
-    ["£1.28bn lost to fraud."],
-    ["Always call back first."]
+    ["54% of UK firms use AI."],
+    ["Most stuck on admin work."],
+    ["Just 12% see more revenue."]
   ],
-  "stat": { "pre": "INVOICE SCAMS AVERAGE:", "big": "£18,000", "post": "LOST PER INCIDENT IN THE UK." },
+  "stat": { "pre": "OF UK FIRMS USING AI HAVE SEEN:", "big": "12%", "post": "ANY INCREASE IN REVENUE." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Verify before you pay. Every time.",
+  "tagline": "Point AI at revenue, not just admin.",
   "url": "kaizenaiconsulting.com"
 }
