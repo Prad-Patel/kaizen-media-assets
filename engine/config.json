@@ -1,12 +1,12 @@
 {
-  "hook": ["AI ADOPTION IS UP.", "PROFIT ISN'T."],
+  "hook": ["FREE AI TRAINING.", "AT SCREWFIX."],
   "points": [
-    ["54% of UK firms use AI."],
-    ["Most stuck on admin work."],
-    ["Just 12% see more revenue."]
+    ["Masterclasses at Screwfix Live."],
+    ["Free AI certificate for members."],
+    ["Part of a 10m-worker UK push."]
   ],
-  "stat": { "pre": "OF UK FIRMS USING AI HAVE SEEN:", "big": "12%", "post": "ANY INCREASE IN REVENUE." },
+  "stat": { "pre": "UK GOVERNMENT TARGET:", "big": "10M", "post": "WORKERS TRAINED IN AI SKILLS BY 2030." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Point AI at revenue, not just admin.",
+  "tagline": "Free training is the start, not the finish.",
   "url": "kaizenaiconsulting.com"
 }
