@@ -475,23 +475,36 @@ character was generated from scratch with `soul_2` and no photographic
 reference of any real individual. Prad's own reference
 (`331c3e04-d30d-4a9e-8202-063aaf95a0cb`) is retired and must not be used.
 
-The locked presenter reference is Higgsfield job
-`b5919179-33be-46d2-af51-67201bf9e9b0`. Pass that id as the
+Prad asked on 2026-09-06 for the presenter to match his own demographic
+without being his face, so the character is generated from a text description
+of that demographic and never from his photo. The locked presenter reference
+is Higgsfield job `aeefcda8-22ee-43bc-925e-63f23324edb7`. Pass that id as the
 `image_references` media on every presenter clip so the face stays consistent;
 never regenerate a new likeness, because the identity cannot be recovered once
 lost. The written description is the continuity contract, so keep it verbatim:
 
-> British woman in her early thirties, light brown shoulder-length wavy hair,
-> minimal everyday makeup, warm and direct expression, cream fine-knit jumper
-> over a white collared shirt, bright modern home office with a plain pale
-> wall, a window with soft daylight and a blurred pot plant behind her,
-> natural British English accent.
+> British South Asian man in his early thirties, neat short black hair, short
+> stubble, plain smart navy button-down shirt, home office with a plain pale
+> wall and a bookshelf partly in frame, natural British English accent.
+
+**Realism beats polish, and this took three attempts to learn.** The workflow's
+`references/ugc-character.md` mandates a "Beauty Floor" of model-tier looks;
+following it produced a glossy stock-model character that Prad rejected as
+fake. Its own User Override Rule says user-specified detail wins over its
+defaults, so override the beauty floor deliberately. What worked: prompt for a
+"candid smartphone snapshot" of an "ordinary" person "rather than a model",
+ask for natural skin with visible pores, slight uneven tone and a blemish or
+two, mild facial asymmetry, flat ordinary indoor daylight with no studio or
+rim light, mild sensor noise, and rule out beauty filter, smoothing,
+airbrushing, HDR, bokeh and cinematic grade. Do not overshoot the other way
+either: a first attempt at "ordinary" returned someone who looked exhausted
+and unkempt in a t-shirt, which is not credible as a business presenter. The
+balance is a real person who tidied themselves up to film, alert and warm,
+presentable but not glamorous.
 
 If the character ever needs replacing, generate a new one with `soul_2` at
-`3:4` and `2k`, keeping the four mandatory realism anchors from the workflow's
-`references/ugc-character.md` ("high model facial features", "symmetrical
-features", "well-proportioned figure", "natural skin texture"), then record the
-new job id and description here.
+`3:4` and `2k` using that realism recipe, then record the new job id and
+description here.
 
 Two hard limits on presenter content, both of which the UGC workflow's own
 safety gate also enforces:
