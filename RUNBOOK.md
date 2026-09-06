@@ -30,7 +30,13 @@ unattended.
 **Topic queue** — Google Sheet "Kaizen AI Blog Automation", document
 `1Am_uZBqtZoEaTN6EJoba4wFGgwuxNQiGoVYN4t7THFg`, first tab. Columns: Topic,
 Keyword, Status, row_number. Take the first row where Status is `Pending`. Set
-it to `Complete` only after the post is actually live.
+it to `Complete` only after the post is actually live. The queue ran dry on
+2026-09-06 (every row Complete) and the Sheet connector cannot insert new
+rows, only update Status on existing ones, so it cannot be refilled from the
+session. Per the daily-sequence step below, an empty queue is no longer a
+stop condition: generate a topic for the day instead and log it as a dynamic
+topic. Still check this sheet first each day in case Prad has added fresh
+Pending rows some other way.
 
 **Sheet updater** — n8n workflow `96DUquYtdDHveiqF`, "Kaizen — Sheet Status
 Updater (Cowork)", published. The Google Drive connector is read-only, so
@@ -336,8 +342,21 @@ those captions should point at the bio.
    every other run, and the queue's next Pending row stays untouched for a
    future day rather than being consumed or marked Complete. If nothing
    clearly beats it, read the topic queue and take the first Pending row as
-   before. If the queue is empty and nothing timely surfaced either, stop and
-   tell Prad rather than inventing a topic with no grounding.
+   before.
+
+   **Generate a topic every day (standing instruction from 2026-09-06).** The
+   queue ran dry that day, every one of its 190-odd rows Complete and the
+   Sheet connector has no way to insert new rows, so a bare "stop, the queue
+   is empty" is no longer the right default. When there is no Pending row,
+   do not stop: research the day's AI and small-business landscape (the same
+   web search as the timeliness check above, widened if nothing jumps out)
+   and pick the strongest angle for the day, sourced and current, in Kaizen's
+   niche (UK small business, trades, AI tools and platforms). Sense-check it
+   against the Run log so it does not retread ground already covered. Treat
+   it exactly like a dynamic topic: no Sheet row, logged in the Run log at
+   the end of the day. Only stop and tell Prad if a genuine blocker shows up
+   (push access down, no web access, nothing sourceable at all), never merely
+   because the queue itself is empty.
 3. Research the topic on the web. Prefer UK sources, current figures, and
    anything that gives a concrete number worth building the video around.
 4. Write the blog post: 900 to 1,400 words of HTML, British spelling, a clear
