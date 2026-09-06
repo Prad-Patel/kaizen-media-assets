@@ -468,14 +468,30 @@ both:
 
 The default shape is presenter hook first, vector payoff second.
 
-**The presenter character.** Prad is the on-camera presenter and the recurring
-face of the channel. He supplied a reference photo on 2026-09-06 and authorised
-its use. The locked Higgsfield reference is `media_id
-331c3e04-d30d-4a9e-8202-063aaf95a0cb` (a cropped head-and-shoulders still).
-Reuse that same media_id every day so the character stays consistent; do not
-regenerate a new likeness. Keep the description stable too: British South Asian
-man, early thirties, short dark hair, neat short beard, smart navy shirt,
-bright modern home office, natural British English accent.
+**The presenter character.** The presenter is a fully generated character, not
+Prad and not any other real person. Prad first supplied his own photo on
+2026-09-06 and then asked for the presenter to look like someone else, so the
+character was generated from scratch with `soul_2` and no photographic
+reference of any real individual. Prad's own reference
+(`331c3e04-d30d-4a9e-8202-063aaf95a0cb`) is retired and must not be used.
+
+The locked presenter reference is Higgsfield job
+`b5919179-33be-46d2-af51-67201bf9e9b0`. Pass that id as the
+`image_references` media on every presenter clip so the face stays consistent;
+never regenerate a new likeness, because the identity cannot be recovered once
+lost. The written description is the continuity contract, so keep it verbatim:
+
+> British woman in her early thirties, light brown shoulder-length wavy hair,
+> minimal everyday makeup, warm and direct expression, cream fine-knit jumper
+> over a white collared shirt, bright modern home office with a plain pale
+> wall, a window with soft daylight and a blurred pot plant behind her,
+> natural British English accent.
+
+If the character ever needs replacing, generate a new one with `soul_2` at
+`3:4` and `2k`, keeping the four mandatory realism anchors from the workflow's
+`references/ugc-character.md` ("high model facial features", "symmetrical
+features", "well-proportioned figure", "natural skin texture"), then record the
+new job id and description here.
 
 Two hard limits on presenter content, both of which the UGC workflow's own
 safety gate also enforces:
