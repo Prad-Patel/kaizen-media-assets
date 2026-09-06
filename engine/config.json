@@ -1,12 +1,12 @@
 {
-  "hook": ["FREE AI TRAINING.", "AT SCREWFIX."],
+  "hook": ["STOP USING AI", "LIKE A SEARCH BOX."],
   "points": [
-    ["Masterclasses at Screwfix Live."],
-    ["Free AI certificate for members."],
-    ["Part of a 10m-worker UK push."]
+    ["The new models finish jobs."],
+    ["Not just answer questions."],
+    ["Hand over one weekly job."]
   ],
-  "stat": { "pre": "UK GOVERNMENT TARGET:", "big": "10M", "post": "WORKERS TRAINED IN AI SKILLS BY 2030." },
+  "stat": { "pre": "76% OF SMALL FIRMS USE AI. ONLY", "big": "14%", "post": "HAVE IT EMBEDDED IN REAL OPERATIONS." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Free training is the start, not the finish.",
+  "tagline": "Don't just ask. Hand it over.",
   "url": "kaizenaiconsulting.com"
 }

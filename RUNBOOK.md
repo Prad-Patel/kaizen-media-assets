@@ -431,12 +431,71 @@ every day and matched to the topic, with the typography composited on top by
 every word is real type added after generation. Blog and Google Business get
 the 3:2, X and the Instagram/TikTok covers get the 4:5.
 
-**The daily video is silent.** Feeds autoplay muted and the captions carry the
-argument. The silent AAC track added for platform compatibility does not change
-this. The in-house `musicgen_daily.py` bed still exists behind `MUSIC=1` for a
-one-off, but the daily post does not use it. Licensed and AI-generated tracks
-were tried repeatedly and always sounded wrong once cut to length, so do not
-reach for those again either.
+**The daily video was silent until 2026-09-06.** Feeds autoplay muted and the
+captions carried the argument. The in-house `musicgen_daily.py` bed still exists
+behind `MUSIC=1` for a one-off, but the daily post does not use it. Licensed and
+AI-generated music tracks were tried repeatedly and always sounded wrong once cut
+to length, so do not reach for those again. Superseded in part by the presenter
+direction below: presenter segments carry real speech. The vector sections stay
+silent, and every argument must still survive with the sound off, so on-screen
+typography carries the point even when a voice is present.
+
+## Content direction (set by Prad, 2026-09-06)
+
+This supersedes the trades-led framing used up to 2026-09-05.
+
+**Audience: general small business.** Write for owners of small businesses of
+any kind, not specifically trades. Trades are welcome as an example, never the
+frame. The useful question every day is "what tool or move can a small business
+use to grow?" rather than "what is happening in the industry?".
+
+**Lead with a hook.** Open on a line that earns the next three seconds: "If you
+run a small business, you need to see this", "AI just changed the game for small
+business", "Do this and your business grows". Then pay it off with something
+genuinely trending. The hook is the first thing on screen and the first line of
+every caption. It must be a real claim the piece actually supports, never bait.
+
+**Mix the styles.** Two builds are now in rotation and a day can use either or
+both:
+
+- *Presenter (UGC) segment* — Prad on camera, talking to the reader, voiced.
+  Realistic look, generated with `seedance_2_5`, `mode: 'omni_reference'`,
+  `generate_audio: true`, `aspect_ratio: '9:16'`. Google VEO is not available on
+  the Higgsfield connector (checked 2026-09-06, no catalogue match), so Seedance
+  2.5 is the realistic-look model.
+- *Vector explainer* — the existing `render_hybrid.sh` build, silent, carrying
+  the stat card and end card.
+
+The default shape is presenter hook first, vector payoff second.
+
+**The presenter character.** Prad is the on-camera presenter and the recurring
+face of the channel. He supplied a reference photo on 2026-09-06 and authorised
+its use. The locked Higgsfield reference is `media_id
+331c3e04-d30d-4a9e-8202-063aaf95a0cb` (a cropped head-and-shoulders still).
+Reuse that same media_id every day so the character stays consistent; do not
+regenerate a new likeness. Keep the description stable too: British South Asian
+man, early thirties, short dark hair, neat short beard, smart navy shirt,
+bright modern home office, natural British English accent.
+
+Two hard limits on presenter content, both of which the UGC workflow's own
+safety gate also enforces:
+
+- The presenter is a host giving advice, never a customer giving a testimonial.
+  Do not script invented purchases, results, before-and-afters, or lived
+  experience. First-person experience is only allowed when Prad supplies the
+  words himself and confirms they are true.
+- No income or earnings promises, same as every other channel.
+
+**Costs changed with this direction.** `seedance_2_5` at 9:16 with audio costs
+about 65 credits for 10s at 720p, 135 for 15s at 1080p, against roughly 15 for a
+`kling3_0_turbo` vector clip. Budget accordingly and tell Prad when the balance
+gets low.
+
+**Fetching presenter clips.** A 15s 1080p Seedance clip is too large to come
+back through the `T89V0h08JMpWkCE5` media-fetch workflow: the MCP session expires
+mid-transfer (hit twice on 2026-09-06). Generate presenter clips at **720p**,
+which lands in the size range that bridge handles reliably and costs half as
+much. The session still cannot reach the Higgsfield CDN directly.
 
 ## Business details
 
@@ -1169,3 +1228,34 @@ hands it over.
   than inventing a topic with no grounding. No Gemini or Higgsfield credits
   spent. Flagged to Prad: the "Kaizen AI Blog Automation" sheet needs new
   Pending rows added before the next run can draft anything.
+- 2026-09-06 (same session, after Prad replied) — Prad set two changes live.
+  First, an empty queue must no longer stop the run: generate a topic every
+  day instead (recorded in the daily sequence and the topic queue section).
+  Under that new rule the session drafted "Google and Screwfix Are Bringing
+  Free AI Training to UK Trades" and built full assets: covers, 9:16 base and
+  a `kling3_0_turbo` hybrid video, all QC'd clean and pushed to `main` at
+  `image/2026-09-06-google-screwfix-ai-training-{3x2,4x5,9x16}.jpg` and
+  `video/2026-09-06-google-screwfix-ai-training.mp4`. **Prad then redirected
+  away from trades before approving it, so that topic was never published.**
+  Those files are built-but-skipped, exactly like the 2026-08-30 EU AI Act
+  set: noting it explicitly so a future run does not mistake them for an
+  orphaned draft in the pattern hit on 08-13, 08-15/16, 08-19 and 08-23/24.
+  Second, Prad set the new content direction now recorded in its own section:
+  general small business rather than trades, hook-first openings, a mix of
+  styles, and a voiced on-camera presenter built from a reference photo he
+  supplied and authorised. The character reference was imported to Higgsfield
+  as `331c3e04-d30d-4a9e-8202-063aaf95a0cb` (pushed to the repo briefly for
+  the import, then removed; the commit remains in git history). Redrafted the
+  day around that direction as "AI Just Changed the Game for Small Business:
+  What You Can Actually Hand Over Now", sourced to the 3 September GPT-6 Astra
+  release and the 76%-use / 14%-embedded adoption gap. Dropped an earlier
+  21%/6% version of that gap when it would not verify, the same discipline
+  applied on 08-18, 08-19 and 09-02. Video is the first mixed-style build: a
+  15s voiced Seedance 2.5 presenter opener cut to the vector stat and end
+  card, 22.6s total. Two build notes worth keeping: Google VEO is not in the
+  Higgsfield catalogue at all, and a 15s 1080p Seedance clip is too big to
+  come back through the media-fetch workflow (the MCP session expired twice),
+  so presenter clips are generated at 720p. Assets pushed as
+  `image/2026-09-06-ai-hand-over-jobs-{3x2,4x5}.jpg` and
+  `video/2026-09-06-ai-hand-over-jobs.mp4`. Held at approval, nothing
+  published for either topic today.
