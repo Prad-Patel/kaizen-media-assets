@@ -1288,3 +1288,26 @@ hands it over.
   `image/2026-09-06-ai-hand-over-jobs-{3x2,4x5}.jpg` and
   `video/2026-09-06-ai-hand-over-jobs.mp4`. Held at approval, nothing
   published for either topic today.
+- 2026-09-08 — cleared the 2026-09-06 backlog, "AI Just Changed the Game for
+  Small Business: What You Can Actually Hand Over Now". No `PENDING-PUBLISH.md`
+  file existed, but the 09-06 run log entry showed the topic held at approval
+  with no publish recorded, so treated it as the backlog to clear per the
+  runbook's orphaned-draft handling rather than drafting a fresh topic.
+  Confirmed via `posts_list` that nothing about it had gone live (latest
+  published posts were all from 09-05). Push access verified first (local
+  `main` was stale, fixed with `git branch -f main origin/main`). `npm install`
+  run fresh in `engine/`. Reused the existing covers and the final `-r3` video
+  (the demographic-matched generated presenter cut) rather than re-spending
+  Higgsfield credits; the blog post and captions were never persisted from
+  09-06, so rewrote both from scratch, re-verifying the 76%/14% Goldman Sachs
+  figure, the DSIT 7%-agentic-AI figure, and the GPT-6 Astra 3 September launch
+  facts against fresh web search before reusing them. Draft (video, both
+  covers, blog post, all captions) presented and approved by Prad in-session
+  before any publish call. Blog post 6863,
+  https://kaizenaiconsulting.com/ai-hand-over-jobs/, Google Business post
+  (accepted, PROCESSING at submission), LinkedIn `6a9fbb4d3d51519832943a27`,
+  X `6a9fbb5a106fa1dbda998b59`, Instagram `6a9fbb5e2c45564c241e42ed`, TikTok
+  `6a9fbb61b0c48b72b7942893`, all confirmed published clean via `posts_get`,
+  no false 409s this run. This was a backlog/
+  dynamic topic outside the queue, so no sheet row was updated; the queue's
+  next Pending row remains untouched for a future run.
