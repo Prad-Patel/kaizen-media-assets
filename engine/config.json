@@ -1,12 +1,12 @@
 {
-  "hook": ["STOP USING AI", "LIKE A SEARCH BOX."],
+  "hook": ["SMALL BUSINESS CONFIDENCE", "JUST HIT ROCK BOTTOM."],
   "points": [
-    ["The new models finish jobs."],
-    ["Not just answer questions."],
-    ["Hand over one weekly job."]
+    ["Only 18% expect to grow."],
+    ["29% plan zero AI spend."],
+    ["AI users? Real productivity gains."]
   ],
-  "stat": { "pre": "76% OF SMALL FIRMS USE AI. ONLY", "big": "14%", "post": "HAVE IT EMBEDDED IN REAL OPERATIONS." },
+  "stat": { "pre": "CONFIDENCE AT A RECORD LOW. BUT", "big": "82%", "post": "OF AI USERS REPORT REAL PRODUCTIVITY GAINS." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Don't just ask. Hand it over.",
+  "tagline": "Cut cost. Not corners.",
   "url": "kaizenaiconsulting.com"
 }
