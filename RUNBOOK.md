@@ -1311,3 +1311,49 @@ hands it over.
   no false 409s this run. This was a backlog/
   dynamic topic outside the queue, so no sheet row was updated; the queue's
   next Pending row remains untouched for a future run.
+- 2026-09-08 (same session, second topic) — read the full topic queue after
+  clearing the backlog above: all 313 rows are Complete, zero Pending, same
+  state as 2026-09-06. Per the standing daily-topic-generation policy,
+  researched the day's landscape rather than stopping. A timeliness/topic
+  search surfaced the FSB's Small Business Index: only 18% of small firms now
+  expect to grow (lowest since the index began in 2014), a net confidence
+  balance of -14%, the first time more expect to shrink than grow. Paired it
+  with the uncomfortable counter-figure (IONOS/YouGov: 29% of UK SMBs plan
+  zero AI spend in 2026, 63% think they can stay competitive without it) and
+  a productivity figure (IBTimes UK/Lloyds: 82% of AI-using businesses report
+  real productivity gains) to write "UK Small Business Confidence Just Hit a
+  Record Low. Here's the One Lever Still Working," framed around cost control
+  rather than growth, consistent with the no-income-promises rule. Illustration
+  used the subject-left, clear-right convention throughout (3:2, 4:5, 9:16): a
+  UK small business owner at a desk studying a downward-sloping chart beside a
+  quietly automated task (glowing checkmark). The first 9:16 generation hit the
+  known top/bottom background-seam bug (confirmed by pixel sampling, RGB
+  219/229/239 in the bands vs 229/238/245 in the middle); the first
+  regeneration fixed the banding but drifted the whole background to dark navy
+  instead of the light paper tone used in the other two ratios; a second,
+  more explicit regeneration (naming the light hex value directly) landed
+  clean and consistent. `ffmpeg` and `imagemagick` needed installing on this
+  container. Higgsfield balance was healthy (616.83 credits) so a real
+  `kling3_0_turbo` animation ran; `media_import_url` worked cleanly, no
+  `SignatureDoesNotMatch`. The media-fetch workflow's MCP call hit the
+  documented session-expiry issue on the first attempt at full includeData;
+  retrying with the specific node name (`Media to Base64`) instead of the
+  full payload got it through on the next call, even though this clip (10s,
+  9:16, well under the known large-Seedance-clip size problem) was nowhere
+  near the size that usually causes it, so treat that fetch as worth a retry
+  on transient failure regardless of clip size. Hybrid video QC'd clean on
+  the first render across all checked frames (2.5s/6s/12.5s/15.5s/17.3s/
+  17.6s/20s). Draft presented for approval; Prad initially asked to schedule
+  everything for 1pm BST, but since the WP+GMB publisher workflow has no
+  scheduling field and a multi-hour session-side wait was already flagged as
+  unreliable in this environment (2026-08-31 entry, container reclaim on
+  inactivity), that tradeoff was surfaced back to Prad rather than assumed;
+  he then said to publish everything immediately, so no scheduling was used.
+  Blog post 6866, https://kaizenaiconsulting.com/small-business-confidence-record-low/,
+  Google Business post (accepted, PROCESSING at submission), LinkedIn
+  `6aa0682786baed19caf6c1bc`, X `6aa0683686baed19caf6c844`, Instagram
+  `6aa0684177293f3d0b15c698`, TikTok `6aa0684377293f3d0b15c761`, all confirmed
+  published clean via `posts_get` (Instagram and TikTok took a short moment
+  to clear `publishing` status, the usual cover-image-stitch delay), no false
+  409s this run. This was a dynamic topic outside the queue (queue still
+  fully Complete), so no sheet row was updated.
