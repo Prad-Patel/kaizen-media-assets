@@ -1357,3 +1357,53 @@ hands it over.
   to clear `publishing` status, the usual cover-image-stitch delay), no false
   409s this run. This was a dynamic topic outside the queue (queue still
   fully Complete), so no sheet row was updated.
+- 2026-09-09 — twenty-seventh run, dynamic topic ("UK Small Business AI Use
+  Just Doubled. Confidence Didn't Follow."), queue still fully exhausted (318
+  rows Complete). No `PENDING-PUBLISH.md` backlog and nothing orphaned since
+  2026-09-08 (confirmed already live). Push access verified first, clean,
+  local `main` already in sync. `npm install` run fresh in `engine/`;
+  `ffmpeg`, `ffprobe` and `imagemagick` needed installing on this container.
+  Timeliness check (Navier-Stokes/DeepMind DNA-variant claims, China's AI
+  compute plan, Meta's unreleased Hatch agent, ASML/TSMC lithography deal)
+  found nothing UK-small-business-actionable, so used Simply Business's 2026
+  SME Insights Report (1,842 UK firms) instead: AI adoption doubled to 47%
+  (from 22%), but only 19% feel "very confident" using it, 33% are stuck on
+  routine admin, and 44% cite security/privacy fears as the top barrier.
+  Illustration used the subject-left, clear-right convention: a UK small
+  business owner at a desk, thoughtfully considering an AI spark icon and a
+  security shield icon beside a laptop. The 3:2 and 4:5 illustrations were
+  clean on the first pass (confined to ~50% width). The 9:16 needed three
+  regenerations: the first badly overshot the requested 40% left-confinement
+  (content reached 76% width), directly overlapping the video's fixed
+  point-label column (which sits at a fixed 58-86% of frame width regardless
+  of text length, per `app_info.jsx`'s `RAIL`/`LABEL_COL` constants, so
+  shortening label text alone cannot fix a confinement failure); the second
+  fixed confinement but reintroduced the top/middle/bottom background-seam
+  bug (confirmed by pixel sampling, #E1E9F6 bands vs #E9F2FB middle); the
+  third fixed the seam but the model painted literal "AI" text into the spark
+  icon, caught before animating and fixed with an explicit anti-lettering
+  instruction on the icons themselves, not just the frame. Higgsfield balance
+  was healthy throughout (601.83 credits pre-generation); the first
+  `kling3_0_turbo` animation ran against the flawed 9:16 and took an
+  unusually long ~14 minutes (vs the documented 60-180s), confirmed genuine
+  rather than stuck by the balance dropping exactly 15 credits; discarded
+  once the layout bug surfaced. The corrected 9:16 was pushed as `-r2` rather
+  than overwriting the flawed original (matching the never-overwrite
+  convention used for same-day corrections since 2026-08-23), re-imported to
+  Higgsfield cleanly (no `SignatureDoesNotMatch`), and animated a second time
+  in under 3 minutes. Point text was also shortened (e.g. "47% of UK small
+  firms use AI now." to "47% of UK firms use AI.") per the runbook's existing
+  fallback, as a second safety margin against the label column. Hybrid video
+  QC'd clean on the rebuild across all checked frames. Draft (video, both
+  covers, blog post, all captions) presented for approval; approved by Prad
+  in-session before any publish call. Blog post 6869,
+  https://kaizenaiconsulting.com/ai-confidence-gap/, Google Business post
+  (accepted, PROCESSING at submission), LinkedIn `6aa1334beedbf49d1dcc4e74`,
+  X `6aa1335beedbf49d1dcc53c9`, both published clean with no false 409s.
+  Instagram `6aa13371152501a677b7757b` published clean. The TikTok
+  `posts_create_post` call itself returned an "MCP server connection lost"
+  error client-side; checked `posts_list` before retrying per the runbook's
+  guidance and found the post had actually been created and published
+  (`6aa1337d152501a677b77a11`), so no duplicate was sent. This was a dynamic
+  topic outside the queue (queue still fully Complete), so no sheet row was
+  updated.
