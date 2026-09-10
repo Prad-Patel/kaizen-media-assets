@@ -1407,3 +1407,37 @@ hands it over.
   (`6aa1337d152501a677b77a11`), so no duplicate was sent. This was a dynamic
   topic outside the queue (queue still fully Complete), so no sheet row was
   updated.
+- 2026-09-10 — twenty-eighth run, dynamic topic ("HMRC's AI Just Recovered
+  £10 Billion. Small Business Is 62% of Why"), queue still fully exhausted
+  (318 rows Complete, no fresh Pending rows found on re-check). No
+  `PENDING-PUBLISH.md` backlog and nothing orphaned since 2026-09-09
+  (`origin/main` HEAD matched that run's own logged commit exactly). Push
+  access verified first (local `main` was one commit behind `origin/main`,
+  a plain fast-forward, fixed with `git branch -f main origin/main`).
+  `ffmpeg` and `imagemagick` needed installing on this container; `npm
+  install` run fresh in `engine/`. Timeliness check (Simply Business's
+  47%/19% AI-adoption story, QuickBooks' Early Fall 2026 ChatGPT/Claude
+  integration, DeepSeek distillation advisory, Meta ad-review and OpenAI
+  litigation stories) found nothing both fresh and UK-small-business-
+  actionable enough to lead with, so researched a grounded angle instead:
+  HMRC's July 2026 Transformation Roadmap and its AI-supported £10bn
+  recovery in 2025/26, paired with the GOV.UK-sourced finding that small
+  business is 62% (£36.7bn) of the UK's £59.2bn 2024/25 tax gap, and
+  Making Tax Digital for Income Tax's live 6 April 2026 start. Framed as
+  a cost/risk piece, not growth, per the no-income-promises rule.
+  Illustration used the subject-left, clear-right convention throughout
+  (3:2, 4:5, 9:16): a UK small business owner at a desk organising digital
+  folders and a ticked checklist beside a glowing shield icon. All three
+  illustrations, both covers and the hybrid video QC'd clean on the first
+  generation and first render, no regenerations needed; 9:16 background
+  pixel-sampled clean top to bottom (no seam). Higgsfield balance was
+  healthy (571.83 credits) so a real `kling3_0_turbo` animation ran;
+  `media_import_url` worked cleanly, no `SignatureDoesNotMatch`. Draft
+  presented and approved by Prad in-session before any publish call. Blog
+  post 6872, https://kaizenaiconsulting.com/hmrc-ai-tax-gap-small-business/,
+  Google Business post (accepted, PROCESSING at submission), LinkedIn
+  `6aa25f3eb83ca4d531ef1ac8`, X `6aa25f4c057f6d7728c2efa6`, Instagram
+  `6aa25f5159a9768398cbf3e1`, TikTok `6aa25f548d807284b40c93a6`, all
+  confirmed published clean via `posts_get`, no false 409s this run. This
+  was a dynamic topic outside the queue (queue still fully Complete), so no
+  sheet row was updated.
