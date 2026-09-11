@@ -329,7 +329,13 @@ those captions should point at the bio.
    gone live, clear that first. Rebuild and present it for approval in the
    current session before drafting anything new. The approval recorded in that
    file is a historical record, not live consent.
-2. Before pulling from the queue, spend one web search checking whether
+2. **From 2026-09-11 the day's trending topic leads by default** (see the
+   2026-09-11 content direction section): research what is trending and build
+   from it, rather than treating this as a tiebreak against a queue row. The
+   rest of this step still governs how a candidate is sense-checked and how a
+   dynamic topic is tracked.
+
+   Before pulling from the queue, spend one web search checking whether
    something more timely is worth leading with instead: a genuine AI or
    small-business story breaking in the last 24 to 48 hours (a major product
    launch, a regulatory change, a fresh UK-relevant stat or report) that is
@@ -377,7 +383,10 @@ those captions should point at the bio.
 7. Animate the 9:16 illustration, fetch the clip back via workflow
    `T89V0h08JMpWkCE5`, build the video with `render_hybrid.sh`, QC frames, and
    push the MP4 to `video/YYYY-MM-DD-slug.mp4`. Fall back to `render_info.sh`
-   + scene only if the generation is unusable twice.
+   + scene only if the generation is unusable twice. **From 2026-09-11 the
+   target is a ~60s cut mixing generated footage with b-roll and summarising
+   the day's blog post: see the 2026-09-11 content direction section, including
+   its open questions, before building.**
 8. Present everything to Prad as drafts: the blog post, the captions, the
    video and both covers. Wait for approval.
 9. On approval, run the n8n publisher (3:2 cover as `imageUrl`), then create
@@ -525,6 +534,64 @@ back through the `T89V0h08JMpWkCE5` media-fetch workflow: the MCP session expire
 mid-transfer (hit twice on 2026-09-06). Generate presenter clips at **720p**,
 which lands in the size range that bridge handles reliably and costs half as
 much. The session still cannot reach the Higgsfield CDN directly.
+
+## Content direction (set by Prad, 2026-09-11)
+
+This supersedes the 2026-09-06 section wherever the two conflict. It keeps that
+section's general-small-business audience and hook-first rule, which Prad
+restated, and changes the video format underneath them.
+
+**Longer videos, around 60 seconds.** The daily video moves from the ~22s build
+to roughly 60s. The existing `render_hybrid.sh` timeline (hook, three points on
+the rail, stat card, navy end card) is built for 22s and does not stretch to 60s
+on its own: three points over a minute leaves long dead stretches. The 60s cut
+needs more beats, and the listicle shape in Prad's own example ("if you have a
+business then these are 10 AI tools you should be using") is the natural fit,
+roughly 8 to 10 items at about 5s each between the hook and the end card.
+
+**Mix AI generation with b-roll.** The video is no longer a single animated
+illustration end to end. It combines generated footage with b-roll cut together
+under the typography. Note for anyone reading the history: Prad rejected a
+cinematic b-roll treatment on 2026-07-29, and this is a deliberate reversal of
+that, not a mistake to correct back. The repo still holds the nine stock clips
+from that build in `broll/` plus the deterministic selector
+`engine/pick_broll.py`, but that library is generic, unmatched to any given
+day's topic, and three of its nine clips are trades-flavoured, which cuts
+against the general-business audience. Treat it as a starting point, not the
+answer.
+
+**The video summarises the blog post.** The day's article is the source, and the
+video is its summary rather than a separate argument built from the same
+research. Whatever carries the piece in the blog should carry the video.
+
+**Open a hook.** Unchanged from 2026-09-06 and restated: the first thing on
+screen and the first line of every caption is a hook that earns the next three
+seconds, and it must be a claim the piece actually supports.
+
+**General business, not trades.** Also unchanged and restated. Trades are an
+example at most, never the frame.
+
+**Trending topics decide the subject.** Research what is trending that day and
+build from it, rather than treating the trend check as a tiebreak against a
+queue row. The queue has been exhausted since 2026-09-06 in any case. Sense-
+check every candidate against the Run log so the same ground is not covered
+twice, and hold the existing sourcing discipline: a figure that will not verify
+gets dropped, as on 08-18, 08-19, 09-02 and 09-10.
+
+**Write like a social media manager, not a report writer.** Every caption is
+built for reach and engagement on the platform it is going to, within the voice
+and compliance rules that already apply. Those rules do not bend for engagement:
+no em dashes, no income or earnings promises, first person plural, concrete
+numbers over adjectives, and the uncomfortable statistic still gets named.
+
+**Ask rather than guess.** When the brief is ambiguous, put the question to Prad
+in the session instead of picking a direction and building on it.
+
+**Open questions put to Prad on 2026-09-11, answers not yet recorded.** The
+2026-09-11 run asked about the 60s timeline structure, where the b-roll should
+come from, whether the longer cut carries voiceover, and the Higgsfield credit
+budget a 60s daily build implies. Until those answers land here, a run hitting
+this section should ask again rather than assume.
 
 ## Business details
 
@@ -1441,3 +1508,58 @@ hands it over.
   confirmed published clean via `posts_get`, no false 409s this run. This
   was a dynamic topic outside the queue (queue still fully Complete), so no
   sheet row was updated.
+- 2026-09-11 — twenty-ninth run, dynamic topic ("38 UK Small Businesses Close
+  Every Day Over Late Payments. Here's the AI Fix."), queue still fully
+  exhausted (zero Pending rows on re-check). No `PENDING-PUBLISH.md` backlog
+  and nothing orphaned since 2026-09-10 (`origin/main` HEAD matched that run's
+  own logged commit exactly). Push access verified first; local `main` was
+  stale behind `origin/main`, the recurring caching artefact logged since
+  2026-08-21, fixed with `git branch -f main origin/main`. `npm install` run
+  fresh in `engine/`; `ffmpeg`, `ffprobe` and `imagemagick` needed installing
+  on this container. Timeliness research (OpenAI's Agents API beta, Microsoft
+  data-centre expansion, Anthropic's threat-intelligence report, Xero's JAX
+  platform, WhatsApp Business agents) found nothing both fresh and
+  UK-small-business-actionable enough to lead with, so built a grounded angle
+  instead. Dropped the widely recycled "£50bn owed / 50,000 closures" figures
+  once search showed they trace to 2020 Tide research and an undated FSB
+  report, the same discipline applied on 08-18, 08-19 and 09-02, and used the
+  DBT/Small Business Commissioner research (London Economics, July 2025)
+  instead: £26bn owed at any time, £17,000 average per affected business, 1.5m
+  businesses (28%) hit a year, ~£11bn annual cost to the economy, 14,000
+  closures a year (38 a day), 86 hours a year spent chasing. Paired with the
+  Small Business Protections Bill (introduced to the Lords 19 May 2026,
+  committee stage, not expected in force before 2027) and the AI credit-control
+  tools available now. Framed as cost/cash-flow protection, not growth, per the
+  no-income-promises rule. Illustration used the subject-left, clear-right
+  convention throughout. Art needed several regenerations: the 3:2 and the
+  first 4:5 both came back with the background-panel seam (recurring since
+  2026-08-04), fixed with the single-canvas wording; the next 4:5 and 9:16 both
+  painted literal "AI" lettering into the spark icon (same failure as
+  2026-09-09) plus a glyph-like mark where a checkmark was asked for, fixed by
+  banning checkmarks and tick shapes outright and naming the 'AI' letters
+  explicitly; the following 9:16 then overshot confinement to 99% frame width
+  and was fixed with a hard "right 65% completely empty" instruction, landing
+  at 55%. Higgsfield balance was healthy (556.83 credits) so a real
+  `kling3_0_turbo` animation ran; `media_import_url` worked cleanly, no
+  `SignatureDoesNotMatch`. **First render caught a new failure mode worth
+  keeping: the i2v generation warped a glyph-like artefact into the calendar
+  icon that was not in the source illustration**, caught by cropping and
+  zooming the QC frame rather than eyeballing it at full size; regenerated once
+  per the runbook's warp rule and clean on the rebuild across all checked
+  frames (2.5/6/8/10/12.5/15.5/17.3/17.6/18.5/20/21s). Draft presented and
+  approved by Prad in-session before any publish call. Blog post 6875,
+  https://kaizenaiconsulting.com/late-payment-ai-fix/, Google Business post
+  (accepted, PROCESSING at submission), LinkedIn `6aa3b5accda23fa1a580f43c`,
+  X `6aa3b5c04d0e6f2d2e7acf62`, Instagram `6aa3b5ddcda23fa1a581047d`, all
+  published clean with no false 409s. The TikTok `posts_create_post` call
+  returned "MCP server connection lost" client-side, the same error as
+  2026-09-09; checked `posts_list` before retrying per the runbook and found
+  the post had actually been created (`6aa3b5e7cda23fa1a5810771`), so no
+  duplicate was sent, and it confirmed published on the next `posts_get`.
+  Dynamic topic outside the queue, so no sheet row was updated. Prad then set
+  a new content direction in the same session, now recorded in its own
+  2026-09-11 section: ~60s videos, generated footage mixed with b-roll, the
+  video as a summary of the blog post, trending topics leading topic choice,
+  and a social-media-manager standard for the captions. Four questions about
+  that direction (60s timeline structure, b-roll source, voiceover, credit
+  budget) were put to him and are still open at the end of this run.
