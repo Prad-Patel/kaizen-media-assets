@@ -1,12 +1,12 @@
 {
-  "hook": ["SMALL BUSINESS CONFIDENCE", "JUST HIT ROCK BOTTOM."],
+  "hook": ["38 UK BUSINESSES", "CLOSE EVERY DAY."],
   "points": [
-    ["Only 18% expect to grow."],
-    ["29% plan zero AI spend."],
-    ["AI users? Real productivity gains."]
+    ["£17k owed per business."],
+    ["New law waits until 2027."],
+    ["AI chases invoices instead."]
   ],
-  "stat": { "pre": "CONFIDENCE AT A RECORD LOW. BUT", "big": "82%", "post": "OF AI USERS REPORT REAL PRODUCTIVITY GAINS." },
+  "stat": { "pre": "LATE PAYMENTS COST THE UK", "big": "£11bn", "post": "A YEAR. MOST OF IT IS AVOIDABLE." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Cut cost. Not corners.",
+  "tagline": "Get paid. Not ghosted.",
   "url": "kaizenaiconsulting.com"
 }
