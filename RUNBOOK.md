@@ -1563,3 +1563,47 @@ hands it over.
   and a social-media-manager standard for the captions. Four questions about
   that direction (60s timeline structure, b-roll source, voiceover, credit
   budget) were put to him and are still open at the end of this run.
+- 2026-09-12 — thirtieth run, dynamic topic ("43% of UK Businesses Were
+  Breached This Year. Almost None Have an AI Policy For It."), queue still
+  fully exhausted (zero Pending rows on re-check). No `PENDING-PUBLISH.md`
+  backlog and nothing orphaned since 2026-09-11 (`origin/main` HEAD matched
+  that run's own logged commit exactly). Push access verified first; local
+  `main` was stale behind `origin/main`, the recurring caching artefact
+  logged since 2026-08-21, fixed with `git branch -f main origin/main`.
+  `npm install` run fresh in `engine/`; `ffmpeg` and `imagemagick` needed
+  installing on this container. Timeliness research (Meta's Stilla
+  acquisition, personal AI agents, Anthropic's threat-intelligence report
+  and researcher resignation, OpenAI's optical-manufacturing expansion, the
+  47%/19% AI-adoption story already covered 09-09) found nothing both fresh
+  and UK-small-business-actionable enough to lead with, so built around the
+  UK government's Cyber Security Breaches Survey 2025/2026 (DSIT/Home
+  Office, Ipsos, 2,112 businesses, published April 2026) instead, not
+  previously used in this pipeline: 43% of UK businesses breached in the
+  last 12 months (~612,000 businesses), only around a quarter of businesses
+  using/adopting AI have any security practices for it, phishing behind 85%
+  of breaches, and patchy basics (30% risk assessment, 47% cyber insurance,
+  47% 2FA, 36% VPN). Framed as a cost/risk piece naming shadow AI as the
+  mechanism, not growth, per the no-income-promises rule. Illustration used
+  the subject-left, clear-right convention throughout (3:2, 4:5, 9:16): a UK
+  small business owner at a laptop beside an open, unlatched padlock and a
+  small AI chat-bubble icon. All three illustrations, both covers and the
+  hybrid video QC'd clean on the first generation and first render, no
+  regenerations needed; 9:16 background pixel-sampled uniform top to bottom
+  (231,236,242), no seam. The four open questions from the 2026-09-11
+  direction (60s timeline structure, b-roll source, voiceover, credit
+  budget) were still unanswered at the start of this run, so rather than
+  invent those specifics the video was built in the existing proven ~22s
+  hybrid format (same as 09-11's actual output) and the questions were put
+  to Prad again alongside the draft; he approved proceeding without
+  answering them, so today's video stayed in the established format and the
+  four questions remain open for a future run to resolve. Higgsfield balance
+  was healthy (526.83 credits) so a real `kling3_0_turbo` animation ran;
+  `media_import_url` worked cleanly, no `SignatureDoesNotMatch`. Draft
+  presented and approved by Prad in-session before any publish call. Blog
+  post 6878, https://kaizenaiconsulting.com/ai-security-policy-gap/, Google
+  Business post (accepted, PROCESSING at submission), LinkedIn
+  `6aa51022c90d7f4bc4567fcf`, X `6aa51032c90d7f4bc456856e`, Instagram
+  `6aa5103bf0269eb3b998fac3`, TikTok `6aa51044c90d7f4bc4568b3f` (sat in
+  `publishing` for the usual cover-image-stitch delay before confirming),
+  all confirmed published clean via `posts_get`, no false 409s this run.
+  Dynamic topic outside the queue, so no sheet row was updated.
