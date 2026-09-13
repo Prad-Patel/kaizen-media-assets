@@ -1,12 +1,12 @@
 {
-  "hook": ["38 UK BUSINESSES", "CLOSE EVERY DAY."],
+  "hook": ["GOOGLE'S AI", "JUST WENT FREE."],
   "points": [
-    ["£17k owed per business."],
-    ["New law waits until 2027."],
-    ["AI chases invoices instead."]
+    ["Windows Gemini is now free."],
+    ["Copilot still costs £30."],
+    ["Check the gap before renewing."]
   ],
-  "stat": { "pre": "LATE PAYMENTS COST THE UK", "big": "£11bn", "post": "A YEAR. MOST OF IT IS AVOIDABLE." },
+  "stat": { "pre": "MICROSOFT CHARGES UP TO", "big": "£30/MONTH.", "post": "GOOGLE'S VERSION IS NOW FREE." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Get paid. Not ghosted.",
+  "tagline": "Stop paying for what's now free.",
   "url": "kaizenaiconsulting.com"
 }
