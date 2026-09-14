@@ -1607,3 +1607,37 @@ hands it over.
   `publishing` for the usual cover-image-stitch delay before confirming),
   all confirmed published clean via `posts_get`, no false 409s this run.
   Dynamic topic outside the queue, so no sheet row was updated.
+- 2026-09-14 — cleared the 2026-09-13 backlog, "Google Just Made Its Windows
+  AI Free. Microsoft Still Wants £30 a Month for Copilot." No
+  `PENDING-PUBLISH.md` file existed, but a full asset set (3:2/4:5/9:16
+  illustrations and a hybrid video) had been pushed to `main` on 2026-09-13
+  with no matching Run log entry, the same orphaned-draft pattern hit
+  repeatedly since 08-13. Git history showed Prad had already reviewed it and
+  caught one error ("Windows Gemini" instead of "Google's Gemini" in a video
+  point label), which was fixed and rebuilt into `-r2` before the session
+  ended without a final approval or publish call. Confirmed via `posts_list`
+  that nothing had gone live (last published post was 2026-09-12). Push
+  access verified first (local `main` was one commit behind `origin/main`,
+  the recurring stale-ref caching artefact logged repeatedly since 2026-08-21,
+  fixed with `git fetch origin main && git branch -f main origin/main`).
+  `npm install` run fresh in `engine/`. The blog post and captions were never
+  persisted (as usual for this failure pattern), so rewrote both from
+  scratch, re-verifying the core claim against fresh web search rather than
+  trusting the old config text blind: Google shipped a native Gemini desktop
+  app for Windows on 10 September 2026, free, competing directly with
+  Microsoft 365 Copilot's £30/user/month UK add-on price; Google's own AI Pro
+  tier is £18.99/month for higher usage; and Google's more autonomous Spark
+  agent is not available in the UK, a genuine caveat against treating this as
+  a clean swap. Reused the existing covers, 9:16 base and the corrected `-r2`
+  video at no extra Gemini or Higgsfield spend. Draft (video, both covers,
+  blog post, all captions) presented for approval and approved by Prad
+  in-session before any publish call. Blog post 6881,
+  https://kaizenaiconsulting.com/gemini-windows-free-copilot/, Google
+  Business post (accepted, PROCESSING at submission), LinkedIn
+  `6aa7a0c181e0939c50a9cf92`, X `6aa7a0d0336585f0c63792f0`, Instagram
+  `6aa7a0ee7eab6c277e65e5cc`, TikTok `6aa7a0f1bac3a0c33c9335d2` (sat in
+  `publishing` for the usual cover-image-stitch delay before confirming),
+  all confirmed published clean via `posts_get`, no false 409s this run.
+  This was a backlog/dynamic topic outside the queue, so no sheet row was
+  updated; the queue's next Pending row (still fully exhausted as of
+  2026-09-12) remains untouched for a future run.
