@@ -1641,3 +1641,54 @@ hands it over.
   This was a backlog/dynamic topic outside the queue, so no sheet row was
   updated; the queue's next Pending row (still fully exhausted as of
   2026-09-12) remains untouched for a future run.
+- 2026-09-15 — thirty-third run, dynamic topic ("A Third of UK Firms Already
+  Use 'Bossware'. The Government Just Opened a Consultation on It."), queue
+  still fully exhausted (zero Pending rows on re-check). No
+  `PENDING-PUBLISH.md` backlog and nothing orphaned since 2026-09-14
+  (`origin/main` HEAD matched that run's own logged commit exactly, no local
+  stale-ref issue this time). Push access verified first, clean. `npm
+  install` run fresh in `engine/`; `ffmpeg` and `imagemagick` needed
+  installing on this container. Timeliness research (47%/19% AI-adoption
+  story already covered 09-09, September AI product-launch roundups, Autumn
+  Budget 2026 predictions with no AI-tax specifics yet) found nothing both
+  fresh and UK-small-business-actionable enough to lead with, so built
+  around the DBT's live consultation on "workplace monitoring technologies"
+  instead (opened 8 July 2026, closes 30 September 2026, part of the
+  Employment Rights Act 2025 reform programme), paired with the Chartered
+  Management Institute's survey of 900+ UK managers finding a third of UK
+  organisations already use some form of "bossware" (login tracking 39%,
+  browser history 36%, email monitoring 35%), and the ICO's existing 2023
+  guidance that monitoring already has to be lawful, necessary, proportionate
+  and transparent under UK GDPR. Framed as a cost/compliance piece (audit
+  what your tools collect before the rules tighten), not growth, per the
+  no-income-promises rule. Illustration used the subject-left, clear-right
+  convention throughout (3:2, 4:5, 9:16): a UK small business owner at a
+  laptop beside a dashboard graphic and a stylised eye icon representing
+  monitoring software. All three illustrations, both covers and the hybrid
+  video QC'd clean on the first generation and first render, no
+  regenerations needed; 9:16 background uniform top to bottom, no seam, no
+  literal lettering in the icons. Higgsfield balance was healthy (234.33
+  credits) so a real `kling3_0_turbo` animation ran; `media_import_url`
+  worked cleanly, no `SignatureDoesNotMatch`. The four open questions from
+  the 2026-09-11 direction (60s timeline structure, b-roll source,
+  voiceover, credit budget) are still unanswered, so the video was built
+  again in the existing proven ~22s hybrid format, same as 09-12 and 09-14,
+  and the questions were put to Prad again alongside the draft rather than
+  guessed at. Draft (video, both covers, blog post, all captions) presented
+  for approval via SendUserFile and a push notification (session had no live
+  user since the scheduled prompt fired); approved by Prad in-session before
+  any publish call. Blog post 6884,
+  https://kaizenaiconsulting.com/ai-staff-monitoring-consultation/, Google
+  Business post (accepted, PROCESSING at submission), LinkedIn
+  `6aa8f6a6f0287d2269d5f707`, X `6aa8f6b33f9eff8a01408d09`, Instagram
+  `6aa8f6bce90b602a47065a02`, both published clean with no false 409s. The
+  TikTok `posts_create_post` call itself returned an MCP timeout client-side,
+  the same pattern as 09-09 and 09-11; checked `posts_list` before retrying
+  per the runbook and found the post had actually been created
+  (`6aa8f6bf44f8409a6c9ff4c2`), so no duplicate was sent; it sat in
+  `publishing`/`processing` for about two minutes (the usual
+  cover-image-stitch delay) before confirming published via the raw
+  `posts_get_post` status (empty `platformPostUrl`, the known non-failure
+  case). Dynamic topic outside the queue, so no sheet row was updated; the
+  queue's next Pending row (still fully exhausted as of 2026-09-12) remains
+  untouched for a future day.
