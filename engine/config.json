@@ -1,12 +1,12 @@
 {
-  "hook": ["GOOGLE'S AI", "JUST WENT FREE."],
+  "hook": ["AI IS WATCHING", "YOUR TEAM."],
   "points": [
-    ["Google's Gemini is now free."],
-    ["Copilot still costs £30."],
-    ["Check the gap before renewing."]
+    ["A third of firms track staff."],
+    ["New rules land 30 September."],
+    ["Audit what your tools collect."]
   ],
-  "stat": { "pre": "MICROSOFT CHARGES UP TO", "big": "£30/MONTH.", "post": "GOOGLE'S VERSION IS NOW FREE." },
+  "stat": { "pre": "A THIRD OF UK FIRMS", "big": "ALREADY USE 'BOSSWARE'.", "post": "RULES CLOSE 30 SEPTEMBER 2026." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Stop paying for what's now free.",
+  "tagline": "Know what your AI tools track.",
   "url": "kaizenaiconsulting.com"
 }
