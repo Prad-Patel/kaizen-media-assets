@@ -1,12 +1,12 @@
 {
-  "hook": ["AI IS WATCHING", "YOUR TEAM."],
+  "hook": ["COMPANIES HOUSE NOW", "REQUIRES YOUR ID."],
   "points": [
-    ["A third of firms track staff."],
-    ["New rules land 30 September."],
-    ["Audit what your tools collect."]
+    ["Miss it, a criminal offence."],
+    ["Scammers copy the real notice."],
+    ["AI-faked IDs up almost 3,900%."]
   ],
-  "stat": { "pre": "A THIRD OF UK FIRMS", "big": "ALREADY USE 'BOSSWARE'.", "post": "RULES CLOSE 30 SEPTEMBER 2026." },
+  "stat": { "pre": "AI-GENERATED FAKE IDs", "big": "UP ALMOST 3,900%.", "post": "IN JUST ONE YEAR." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Know what your AI tools track.",
+  "tagline": "Verify the real way, not the scam way.",
   "url": "kaizenaiconsulting.com"
 }
