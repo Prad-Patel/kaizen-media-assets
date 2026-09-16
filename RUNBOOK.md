@@ -1692,3 +1692,52 @@ hands it over.
   case). Dynamic topic outside the queue, so no sheet row was updated; the
   queue's next Pending row (still fully exhausted as of 2026-09-12) remains
   untouched for a future day.
+- 2026-09-16 — thirty-fourth run, dynamic topic ("Companies House ID
+  Verification Is Live. So Are the Scammers Copying It."), queue still fully
+  exhausted (318 rows Complete, zero Pending on re-check). No
+  `PENDING-PUBLISH.md` backlog and nothing orphaned since 2026-09-15
+  (`origin/main` HEAD matched that run's own logged commit exactly). Push
+  access verified first, clean. `npm install` run fresh in `engine/`; `ffmpeg`
+  and `imagemagick` needed installing on this container. Timeliness research
+  (47%/19% AI-adoption story already covered 09-09, DeepSeek-V4.1-Flash and
+  other September model launches, cash-admin-burden survey with a weak AI tie,
+  autumn Budget predictions with nothing confirmed on AI/tax yet) found
+  nothing both fresh and UK-small-business-actionable enough to lead with, so
+  built around Companies House's mandatory director/PSC identity verification
+  rollout (live since 18 November 2025, transition period to 17 November
+  2026, criminal offence if missed) instead, paired with Companies House's own
+  warning about phishing emails exploiting that exact rollout and Shufti's
+  Identity Fraud Index Report 2026 (deepfake-powered identity fraud projected
+  up nearly 495% in 2026, AI-generated fake documents up almost 3,900% year on
+  year, the fastest-growing category). Framed as a cost/risk piece (a genuine
+  compliance deadline and a scam copying it landing in the same inbox), not
+  growth, per the no-income-promises rule; checked the deepfake-fraud topic
+  against the Run log first since deepfake scams were covered under the old
+  trades framing before 2026-09-06, and confirmed this angle (Companies House
+  ID verification plus the scam warning) had not been used. Illustration used
+  the subject-left, clear-right convention throughout (3:2, 4:5, 9:16): a UK
+  small business owner at a laptop beside a large ID card icon under a
+  magnifying glass with a warning triangle and a fainter duplicate card behind
+  it. All three illustrations, both covers and the hybrid video QC'd clean on
+  the first generation and first render, no regenerations needed; 9:16
+  background pixel-sampled uniform top to bottom (231-232/239-241/248-251),
+  no seam. Higgsfield balance was healthy (219.33 credits) so a real
+  `kling3_0_turbo` animation ran; `media_import_url` worked cleanly, no
+  `SignatureDoesNotMatch`. The four open questions from the 2026-09-11
+  direction (60s timeline structure, b-roll source, voiceover, credit budget)
+  are still unanswered, so the video was built again in the existing proven
+  ~22s hybrid format, same as every run since 09-12. Draft (video, both
+  covers, blog post, all captions) presented for approval via SendUserFile and
+  a push notification (session had no live user since the scheduled prompt
+  fired); approved by Prad in-session before any publish call. Blog post
+  6887, https://kaizenaiconsulting.com/companies-house-id-verification-scam-warning/,
+  Google Business post (accepted, PROCESSING at submission), LinkedIn
+  `6aaa4ec9795e85eb77c0896a`, X `6aaa4ed8e36b210dcc794646`, Instagram
+  `6aaa4ee2b2957973e4f7b2a3`, both confirmed published clean via `posts_get`,
+  no false 409s this run. TikTok `6aaa4ee68431003ec9bf2a02` sat in
+  `publishing`/`processing` for about three minutes (longer than the usual
+  cover-image-stitch delay but with `publishAttempts: 0` and no error
+  throughout) before confirming published via the raw `posts_get_post` status
+  (empty `platformPostUrl`, the known non-failure case). Dynamic topic outside
+  the queue, so no sheet row was updated; the queue's next Pending row (still
+  fully exhausted) remains untouched for a future day.
