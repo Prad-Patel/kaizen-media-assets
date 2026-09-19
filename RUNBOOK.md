@@ -1741,3 +1741,56 @@ hands it over.
   (empty `platformPostUrl`, the known non-failure case). Dynamic topic outside
   the queue, so no sheet row was updated; the queue's next Pending row (still
   fully exhausted) remains untouched for a future day.
+- 2026-09-19 — thirty-fifth run, dynamic topic ("AI Is Already Shopping For
+  Your Customers: What UK Small Businesses Need to Do Before Christmas"),
+  queue still fully exhausted (318 rows Complete, zero Pending on re-check).
+  No `PENDING-PUBLISH.md` backlog and nothing orphaned since 2026-09-16
+  (`origin/main` HEAD matched that run's own logged commit exactly). Push
+  access verified first (a stale local `main` briefly looked like a
+  non-fast-forward problem; `git branch -f main origin/main` resolved it, the
+  same recurring caching artefact logged since 2026-08-21). `ffmpeg` and
+  `imagemagick` needed installing on this container; `npm install` run fresh
+  in `engine/`. Timeliness research (OpenAI/Anthropic/Google coordinating on
+  an AI safety standards body, Microsoft Copilot vs Google Gemini pricing
+  already covered 09-14, AI scam waves already covered 09-04/09-16, Autumn
+  Budget 2026 predictions with nothing AI-specific confirmed) found nothing
+  both fresh and UK-small-business-actionable enough to lead with, so built
+  around Adyen's 2026 UK retail report instead (AI shopping assistant use
+  more than doubled to 28% from 12%, 44% of shoppers open to letting AI
+  complete the whole purchase) paired with Similarweb's UK AI-referral
+  traffic data (50.2 million shopping-intent visits a month to UK retail,
+  traffic up 180% year on year and converting 42% better than average) and
+  John Lewis's £800m AI-shopping push into Gemini and ChatGPT, framed around
+  Black Friday and Small Business Saturday (5 December) readiness. Illustration
+  used the subject-left, clear-right convention throughout (3:2, 4:5, 9:16): a
+  UK small business owner holding a wrapped gift box beside a phone showing a
+  glowing chat-bubble/shopping-bag AI icon, with wrapped gifts at her feet. The
+  3:2 and 4:5 were clean on the first pass; the first 9:16 came back with the
+  known hard background-panel seam (recurring since 2026-08-04), confirmed by
+  pixel sampling (light paper tone on the left, a distinctly darker blue-grey
+  block on the right from about 55% width), fixed on a second generation with
+  an explicit single-flat-hex-colour instruction; that second generation fixed
+  the seam but overshot confinement to about 72% frame width (past the video's
+  58-86%-width label column), fixed on a third generation by dropping the
+  counter/table prop entirely and tightening the confinement instruction to
+  30%, landing at a clean 40%. Higgsfield balance was healthy (204.33 credits
+  pre-generation) so a real `kling3_0_turbo` animation ran; `media_import_url`
+  worked cleanly, no `SignatureDoesNotMatch`. Hybrid video QC'd clean on the
+  first render across all checked frames (2.5s/6s/12.5s/15.5s/17.3s/17.6s/20s).
+  The four open questions from the 2026-09-11 direction (60s timeline
+  structure, b-roll source, voiceover, credit budget) are still unanswered, so
+  the video was built again in the existing proven ~22s hybrid format, same as
+  every run since 09-12, and the questions were put to Prad again alongside
+  the draft. Draft (video, both covers, blog post, all captions) presented for
+  approval via SendUserFile and a push notification (session had no live user
+  since the scheduled prompt fired); approved by Prad in-session before any
+  publish call. Blog post 6890,
+  https://kaizenaiconsulting.com/ai-shopping-assistants-uk-small-business/,
+  Google Business post (accepted, PROCESSING at submission), LinkedIn
+  `6aae39cbd41a0decd5026000`, X `6aae39dbadc08b99ae43ac74`, Instagram
+  `6aae39eef2ee843b24938897`, all confirmed published clean via `posts_get`,
+  no false 409s this run. TikTok `6aae39f5d41a0decd50263e5` sat in
+  `publishing`/`processing` past the usual cover-image-stitch delay before
+  confirming published (`publishAttempts: 0`, no error throughout). Dynamic
+  topic outside the queue, so no sheet row was updated; the queue's next
+  Pending row (still fully exhausted) remains untouched for a future day.
