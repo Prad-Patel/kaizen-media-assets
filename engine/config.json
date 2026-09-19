@@ -1,12 +1,12 @@
 {
-  "hook": ["COMPANIES HOUSE NOW", "REQUIRES YOUR ID."],
+  "hook": ["AI IS ALREADY", "SHOPPING FOR THEM."],
   "points": [
-    ["Miss it, a criminal offence."],
-    ["Scammers copy the real notice."],
-    ["AI-faked IDs up almost 3,900%."]
+    ["AI shopping use doubled to 28%."],
+    ["44% would let AI buy for them."],
+    ["That traffic converts 42% better."]
   ],
-  "stat": { "pre": "AI-GENERATED FAKE IDs", "big": "UP ALMOST 3,900%.", "post": "IN JUST ONE YEAR." },
+  "stat": { "pre": "AI SHOPPING TRAFFIC", "big": "UP 180% IN A YEAR.", "post": "AND IT CONVERTS BETTER." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Verify the real way, not the scam way.",
+  "tagline": "Don't lose the sale AI already found.",
   "url": "kaizenaiconsulting.com"
 }
