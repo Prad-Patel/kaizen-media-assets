@@ -1,12 +1,12 @@
 {
-  "hook": ["AI IS ALREADY", "SHOPPING FOR THEM."],
+  "hook": ["UK AI USE JUST", "TRIPLED SINCE 2023."],
   "points": [
-    ["AI shopping use doubled to 28%."],
-    ["44% would let AI buy for them."],
-    ["That traffic converts 42% better."]
+    ["Most use just one AI tool."],
+    ["Only 1 in 10 go deep."],
+    ["Microbusinesses lag 45%."]
   ],
-  "stat": { "pre": "AI SHOPPING TRAFFIC", "big": "UP 180% IN A YEAR.", "post": "AND IT CONVERTS BETTER." },
+  "stat": { "pre": "UK AI ADOPTION", "big": "TRIPLED TO 35%.", "post": "MOST BARELY USE IT." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Don't lose the sale AI already found.",
+  "tagline": "Depth beats dabbling, every time.",
   "url": "kaizenaiconsulting.com"
 }
