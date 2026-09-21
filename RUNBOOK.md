@@ -1794,3 +1794,48 @@ hands it over.
   confirming published (`publishAttempts: 0`, no error throughout). Dynamic
   topic outside the queue, so no sheet row was updated; the queue's next
   Pending row (still fully exhausted) remains untouched for a future day.
+- 2026-09-21 — thirty-sixth run, cleared a same-pattern orphaned draft from
+  2026-09-20 ("UK AI Adoption Tripled Since 2023. Depth Didn't."), queue
+  still fully exhausted (318 rows Complete, zero Pending on re-check). No
+  `PENDING-PUBLISH.md` file existed, but a full asset set (3:2/4:5/9:16
+  illustrations and a hybrid video) had been pushed to `main` on 2026-09-20
+  with no matching Run log entry, no orphan note, and the local dev branch's
+  `HEAD` already sitting on that exact commit, so the previous session ended
+  mid-draft rather than mid-review. Confirmed via `posts_list` that nothing
+  had gone live for this topic (last published post was still 2026-09-19's).
+  Push access verified first, clean, no stale-ref issue. `npm install` run
+  fresh in `engine/`; `ffmpeg` and `imagemagick` needed installing on this
+  container. The blog post and captions were never persisted (as usual for
+  this failure pattern), so rewrote both from scratch, re-verifying every
+  claim against fresh web search rather than trusting the committed asset
+  text blind. That check caught a real problem: the pre-built video's third
+  stat point, "Microbusinesses lag 45%", did not source to anything in
+  either the ONS's *Artificial intelligence in UK businesses: 2023 to 2026*
+  report or any other UK AI-adoption data found, the same unsourced-figure
+  failure mode logged on 2026-08-18, 08-19, 09-02 and 09-10. Corrected it to
+  "Micro firms: just 14% use AI.", sourced to DSIT's AI Adoption Research
+  (3,500 UK businesses, February to May 2025 fieldwork: 14% microbusinesses
+  versus 36% large firms), and kept the other two points and the stat card
+  (12% to 35% tripling, 1.6 tools average, only 10% of adopters extensive,
+  all confirmed against the ONS report directly). Reused the existing
+  covers and 9:16 illustration at no new Gemini spend; re-animated a fresh
+  `kling3_0_turbo` clip from the existing illustration (Higgsfield balance
+  174.33 credits pre-generation) since the original clip wasn't persisted
+  either, then rebuilt with `render_hybrid.sh` and pushed as `-r2`. Hybrid
+  video QC'd clean on the first render across all checked frames
+  (2.5s/6s/12.5s/15.5s/17.3s/17.6s/20s), corrected point legible and clear of
+  the rail. Pushed the `-r2` commit to the dev branch and then fast-forward
+  to `main` directly, consistent with the runbook's requirement that every
+  asset resolve from the default branch. Draft (video, both covers, blog
+  post, all captions) presented for approval via `SendUserFile` and a push
+  notification (session had no live user since the scheduled prompt fired);
+  approved by Prad in-session before any publish call. Blog post 6893,
+  https://kaizenaiconsulting.com/uk-ai-adoption-tripled-shallow-use/, Google
+  Business post (accepted, PROCESSING at submission), LinkedIn
+  `6ab0dbc6fa32a155d1248a72`, X `6ab0dbd3caa6a1c435525ccc`, Instagram
+  `6ab0dbeecaa6a1c43552643c`, all confirmed published clean via `posts_get`,
+  no false 409s this run. TikTok `6ab0dbf669bd4e6139073060` sat in
+  `publishing`/`processing` for the usual cover-image-stitch delay before
+  confirming published. Dynamic/recovered topic outside the queue, so no
+  sheet row was updated; the queue's next Pending row (still fully
+  exhausted) remains untouched for a future day.
