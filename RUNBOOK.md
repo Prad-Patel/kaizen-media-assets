@@ -17,7 +17,7 @@ One topic from the queue becomes six pieces of output:
 |---|---|---|
 | WordPress blog post | 3:2 Gemini cover (typography composited) | n8n publisher |
 | Google Business Profile | 3:2 Gemini cover | n8n publisher |
-| LinkedIn | hybrid video | Zernio |
+| LinkedIn (Tue/Wed/Thu only) | hybrid video, links in first comment | Zernio |
 | Instagram | hybrid video, with the 4:5 Gemini cover as reel cover | Zernio |
 | TikTok | hybrid video, with the 4:5 Gemini cover as video cover | Zernio |
 | X | 4:5 Gemini cover | Zernio |
@@ -370,12 +370,15 @@ those captions should point at the bio.
    reputable links, required). The publisher appends the Elementor booking
    button itself, so do not add a CTA button to the HTML. Write a 40 to 60
    word summary for Google Business.
-5. Write per-platform copy. LinkedIn gets the long analytical version.
-   Instagram gets the hook-first version with hashtags. TikTok gets the short
-   punchy one. X gets the single sharpest sentence plus the link, and has to
-   fit 280 characters, which is tighter than it looks. Run every caption
-   through `validate_post_length` before presenting it. The LinkedIn and X
-   captions carry both links: the blog article and the Calendly booking link.
+5. Write per-platform copy. LinkedIn follows the LinkedIn rules below (600 to
+   1,100 characters, point of view first, no links in the body, ends on a real
+   question, opener never reused). Instagram gets the hook-first version with
+   hashtags. TikTok gets the short punchy one. X gets the single sharpest
+   sentence plus the link, and has to fit 280 characters, which is tighter
+   than it looks. Run every caption through `validate_post_length` before
+   presenting it. The X caption carries both links: the blog article and the
+   Calendly booking link. The LinkedIn caption carries neither, because both
+   go in its first comment at publish time (step 9).
 6. Write the day's image description (topic-specific scene, no text) and
    generate the 3:2, 4:5 and 9:16 illustrations via workflow
    `FqYH4E3KZywda1ON`. Composite the covers with `render_cover.sh` and push
@@ -398,6 +401,15 @@ those captions should point at the bio.
    validation when a platform returns an empty `platformPostUrl` (TikTok does
    this routinely); that is not a publish failure. Use `call_tool` with
    `posts_get_post` to read the raw status.
+   **LinkedIn only publishes on Tuesday, Wednesday and Thursday** (see the
+   LinkedIn section below). On any other day, skip the LinkedIn post entirely
+   and say so when reporting; every other destination still publishes daily.
+   **Immediately after the LinkedIn post confirms published, post its first
+   comment** carrying the blog link and the Calendly link, with
+   `comments_reply_to_inbox_post` (`post_id` = the Zernio post id,
+   `account_id` = the LinkedIn account, `comment_id` omitted so it lands on
+   the post rather than as a reply). Verified working 2026-09-21, returns
+   `isReply: False`.
 10. Append a one-line record of the run to the Run log at the bottom of this
     file, commit it, and push.
 
@@ -412,6 +424,23 @@ First person plural. Kaizen has built these things, so write "we built",
 not "businesses can build". Concrete numbers beat adjectives. Name the
 uncomfortable statistic rather than only the upside, because pointing at the
 risk is what makes the advice credible.
+
+**Never reuse an opening line.** Openers are one-shot: once a formula has run,
+it is burned and must not appear again. "If you run a small business, you need
+to see this" ran on seven of ten posts to 2026-09-21 and those seven averaged
+15.1 LinkedIn impressions against 30.9 for everything else, with zero comments
+and zero clicks between them. Before writing the day's copy, read the last ten
+Run log entries and the last ten posts (`posts_list`) and make sure the first
+line shares no formula with any of them.
+
+**Lead with a point of view, not a news summary.** "Here is what was
+announced" reads as a press release. "Here is what we would tell a client
+about this" is the thing worth reading. The best-performing post in the whole
+dataset (186 impressions, 2026-07-27, the only post to earn shares) opened on
+a first-person claim, "We've built apps for under £100 in tooling. Two years
+ago, the same builds would have been £20,000+ agency projects." The hook rule
+from 2026-09-06 still applies, but the hook has to be a claim Kaizen is making,
+not a headline being relayed.
 
 No income or earnings promises. Cost claims always describe tool costs, never
 what Kaizen charges. UK compliance matters more than a punchier line.
@@ -534,6 +563,58 @@ back through the `T89V0h08JMpWkCE5` media-fetch workflow: the MCP session expire
 mid-transfer (hit twice on 2026-09-06). Generate presenter clips at **720p**,
 which lands in the size range that bridge handles reliably and costs half as
 much. The session still cannot reach the Higgsfield CDN directly.
+
+## LinkedIn rules (set by Prad, 2026-09-21)
+
+Prad flagged a significant drop in LinkedIn views and engagement. The analysis
+below came out of the 67 LinkedIn posts published between 2026-06-25 and
+2026-09-21, and these rules replace the previous "LinkedIn gets the long
+analytical version" instruction wherever they conflict.
+
+**What the numbers showed.** Average impressions by period: 16.5 (25 Jun to 17
+Jul), 75.3 (18 to 31 Jul, the peak), 37.9 (August), 20.1 (25 Aug to 9 Sep),
+13.5 (10 to 21 Sep). The last three posts before the review landed on 2, 5 and
+5 impressions, fewer people than the page has followers. Across all 67 posts:
+43 likes, 4 comments, 2 shares, 63 clicks. Account health was clean, so this
+is algorithmic throttling driven by sustained zero engagement, not a
+restriction.
+
+**The page has 16 followers** and has not grown all quarter (14 to 17 to 16).
+That is the ceiling on everything else here, and no amount of copy changes
+moves it. Two things fix it and both need Prad, so a run should not silently
+work around them: connecting his personal LinkedIn profile to Zernio so posts
+publish from a profile rather than the company page, and commenting daily on
+other people's posts. Until the personal profile is connected, the company
+page is the only account available and the rules below are damage control on a
+small base, not a growth plan.
+
+**The rules.**
+
+- **Tuesday, Wednesday and Thursday only.** Seven low-engagement posts a week
+  teaches the algorithm the page is not worth distributing. Everything else in
+  the pipeline still runs daily: TikTok is the one healthy channel (463
+  average views since 15 August, steady, versus LinkedIn's 21) and Instagram
+  still spikes to 80-160, so neither drops cadence. This is a LinkedIn-only
+  change.
+- **600 to 1,100 characters.** Posts in that band averaged 42.0 impressions;
+  posts over 1,100 averaged 26.8, and nearly every recent post was over 1,100.
+- **No links in the post body.** Both links go in the first comment instead,
+  posted straight after publish (step 9). Posts carrying one link averaged
+  33.6 impressions against 25.6 for two links, and the whole quarter produced
+  63 clicks, so the links cost distribution and return almost nothing where
+  they are.
+- **End on a real question.** Not one post in 67 asked the reader anything,
+  which is a large part of why comments totalled 4. The question has to be one
+  a reader could actually answer from their own experience, not a rhetorical
+  close.
+- **Opener never reused**, per the voice rules above.
+- **Point of view over news recap**, per the voice rules above.
+
+**Video is not buying reach on LinkedIn.** Video posts averaged 30.5
+impressions against 27.7 for images, with half the engagement (0.50 against
+1.03). Keep building the video for TikTok and Instagram, where it works, but
+do not treat it as the reason a LinkedIn post will perform, and prefer the 4:5
+cover on LinkedIn if a day's video is weak.
 
 ## Content direction (set by Prad, 2026-09-11)
 
