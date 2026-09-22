@@ -41,18 +41,8 @@ const path = require('path');
   const page = await browser.newPage({ viewport: { width: w, height: h } });
   await page.goto('file://' + path.join(process.cwd(), 'carousel.html'));
   await page.evaluate(() => document.fonts.ready);
-  const fits = await page.evaluate(() => {
-    const out = [];
-    document.querySelectorAll('.fit').forEach((el, i) => {
-      const avail = el.getBoundingClientRect().height;
-      let s = 1;
-      while (el.scrollHeight * s > avail && s > 0.6) s -= 0.01;
-      el.style.transform = `scale(${s})`;
-      if (s < 1) out.push({ slide: i + 1, scale: +s.toFixed(2) });
-    });
-    return out;
-  });
-  fits.forEach(f => console.log(`==> slide ${f.slide} auto-fit to ${f.scale}`));
+  const fits = await page.evaluate(() => window.__autofit(1.45));
+  fits.filter(f => f.scale !== 1).forEach(f => console.log(`==> slide ${f.slide} fit to ${f.scale}`));
   await page.waitForTimeout(200);
   await page.pdf({ path: process.env.OUT, width: `${w}px`, height: `${h}px`,
                    printBackground: true });

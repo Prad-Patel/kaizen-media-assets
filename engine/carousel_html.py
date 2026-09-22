@@ -163,12 +163,40 @@ def build(cfg, w, h, animated=False, timing=None):
                      % (anim("start", 0.54), H.escape(start))) if start else "",
                     bar()))
 
+    # Auto-fit runs in both directions: grow a sparse slide until it fills the
+    # frame, shrink a long one until it clears the footer. Width and height are
+    # divided by the scale before transforming, so the scaled box lands back on
+    # the original bounds and text re-wraps at the right measure instead of
+    # overflowing the right edge.
+    fit_js = """<script>
+window.__autofit=function(maxUp){
+  maxUp=maxUp||1.22;
+  var out=[];
+  [].slice.call(document.querySelectorAll('.fit')).forEach(function(el,i){
+    var r=el.getBoundingClientRect(), availH=r.height, availW=r.width;
+    el.style.right='auto'; el.style.bottom='auto';
+    var chosen=0.6;
+    for(var s=maxUp;s>=0.6;s-=0.02){
+      el.style.transform='none';
+      el.style.width=(availW/s)+'px';
+      el.style.height=(availH/s)+'px';
+      if(el.scrollHeight*s<=availH+1){chosen=s;break;}
+    }
+    el.style.width=(availW/chosen)+'px';
+    el.style.height=(availH/chosen)+'px';
+    el.style.transform='scale('+chosen.toFixed(3)+')';
+    out.push({slide:i+1,scale:+chosen.toFixed(2)});
+  });
+  return out;
+};
+</script>"""
+
     seek_js = ""
     if animated:
         t = timing or {}
         seek_js = """<script>
 (function(){
-  var COVER=%(cover)s, ITEM=%(item)s, END=%(end)s, FADE=0.45;
+  var COVER=%(cover)s, ITEM=%(item)s, END=%(end)s, XF=0.42;
   var slides=[].slice.call(document.querySelectorAll('.slide'));
   var spans=slides.map(function(s){
     return s.classList.contains('cover')?COVER:(s.classList.contains('end')?END:ITEM);
@@ -181,21 +209,24 @@ def build(cfg, w, h, animated=False, timing=None):
   window.__seek=function(t){
     if(bar) bar.style.width=(Math.max(0,Math.min(1,t/acc))*100)+'%%';
     slides.forEach(function(s,i){
-      var lt=t-starts[i], dur=spans[i];
-      // Hold the last slide rather than cutting to blank on the final frame.
-      var active=(lt>=0&&lt<dur)||(i===slides.length-1&&t>=starts[i]);
-      if(!active){s.style.opacity=0;s.style.visibility='hidden';return;}
+      var last=(i===slides.length-1);
+      // Every slide but the first starts fading in XF early, over the tail of
+      // the one before. Without that overlap the outgoing slide reaches zero
+      // opacity before the incoming one leaves it, and the transition shows a
+      // frame of empty background.
+      var e=t-starts[i]+(i?XF:0), span=spans[i]+(i?XF:0);
+      if(e<0||(!last&&e>span)){s.style.opacity=0;s.style.visibility='hidden';return;}
       s.style.visibility='visible';
-      var fadeIn=ease(lt/FADE);
-      var fadeOut=(i<slides.length-1)?ease((dur-lt)/0.3):1;
-      s.style.opacity=Math.min(fadeIn,fadeOut);
+      var o=ease(e/XF);
+      if(!last)o=Math.min(o,ease((span-e)/XF));
+      s.style.opacity=o;
       [].slice.call(s.querySelectorAll('[data-a]')).forEach(function(el){
-        var p=ease((lt-parseFloat(el.dataset.a))/0.55);
+        var p=ease((e-parseFloat(el.dataset.a))/0.55);
         el.style.opacity=p;
         el.style.transform='translateY('+((1-p)*26).toFixed(2)+'px)';
       });
       var ic=s.querySelector('.icon');
-      if(ic){var p=ease(lt/0.7);ic.style.transform='scale('+(0.84+0.16*p).toFixed(3)+')';}
+      if(ic){var p=ease(e/0.7);ic.style.transform='scale('+(0.84+0.16*p).toFixed(3)+')';}
     });
   };
   window.__seek(0);
@@ -262,7 +293,7 @@ html,body{margin:0;padding:0;background:%(paper)s;-webkit-print-color-adjust:exa
 #prog{height:100%%;width:0;background:linear-gradient(90deg,%(blue)s,%(teal)s)}
 """ % dict(
         fonts=fonts, w=w, h=h, slidepos=slidepos, paper=PAPER, navy=NAVY, blue=BLUE, teal=TEAL,
-        pad=px(80), inbot=px(150), markw=px(132), markgap=px(44), icongap=px(36),
+        pad=px(80), inbot=px(150), covbot=px(215), markw=px(132), markgap=px(44), icongap=px(36),
         iconbox=px(152), iconr=px(32), icons1=px(12), icons2=px(34), iconbd=px(2),
         kicker=px(27), kgap=px(22), big=px(74), rule=px(8), rulew=px(104), rgap=px(38),
         sub=px(30), swipe=px(150), swipetxt=px(24),
@@ -271,4 +302,4 @@ html,body{margin:0;padding:0;background:%(paper)s;-webkit-print-color-adjust:exa
         cta=px(31), ctagap=px(36), fh=px(116), barmark=px(196), ftxt=px(25), ph=px(9))
 
     return ("<!doctype html><html><head><meta charset=\"utf-8\"><style>%s</style></head>"
-            "<body>%s%s%s</body></html>" % (css, "".join(out), prog, seek_js))
+            "<body>%s%s%s%s</body></html>" % (css, "".join(out), prog, fit_js, seek_js))

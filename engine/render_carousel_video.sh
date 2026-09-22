@@ -52,28 +52,16 @@ const path = require('path');
   await page.goto('file://' + path.join(process.cwd(), 'carousel_anim.html'));
   await page.waitForFunction('typeof window.__seek === "function"');
   await page.evaluate(() => document.fonts.ready);
-  // Shrink any slide whose content would otherwise run past the footer. Done
-  // once up front so the scale is identical on every captured frame.
-  await page.evaluate(() => {
-    document.querySelectorAll('.fit').forEach((el) => {
-      const avail = el.getBoundingClientRect().height;
-      let s = 1;
-      while (el.scrollHeight * s > avail && s > 0.6) s -= 0.01;
-      if (s < 1) el.dataset.fit = s;
-    });
-  });
+  // Fit every slide once up front so the scale is identical on every frame.
+  // __seek only writes transforms on [data-a] children and .icon, never on
+  // .fit itself, so this survives the whole capture.
+  const fits = await page.evaluate(() => window.__autofit(1.45));
+  fits.filter(f => f.scale !== 1).forEach(f => console.log(`==> slide ${f.slide} fit to ${f.scale}`));
   await page.waitForTimeout(300);
   const dur = await page.evaluate(() => window.__duration);
   const total = Math.round(dur * fps);
   for (let i = 0; i < total; i++) {
-    await page.evaluate((t) => {
-      window.__seek(t);
-      // __seek writes transform on the animated children, so reapply the
-      // per-slide fit scale afterwards or a shrunk slide springs back.
-      document.querySelectorAll('.fit[data-fit]').forEach((el) => {
-        el.style.transform = `scale(${el.dataset.fit})`;
-      });
-    }, i / fps);
+    await page.evaluate((t) => window.__seek(t), i / fps);
     await page.waitForTimeout(6);
     await page.screenshot({ path: path.join(process.env.FRAMES, `f${String(i).padStart(5, '0')}.png`) });
     if (i % 60 === 0) console.log(`frame ${i}/${total}`);
