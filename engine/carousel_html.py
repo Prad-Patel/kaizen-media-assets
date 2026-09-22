@@ -193,7 +193,10 @@ window.__autofit=function(maxUp){
 
     seek_js = ""
     if animated:
-        t = timing or {}
+        # Seconds per slide. A deck can override with a "timing" key; the
+        # defaults give a 5-item deck about 45s, slow enough to read each
+        # slide before it moves on.
+        t = timing or cfg.get("timing") or {}
         seek_js = """<script>
 (function(){
   var COVER=%(cover)s, ITEM=%(item)s, END=%(end)s, XF=0.42;
@@ -231,7 +234,7 @@ window.__autofit=function(maxUp){
   };
   window.__seek(0);
 })();
-</script>""" % dict(cover=t.get("cover", 3.2), item=t.get("item", 4.2), end=t.get("end", 4.4))
+</script>""" % dict(cover=t.get("cover", 5.0), item=t.get("item", 6.6), end=t.get("end", 7.0))
 
     prog = '<div id="progwrap"><div id="prog"></div></div>' if animated else ""
     # Animated slides overlay each other and are revealed by __seek; the PDF
