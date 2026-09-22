@@ -1,0 +1,33 @@
+{
+  "footer": "Prad Patel  ·  Kaizen AI Consulting",
+  "slides": [
+    {"type": "cover",
+     "kicker": "Where to actually start",
+     "title": ["The five jobs", "worth automating", "first in a small", "business"],
+     "subtitle": "Not the chatbot. Start with the money that leaks quietly, every week, without anyone noticing."},
+    {"type": "item",
+     "label": "Answering the phone you miss",
+     "detail": "Every missed call is a job somebody else quoted for. It never appears on a report and never gets blamed for anything, which is exactly why it survives for years.",
+     "start": "Where your calls actually go after five rings. Ring it yourself at 4pm on a Friday."},
+    {"type": "item",
+     "label": "Turning a job into a quote",
+     "detail": "Notes and photos in, a priced document out. The gap between visiting a job and sending the number is where warm work goes cold, and it is usually measured in days.",
+     "start": "Your last ten quotes. How many hours between the visit and hitting send?"},
+    {"type": "item",
+     "label": "Chasing the invoice",
+     "detail": "Polite, on time, every time, without you having to decide to do it. A lot of what gets called a cash flow problem is really a chasing problem wearing a disguise.",
+     "start": "How many days past due your average paid invoice actually was."},
+    {"type": "item",
+     "label": "The follow-up nobody does",
+     "detail": "You have already done the expensive part. You visited, you priced it, you wrote it up. A quote that is never chased once is the cheapest revenue in the building.",
+     "start": "Quotes you sent more than fourteen days ago that nobody ever replied to."},
+    {"type": "item",
+     "label": "Writing the same reply again",
+     "detail": "If you have typed it twenty times, it should not need typing a twenty-first. Most inboxes have about five questions on permanent repeat and everyone answers them from scratch.",
+     "start": "Your sent folder. Find the five things you keep explaining."},
+    {"type": "end",
+     "title": ["Pick one.", "Not five."],
+     "body": "The businesses that get real value out of this are the ones that fixed a single process properly and left everything else alone until it was genuinely working. Doing all five at once is how you end up with five half-built things and no time back.",
+     "cta": "Which of these is costing you most right now, the phone or the paperwork?"}
+  ]
+}
