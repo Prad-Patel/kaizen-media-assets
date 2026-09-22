@@ -1920,3 +1920,54 @@ hands it over.
   confirming published. Dynamic/recovered topic outside the queue, so no
   sheet row was updated; the queue's next Pending row (still fully
   exhausted) remains untouched for a future day.
+- 2026-09-22 — thirty-seventh run, dynamic topic ("44% of UK Small Businesses
+  Know About Agentic AI. Only 5% Use It"), queue still fully exhausted (zero
+  Pending rows on re-check). No `PENDING-PUBLISH.md` backlog and nothing
+  orphaned since 2026-09-21 (`origin/main` HEAD matched that run's own logged
+  commit exactly). Push access failed on the first `git push --dry-run origin
+  main` with a non-fast-forward rejection, the recurring stale-ref caching
+  artefact logged repeatedly since 2026-08-21, fixed with `git fetch origin
+  main && git branch -f main origin/main`. `npm install` run fresh in
+  `engine/`; `ffmpeg` and `imagemagick` needed installing on this container.
+  Timeliness research found nothing both fresh and UK-small-business-
+  actionable enough to lead with (the 47%/19% adoption story already covered
+  09-09, Autumn Budget 2026 predictions with nothing AI-specific confirmed),
+  so built around a new, not-previously-used source instead: the Small
+  Business Institute/Accio survey of 1,000 UK small business owners (August
+  2026, via PR Newswire), which found 44% have heard of agentic AI but only 5%
+  use it regularly, alongside 68% wanting to learn more, 60% seeing a
+  work-life-balance upside, and only 5% of current AI users pointing it at
+  anything beyond content/marketing. Illustration used the subject-left,
+  clear-right convention throughout (3:2, 4:5, 9:16): a UK small business
+  owner watching a small AI agent orb autonomously organise a stack of
+  documents and an envelope. All three illustrations and both covers were
+  clean on the first generation, no regenerations needed; 9:16 background
+  pixel-sampled uniform top to bottom, no seam. Higgsfield balance was healthy
+  (127.33 credits pre-generation) so a real `kling3_0_turbo` animation ran;
+  `media_import_url` worked cleanly, no `SignatureDoesNotMatch`; generation
+  took about 9 minutes. **First hybrid render caught a new failure mode worth
+  keeping**: the hook headline's first line overlapped the fixed K logo in the
+  top-left corner, because the hook block is right-aligned across the full
+  width (`app_info.jsx` `Hook()`, top:168, left/right:MARGIN) and a wide first
+  line reaches back far enough to collide with `Mark()`'s logo at
+  top:150/left:90/width:96; not previously logged. Fixed by shortening the
+  hook's first line from "44% HAVE HEARD OF" to "44% KNOW OF" so the
+  right-aligned text clears the logo, then rebuilt from the same footage at no
+  extra Higgsfield spend; QC passed clean on the rebuild across all checked
+  frames (2.5s/6s/12.5s/15.5s/17.3s/17.6s/20s). Lesson for future configs:
+  keep the hook's first line short (roughly 11 characters or fewer at the
+  92px bold Space Grotesk size) whenever the phrasing allows it, since only
+  line 1 shares vertical space with the logo. Draft (video, both covers, blog
+  post, all captions) presented for approval via `SendUserFile` and a push
+  notification (session had no live user since the scheduled prompt fired);
+  approved by Prad in-session before any publish call. Blog post 6896,
+  https://kaizenaiconsulting.com/agentic-ai-awareness-gap/, Google Business
+  post (accepted, PROCESSING at submission), X `6ab232bb8b94ded0e9dc5f44`,
+  LinkedIn `6ab232d128a9ee8f636d0be1` (first comment with the blog and
+  Calendly links posted immediately after, confirmed `isReply: False`),
+  Instagram `6ab232e98b94ded0e9dc6f9f`, all confirmed published clean via
+  `posts_get`, no false 409s this run. TikTok `6ab232f1d7814fbcb771ab6e` sat
+  in `publishing` for the usual cover-image-stitch delay before confirming
+  published. Dynamic topic outside the queue, so no sheet row was updated;
+  the queue's next Pending row (still fully exhausted) remains untouched for
+  a future day.
