@@ -1,4 +1,5 @@
 engine/node_modules/
+engine/__pycache__/
 engine/dist/
 engine/frames/
 engine/index.html
