@@ -379,6 +379,26 @@ those captions should point at the bio.
    presenting it. The X caption carries both links: the blog article and the
    Calendly booking link. The LinkedIn caption carries neither, because both
    go in its first comment at publish time (step 9).
+5a. **On a Playbook day** (Tuesdays, per the LinkedIn content calendar) the
+   build is the carousel, not the illustration-and-hybrid-video run. Write the
+   deck config (cover, one slide per item with a `label`, a `detail` and a
+   `Start with` line, then a closing slide carrying the question), render both
+   cuts from it, and skip steps 6 and 7:
+
+   ```
+   ./engine/render_carousel.sh       carousel.json  doc/YYYY-MM-DD-slug.pdf   1080 1350
+   ./engine/render_carousel_video.sh carousel.json  video/YYYY-MM-DD-slug.mp4 1080 1350
+   ```
+
+   The PDF is the LinkedIn document post; the 45s MP4 is the Instagram and
+   TikTok cut. The blog post is the long-form version of the same deck. Pass
+   the PDF to Zernio as a `document` media item with `documentTitle` set, and
+   **serve it from jsDelivr, never raw.githubusercontent**, which returns
+   `application/octet-stream` and stops LinkedIn reading it as a document.
+   Check the returned byte count against the local file before posting:
+   jsDelivr caches a path on first request, so a re-rendered deck pushed over
+   its own filename will keep serving the stale copy (hit 2026-09-22, a 238KB
+   cached PDF against a 435KB local one). Use a fresh `-r2` name.
 6. Write the day's image description (topic-specific scene, no text) and
    generate the 3:2, 4:5 and 9:16 illustrations via workflow
    `FqYH4E3KZywda1ON`. Composite the covers with `render_cover.sh` and push
@@ -404,12 +424,17 @@ those captions should point at the bio.
    **LinkedIn only publishes on Tuesday, Wednesday and Thursday** (see the
    LinkedIn section below). On any other day, skip the LinkedIn post entirely
    and say so when reporting; every other destination still publishes daily.
-   **Immediately after the LinkedIn post confirms published, post its first
-   comment** carrying the blog link and the Calendly link, with
-   `comments_reply_to_inbox_post` (`post_id` = the Zernio post id,
-   `account_id` = the LinkedIn account, `comment_id` omitted so it lands on
-   the post rather than as a reply). Verified working 2026-09-21, returns
-   `isReply: False`.
+   **The LinkedIn first comment goes on the post itself**, as
+   `platformSpecificData.firstComment` on the LinkedIn platform entry of
+   `posts_create_post`. Zernio posts it automatically once the post lands,
+   which is atomic with publishing and cannot be half-done the way a separate
+   call can. Verified live 2026-09-22: comment appeared one second after the
+   post. It carries the blog and Calendly links on a news or Timely post; on a
+   Playbook post prefer a line that adds something and invites a reply, and
+   leave the booking link to the profile, because a giving-back post that ends
+   in a pitch stops being one.
+   (`comments_reply_to_inbox_post` with `comment_id` omitted also works and is
+   the fallback for commenting on a post that is already live.)
 10. Append a one-line record of the run to the Run log at the bottom of this
     file, commit it, and push.
 
@@ -615,6 +640,85 @@ impressions against 27.7 for images, with half the engagement (0.50 against
 1.03). Keep building the video for TikTok and Instagram, where it works, but
 do not treat it as the reason a LinkedIn post will perform, and prefer the 4:5
 cover on LinkedIn if a day's video is weak.
+
+## LinkedIn content calendar (set by Prad, 2026-09-22)
+
+Prad asked for posts that are informative and actionable but also current and
+relevant. Those pull against each other: a topic chosen three weeks out is not
+current by the time it runs. So currency is handled by reserving slots for it
+rather than by trying to predict it.
+
+Each of the three LinkedIn days has a different job. Three distinct shapes is
+also what stops the openers converging the way they did through September.
+
+| Day | Slot | Planned ahead? |
+|---|---|---|
+| Tuesday | **Playbook**, an actionable carousel, evergreen | Yes, topic set below |
+| Wednesday | **Reactive**, whatever actually broke that week | No, chosen that morning |
+| Thursday | **Timely**, anchored to a dated event | Yes, the date is known |
+
+**Playbook days** use the carousel build: `render_carousel.sh` for the PDF
+document post and `render_carousel_video.sh` for the 45s cut that goes to
+Instagram and TikTok, both from one config. The day's blog post is the
+long-form version of the same deck, so one topic feeds every destination
+rather than the blog and the social assets saying different things off the
+same research.
+
+**Reactive days** are the existing dynamic-topic process, unchanged: research
+what is trending, sense-check it against the Run log, build the hybrid video.
+
+**Timely days** lead on the dated anchor below. The date is the hook, so the
+post has to run in the window where it still matters.
+
+**The dated spine for Q4 2026.** All confirmed, so these do not need
+re-researching, only re-verifying close to the day:
+
+- **28 October.** Autumn Budget, Chancellor John Healey. A VAT cut on
+  electricity and a 20% business rates cut for pubs and live music venues are
+  already trailed.
+- **7 November.** MTD for Income Tax Q2 update deadline.
+- **18 November.** Hard deadline for existing directors and PSCs to complete
+  Companies House identity verification.
+- **27 November.** Black Friday. 30 November, Cyber Monday.
+- **2 December.** EU AI Act watermarking obligation for AI-generated content,
+  which reaches any UK firm selling into the EU.
+- **5 December.** Small Business Saturday.
+
+**The schedule.**
+
+| Date | Slot | Topic |
+|---|---|---|
+| Tue 22 Sep | Playbook | The five jobs worth automating first. **Published.** |
+| Thu 24 Sep | Playbook | Six questions before you buy any AI tool |
+| Tue 29 Sep | Playbook | What AI actually costs a small business |
+| Thu 1 Oct | Timely | Fix one process before your busiest quarter |
+| Tue 6 Oct | Playbook | How to write a prompt that gets a usable answer |
+| Thu 8 Oct | Timely | What to have ready before Budget day |
+| Tue 13 Oct | Playbook | The one-page AI policy, and what goes in it |
+| Thu 15 Oct | Timely | Four weeks to the ID verification deadline |
+| Tue 20 Oct | Playbook | Getting found when customers ask AI instead of Google |
+| Thu 22 Oct | Timely | Five numbers to have to hand on Budget day |
+| Wed 28 Oct | Reactive | **Budget day.** Clear the decks, this is the week's post |
+| Thu 29 Oct | Timely | What the Budget actually changed for small business |
+
+November runs the same shape against Black Friday, the 18 November deadline
+and the 2 December watermarking rule. Wednesdays throughout stay reactive and
+are deliberately left blank here.
+
+**Two guardrails on specific topics.**
+
+"What AI actually costs" describes tool costs only. Never what Kaizen charges,
+and no earnings or savings promises, per the voice rules. It is the post most
+likely to trip that rule, so check it twice before presenting.
+
+The ID verification topic was already covered on 2026-09-16 from the phishing
+angle. The October post is a different piece, "have you actually done it, here
+is how, four weeks left", not a rerun of that one.
+
+**When this calendar runs out**, or when a Playbook topic has clearly been
+overtaken by events, say so when presenting the draft and propose a
+replacement rather than silently substituting one. If Prad is not available,
+fall back to the dynamic-topic process for that slot and log the swap.
 
 ## Content direction (set by Prad, 2026-09-11)
 
