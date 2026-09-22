@@ -1,12 +1,12 @@
 {
-  "hook": ["UK AI USE JUST", "TRIPLED SINCE 2023."],
+  "hook": ["44% KNOW OF", "AGENTIC AI."],
   "points": [
-    ["Most use just one AI tool."],
-    ["Only 1 in 10 go deep."],
-    ["Micro firms: just 14% use AI."]
+    ["Only 5% actually use it."],
+    ["68% want to learn more."],
+    ["Most still just use chat."]
   ],
-  "stat": { "pre": "UK AI ADOPTION", "big": "TRIPLED TO 35%.", "post": "MOST BARELY USE IT." },
+  "stat": { "pre": "44% KNOW ABOUT IT.", "big": "ONLY 5% USE IT.", "post": "THE GAP IS THE OPPORTUNITY." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Depth beats dabbling, every time.",
+  "tagline": "The gap closes one task at a time.",
   "url": "kaizenaiconsulting.com"
 }
