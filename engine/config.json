@@ -1,12 +1,12 @@
 {
-  "hook": ["44% KNOW OF", "AGENTIC AI."],
+  "hook": ["AI JUST GOT", "50% CHEAPER."],
   "points": [
-    ["Only 5% actually use it."],
-    ["68% want to learn more."],
-    ["Most still just use chat."]
+    ["Usage is up 1,001%."],
+    ["Spend still up 497%."],
+    ["Your subscription won't move."]
   ],
-  "stat": { "pre": "44% KNOW ABOUT IT.", "big": "ONLY 5% USE IT.", "post": "THE GAP IS THE OPPORTUNITY." },
+  "stat": { "pre": "PRICES FELL 50%.", "big": "SPEND STILL ROSE 497%.", "post": "CHECK WHERE YOURS SITS." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "The gap closes one task at a time.",
+  "tagline": "The saving goes to whoever's closest to the model.",
   "url": "kaizenaiconsulting.com"
 }
