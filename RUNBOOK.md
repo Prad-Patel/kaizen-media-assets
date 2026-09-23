@@ -304,9 +304,21 @@ Business step is set to continue on error, so a GMB failure will not lose the
 blog post; check the `googleBusiness` field and report it.
 
 **Social publishing** — Zernio MCP. Accounts: Instagram
-`69f3414b985e734bf3e0697a`, LinkedIn `69f34174985e734bf3e06b70`, TikTok
-`69f34133985e734bf3e06870`, X `69fb9f1792b3d8e85f83c510`. Always pass
-`account_id` explicitly. `posts_create` takes `media_urls` as comma-separated
+`69f3414b985e734bf3e0697a`, TikTok `69f34133985e734bf3e06870`, X
+`69fb9f1792b3d8e85f83c510`. Always pass `account_id` explicitly.
+
+**LinkedIn now has two connected accounts (split 2026-09-23)**, grouped into
+two Zernio profiles: the Kaizen company page account `69f34174985e734bf3e06b70`
+sits in the "Kaizen" (default) profile `69f34057dc2b479b7f3f463f`, and Prad's
+personal profile account `6ab38cfa8d284ffb213313ab` sits in the new "Prad
+Personal" profile `6ab38cd9388cb9011e4521bc`. Before 09-23 there was only one
+LinkedIn account in Zernio and it had started silently resolving to the
+personal profile rather than the company page (first noticed in the 09-23 run
+log entry); Prad split them explicitly to fix that ambiguity. **Which LinkedIn
+account the daily post should target is Prad's call, not yet made as of
+09-23** — check the Run log for the day it gets decided rather than assuming
+the company page; until then, ask if it isn't already answered there.
+`posts_create` takes `media_urls` as comma-separated
 public URLs, so the asset URLs go straight in with no upload step.
 
 X gets the 4:5 cover as its image. For the covers on video posts the simple
