@@ -314,11 +314,16 @@ personal profile account `6ab38cfa8d284ffb213313ab` sits in the new "Prad
 Personal" profile `6ab38cd9388cb9011e4521bc`. Before 09-23 there was only one
 LinkedIn account in Zernio and it had started silently resolving to the
 personal profile rather than the company page (first noticed in the 09-23 run
-log entry); Prad split them explicitly to fix that ambiguity. **Which LinkedIn
-account the daily post should target is Prad's call, not yet made as of
-09-23** — check the Run log for the day it gets decided rather than assuming
-the company page; until then, ask if it isn't already answered there.
-`posts_create` takes `media_urls` as comma-separated
+log entry); Prad split them explicitly to fix that ambiguity.
+
+**Routing rule (set by Prad, 2026-09-23): most LinkedIn content stays on the
+Kaizen company page** (`69f34174985e734bf3e06b70`), not the personal profile.
+**The personal profile** (`6ab38cfa8d284ffb213313ab`) **is reserved for the
+value-added carousel posts** — the actionable, direct, relevant ones — which
+in practice means **Playbook day** (Tuesday, see the LinkedIn content
+calendar and step 5a below): post the carousel to the personal profile.
+Reactive (Wednesday) and Timely (Thursday) posts, and anything else, go to
+the Kaizen company page as before. `posts_create` takes `media_urls` as comma-separated
 public URLs, so the asset URLs go straight in with no upload step.
 
 X gets the 4:5 cover as its image. For the covers on video posts the simple
@@ -403,7 +408,10 @@ those captions should point at the bio.
    ```
 
    The PDF is the LinkedIn document post; the 45s MP4 is the Instagram and
-   TikTok cut. The blog post is the long-form version of the same deck. Pass
+   TikTok cut. The blog post is the long-form version of the same deck.
+   **Post the LinkedIn carousel to Prad's personal profile**
+   (`6ab38cfa8d284ffb213313ab`), not the Kaizen company page, per the
+   2026-09-23 routing rule above. Pass
    the PDF to Zernio as a `document` media item with `documentTitle` set, and
    **serve it from jsDelivr, never raw.githubusercontent**, which returns
    `application/octet-stream` and stops LinkedIn reading it as a document.
@@ -436,6 +444,10 @@ those captions should point at the bio.
    **LinkedIn only publishes on Tuesday, Wednesday and Thursday** (see the
    LinkedIn section below). On any other day, skip the LinkedIn post entirely
    and say so when reporting; every other destination still publishes daily.
+   **Which LinkedIn account** (2026-09-23 routing rule): Tuesday's Playbook
+   carousel goes to Prad's personal profile `6ab38cfa8d284ffb213313ab`;
+   Wednesday's Reactive and Thursday's Timely posts go to the Kaizen company
+   page `69f34174985e734bf3e06b70`, same as every other platform.
    **The LinkedIn first comment goes on the post itself**, as
    `platformSpecificData.firstComment` on the LinkedIn platform entry of
    `posts_create_post`. Zernio posts it automatically once the post lands,
