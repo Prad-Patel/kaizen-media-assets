@@ -2075,3 +2075,61 @@ hands it over.
   published. Dynamic topic outside the queue, so no sheet row was updated;
   the queue's next Pending row (still fully exhausted) remains untouched for
   a future day.
+- 2026-09-23 — thirty-eighth run, dynamic topic ("OpenAI Just Halved Its AI
+  Prices. Here's Why Your Software Bill Won't Follow."), queue still fully
+  exhausted (318/318 Complete, zero Pending on re-check). No
+  `PENDING-PUBLISH.md` backlog and nothing orphaned since 2026-09-22 (`main`
+  HEAD matched that run's own logged commit exactly). Push access verified
+  first, clean. This session's designated branch was a fresh
+  `claude/dreamy-lamport-afqcwf`, not `main`; pushed there first, then
+  fast-forwarded `main` to match for every asset push, consistent with the
+  runbook's requirement that every asset resolve from the default branch (the
+  same pattern logged 2026-09-21). `npm install` run fresh in `engine/`;
+  `ffmpeg` and `imagemagick` needed installing on this container. Today is a
+  Wednesday, a Reactive day on the LinkedIn content calendar (no Playbook or
+  Timely slot), so built the standard dynamic-topic hybrid video rather than
+  a carousel. Timeliness research found OpenAI's GPT-6 Sol/Luna release
+  (22 September, API prices cut roughly 50%) paired with Ramp's AI Index
+  showing business AI token usage up 1,001% between January 2025 and April
+  2026 against total spend still up 497% in that window, a genuinely fresh,
+  UK-relevant, strongly sourced angle not covered before; sense-checked
+  against the last ten Run log entries and the last ten published posts to
+  confirm no overlap, and checked specifically against the 29 September
+  "what AI actually costs" Playbook slot, a different angle (pricing-news
+  hook and spend-paradox insight, not a cost listicle) so it was judged clear
+  to run. Illustration used the subject-left, clear-right convention
+  throughout (3:2, 4:5, 9:16): a small business owner examining a large price
+  tag split in half by a glowing blue line, beside a smaller, static, unchanged
+  invoice card. The 3:2 and 4:5 were clean on the first generation; the 9:16
+  came back at a noticeably lower resolution (768x1376) with a more abstract,
+  fragmented rendering of the same tag-and-card idea than the other two
+  ratios, but the background was pixel-sampled uniform top to bottom with no
+  seam and the composition still read clearly once animated, so it was kept
+  rather than spending a regeneration on a stylistic-only issue. **Higgsfield
+  balance was 14.33 credits, below the ~15-credit cost of one
+  `kling3_0_turbo` generation and well below the ~35 floor**, so per the
+  runbook's 2a fallback the i2v call was skipped entirely and the video was
+  built from an 11s static clip of the 9:16 illustration via ffmpeg instead;
+  flagged to Prad in the draft presentation. Hybrid video QC'd clean on the
+  first render across all seven checked frames (2.5s/6s/12.5s/15.5s/17.3s/
+  17.6s/20s), hook's first line ("AI JUST GOT", 11 characters) kept short per
+  the 2026-09-22 logo-collision lesson, no overlap. Draft (video, both
+  covers, blog post, all captions) presented for approval via `SendUserFile`
+  and a push notification (session had no live user since the scheduled
+  prompt fired); approved by Prad in-session before any publish call. Blog
+  post 6899, https://kaizenaiconsulting.com/ai-price-cut-software-bill/,
+  Google Business post (accepted, PROCESSING at submission), LinkedIn
+  `6ab38573250c75f3a9ac79ea` (first comment with the blog and Calendly links
+  posted immediately after publish), Instagram `6ab385899d24dc04f49185d8`,
+  TikTok `6ab3859203c2093e2920b3cf`, X `6ab385a9250c75f3a9ac8026`, all
+  confirmed published clean via `posts_get`, no false 409s this run;
+  Instagram and TikTok both sat in `publishing` for the usual
+  cover-image-stitch delay before confirming. **New observation**: the
+  LinkedIn account now resolves to a personal profile ("Prad Patel") rather
+  than the company page for the first time in this log, suggesting the
+  personal-profile connection flagged as a growth lever in the 2026-09-21
+  LinkedIn rules may now be in place; worth Prad confirming, since the
+  600-1,100-character and Tue/Wed/Thu rules were tuned against company-page
+  data. Dynamic topic outside the queue, so no sheet row was updated; the
+  queue's next Pending row (still fully exhausted) remains untouched for a
+  future day.
