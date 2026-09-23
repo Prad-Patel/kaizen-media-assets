@@ -323,7 +323,22 @@ value-added carousel posts** — the actionable, direct, relevant ones — which
 in practice means **Playbook day** (Tuesday, see the LinkedIn content
 calendar and step 5a below): post the carousel to the personal profile.
 Reactive (Wednesday) and Timely (Thursday) posts, and anything else, go to
-the Kaizen company page as before. `posts_create` takes `media_urls` as comma-separated
+the Kaizen company page as before.
+
+**Everything posted to the personal profile is then reshared by the Kaizen
+page (set by Prad, 2026-09-23).** Once the personal post is confirmed
+published, take its `platformPostUrl` from the `posts_create_post` response
+(or from `posts_get_post` via `call_tool`) and create a second post on the
+Kaizen account with `platformSpecificData.reshareUrl` set to that URL and one
+line of Kaizen commentary as `content`. `reshareUrl` cannot be combined with
+`mediaItems`, so send no media on the reshare. LinkedIn's API cannot do the
+one-click "Repost" that keeps Prad as author: the reshare is a new Kaizen post
+with Prad's embedded underneath, which is why it carries a line of its own
+rather than going out text-free (bare reshares get little distribution). The
+commentary follows the same voice rules as every caption: no em dashes, no
+links (the links live in the personal post's first comment), and an opener
+not reused from the last ten posts. Verify the reshare with `posts_get` like
+any other post, and log both post ids in the Run log. `posts_create` takes `media_urls` as comma-separated
 public URLs, so the asset URLs go straight in with no upload step.
 
 X gets the 4:5 cover as its image. For the covers on video posts the simple
@@ -447,7 +462,10 @@ those captions should point at the bio.
    **Which LinkedIn account** (2026-09-23 routing rule): Tuesday's Playbook
    carousel goes to Prad's personal profile `6ab38cfa8d284ffb213313ab`;
    Wednesday's Reactive and Thursday's Timely posts go to the Kaizen company
-   page `69f34174985e734bf3e06b70`, same as every other platform.
+   page `69f34174985e734bf3e06b70`, same as every other platform. After any
+   personal-profile post is confirmed published, reshare it from the Kaizen
+   page with `reshareUrl` and a line of commentary (see the routing rule under
+   Social publishing).
    **The LinkedIn first comment goes on the post itself**, as
    `platformSpecificData.firstComment` on the LinkedIn platform entry of
    `posts_create_post`. Zernio posts it automatically once the post lands,
