@@ -2188,3 +2188,65 @@ hands it over.
   data. Dynamic topic outside the queue, so no sheet row was updated; the
   queue's next Pending row (still fully exhausted) remains untouched for a
   future day.
+- 2026-09-24 — thirty-ninth run, Playbook day (Thursday, under the original
+  Tue/Thu-Timely calendar; superseded mid-run, see below), topic "Six
+  questions before you buy any AI tool", the next dated row in the LinkedIn
+  content calendar. No `PENDING-PUBLISH.md` backlog. Found a same-pattern
+  unlogged item instead: the 2026-09-22 Playbook carousel ("The five jobs
+  worth automating first") had actually published cleanly to LinkedIn
+  (confirmed live, `6ab26fa2e211697e6a840ca7`, to the Kaizen company page
+  since the personal-profile split hadn't happened yet that morning) but the
+  matching blog post, Google Business post, Instagram and TikTok posts were
+  never sent and never logged. Built the missing blog post, GMB summary and
+  IG/TikTok captions from the existing assets and presented for approval;
+  Prad confirmed it as already handled and to close it without further
+  publishing, so no blog/GMB/social went out for that topic beyond the
+  LinkedIn post already live.
+
+  Push access verified first, clean. `npm install` run fresh in `engine/`;
+  `ffmpeg` and `imagemagick` needed installing on this container. Built
+  today's carousel per step 5a: six new item icons (task, data, cost, team,
+  alert, calendar) added to `carousel_html.py`'s `ICONS` dict, since the
+  existing set was specific to the five-jobs deck. PDF (8 slides, 1080x1350)
+  and the 51.6s video QC'd clean on the first render across all slides, no
+  regeneration needed.
+
+  **Standing change, set by Prad mid-run:** Playbook moves from one day a
+  week to two, Monday and Thursday. Today's run stayed on its original
+  Thursday slot; the next Playbook does not run before Monday 28 September.
+  The old Thursday Timely slot is retired, its dated topics folded into the
+  new Thursday Playbook slot on the same dates. `RUNBOOK.md` updated
+  throughout (the day-mapping table, step 5a, the personal-profile routing
+  rule, the LinkedIn day cap, the full dated schedule).
+
+  Playbook days have no Gemini illustration step (6/7 are skipped for the
+  carousel build), which left blog and Google Business with no cover image;
+  this was a known gap flagged on both the 09-22 backlog and today's first
+  draft. Prad confirmed a generated cover should be built. First Gemini
+  generation baked the letters "AI" onto the chip icon in the illustration,
+  breaking the no-AI-lettering rule; regenerated once with an explicit
+  no-lettering instruction on the icon itself, clean on the second pass.
+  Composited with `render_cover.sh` (1200x800, no footer) same as any other
+  day's 3:2 blog cover. This is now the standing approach for every future
+  Playbook day's blog/GMB image.
+
+  Draft (carousel PDF, video, blog post, all captions, cover) presented for
+  approval; approved by Prad in-session, who also gave the Monday/Thursday
+  schedule change and the cover-image go-ahead in the same reply. Blog post
+  6902, https://kaizenaiconsulting.com/six-questions-ai-tool/, Google
+  Business post (accepted, PROCESSING at submission). LinkedIn personal
+  profile `6ab4ddde85354a79da7dee15` (document post, carousel PDF, first
+  comment posted atomically), confirmed published clean, no false 409.
+  Kaizen company page reshare `6ab4de2685354a79da7dfcc3` (reshareUrl, one
+  line of commentary), confirmed published clean. Instagram
+  `6ab4de2c85354a79da7dfe40`, confirmed published
+  (instagram.com/reel/DdqcvjoDFbb/). TikTok `6ab4de3485354a79da7dff99`
+  (carousel video, required TikTok consent fields set), confirmed published;
+  `platformPostUrl` came back empty, the known non-failure case. One
+  `posts_create_post` call (the LinkedIn personal post) hit a 60s MCP
+  timeout with no response, but `posts_list` immediately after showed it had
+  actually published, so no retry was needed, consistent with the runbook's
+  note that a failed-looking response can still mean the post went out. X
+  skipped, consistent with the 09-22 precedent: Playbook days generate no
+  4:5 cover, so there is no asset for X's post. No sheet row to update, this
+  topic comes from the dated calendar, not the Google Sheet queue.
