@@ -3,59 +3,66 @@
   "slides": [
     {
       "type": "cover",
-      "kicker": "Where to actually start",
+      "kicker": "Before you sign up",
       "title": [
-        "The five jobs",
-        "worth automating",
-        "first in a small",
-        "business"
+        "Six questions",
+        "to ask before",
+        "you buy any",
+        "AI tool"
       ],
-      "subtitle": "Not the chatbot. Start with the money that leaks quietly, every week, without anyone noticing.",
+      "subtitle": "Not what it can do. What it actually replaces, what it costs once you use it, and what happens when it gets something wrong.",
       "icon": "grid"
     },
     {
       "type": "item",
-      "label": "Answering the phone you miss",
-      "detail": "Every missed call is a job somebody else quoted for. It never appears on a report and never gets blamed for anything, which is exactly why it survives for years.",
-      "start": "Where your calls actually go after five rings. Ring it yourself at 4pm on a Friday.",
-      "icon": "phone"
+      "label": "What job does this replace?",
+      "detail": "A tool that does everything fixes nothing. If you cannot name the one task it takes off somebody's plate, it becomes another tab nobody opens by week three.",
+      "start": "Finish the sentence: before, we did this by hand, now this tool does it.",
+      "icon": "task"
     },
     {
       "type": "item",
-      "label": "Turning a job into a quote",
-      "detail": "Notes and photos in, a priced document out. The gap between visiting a job and sending the number is where warm work goes cold, and it is usually measured in days.",
-      "start": "Your last ten quotes. How many hours between the visit and hitting send?",
-      "icon": "quote"
+      "label": "Where does our data actually go?",
+      "detail": "Half of UK founders admit they have put sensitive business data into a public AI tool without checking where it goes. Most never read the setting that decides whether their inputs train someone else's model.",
+      "start": "Find that tool's own privacy page and check whether your inputs are used for training by default.",
+      "icon": "data"
     },
     {
       "type": "item",
-      "label": "Chasing the invoice",
-      "detail": "Polite, on time, every time, without you having to decide to do it. A lot of what gets called a cash flow problem is really a chasing problem wearing a disguise.",
-      "start": "How many days past due your average paid invoice actually was.",
-      "icon": "invoice"
+      "label": "What does it cost once we actually use it?",
+      "detail": "The demo price and the real price are rarely the same number. Usage-based tools look cheap at ten requests a day and look very different at the volume a working team actually generates.",
+      "start": "Run the free trial hard for a week, then project the bill at your real volume, not the demo volume.",
+      "icon": "cost"
     },
     {
       "type": "item",
-      "label": "The follow-up nobody does",
-      "detail": "You have already done the expensive part. You visited, you priced it, you wrote it up. A quote that is never chased once is the cheapest revenue in the building.",
-      "start": "Quotes you sent more than fourteen days ago that nobody ever replied to.",
-      "icon": "followup"
+      "label": "Can someone else here run it without you?",
+      "detail": "Only a quarter of UK businesses already using AI have any process in place for it. A tool only you understand is not a system, it is a habit that leaves the building when you do.",
+      "start": "Hand it to the newest person on the team for a day and watch exactly where they get stuck.",
+      "icon": "team"
     },
     {
       "type": "item",
-      "label": "Writing the same reply again",
-      "detail": "If you have typed it twenty times, it should not need typing a twenty-first. Most inboxes have about five questions on permanent repeat and everyone answers them from scratch.",
-      "start": "Your sent folder. Find the five things you keep explaining.",
-      "icon": "repeat"
+      "label": "What happens when it gets it wrong?",
+      "detail": "Every AI tool is wrong sometimes. The question that actually matters is who catches it, a person or your customer, and how much it costs when it is the customer.",
+      "start": "Ask the vendor for one real example of a wrong output and what their product does next.",
+      "icon": "alert"
+    },
+    {
+      "type": "item",
+      "label": "Would we still want this in six months?",
+      "detail": "Companies abandoning most of their AI tools jumped from 17% to 42% in a single year. Most of that was never a bad tool, it was a tool nobody planned to keep checking on.",
+      "start": "Put a date in the calendar right now to actually review whether it is still earning its place.",
+      "icon": "calendar"
     },
     {
       "type": "end",
       "title": [
-        "Pick one.",
-        "Not five."
+        "Ask all six.",
+        "Buy none until you can."
       ],
-      "body": "The businesses that get real value out of this are the ones that fixed a single process properly and left everything else alone until it was genuinely working. Doing all five at once is how you end up with five half-built things and no time back.",
-      "cta": "Which of these is costing you most right now, the phone or the paperwork?",
+      "body": "The businesses getting real value from AI are not the ones that moved fastest. They are the ones that could answer all six of these about every tool they kept.",
+      "cta": "Which of these six would you actually struggle to answer about a tool you're using right now?",
       "icon": "target"
     }
   ]

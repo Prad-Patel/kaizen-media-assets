@@ -68,6 +68,41 @@ ICONS = {
       <circle cx="60" cy="60" r="27" fill="none" stroke="{blue}" stroke-width="7"/>
       <circle cx="60" cy="60" r="11" fill="{teal}"/>
     """,
+    "task": """
+      <rect x="24" y="14" width="72" height="92" rx="8" fill="none" stroke="{navy}" stroke-width="7"/>
+      <rect x="44" y="8" width="32" height="16" rx="4" fill="{navy}"/>
+      <path d="M38 46h44M38 62h44" stroke="{blue}" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="60" cy="84" r="18" fill="{teal}"/>
+      <path d="M52 84l6 6 11-12" fill="none" stroke="{navy}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    """,
+    "data": """
+      <path d="M60 12l38 14v30c0 26-16 42-38 50-22-8-38-24-38-50V26z" fill="none" stroke="{navy}" stroke-width="7" stroke-linejoin="round"/>
+      <rect x="42" y="54" width="36" height="28" rx="6" fill="{teal}"/>
+      <path d="M50 54v-9a10 10 0 0 1 20 0v9" fill="none" stroke="{navy}" stroke-width="6"/>
+    """,
+    "cost": """
+      <path d="M18 54L54 18h34a8 8 0 0 1 8 8v34L60 96a8 8 0 0 1-11 0L18 65a8 8 0 0 1 0-11z" fill="none" stroke="{navy}" stroke-width="7" stroke-linejoin="round"/>
+      <circle cx="76" cy="40" r="8" fill="{blue}"/>
+      <path d="M34 78l10-14 8 8 14-20" fill="none" stroke="{teal}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    """,
+    "team": """
+      <circle cx="42" cy="40" r="18" fill="none" stroke="{navy}" stroke-width="7"/>
+      <circle cx="80" cy="46" r="14" fill="{teal}"/>
+      <path d="M18 100c0-18 12-28 26-28s24 8 26 22" fill="none" stroke="{navy}" stroke-width="7" stroke-linecap="round"/>
+      <path d="M62 100c2-14 10-22 22-22 10 0 18 6 22 16" fill="none" stroke="{blue}" stroke-width="7" stroke-linecap="round" opacity=".55"/>
+    """,
+    "alert": """
+      <path d="M60 14l48 84H12z" fill="none" stroke="{navy}" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M60 42v26" stroke="{blue}" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="60" cy="84" r="7" fill="{teal}"/>
+    """,
+    "calendar": """
+      <rect x="16" y="24" width="88" height="76" rx="8" fill="none" stroke="{navy}" stroke-width="7"/>
+      <path d="M16 44h88" stroke="{navy}" stroke-width="7"/>
+      <path d="M36 14v20M84 14v20" stroke="{blue}" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="70" cy="72" r="22" fill="{teal}"/>
+      <path d="M60 72l7 7 15-16" fill="none" stroke="{navy}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    """,
 }
 
 
