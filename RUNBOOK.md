@@ -728,9 +728,9 @@ what is trending, sense-check it against the Run log, build the hybrid video.
 **The dated spine for Q4 2026.** All confirmed, so these do not need
 re-researching, only re-verifying close to the day:
 
-- **28 October.** Autumn Budget, Chancellor John Healey. A VAT cut on
-  electricity and a 20% business rates cut for pubs and live music venues are
-  already trailed.
+- **28 October.** Autumn Budget, Chancellor John Healey (date and Chancellor
+  re-verified 2026-09-24). A VAT cut on electricity and a 20% business rates
+  cut for pubs and live music venues are already trailed.
 - **7 November.** MTD for Income Tax Q2 update deadline.
 - **18 November.** Hard deadline for existing directors and PSCs to complete
   Companies House identity verification.
@@ -739,36 +739,101 @@ re-researching, only re-verifying close to the day:
   which reaches any UK firm selling into the EU.
 - **5 December.** Small Business Saturday.
 
-**The schedule.**
+**The schedule** (reworked 2026-09-24, see the tool-tips note below).
 
-| Date | Slot | Topic |
-|---|---|---|
-| Tue 22 Sep | Playbook | The five jobs worth automating first. **Published**, under the old Tuesday slot. |
-| Thu 24 Sep | Playbook | Six questions before you buy any AI tool. **Published**, under the old Thursday slot; next Playbook is Mon 28 Sep, not this same week. |
-| Mon 28 Sep | Playbook | What AI actually costs a small business |
-| Thu 1 Oct | Playbook | Fix one process before your busiest quarter |
-| Mon 5 Oct | Playbook | How to write a prompt that gets a usable answer |
-| Thu 8 Oct | Playbook | What to have ready before Budget day |
-| Mon 12 Oct | Playbook | The one-page AI policy, and what goes in it |
-| Thu 15 Oct | Playbook | Four weeks to the ID verification deadline |
-| Mon 19 Oct | Playbook | Getting found when customers ask AI instead of Google |
-| Thu 22 Oct | Playbook | Five numbers to have to hand on Budget day |
-| Wed 28 Oct | Reactive | **Budget day.** Clear the decks, this is the week's post |
-| Thu 29 Oct | Playbook | What the Budget actually changed for small business |
+| Date | Slot | Type | Topic |
+|---|---|---|---|
+| Tue 22 Sep | Playbook | Business | The five jobs worth automating first. **Published**, under the old Tuesday slot. |
+| Thu 24 Sep | Playbook | Business | Six questions before you buy any AI tool. **Published**, under the old Thursday slot. |
+| Mon 28 Sep | Playbook | Tool tips | Claude Cowork and Projects: set up your business so the AI stops forgetting |
+| Thu 1 Oct | Playbook | Business | Fix one process before your busiest quarter |
+| Mon 5 Oct | Playbook | Tool tips | Match the model to the job: top-tier models for thinking, mid-tier for routine, cheap tier for bulk, and what it saves in tokens |
+| Thu 8 Oct | Playbook | Tool tips | How to write a prompt that gets a usable answer |
+| Mon 12 Oct | Playbook | Tool tips | MCP: connect your AI to the tools you already use |
+| Thu 15 Oct | Playbook | Business | Five weeks to the Companies House ID verification deadline (18 Nov) |
+| Mon 19 Oct | Playbook | Tool tips | Open-weight models: cutting AI costs without a subscription |
+| Thu 22 Oct | Playbook | Business | Five numbers to have to hand on Budget day |
+| Mon 26 Oct | Playbook | Tool tips | Running a model locally: a quick intro for keeping data on your own machine |
+| Wed 28 Oct | Reactive | Business | **Budget day.** Clear the decks, this is the week's post |
+| Thu 29 Oct | Playbook | Business | What the Budget actually changed for small business |
+| Mon 2 Nov | Playbook | Business | The one-page AI policy, and what goes in it |
+| Thu 5 Nov | Playbook | Business | Getting found when customers ask AI instead of Google |
 
-November runs the same shape against Black Friday, the 18 November deadline
-and the 2 December watermarking rule, on Mondays and Thursdays. Wednesdays
-throughout stay reactive and are deliberately left blank here.
+Changes from the 2026-09-22 version: "What AI actually costs" is folded into
+the model-tiering post (5 Oct), which is its actionable form, and moved away
+from the 2026-09-23 price-cut post so the two do not land in the same week.
+The two pre-Budget posts (8 Oct and 22 Oct) are merged into the 22 Oct one,
+which keeps Budget week from carrying four posts on the same subject. The
+AI-policy and AI-search topics move into early November.
 
-**Two guardrails on specific topics.**
+The rest of November runs the same shape against Black Friday, the 18
+November deadline and the 2 December watermarking rule, on Mondays and
+Thursdays, keeping the roughly one-in-two mix of tool-tips and business
+topics. Wednesdays throughout stay reactive and are deliberately left blank
+here.
 
-"What AI actually costs" describes tool costs only. Never what Kaizen charges,
-and no earnings or savings promises, per the voice rules. It is the post most
-likely to trip that rule, so check it twice before presenting.
+**Tool-tips topics (set by Prad, 2026-09-24).** Prad asked for the Playbook
+to be "even more actionable" with hands-on tips for current AI tools, mixed
+in with the business topics, and for everything to be current as of the day
+it is written. Rules for every tool-tips post:
+
+- **Re-verify every product name, model name, price and feature on the day
+  of writing**, with web search. This market changes weekly: GPT-6 Astra
+  launched 3 September, Sol and Luna 22 September, and Cowork merged into
+  the main Claude app mid-September. The snapshot below is a starting point
+  only and is stale by default. If something has changed, write the current
+  version and say so when presenting the draft.
+- **Plain English for a non-technical owner.** MCP, open-weight models and
+  local models are developer topics; the carousel has to explain what the
+  thing does for a business and give one first step someone could take
+  that afternoon, not a technical tutorial.
+- **Name the trade-off every time.** A cheaper model can take more retries
+  to get the job done; open weights are free to download but not free to
+  run; a local model is private but slower and weaker than the frontier
+  ones, and is not automatically compliant just because it is local.
+- **Cost claims describe tool costs only**, never what Kaizen charges, and
+  no savings promises, per the voice rules. Quote published per-token prices
+  and work out an illustrative example rather than claiming "you will save X".
+- **Balance vendors.** Cover Anthropic, OpenAI, Google and the open-weight
+  options together where the topic allows, so the post reads as advice rather
+  than an advert for one vendor.
+
+**Snapshot as of 2026-09-24** (re-verify before use):
+
+- *Model tiers and API prices, per million tokens input/output.* Anthropic:
+  Claude Fable 5.1 $10/$50 (top tier), Claude Opus 5.5 $4/$20, Claude
+  Sonnet 5 $2/$10, Claude Haiku 4.5 $1/$5. OpenAI: GPT-6 Astra $10/$50 (top
+  tier, 3 Sep), GPT-6 Sol $2/$10 and GPT-6 Luna $0.10/$0.50 (both 22 Sep).
+  The two vendors' tiers line up closely, which makes a clean
+  like-for-like comparison: the top tier is about 5x mid-tier and up to
+  100x the cheapest.
+- *Claude Cowork and Projects.* Cowork and chat merged into one Claude app
+  in mid-September 2026; Projects and Artifacts are shared across both.
+  Cowork runs on web and mobile as well as desktop, with remote sessions in
+  beta. The Claude for Small Business plugin adds workflows and connectors
+  for Xero, QuickBooks, HubSpot, Shopify, Stripe, Google Workspace and
+  Microsoft 365, and asks for approval before anything sends, posts or pays.
+- *MCP.* Supported by Claude, ChatGPT, Gemini, Microsoft Copilot and most
+  coding tools; official servers exist for HubSpot, Shopify, Stripe, Slack,
+  Notion, Google and others. The public MCP Registry lists thousands of
+  servers.
+- *Open-weight models.* Kimi K3 (weights 27 Jul), DeepSeek-V4.1-Flash (MIT
+  licence, 10 Sep) and GLM-5.3 (28 Aug) lead the benchmarks. "Open weight"
+  is not the same as "open source": check the licence for commercial-use
+  limits.
+- *Local models.* Ollama (command line) and LM Studio (graphical app) are
+  the two standard tools. A 16GB laptop runs 13B-class models acceptably;
+  Apple Silicon Macs are well suited.
+
+**Guardrails on specific topics.**
+
+The model-tiering post (5 Oct) is the one most likely to trip the cost
+rule: describe tool costs only, never what Kaizen charges, and no earnings
+or savings promises. Check it twice before presenting.
 
 The ID verification topic was already covered on 2026-09-16 from the phishing
-angle. The October post is a different piece, "have you actually done it, here
-is how, four weeks left", not a rerun of that one.
+angle. The October post is a different piece, "have you actually done it,
+here is how, five weeks left", not a rerun of that one.
 
 **When this calendar runs out**, or when a Playbook topic has clearly been
 overtaken by events, say so when presenting the draft and propose a
