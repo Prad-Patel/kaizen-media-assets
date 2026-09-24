@@ -316,14 +316,15 @@ LinkedIn account in Zernio and it had started silently resolving to the
 personal profile rather than the company page (first noticed in the 09-23 run
 log entry); Prad split them explicitly to fix that ambiguity.
 
-**Routing rule (set by Prad, 2026-09-23): most LinkedIn content stays on the
-Kaizen company page** (`69f34174985e734bf3e06b70`), not the personal profile.
-**The personal profile** (`6ab38cfa8d284ffb213313ab`) **is reserved for the
-value-added carousel posts** — the actionable, direct, relevant ones — which
-in practice means **Playbook day** (Tuesday, see the LinkedIn content
+**Routing rule (set by Prad, 2026-09-23; Playbook days changed 2026-09-24):
+most LinkedIn content stays on the Kaizen company page**
+(`69f34174985e734bf3e06b70`), not the personal profile. **The personal
+profile** (`6ab38cfa8d284ffb213313ab`) **is reserved for the value-added
+carousel posts** — the actionable, direct, relevant ones — which in practice
+means **Playbook day** (Monday and Thursday, see the LinkedIn content
 calendar and step 5a below): post the carousel to the personal profile.
-Reactive (Wednesday) and Timely (Thursday) posts, and anything else, go to
-the Kaizen company page as before.
+Reactive (Wednesday) posts, and anything else, go to the Kaizen company page
+as before.
 
 **Everything posted to the personal profile is then reshared by the Kaizen
 page (set by Prad, 2026-09-23).** Once the personal post is confirmed
@@ -411,7 +412,7 @@ those captions should point at the bio.
    presenting it. The X caption carries both links: the blog article and the
    Calendly booking link. The LinkedIn caption carries neither, because both
    go in its first comment at publish time (step 9).
-5a. **On a Playbook day** (Tuesdays, per the LinkedIn content calendar) the
+5a. **On a Playbook day** (Mondays and Thursdays, per the LinkedIn content calendar) the
    build is the carousel, not the illustration-and-hybrid-video run. Write the
    deck config (cover, one slide per item with a `label`, a `detail` and a
    `Start with` line, then a closing slide carrying the question), render both
@@ -456,13 +457,14 @@ those captions should point at the bio.
    validation when a platform returns an empty `platformPostUrl` (TikTok does
    this routinely); that is not a publish failure. Use `call_tool` with
    `posts_get_post` to read the raw status.
-   **LinkedIn only publishes on Tuesday, Wednesday and Thursday** (see the
+   **LinkedIn only publishes on Monday, Wednesday and Thursday** (see the
    LinkedIn section below). On any other day, skip the LinkedIn post entirely
    and say so when reporting; every other destination still publishes daily.
-   **Which LinkedIn account** (2026-09-23 routing rule): Tuesday's Playbook
-   carousel goes to Prad's personal profile `6ab38cfa8d284ffb213313ab`;
-   Wednesday's Reactive and Thursday's Timely posts go to the Kaizen company
-   page `69f34174985e734bf3e06b70`, same as every other platform. After any
+   **Which LinkedIn account** (2026-09-23 routing rule, days updated
+   2026-09-24): every Playbook carousel, Monday or Thursday, goes to Prad's
+   personal profile `6ab38cfa8d284ffb213313ab`; Wednesday's Reactive posts go
+   to the Kaizen company page `69f34174985e734bf3e06b70`, same as every other
+   platform. After any
    personal-profile post is confirmed published, reshare it from the Kaizen
    page with `reshareUrl` and a line of commentary (see the routing rule under
    Social publishing).
@@ -657,7 +659,9 @@ small base, not a growth plan.
 
 **The rules.**
 
-- **Tuesday, Wednesday and Thursday only.** Seven low-engagement posts a week
+- **Three days a week only** (Monday, Wednesday and Thursday as of the
+  2026-09-24 Playbook-day change; originally Tuesday, Wednesday and
+  Thursday). Seven low-engagement posts a week
   teaches the algorithm the page is not worth distributing. Everything else in
   the pipeline still runs daily: TikTok is the one healthy channel (463
   average views since 15 August, steady, versus LinkedIn's 21) and Instagram
@@ -683,34 +687,43 @@ impressions against 27.7 for images, with half the engagement (0.50 against
 do not treat it as the reason a LinkedIn post will perform, and prefer the 4:5
 cover on LinkedIn if a day's video is weak.
 
-## LinkedIn content calendar (set by Prad, 2026-09-22)
+## LinkedIn content calendar (set by Prad, 2026-09-22; days changed 2026-09-24)
 
 Prad asked for posts that are informative and actionable but also current and
 relevant. Those pull against each other: a topic chosen three weeks out is not
 current by the time it runs. So currency is handled by reserving slots for it
 rather than by trying to predict it.
 
-Each of the three LinkedIn days has a different job. Three distinct shapes is
-also what stops the openers converging the way they did through September.
+**Changed 2026-09-24: two Playbook days a week, Monday and Thursday**, up from
+one. Prad's own words: "I think we can do two playbook posts a week. Let's
+change that to Monday and Thursday for playbook posts." The 2026-09-24 run
+itself stayed on its original Thursday Playbook slot (already built and
+presented before this change landed); **the next Playbook does not run before
+Monday 28 September**, per Prad's explicit instruction not to double up.
+Thursday's old **Timely** slot is retired as a separate type: the dated
+topics that used to fill it fold into the Thursday Playbook slot instead, on
+the same dates, since most of them were already actionable-checklist shaped
+and suit the carousel format without rewriting. Tuesday drops off the
+calendar. Wednesday Reactive is unchanged.
 
 | Day | Slot | Planned ahead? |
 |---|---|---|
-| Tuesday | **Playbook**, an actionable carousel, evergreen | Yes, topic set below |
+| Monday | **Playbook**, an actionable carousel, evergreen | Yes, topic set below |
 | Wednesday | **Reactive**, whatever actually broke that week | No, chosen that morning |
-| Thursday | **Timely**, anchored to a dated event | Yes, the date is known |
+| Thursday | **Playbook**, an actionable carousel, often dated-anchored | Yes, topic set below |
 
 **Playbook days** use the carousel build: `render_carousel.sh` for the PDF
 document post and `render_carousel_video.sh` for the 45s cut that goes to
 Instagram and TikTok, both from one config. The day's blog post is the
 long-form version of the same deck, so one topic feeds every destination
 rather than the blog and the social assets saying different things off the
-same research.
+same research. Every Playbook post also needs a generated 3:2 cover image for
+the blog and Google Business post, same as any other day (see the note added
+2026-09-24 under the Publisher section: Playbook days skip the 9:16/hybrid
+video illustration but still need the 3:2 still).
 
 **Reactive days** are the existing dynamic-topic process, unchanged: research
 what is trending, sense-check it against the Run log, build the hybrid video.
-
-**Timely days** lead on the dated anchor below. The date is the hook, so the
-post has to run in the window where it still matters.
 
 **The dated spine for Q4 2026.** All confirmed, so these do not need
 re-researching, only re-verifying close to the day:
@@ -730,22 +743,22 @@ re-researching, only re-verifying close to the day:
 
 | Date | Slot | Topic |
 |---|---|---|
-| Tue 22 Sep | Playbook | The five jobs worth automating first. **Published.** |
-| Thu 24 Sep | Playbook | Six questions before you buy any AI tool |
-| Tue 29 Sep | Playbook | What AI actually costs a small business |
-| Thu 1 Oct | Timely | Fix one process before your busiest quarter |
-| Tue 6 Oct | Playbook | How to write a prompt that gets a usable answer |
-| Thu 8 Oct | Timely | What to have ready before Budget day |
-| Tue 13 Oct | Playbook | The one-page AI policy, and what goes in it |
-| Thu 15 Oct | Timely | Four weeks to the ID verification deadline |
-| Tue 20 Oct | Playbook | Getting found when customers ask AI instead of Google |
-| Thu 22 Oct | Timely | Five numbers to have to hand on Budget day |
+| Tue 22 Sep | Playbook | The five jobs worth automating first. **Published**, under the old Tuesday slot. |
+| Thu 24 Sep | Playbook | Six questions before you buy any AI tool. **Published**, under the old Thursday slot; next Playbook is Mon 28 Sep, not this same week. |
+| Mon 28 Sep | Playbook | What AI actually costs a small business |
+| Thu 1 Oct | Playbook | Fix one process before your busiest quarter |
+| Mon 5 Oct | Playbook | How to write a prompt that gets a usable answer |
+| Thu 8 Oct | Playbook | What to have ready before Budget day |
+| Mon 12 Oct | Playbook | The one-page AI policy, and what goes in it |
+| Thu 15 Oct | Playbook | Four weeks to the ID verification deadline |
+| Mon 19 Oct | Playbook | Getting found when customers ask AI instead of Google |
+| Thu 22 Oct | Playbook | Five numbers to have to hand on Budget day |
 | Wed 28 Oct | Reactive | **Budget day.** Clear the decks, this is the week's post |
-| Thu 29 Oct | Timely | What the Budget actually changed for small business |
+| Thu 29 Oct | Playbook | What the Budget actually changed for small business |
 
 November runs the same shape against Black Friday, the 18 November deadline
-and the 2 December watermarking rule. Wednesdays throughout stay reactive and
-are deliberately left blank here.
+and the 2 December watermarking rule, on Mondays and Thursdays. Wednesdays
+throughout stay reactive and are deliberately left blank here.
 
 **Two guardrails on specific topics.**
 
