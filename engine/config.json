@@ -1,12 +1,12 @@
 {
-  "hook": ["AI JUST GOT", "50% CHEAPER."],
+  "hook": ["AI WON'T WRECK", "YOUR ENERGY BILL."],
   "points": [
-    ["Usage is up 1,001%."],
-    ["Spend still up 497%."],
-    ["Your subscription won't move."]
+    ["One query: 0.34 watt-hours."],
+    ["50 a day, a month: 11p."],
+    ["The grid strain isn't yours."]
   ],
-  "stat": { "pre": "PRICES FELL 50%.", "big": "SPEND STILL ROSE 497%.", "post": "CHECK WHERE YOURS SITS." },
+  "stat": { "pre": "GRID DEMAND: UP 4X.", "big": "YOUR QUERY: 0.34Wh.", "post": "NOT THE SAME BILL." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "The saving goes to whoever's closest to the model.",
+  "tagline": "The energy that matters is the data centre's, not your browser tab.",
   "url": "kaizenaiconsulting.com"
 }
