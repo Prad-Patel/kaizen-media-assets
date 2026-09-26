@@ -2314,4 +2314,35 @@ hands it over.
   note that a failed-looking response can still mean the post went out. X
   skipped, consistent with the 09-22 precedent: Playbook days generate no
   4:5 cover, so there is no asset for X's post. No sheet row to update, this
-  topic comes from the dated calendar, not the Google Sheet queue.
+  topic comes from the dated calendar, not the Google Sheet queue.- 2026-09-26 — fortieth run (Saturday, no LinkedIn), dynamic topic "AI Scam
+  Reports Are Up 395%. The Typo Test Won't Save You.", queue still fully
+  exhausted (no Pending rows). Push dry-run first hit the stale local `main`
+  ref artefact again, fixed with `git branch -f main origin/main`. Found a
+  same-pattern orphaned draft from 2026-09-25 ("AI won't wreck your energy
+  bill": covers, 9:16 and hybrid video pushed to `main` but never logged,
+  captioned or published; confirmed nothing live via `posts_list`). Rebuilt
+  its blog and captions and presented it first; **Prad rejected the topic**
+  and asked for the next one, so the 09-25 assets stay on `main` unused and
+  that topic should not be re-offered. Replacement topic from the BBC Wales
+  investigation (21 Sep) into AI-written emails impersonating UK food
+  festivals to take stall fees from small traders, with Report Fraud's 395%
+  rise in AI-linked reports and UK Finance's £576.4m APP loss figure.
+  Illustrations: 4:5 clean first time; 3:2 regenerated once (fishing hook ran
+  into the top-right headline zone; the second came back with a slightly
+  deeper blue-grey background, accepted); 9:16 regenerated once for the known
+  panel/box background fault. Higgsfield balance 46.33, so a real
+  `kling3_0_turbo` animation ran (~15 credits, ~31 left, below the ~35
+  floor). First hybrid render had points one and two touching; shortened the
+  point text and set `labelFontSize` 36, re-rendered from the same clip.
+  Prad approved in-session but asked for a catchier hook built on the big
+  fact, so the hook, both covers and every caption opener were reworked to
+  lead with 395% and published as `-r2` files. **Lesson:** a 15-character
+  first hook line ("AI SCAM REPORTS") collides with the K logo exactly like
+  the 2026-09-22 case; putting the number on a short first line ("395% MORE")
+  fixed it, and the stat card moved to £576.4m so the video does not repeat
+  the hook figure. Prad's direction worth keeping: lead the hook with the
+  single biggest number. Blog https://kaizenaiconsulting.com/ai-killed-the-typo-test/,
+  Google Business post (PROCESSING at submission), X
+  `6ab7954e03e69d3595de1c0c` (published), Instagram
+  `6ab7953653be563e8239ad94`, TikTok `6ab7953953be563e8239aea0`. LinkedIn
+  skipped, Saturday. Dynamic topic, no Sheet row touched.
