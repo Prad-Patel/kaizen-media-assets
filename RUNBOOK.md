@@ -511,6 +511,29 @@ ago, the same builds would have been £20,000+ agency projects." The hook rule
 from 2026-09-06 still applies, but the hook has to be a claim Kaizen is making,
 not a headline being relayed.
 
+**Lead the hook with the single biggest number (standing rule, set by Prad
+2026-09-26).** Pick the day's most striking verified figure and put it first,
+everywhere: the video hook, both cover headlines, the first line of every
+caption, and the blog title and first sentence. On 2026-09-26 Prad sent back a
+hook built on a concept ("AI killed the typo test") and asked for one built on
+the fact instead ("395% more AI scam reports"). How to apply it:
+
+- **Video hook:** the number goes on the first line, and that line stays at
+  about 11 characters or fewer ("395% MORE"), with the rest on line two. A
+  15-character first line ("AI SCAM REPORTS") runs into the K logo, the same
+  collision as 2026-09-22.
+- **Stat card:** use a different figure from the hook (on 09-26 the hook
+  carried 395% and the card carried £576.4m) so the video doesn't say the same
+  number twice.
+- **Accuracy:** the number must be sourced and worded exactly as the source
+  counts it ("AI-linked fraud reports up 395%", not "AI scams up 395%").
+- **Point of view still follows:** the number earns the first second, then the
+  next line is Kaizen's claim about it. Pick the day's topic partly on whether
+  it has one number strong enough to lead.
+- **Openers still never repeat:** leading with a number is the fixed
+  structure, but the wording around it changes every day ("395%. That's
+  how much...", "AI scam reports are up 395%...").
+
 No income or earnings promises. Cost claims always describe tool costs, never
 what Kaizen charges. UK compliance matters more than a punchier line.
 
