@@ -2369,3 +2369,48 @@ hands it over.
   `6ab7954e03e69d3595de1c0c` (published), Instagram
   `6ab7953653be563e8239ad94`, TikTok `6ab7953953be563e8239aea0`. LinkedIn
   skipped, Saturday. Dynamic topic, no Sheet row touched.
+- 2026-09-27 — forty-first run (Sunday, no LinkedIn), dynamic topic ("£26
+  Billion in Late Payments: How UK Small Businesses Can Let AI Chase It
+  Instead"), queue still fully exhausted (confirmed via a full CSV export of
+  all 314 rows, zero occurrences of "Pending"). No `PENDING-PUBLISH.md`
+  backlog and nothing orphaned since 2026-09-26 (`main` HEAD matched that
+  run's own logged commit before this run's changes). Push dry-run hit the
+  recurring stale local-`main`-ref artefact again (non-fast-forward
+  rejection), fixed as usual with `git fetch origin main && git branch -f
+  main origin/main`. `npm install` run fresh in `engine/`; `ffmpeg`,
+  `ffprobe` and `imagemagick` needed installing on this container. Sense-
+  checked candidates against the last ten Run log entries; the 47%/19%
+  adoption story and the Accio agentic-AI survey were both already covered,
+  and the Novuna energy-adoption-barrier story sat too close to the topic
+  Prad rejected the day before, so built instead around a genuinely fresh,
+  government-sourced angle: research commissioned by the Department for
+  Business and Trade and the Office of the Small Business Commissioner (via
+  London Economics) finding UK businesses owed £26 billion in late payments
+  at any given time and losing 133 million staff hours a year chasing it,
+  paired with the Small Business Protections Bill now before Parliament,
+  described as the biggest late-payment crackdown in 25+ years. Illustration
+  used the subject-right, clear-left convention (owner at a desk, AI orb
+  straightening a leaning stack of overdue invoices into a calm paid pile):
+  3:2 and 4:5 clean on the first generation; 9:16 hit the known panel/seam
+  background fault again and needed one regeneration with an explicit
+  single-hex-colour instruction (`#EAF0F9`), verified uniform afterwards by
+  pixel-sampling six points top to bottom. Higgsfield balance was 31.33
+  credits pre-generation, above the ~15-credit floor, so a real
+  `kling3_0_turbo` animation ran (~15 credits, ~16 left, below the ~35
+  floor, flagged to Prad in the draft). Hybrid video QC'd clean on the first
+  render across all seven checked frames (2.5s/6s/12.5s/15.5s/17.3s/17.6s/
+  20s): hook's first line ("£26 BILLION", 11 characters) kept short per the
+  2026-09-22/09-26 logo-collision lesson, no overlap, and the stat card used
+  a different figure (133 million hours) than the hook per Prad's
+  lead-with-the-number rule. Draft (video, both covers, blog post, all
+  captions) presented for approval via `SendUserFile` and a push
+  notification (session had no live user since the scheduled prompt fired);
+  approved by Prad in-session before any publish call. Blog post 6908,
+  https://kaizenaiconsulting.com/late-payment-ai-invoice-chasing/, Google
+  Business post (accepted, PROCESSING at submission), X
+  `6ab8c9ccdf67677744a1547a`, Instagram `6ab8c9d046cea0f52cd351e4`, TikTok
+  `6ab8c9d346cea0f52cd3528e`, all confirmed published clean via `posts_get`
+  after a 60s wait, no false 409s this run. LinkedIn skipped, Sunday.
+  Dynamic topic outside the queue, so no sheet row was updated; the queue's
+  next Pending row (still fully exhausted) remains untouched for a future
+  day.
