@@ -1,12 +1,12 @@
 {
-  "hook": ["AI WON'T WRECK", "YOUR ENERGY BILL."],
+  "hook": ["£26 BILLION", "SITS UNPAID."],
   "points": [
-    ["One query: 0.34 watt-hours."],
-    ["50 a day, a month: 11p."],
-    ["The grid strain isn't yours."]
+    ["133 million hours lost chasing it."],
+    ["AI can chase invoices for you."],
+    ["A new law caps terms at 60 days."]
   ],
-  "stat": { "pre": "GRID DEMAND: UP 4X.", "big": "YOUR QUERY: 0.34Wh.", "post": "NOT THE SAME BILL." },
+  "stat": { "pre": "STAFF TIME LOST CHASING INVOICES:", "big": "133 MILLION HOURS A YEAR.", "post": "AI CAN DO THE CHASING INSTEAD." },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "The energy that matters is the data centre's, not your browser tab.",
+  "tagline": "Chasing payments shouldn't be a founder's job.",
   "url": "kaizenaiconsulting.com"
 }
