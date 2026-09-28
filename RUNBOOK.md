@@ -2414,3 +2414,74 @@ hands it over.
   Dynamic topic outside the queue, so no sheet row was updated; the queue's
   next Pending row (still fully exhausted) remains untouched for a future
   day.
+- 2026-09-28 — forty-second run, Playbook day (Monday, the first under the
+  2026-09-24 Monday/Thursday change), topic "Claude Cowork and Projects: set
+  up your business so the AI stops forgetting", the next dated row in the
+  LinkedIn content calendar tool-tips rotation. No `PENDING-PUBLISH.md`
+  backlog and nothing orphaned since 2026-09-27. Push dry-run first hit the
+  recurring stale local-`main`-ref artefact (non-fast-forward rejection),
+  fixed as usual with `git fetch origin main && git branch -f main
+  origin/main`. `npm install` run fresh in `engine/`; `ffmpeg`, `ffprobe` and
+  `imagemagick` needed installing on this container. Sheet queue re-checked
+  via a full CSV export (still fully exhausted, zero Pending rows), so the
+  dated calendar topic ran unmodified.
+
+  Re-verified the tool-tips snapshot before writing: the Claude Cowork/chat
+  memory merge (TechCrunch, 25 Aug), OpenAI's self-updating "Dreaming"
+  memory system (OpenAI's own announcement, June 2026, 82.8% factual recall
+  vs 41.5% on the 2024 system), and Gemini Gems' fixed-instruction model
+  (Google's own support forums still showing memory-reaching-Gems issues
+  into mid-2026) all held up. Led the hook with a fresh, well-corroborated
+  figure instead of the Salesforce 76%/52% stat first turned up (dropped,
+  single low-authority source, could not verify a second way, per the
+  standing sourcing discipline): Twilio's 2026 Customer Insights Series
+  (7,652 consumers, 660 business leaders, 18 countries, published 24 Sep),
+  70% of APAC consumers abandoning an AI interaction that lacked context,
+  corroborated independently across six outlets. Paired with UK-specific
+  supporting figures (HeyBRB's 384 admin-hours-a-year UK owner-operator
+  survey, ONS's ~12%-to-~35% UK AI adoption climb) for the required UK
+  grounding.
+
+  Built the carousel per step 5a: cover plus six items (one Project per
+  job, load repeat documents, shared chat/Cowork memory, the ChatGPT vs
+  Gemini trade-off, the storage/privacy angle, test-before-trust) plus a
+  closing question slide, reusing the existing icon set with no new icons
+  needed. PDF (8 slides, 1080x1350) and the 51.6s video QC'd clean on the
+  first render across all sampled slides and frames, no regeneration
+  needed. Per the 2026-09-24 standing note, generated a 3:2 blog/GMB cover
+  even though Playbook days skip the illustration/hybrid-video steps: the
+  first Gemini illustration collided with the headline (artwork ran under
+  the top-right text zone), the second attempt fixed the composition but
+  introduced a visible background panel/seam (the known panel/box fault),
+  and the third attempt came back clean and was used, with the raw
+  pre-text illustration pushed to the repo for future rebuilds.
+
+  Draft (carousel PDF, video, blog post, 3:2 cover, all captions) presented
+  for approval via `SendUserFile` and a push notification (session had no
+  live user since the scheduled prompt fired). Prad approved the draft but
+  flagged that Instagram had no cover image, since the 2026-09-22/09-24
+  precedent of skipping the 4:5 on Playbook days (no X post, so "no asset
+  needed") had also left Instagram's reel with nothing set. Generated a
+  dedicated 4:5 portrait illustration (not a crop of the 3:2, which would
+  have cut the subject off center-crop) with the top third clear per house
+  style, composited with the footer bar, pushed, validated, and re-sent for
+  approval; Prad replied "Proceed." **Correction to the 09-22/09-24
+  precedent for future Playbook days:** generate the 4:5 for Instagram's
+  reel cover even when there is no X post to justify it; X itself stays
+  skipped on Playbook days (still no asset intended for it, and adding one
+  was outside what was asked).
+
+  Publisher ran clean: blog post 6911,
+  https://kaizenaiconsulting.com/claude-cowork-projects-memory-setup/,
+  Google Business post (accepted, PROCESSING at submission). LinkedIn
+  personal profile document post `urn:li:ugcPost:7510242539178897408`
+  (carousel PDF via jsDelivr, first comment posted atomically), confirmed
+  published clean, no false 409. Kaizen company page reshare
+  `urn:li:ugcPost:7510242578433212418` (reshareUrl, one line of
+  commentary), confirmed published clean. Instagram
+  `6aba1a7ac6d95e0b13050255`, confirmed published
+  (instagram.com/reel/Dd0rNa2iPjJ/). TikTok `6aba1a83c6d95e0b1305039a`,
+  confirmed published; `platformPostUrl` came back empty, the known
+  non-failure case. No false 409s this run. X skipped, Playbook day
+  convention (see correction above). No sheet row to update, this topic
+  comes from the dated calendar, not the Google Sheet queue.
