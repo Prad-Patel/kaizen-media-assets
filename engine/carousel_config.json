@@ -3,66 +3,66 @@
   "slides": [
     {
       "type": "cover",
-      "kicker": "Before you sign up",
+      "kicker": "The memory problem",
       "title": [
-        "Six questions",
-        "to ask before",
-        "you buy any",
-        "AI tool"
+        "70% abandon",
+        "AI chats",
+        "that forget",
+        "who they are"
       ],
-      "subtitle": "Not what it can do. What it actually replaces, what it costs once you use it, and what happens when it gets something wrong.",
+      "subtitle": "Claude Projects and Cowork now share memory. Here's how we set ours up so it actually holds, and what ChatGPT and Gemini do differently.",
       "icon": "grid"
     },
     {
       "type": "item",
-      "label": "What job does this replace?",
-      "detail": "A tool that does everything fixes nothing. If you cannot name the one task it takes off somebody's plate, it becomes another tab nobody opens by week three.",
-      "start": "Finish the sentence: before, we did this by hand, now this tool does it.",
-      "icon": "task"
+      "label": "Give every job its own Project, not one long chat",
+      "detail": "A Project is a separate memory space with its own files and instructions. Run five clients through one chat thread and the AI blends them. Run each through its own Project and nothing bleeds across.",
+      "start": "Open a Project for the client or job you re-explain the most, right now.",
+      "icon": "grid"
     },
     {
       "type": "item",
-      "label": "Where does our data actually go?",
-      "detail": "Half of UK founders admit they have put sensitive business data into a public AI tool without checking where it goes. Most never read the setting that decides whether their inputs train someone else's model.",
-      "start": "Find that tool's own privacy page and check whether your inputs are used for training by default.",
-      "icon": "data"
+      "label": "Load the three documents you keep re-pasting",
+      "detail": "Price list, service area, standard terms. Drop them into the Project's files once and every future chat inside it already knows them, instead of you retyping the same paragraph on a Tuesday and again on a Friday.",
+      "start": "Add your price list, service area and terms to one Project today.",
+      "icon": "invoice"
     },
     {
       "type": "item",
-      "label": "What does it cost once we actually use it?",
-      "detail": "The demo price and the real price are rarely the same number. Usage-based tools look cheap at ten requests a day and look very different at the volume a working team actually generates.",
-      "start": "Run the free trial hard for a week, then project the bill at your real volume, not the demo volume.",
-      "icon": "cost"
+      "label": "Chat and Cowork now share the same memory",
+      "detail": "Since the merge in September, whatever you tell Claude in one surface shows up when you are back in the other, as long as you are in the same Project. Start a task on your phone, finish it at your desk, and it remembers where you left off.",
+      "start": "Switch from chat to Cowork on the same Project and check the summary carried over.",
+      "icon": "repeat"
     },
     {
       "type": "item",
-      "label": "Can someone else here run it without you?",
-      "detail": "Only a quarter of UK businesses already using AI have any process in place for it. A tool only you understand is not a system, it is a habit that leaves the building when you do.",
-      "start": "Hand it to the newest person on the team for a day and watch exactly where they get stuck.",
-      "icon": "team"
+      "label": "Every tool remembers differently, and that is the trade-off",
+      "detail": "ChatGPT's Dreaming system now rewrites its own memory after each chat with no prompting. Gemini's Gems run on fixed instructions and knowledge files, so a new fact you mention today is gone again tomorrow unless you go back and edit the Gem by hand.",
+      "start": "Check which of your AI tools update themselves and which need manual edits.",
+      "icon": "quote"
     },
     {
       "type": "item",
-      "label": "What happens when it gets it wrong?",
-      "detail": "Every AI tool is wrong sometimes. The question that actually matters is who catches it, a person or your customer, and how much it costs when it is the customer.",
-      "start": "Ask the vendor for one real example of a wrong output and what their product does next.",
+      "label": "Remembering more also means storing more",
+      "detail": "Businesses everywhere assume their AI recognises returning customers. Consumers keep saying it still does not. Whichever tool wins that argument for you, everything it remembers is also everything it is keeping, so check the memory settings before you paste anything sensitive.",
+      "start": "Open your Project's memory or saved info panel and see what is actually stored.",
       "icon": "alert"
     },
     {
       "type": "item",
-      "label": "Would we still want this in six months?",
-      "detail": "Companies abandoning most of their AI tools jumped from 17% to 42% in a single year. Most of that was never a bad tool, it was a tool nobody planned to keep checking on.",
-      "start": "Put a date in the calendar right now to actually review whether it is still earning its place.",
-      "icon": "calendar"
+      "label": "Test it before you trust it",
+      "detail": "Close the chat, open a fresh one in the same Project, and ask it something only the earlier conversation would know. If it answers correctly, the setup works. If it does not, the files or instructions need another pass.",
+      "start": "Run that test on your busiest recurring Project this afternoon.",
+      "icon": "target"
     },
     {
       "type": "end",
       "title": [
-        "Ask all six.",
-        "Buy none until you can."
+        "Stop repeating yourself.",
+        "Start building on it."
       ],
-      "body": "The businesses getting real value from AI are not the ones that moved fastest. They are the ones that could answer all six of these about every tool they kept.",
-      "cta": "Which of these six would you actually struggle to answer about a tool you're using right now?",
+      "body": "We built our own Projects around the clients and jobs we explain most often, so the AI carries the context instead of us carrying it every time.",
+      "cta": "Which job would you save the most time on if the AI already knew the details?",
       "icon": "target"
     }
   ]
