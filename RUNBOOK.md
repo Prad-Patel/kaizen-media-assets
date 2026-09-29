@@ -2485,3 +2485,27 @@ hands it over.
   non-failure case. No false 409s this run. X skipped, Playbook day
   convention (see correction above). No sheet row to update, this topic
   comes from the dated calendar, not the Google Sheet queue.
+- 2026-09-29 — forty-third run (Tuesday, no LinkedIn), dynamic topic
+  "900,000 Installs Later: What UK Small Businesses Should Do Before
+  Connecting AI to Their Books" (Forbes 15 Sep: Claude for Small Business
+  installed 900,000+ times since May, 43 new workflows, 27 new integrations,
+  37 partner connectors; Claude Marketplace 23 Sep, 2,000+ connectors; Xero UK
+  release). Queue still exhausted, no `PENDING-PUBLISH.md`. Push dry-run again
+  hit the stale local `main` artefact, fixed by fast-forwarding to
+  `origin/main`. The n8n trigger node names are "Cowork Image Request",
+  "Cowork Fetch Request" and "Cowork Publish Request" (`triggerNodeName` is
+  required). The 3:2 illustration was regenerated once (artwork under the
+  headline). The i2v clip put the first rail point on the gate tick, and
+  Higgsfield balance was 16.33 (about 1 left after the 15-credit clip), so no
+  re-roll: the clip was scaled to 83% and padded with pad colour 0xE0E9F0
+  (measured to match the post-render background within 1 to 2 units) to lift the
+  art clear of the rail, rebuilt free with `labelFontSize` 36. Zernio
+  `call_tool posts_create_post` takes snake_case args (`media_items`,
+  `publish_now`, `tiktok_settings`), camelCase is rejected. Higgsfield needs a
+  top-up before the next animated build. Draft approved in-session ("proceed").
+  Blog post 6914, https://kaizenaiconsulting.com/claude-small-business-900000-installs/,
+  Google Business post (PROCESSING at submission), X `6abb6c17c2e7e87aa9f94302`,
+  Instagram `6abb6c2cdcadffc0fb66972c`
+  (instagram.com/reel/Dd3QEY1lfjS/), TikTok `6abb6c2fdcadffc0fb669730`, all
+  confirmed published clean after 70s, no false 409s. LinkedIn skipped,
+  Tuesday. Dynamic topic, no Sheet row touched.
