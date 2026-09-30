@@ -482,6 +482,38 @@ those captions should point at the bio.
 10. Append a one-line record of the run to the Run log at the bottom of this
     file, commit it, and push.
 
+## WPvibe trial for WordPress publishing (set by Prad, 2026-09-30)
+
+Prad wants to try posting the WordPress blog through the WPvibe connector
+(MCP server `https://mcp.wpvibe.ai/mcp`, SeedProd plugin on the Hostinger-hosted
+self-hosted site) instead of the n8n publisher, starting with the 2026-10-01
+run. The WordPress.com connector is the wrong product for this site, ignore it.
+WPvibe showed as connected but not enabled in the 2026-09-30 session, so first
+check that its tools load (ToolSearch "wpvibe"); if they do not, tell Prad the
+connector is not enabled for the routine and use n8n as normal.
+
+How to run the trial, after Prad approves the draft as usual:
+
+1. Create the post with WPvibe, matching what the n8n workflow
+   `QkD45M0Zd1J7Seor` does: title, slug, `contentHtml` followed by the booking
+   button HTML below, status publish, category id 2, tag id 37, author id 1,
+   the 3:2 cover uploaded to the media library with title/alt/caption/
+   description set as in the publisher body, and set as featured image.
+   Booking button (append after the article HTML):
+   `<div class="elementor-element elementor-element-a458685 elementor-widget__width-auto elementor-widget elementor-widget-flexitype-creative-button" data-id="a458685" data-element_type="widget" data-widget_type="flexitype-creative-button.default"><div class="elementor-widget-container"><div class="flexitype-btn"><a class="flexitype-btn-wrapper button-moema  right" href="https://kaizenaiconsulting.com/contact-us/" data-text="Book in a free consultation"><span>Book in a free consultation</span><i class="fas fa-plus"></i></a></div></div></div>`
+2. Read the post back through WPvibe and confirm the link, featured image and
+   that the button HTML survived. The session cannot fetch the site directly.
+3. **Do not also run the n8n publisher.** It has no skip-WordPress flag, so it
+   would create a duplicate post. Only fall back to n8n if WPvibe did NOT
+   create a post, and check for a half-created post or stray media first.
+4. **Google Business is an open gap.** That step only exists inside the n8n
+   publisher and needs the WP post link and media URL. Until Prad has a
+   Google-Business-only workflow built, say plainly in the draft report that
+   the GBP post is not covered by the WPvibe route and ask Prad whether to
+   skip it or use n8n for the day. Do not silently drop it.
+5. Log how the trial went (button, featured image, anything broken) in the Run
+   log so the decision to drop n8n is made on evidence.
+
 ## Voice and brand rules
 
 These come from Prad directly and are not negotiable.
