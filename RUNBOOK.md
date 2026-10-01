@@ -2560,3 +2560,26 @@ hands it over.
   non-failure), LinkedIn Kaizen page `6abcc4b5f66610d1b0b50474` with first
   comment, all confirmed published, no false 409s. Draft approved in-session
   ("proceed"). Dynamic topic, no Sheet row touched.
+- 2026-10-01 — forty-fifth run, Playbook day (Thursday), calendar topic "Fix
+  one process before your busiest quarter", built around late payments (gov
+  research via London Economics / Small Business Commissioner, July 2025: 38
+  firms a day, 14,000 a year, 86 hours chasing per affected business, £11bn).
+  No `PENDING-PUBLISH.md`. Push dry-run clean. Carousel PDF and 58s video
+  built; first 3:2 illustration collided with the headline and was
+  regenerated once. Prad asked for a more obvious AI benefit and a case
+  study: no verifiable AI case study found (the "Midlands engineering DSO
+  58 to 33" story had no source and was dropped), so r2 added a slide 5 "Hand
+  the chasing to an AI agent" using the 86 hours and Xero's own "paid up to
+  twice as fast with online payment" data, and the blog gained an AI agent
+  section. One sentence claiming Kaizen had built a one-page process map for
+  its own admin was softened before publishing as unverified. Draft approved
+  in-session ("Looks good. Let's go ahead."). Blog post 6920,
+  https://kaizenaiconsulting.com/fix-one-process-before-q4-late-payments/,
+  Google Business post (PROCESSING at submission). LinkedIn personal profile
+  document post `urn:li:ugcPost:7511409379846365184` (r2 PDF via jsDelivr,
+  first comment with sources and blog link), Kaizen page reshare
+  `urn:li:ugcPost:7511409419960832000`, Instagram `6abe592b0a38784962984233`
+  (instagram.com/reel/Dd89y7UguwU/), TikTok `6abe5938b10990a2051c418c`, all
+  confirmed published after about a minute, no 409s. X skipped, Playbook day.
+  WPvibe tools not enabled for the routine, so n8n was used. No Sheet row to
+  update (calendar topic).
