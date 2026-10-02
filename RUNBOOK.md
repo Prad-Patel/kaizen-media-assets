@@ -2583,3 +2583,18 @@ hands it over.
   confirmed published after about a minute, no 409s. X skipped, Playbook day.
   WPvibe tools not enabled for the routine, so n8n was used. No Sheet row to
   update (calendar topic).
+- 2026-10-02 — forty-sixth run (Friday, no LinkedIn), dynamic topic "£3.7bn
+  Lost to Missed Calls: Should a UK Small Business Hire an AI Receptionist?"
+  (BT Business "AI from BT" launch, BT research: £3.7bn a year lost to missed
+  calls, 67% of SMBs miss a call daily, 75% of callers try three times, 58%
+  would warn others off; price unpublished). Queue still exhausted, no
+  `PENDING-PUBLISH.md`. Push dry-run hit the stale local `main` artefact again
+  (pushed as `HEAD:main`). Higgsfield balance 1.33, so the video used the
+  static-clip fallback (2a); top-up needed. Stat card shortened to "75% GIVE
+  UP." before pushing after the first render wrapped to two lines. WPvibe tools
+  not enabled for the routine, so n8n was used. Draft approved in-session
+  ("Proceed"). Blog post 6923,
+  https://kaizenaiconsulting.com/bt-ai-receptionist-missed-calls/, Google
+  Business post (PROCESSING at submission), X `6abf69d77738291087c12dba`
+  (published), Instagram `6abf69dfb65278277721a04c`, TikTok
+  `6abf69e206653f68e261621a`. No Sheet row to update (dynamic topic).
