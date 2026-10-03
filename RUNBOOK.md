@@ -2598,3 +2598,19 @@ hands it over.
   Business post (PROCESSING at submission), X `6abf69d77738291087c12dba`
   (published), Instagram `6abf69dfb65278277721a04c`, TikTok
   `6abf69e206653f68e261621a`. No Sheet row to update (dynamic topic).
+- 2026-10-03 — forty-seventh run (Saturday, no LinkedIn), dynamic topic
+  "£958 Million: Your Staff Are Already Paying for AI at Work" (Deloitte UK
+  GenAI Workforce Survey, 25,000 workers, May to June 2026: £958m a year of
+  workers' own money on GenAI for work, 31% of users use it without their
+  employer's knowledge). Queue still exhausted, no `PENDING-PUBLISH.md`. Push
+  dry-run clean. Higgsfield balance 1.33, so static-clip fallback (2a) again;
+  top-up needed. First 3:2 collided with the headline and first 9:16 had
+  painted £ glyphs on the coins, both regenerated once; video point text
+  shortened and labelFontSize 34 after point 1 crowded the artwork. A
+  Deloitte "pay for it themselves" share was dropped as the sources disagreed.
+  WPvibe tools not enabled for the routine, so n8n was used. Draft approved
+  in-session ("Proceed"), TikTok line softened to "may train on what you paste
+  in". Blog post https://kaizenaiconsulting.com/staff-paying-own-ai-958m/,
+  Google Business post (PROCESSING at submission), X `6ac0bd4109db9f2ea0f731ab`,
+  Instagram `6ac0bd4c09db9f2ea0f731cd`, TikTok `6ac0bd4f2509eea9d92f058c`.
+  No Sheet row to update (dynamic topic).
