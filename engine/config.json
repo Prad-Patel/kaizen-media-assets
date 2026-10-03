@@ -1,12 +1,26 @@
 {
-  "hook": ["£26 BILLION", "SITS UNPAID."],
-  "points": [
-    ["133 million hours lost chasing it."],
-    ["AI can chase invoices for you."],
-    ["A new law caps terms at 60 days."]
+  "hook": [
+    "£958M",
+    "OF THEIR OWN CASH."
   ],
-  "stat": { "pre": "STAFF TIME LOST CHASING INVOICES:", "big": "133 MILLION HOURS A YEAR.", "post": "AI CAN DO THE CHASING INSTEAD." },
+  "points": [
+    [
+      "Staff pay for AI."
+    ],
+    [
+      "Check the data terms."
+    ],
+    [
+      "One account, three rules."
+    ]
+  ],
+  "stat": {
+    "pre": "AI USERS HIDING IT AT WORK:",
+    "big": "31%.",
+    "post": "GIVE THEM A SAFE ACCOUNT."
+  },
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Chasing payments shouldn't be a founder's job.",
-  "url": "kaizenaiconsulting.com"
+  "tagline": "Bring your team's AI use into the open.",
+  "url": "kaizenaiconsulting.com",
+  "labelFontSize": 34
 }
