@@ -2614,3 +2614,21 @@ hands it over.
   Google Business post (PROCESSING at submission), X `6ac0bd4109db9f2ea0f731ab`,
   Instagram `6ac0bd4c09db9f2ea0f731cd`, TikTok `6ac0bd4f2509eea9d92f058c`.
   No Sheet row to update (dynamic topic).
+- 2026-10-04 — forty-eighth run (Sunday, no LinkedIn), dynamic topic "$4.1
+  Trillion of AI Debt: What the BoE Warning Means for UK Small Businesses"
+  (Bank of England FPC record of 25 Sep: JP Morgan estimate of about $4.1tn of
+  debt-financed AI capex 2026 to 2030, "circular arrangements" warning; stat card
+  used Simply Business's 47% of UK small firms using AI). Queue still exhausted,
+  no `PENDING-PUBLISH.md`. Push dry-run on `main` hit the stale local ref again
+  (`HEAD:main` clean). Higgsfield balance 1.33, so static-clip fallback (2a),
+  shrunk to 75% and padded with 0xBDD1DC to clear the rail; top-up needed. Prad
+  asked for BoE in the headline and a tagline that fits the message: covers now
+  read "BoE: $4.1 Trillion / Of AI Debt", hook "BOE AI DEBT ALERT.", end card
+  "Keep a Plan B for your AI.", re-rendered as `-r2` (a 3-line hook wrap and a
+  3:2 headline collision with the artwork were fixed on the way). WPvibe tools
+  not enabled for the routine, so n8n was used. Draft approved in-session
+  ("proceed"). Blog post 6929,
+  https://kaizenaiconsulting.com/ai-debt-bank-of-england-small-business/, Google
+  Business post (PROCESSING at submission), X `6ac2861f89cc049993c815c1`,
+  Instagram `6ac28631cb236e4854493b6c`, TikTok `6ac2863c402201d83af9869d`. LinkedIn
+  skipped, Sunday. No Sheet row to update (dynamic topic).
