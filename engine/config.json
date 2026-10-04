@@ -1,26 +1,9 @@
 {
-  "hook": [
-    "£958M",
-    "OF THEIR OWN CASH."
-  ],
-  "points": [
-    [
-      "Staff pay for AI."
-    ],
-    [
-      "Check the data terms."
-    ],
-    [
-      "One account, three rules."
-    ]
-  ],
-  "stat": {
-    "pre": "AI USERS HIDING IT AT WORK:",
-    "big": "31%.",
-    "post": "GIVE THEM A SAFE ACCOUNT."
-  },
+  "hook": ["$4.1 TRILLION", "OF AI DEBT."],
+  "points": [["Own your prompts."], ["Read terms before prepaying."], ["Test a second tool."]],
+  "stat": {"pre": "UK SMALL FIRMS USING AI:", "big": "47%.", "post": "TREAT IT LIKE A SUPPLIER."},
   "cta": "FREE 30-MIN AI AUDIT",
-  "tagline": "Bring your team's AI use into the open.",
+  "tagline": "Make your AI harder to break.",
   "url": "kaizenaiconsulting.com",
   "labelFontSize": 34
 }
