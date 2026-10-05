@@ -2632,3 +2632,19 @@ hands it over.
   Business post (PROCESSING at submission), X `6ac2861f89cc049993c815c1`,
   Instagram `6ac28631cb236e4854493b6c`, TikTok `6ac2863c402201d83af9869d`. LinkedIn
   skipped, Sunday. No Sheet row to update (dynamic topic).
+- 2026-10-05 — forty-ninth run, Playbook day (Monday), calendar topic "Match the
+  model to the job" (model tiering and token prices), led with the 100x per-token
+  gap between GPT-6 Astra ($10/$50) and GPT-6 Luna ($0.10/$0.50); prices from
+  third-party trackers (Lindy, BenchLM, CostGoat) since WebFetch is blocked. No
+  `PENDING-PUBLISH.md`. Push dry-run on local `main` hit the stale ref again
+  (`HEAD:main` clean). Carousel PDF (8 slides) and 51.6s video rendered first
+  time; the first 3:2 collided with the headline because the prompt put the subject
+  on the right, regenerated once subject-left. Blog about 1,050 words, worked
+  example of 1,000 email replies at list price, labelled an illustration. Draft
+  approved in-session ("Proceed"). Blog post
+  https://kaizenaiconsulting.com/match-ai-model-to-job-100x-price-gap/, Google
+  Business post (PROCESSING at submission). LinkedIn personal profile document post
+  `urn:li:ugcPost:7512778117464215552` (PDF via jsDelivr, first comment attached),
+  Kaizen page reshare `urn:li:ugcPost:7512778288147247106`, Instagram
+  `6ac353e0f5bed7e24d0bd4b1`, TikTok `6ac353e32fba036a0f6dbefe`. X skipped,
+  Playbook day. n8n used for WordPress (WPvibe not checked). No Sheet row to update.
