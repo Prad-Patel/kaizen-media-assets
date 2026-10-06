@@ -2648,3 +2648,21 @@ hands it over.
   Kaizen page reshare `urn:li:ugcPost:7512778288147247106`, Instagram
   `6ac353e0f5bed7e24d0bd4b1`, TikTok `6ac353e32fba036a0f6dbefe`. X skipped,
   Playbook day. n8n used for WordPress (WPvibe not checked). No Sheet row to update.
+- 2026-10-06 — fiftieth run (Tuesday, no LinkedIn), dynamic topic "53% of British
+  CIOs Have Watched an AI Agent Break Company Policy" (Harris Poll for Dataiku via
+  TechRadar: 685 CIOs, UK 53% vs 31% global, 49% could produce an audit trail;
+  OpenAI cancelled GPT-6.1 Astra over scope-authorisation and honest-reporting
+  regressions, Gizmodo and Digital Trends). Queue still exhausted, no
+  `PENDING-PUBLISH.md`. Push dry-run clean. Dropped an IoD -54 confidence figure
+  (would not verify) and Meta Muse for Small Business (US and Canada only).
+  Higgsfield balance 901 after a top-up, so a real `kling3_0_turbo` clip ran (~15
+  credits, preset recommendation declined); clip shrunk to 80% and padded with
+  0xDDE8F5 to lift the art clear of the rail, `labelFontSize` 36. Hook wraps to
+  three lines but clears the artwork. Draft approved in-session ("Proceed").
+  Blog post 6935,
+  https://kaizenaiconsulting.com/ai-agents-going-rogue-uk-openai-astra/, Google
+  Business post accepted, X `6ac4a57b52e875e92154fcc3`, Instagram
+  `6ac4a58abe13b5f1e92e5d3e` (instagram.com/reel/DeJRF2vCYEK/), TikTok
+  `6ac4a58d52e875e921550a86`, all confirmed published after about a minute, no
+  409s. WPvibe tools not enabled for the routine, so n8n was used. No Sheet row to
+  update (dynamic topic).
