@@ -2666,3 +2666,21 @@ hands it over.
   `6ac4a58d52e875e921550a86`, all confirmed published after about a minute, no
   409s. WPvibe tools not enabled for the routine, so n8n was used. No Sheet row to
   update (dynamic topic).
+- 2026-10-07 — fifty-first run (Wednesday, Reactive slot), dynamic topic "Only 6% of
+  UK Businesses Using AI Have Reached the Stage Where It Transforms Anything"
+  (NatWest first AI Adoption Report, 1,400 UK SMEs and mid-market firms: 44% use AI,
+  6% of users at the transforming stage, 67% vs 36% adoption for 100+ staff vs
+  smaller, self-reported time savings 61-70% vs 1-10%; BCC/Atos 54% as contrast).
+  NatWest publication date not confirmed beyond "within the last week". Queue still
+  exhausted, no `PENDING-PUBLISH.md`. Push dry-run only complained of a stale local
+  `main` (fast-forwarded), not auth. Gemini 3:2 regenerated once because the headline
+  grazed the artwork; real `kling3_0_turbo` clip (~15 credits, preset declined,
+  balance about 830), `labelFontSize` 36. Draft approved in-session ("Proceed").
+  WPvibe tools not available, n8n used: blog
+  https://kaizenaiconsulting.com/natwest-ai-adoption-6-percent-transforming/, Google
+  Business post accepted (PROCESSING at submission). X `6ac5f5f6026ad4ee3e30e807`,
+  LinkedIn Kaizen page `6ac5f605f48c4efd0fd12c1b` (first comment attached), Instagram
+  `6ac5f6212d7322db5c204e54`, TikTok `6ac5f624f48c4efd0fd12c6e`. No 409s. No Sheet row
+  to update (dynamic topic). Note: `call_tool` `posts_create_post` takes snake_case
+  args (`media_items`, `publish_now`, `tiktok_settings`), and the n8n trigger node
+  names are "Cowork Image Request", "Cowork Fetch Request", "Cowork Publish Request".
