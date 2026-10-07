@@ -953,6 +953,68 @@ come from, whether the longer cut carries voiceover, and the Higgsfield credit
 budget a 60s daily build implies. Until those answers land here, a run hitting
 this section should ask again rather than assume.
 
+## Engagement direction: direct hooks, social-manager mindset (set by Prad, 2026-10-07)
+
+Prad found the titles ambiguous and not attention-grabbing ("6% Reach The Top
+Stage" was the example) and asked for something direct and to the point, written
+as a social media manager would, with engagement as the goal. This supersedes the
+2026-09-26 "biggest number first, everywhere" rule wherever the two conflict.
+
+**What the 90-day data (2026-07-09 to 2026-10-06, Zernio analytics) showed.**
+Samples are small and noisy, so treat these as leanings, not laws.
+
+- Hook style, mean views/impressions. Brand-news hooks (a named product plus
+  what it did): TikTok 499, LinkedIn 43, Instagram 28. First-person "we" claims:
+  TikTok 709 (n=1), Instagram 126 (n=2), LinkedIn 88 (n=3). Number-first hooks:
+  TikTok 470, Instagram 18, LinkedIn 17. Number-first is never the best style
+  and is the worst on Instagram and LinkedIn.
+- The number-first rule started 2026-09-26. Instagram video views before it:
+  mean 43, median 16. Since: mean 17, median 8. The three weakest recent reels
+  all opened on a bare statistic ("900,000 installs", "£26 BILLION", "395%").
+  TikTok did not move (479 to 495).
+- Best performers share a shape: plain English, a named thing, a concrete
+  consequence. "Canva now builds entire websites from one sentence. Free." (IG
+  109), "ChatGPT just turned on ads in 31 more European countries. The UK's had
+  them since June, quietly" (TikTok 1,069, best of the quarter), "We've built
+  apps for under £100 in tooling" (LinkedIn 196, IG 158).
+- Instagram reels are skipped almost immediately: reelsSkipRate 87 to 100% on
+  nearly every video. The first two seconds decide everything there.
+- Weakest hooks are abstract or concept-led ("transforming stage", "growth gap",
+  "approval gate") or need the reader to know what the statistic means.
+- Caption length, emoji, question hooks and hashtag count showed no reliable
+  effect. Do not spend effort on them. Posting day and time are untested: every
+  post goes out at about 07:35 UTC.
+- LinkedIn impressions fell month on month (50, 34, 21, 10). That is the page's
+  16-follower ceiling, not a copy problem.
+- X analytics returned no post data and the X account has 1 follower, so X
+  cannot be judged from data yet.
+- TikTok photo carousels in July (718 to 753 views) matched or beat the video
+  average (about 480). Worth a test on a non-Playbook day.
+
+**The rules from tomorrow.**
+
+1. **Plain-English hook, consequence first.** Say what happened and what it means
+   for the reader in one line a stranger understands in two seconds. Pattern:
+   named product or party + what it did + why the reader cares ("ChatGPT is
+   showing your customers ads. Here is what to do."). A number goes in the hook
+   only when it is self-explanatory without context ("AI scams up 395%" works,
+   "6% reach the top stage" does not). Otherwise the number moves to the stat
+   card or line two.
+2. **Blog title = the hook.** Direct and specific, no abstract nouns, no
+   "what X means for Y" filler. Test it by asking whether someone scrolling
+   would know what the post is about from the title alone.
+3. **Covers and the video hook match the title**, in plain words. The video's
+   first line has to work with the sound off and in the first two seconds.
+4. **Prefer first-person Kaizen claims** where Prad can truthfully stand behind
+   them (what we built, tested or would tell a client). Never invent experience.
+5. **Name the hook type in the Run log** each day (brand-news, we-claim, number,
+   question, other) with the platform results a few days later, so the next
+   review has real data.
+6. **Review on 2026-10-21.** Pull the same analytics, compare hook types since
+   2026-10-08 against the baseline above, and keep, change or drop rules. Use
+   that run to test one posting-time change (for example a midday or evening UK
+   slot) and one TikTok photo-carousel post.
+
 ## Business details
 
 Kaizen AI Consulting, 85 Great Portland Street, London. Phone 020 3432 0345,
