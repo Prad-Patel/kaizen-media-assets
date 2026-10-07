@@ -1015,6 +1015,45 @@ Samples are small and noisy, so treat these as leanings, not laws.
    that run to test one posting-time change (for example a midday or evening UK
    slot) and one TikTok photo-carousel post.
 
+### Hashtags and posting-time test (approved by Prad, 2026-10-07)
+
+Investigation of the view drop (2026-10-07) found no evidence that hashtags or
+posting time caused it. TikTok views were flat while tags per post fell from 14
+to 1 to 4, and Instagram weekly views swung from 83 to 6 to 62 on a steady 6 to 8
+tags. About 80% of posts went out 07:00 to 09:00 UTC, so time was never tested;
+the apparent 21:00 UTC Instagram win (mean 81, n=4) is confounded with the early
+August spike weeks. Accounts are healthy, no restrictions. The likelier cause on
+Instagram is the first two seconds (reelsSkipRate about 93%, average watch time
+about 1.2s) plus abstract or stat-first hooks, on a 44-follower account.
+
+**Hashtags, from 2026-10-08.** Use 3 to 5 broad tags per Instagram and TikTok
+caption, chosen from `#aitools`, `#ukbusiness`, `#uksmallbusiness`,
+`#smallbusinessuk`, `#aiforbusiness`. Drop `#kaizenai`, `#businessgrowth` and
+`#uktrades` (each did worse on Instagram with the tag than without, small
+samples). LinkedIn and X stay as they are (LinkedIn carries no hashtags).
+
+**Posting-time test, 2026-10-08 to 2026-10-21.** Instagram and TikTok only. Blog,
+Google Business, X and LinkedIn publish on approval as before, so the test stays
+clean. After Prad approves, schedule the Instagram and TikTok posts instead of
+publishing now, rotating three UK-time slots by day of the month (day mod 3):
+
+| Day of month mod 3 | Slot (UK) | UTC while BST (to 25 Oct) |
+|---|---|---|
+| 0 | 08:30 (control, as before) | 07:30 |
+| 1 | 12:30 | 11:30 |
+| 2 | 19:30 | 18:30 |
+
+Rules for the test: use `scheduled_for` (or `schedule_minutes`) on `posts_create`
+or `posts_create_post`, always with `account_id`; keep the hook style the same
+type across slots, and log the slot, hook type and platform in the Run log. A
+scheduled post cannot be verified a minute later, so check yesterday's scheduled
+Instagram and TikTok posts with `posts_get_post` at the start of the next run and
+report any failure to Prad straight away. Clocks go back on 25 October: after
+that the UTC offset drops by one hour, so recompute the UTC times. On 2026-10-21
+pull `analytics_get_analytics` for both platforms, compare views by slot (expect
+small samples, about 4 to 5 posts per slot), and say plainly whether anything
+beat the control before changing the default time.
+
 ## Business details
 
 Kaizen AI Consulting, 85 Great Portland Street, London. Phone 020 3432 0345,
