@@ -428,7 +428,12 @@ those captions should point at the bio.
    **Post the LinkedIn carousel to Prad's personal profile**
    (`6ab38cfa8d284ffb213313ab`), not the Kaizen company page, per the
    2026-09-23 routing rule above. Pass
-   the PDF to Zernio as a `document` media item with `documentTitle` set, and
+   the PDF to Zernio as a `document` media item, and set the title in
+   `platformSpecificData.documentTitle` on the LinkedIn platform entry, NOT on the media
+   item (a `documentTitle` on the media item is silently dropped and LinkedIn then shows
+   the PDF filename, as on 2026-10-08; check the response's `platformSpecificData` shows
+   it before moving on). Use a short human title, not the slug. LinkedIn does not let a
+   published document's title be edited, so a wrong one means delete and repost, and
    **serve it from jsDelivr, never raw.githubusercontent**, which returns
    `application/octet-stream` and stops LinkedIn reading it as a document.
    Check the returned byte count against the local file before posting:
