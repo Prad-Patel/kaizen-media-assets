@@ -2785,3 +2785,20 @@ hands it over.
   to update (dynamic topic). Note: `call_tool` `posts_create_post` takes snake_case
   args (`media_items`, `publish_now`, `tiktok_settings`), and the n8n trigger node
   names are "Cowork Image Request", "Cowork Fetch Request", "Cowork Publish Request".
+- 2026-10-08 — fifty-second run, Playbook day (Thursday), calendar topic "How to write a
+  prompt that gets a usable answer". Hook type: we-claim/plain-English ("Vague prompt,
+  vague answer"), no number-first hook per the 2026-10-07 direction. No `PENDING-PUBLISH.md`.
+  Push dry-run only complained of a stale local branch (fast-forwarded), not auth. Carousel
+  PDF (8 slides) and 51.6s video rendered first time; 3:2 and 4:5 Gemini illustrations clean
+  on the first generation. Slide 8 first-person line softened to "the checklist we would hand
+  a client" (no confirmed Kaizen experience). Model names kept generic: search found GPT-5.6
+  Sol guidance, not "GPT-6" as in the 09-24 snapshot. Draft approved in-session ("proceed").
+  n8n used for WordPress (WPvibe not checked): blog
+  https://kaizenaiconsulting.com/how-to-write-ai-prompt-usable-answer/, Google Business post
+  PROCESSING at submission. LinkedIn personal profile document post
+  `urn:li:ugcPost:7513866695770357761` (Zernio `6ac749908add438859f35384`, PDF via jsDelivr,
+  first comment attached), Kaizen page reshare `urn:li:ugcPost:7513866744629710848`
+  (`6ac749b8fdfdafb278a13fe6`), both confirmed published. POSTING-TIME TEST (day 8 mod 3 = 2,
+  19:30 UK / 18:30 UTC slot): Instagram `6ac749ba16e1e7fadbe51213` and TikTok
+  `6ac749bb9d1fe07220523556` scheduled for 2026-10-08T18:30Z; check both with
+  `posts_get_post` at the start of the next run. X skipped, Playbook day. No Sheet row.
