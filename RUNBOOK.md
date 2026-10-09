@@ -2807,3 +2807,18 @@ hands it over.
   19:30 UK / 18:30 UTC slot): Instagram `6ac749ba16e1e7fadbe51213` and TikTok
   `6ac749bb9d1fe07220523556` scheduled for 2026-10-08T18:30Z; check both with
   `posts_get_post` at the start of the next run. X skipped, Playbook day. No Sheet row.
+- 2026-10-09 — fifty-third run (Friday, no LinkedIn), dynamic topic "49% of UK Small Firms
+  Had a Cyber Incident. Mostly Basic Gaps, Not AI." (ESET 2026 SMB Cyber Risk Report, 17 Sep,
+  500 UK SMBs; gov.uk Cyber Security Breaches Survey 2025/26 43%; NCSC Cyber Action Toolkit).
+  Hook type: brand-news/plain-English ("Half of UK firms got hit"). No `PENDING-PUBLISH.md`.
+  Push dry-run first failed only on a stale local ref. Yesterday's scheduled IG/TikTok posts
+  both published. 3:2 and 9:16 illustrations needed one regeneration each (headline on roof;
+  banded 9:16 background). Clip shifted up 130px with a mirrored-background fill so point 1
+  cleared the ground shadow (no credits re-rolled); video `-r2` filename. ESET UK cause split
+  not verifiable (sources conflict), so the post names causes without percentages. Draft
+  approved in-session ("proceed"). n8n used for WordPress (WPvibe not checked), blog
+  https://kaizenaiconsulting.com/uk-small-firms-cyber-incident-basics-not-ai/ and Google
+  Business post PROCESSING at submission. X `6ac8976de0fb2be2af0d95b4` published. POSTING-TIME
+  TEST (day 9 mod 3 = 0, control slot): the 07:30 UTC slot had nearly passed at approval, so
+  Instagram `6ac89774aec3671495834156` and TikTok `6ac89776410ea9394845e1ce` were scheduled
+  for 07:40Z; check both with `posts_get_post` at the start of the next run. No Sheet row.
