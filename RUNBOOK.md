@@ -1063,6 +1063,12 @@ beat the control before changing the default time.
 
 Prad rejected the 2026-10-15 Companies House ID verification draft as "very uninteresting". From now on, including Playbook days: choose cutting-edge, eye-catching topics, such as new models and tools and concrete use cases for specific models, or anything a reader can take something away from. Avoid legislation, registration, compliance and deadline topics. This overrides the calendar rows for Companies House (15 Oct) and other deadline-led posts, and the dated spine entries for the 18 November Companies House deadline, MTD and the 2 December EU AI Act watermarking rule. Budget day (28 and 29 October) is the one dated item to put to Prad before building rather than assume.
 
+## Case study Fridays (proposed by Prad, 2026-10-15, starting 2026-10-16)
+
+One real Kaizen case study every Friday, replacing the dynamic topic on that day. Proposed order: (1) this daily content routine, (2) 18 Upway project designer, (3) personal estate agent full brand build, (4) Worktop-Compare price calculator, (5) Kati social media poster, (6) A Walsh Electrical website. The order was set in the 2026-10-15 session (routine first, because its facts are already in this file's Run log).
+
+Hard rules for case studies: only facts, numbers, timelines and quotes Prad has supplied or confirmed in writing. Never invent results, client quotes or time savings, per the presenter and voice rules. Name a client only once Prad confirms they agreed to it. Strip addresses, postcodes and third-party names (architects, suppliers) from screenshots and copy unless Prad clears them. Cost claims are tool costs only. If the inputs for that Friday's case study are not in `case-studies/<slug>.md` in this repository, or recorded here, do not draft from guesswork: ask Prad in the session for the missing items and stop. Friday is not a LinkedIn day unless Prad changes the calendar.
+
 ## Business details
 
 Kaizen AI Consulting, 85 Great Portland Street, London. Phone 020 3432 0345,
