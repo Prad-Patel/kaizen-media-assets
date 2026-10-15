@@ -3,67 +3,59 @@
   "slides": [
     {
       "type": "cover",
-      "kicker": "The memory problem",
-      "title": [
-        "70% abandon",
-        "AI chats",
-        "that forget",
-        "who they are"
-      ],
-      "subtitle": "Claude Projects and Cowork now share memory. Here's how we set ours up so it actually holds, and what ChatGPT and Gemini do differently.",
-      "icon": "grid"
+      "kicker": "Five weeks left",
+      "title": ["Only 55% of", "directors had", "verified by June"],
+      "subtitle": "Companies House ID checks for existing directors and PSCs close in mid-November. Here is the six-step list we would work through this week.",
+      "icon": "calendar"
     },
     {
       "type": "item",
-      "label": "Give every job its own Project, not one long chat",
-      "detail": "A Project is a separate memory space with its own files and instructions. Run five clients through one chat thread and the AI blends them. Run each through its own Project and nothing bleeds across.",
-      "start": "Open a Project for the client or job you re-explain the most, right now.",
-      "icon": "grid"
+      "label": "List everyone who has to verify",
+      "detail": "Every director, LLP member and PSC (a person with significant control) needs to verify. That includes you if you are the only director, and any shareholder who controls the company.",
+      "start": "Write down every director and PSC on your company, starting with yourself.",
+      "icon": "team"
     },
     {
       "type": "item",
-      "label": "Load the three documents you keep re-pasting",
-      "detail": "Price list, service area, standard terms. Drop them into the Project's files once and every future chat inside it already knows them, instead of you retyping the same paragraph on a Tuesday and again on a Friday.",
-      "start": "Add your price list, service area and terms to one Project today.",
+      "label": "Verify online, free, in minutes",
+      "detail": "The quickest route is GOV.UK One Login with a passport or other photo ID. It is free and usually takes about fifteen minutes. A Post Office or an authorised agent can do it instead.",
+      "start": "Search for 'verifying your identity for Companies House' and check the address ends gov.uk.",
+      "icon": "phone"
+    },
+    {
+      "type": "item",
+      "label": "Save your personal code",
+      "detail": "Once verified you get an 11 character personal code. Companies House needs it linked to you, and it is what goes into your filings. Lose it and you are chasing support during the busiest week.",
+      "start": "Sign in to Companies House, open Manage account, and save the code in your password manager.",
       "icon": "invoice"
     },
     {
       "type": "item",
-      "label": "Chat and Cowork now share the same memory",
-      "detail": "Since the merge in September, whatever you tell Claude in one surface shows up when you are back in the other, as long as you are in the same Project. Start a task on your phone, finish it at your desk, and it remembers where you left off.",
-      "start": "Switch from chat to Cowork on the same Project and check the summary carried over.",
-      "icon": "repeat"
+      "label": "Check your next confirmation statement",
+      "detail": "A confirmation statement cannot be filed unless every director has verified. For many companies that date falls before the November deadline, so one unverified director can stall your filing early.",
+      "start": "Find your next confirmation statement date and chase any director who has not verified.",
+      "icon": "calendar"
     },
     {
       "type": "item",
-      "label": "Every tool remembers differently, and that is the trade-off",
-      "detail": "ChatGPT's Dreaming system now rewrites its own memory after each chat with no prompting. Gemini's Gems run on fixed instructions and knowledge files, so a new fact you mention today is gone again tomorrow unless you go back and edit the Gem by hand.",
-      "start": "Check which of your AI tools update themselves and which need manual edits.",
-      "icon": "quote"
-    },
-    {
-      "type": "item",
-      "label": "Remembering more also means storing more",
-      "detail": "Businesses everywhere assume their AI recognises returning customers. Consumers keep saying it still does not. Whichever tool wins that argument for you, everything it remembers is also everything it is keeping, so check the memory settings before you paste anything sensitive.",
-      "start": "Open your Project's memory or saved info panel and see what is actually stored.",
+      "label": "Distrust any email about it",
+      "detail": "Companies House has warned that scammers are copying this rollout with fake emails and links. Genuine verification starts on gov.uk, never from a message telling you to act now.",
+      "start": "Tell your team: nobody clicks an ID verification link from an email. Type the address in.",
       "icon": "alert"
     },
     {
       "type": "item",
-      "label": "Test it before you trust it",
-      "detail": "Close the chat, open a fresh one in the same Project, and ask it something only the earlier conversation would know. If it answers correctly, the setup works. If it does not, the files or instructions need another pass.",
-      "start": "Run that test on your busiest recurring Project this afternoon.",
+      "label": "Do it now, not in the last week",
+      "detail": "At June's end only 55% of directors and 42% of PSCs had verified. Millions of people are queuing for the same deadline. Acting as an unverified director is an offence, so a late job is a risky one.",
+      "start": "Block fifteen minutes in your diary this week and verify before you do anything else.",
       "icon": "target"
     },
     {
       "type": "end",
-      "title": [
-        "Stop repeating yourself.",
-        "Start building on it."
-      ],
-      "body": "We built our own Projects around the clients and jobs we explain most often, so the AI carries the context instead of us carrying it every time.",
-      "cta": "Which job would you save the most time on if the AI already knew the details?",
-      "icon": "target"
+      "title": ["Verify this week.", "Not the last week."],
+      "body": "This is the checklist we would hand a client who asked what to do before the Companies House deadline. Check your own due date on the register.",
+      "cta": "Does every director and PSC at your company have their personal code yet?",
+      "icon": "calendar"
     }
   ]
 }
