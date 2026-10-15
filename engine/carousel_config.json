@@ -3,59 +3,59 @@
   "slides": [
     {
       "type": "cover",
-      "kicker": "Five weeks left",
-      "title": ["Only 55% of", "directors had", "verified by June"],
-      "subtitle": "Companies House ID checks for existing directors and PSCs close in mid-November. Here is the six-step list we would work through this week.",
-      "icon": "calendar"
+      "kicker": "New in ChatGPT",
+      "title": ["ChatGPT now", "builds working", "tools in chat"],
+      "subtitle": "Since 7 October, answers can include calculators, forms and charts. Here are five tools we would ask it for first, and the catch.",
+      "icon": "grid"
     },
     {
       "type": "item",
-      "label": "List everyone who has to verify",
-      "detail": "Every director, LLP member and PSC (a person with significant control) needs to verify. That includes you if you are the only director, and any shareholder who controls the company.",
-      "start": "Write down every director and PSC on your company, starting with yourself.",
-      "icon": "team"
-    },
-    {
-      "type": "item",
-      "label": "Verify online, free, in minutes",
-      "detail": "The quickest route is GOV.UK One Login with a passport or other photo ID. It is free and usually takes about fifteen minutes. A Post Office or an authorised agent can do it instead.",
-      "start": "Search for 'verifying your identity for Companies House' and check the address ends gov.uk.",
-      "icon": "phone"
-    },
-    {
-      "type": "item",
-      "label": "Save your personal code",
-      "detail": "Once verified you get an 11 character personal code. Companies House needs it linked to you, and it is what goes into your filings. Lose it and you are chasing support during the busiest week.",
-      "start": "Sign in to Companies House, open Manage account, and save the code in your password manager.",
+      "label": "A quote calculator",
+      "detail": "Give it your hourly rate, materials markup and VAT, and ask for a calculator with boxes for hours and materials. Change the inputs per job instead of redoing the sum each time.",
+      "start": "Ask: 'Build a quote calculator: hours x my rate, materials plus 15% markup, then 20% VAT.'",
       "icon": "invoice"
     },
     {
       "type": "item",
-      "label": "Check your next confirmation statement",
-      "detail": "A confirmation statement cannot be filed unless every director has verified. For many companies that date falls before the November deadline, so one unverified director can stall your filing early.",
-      "start": "Find your next confirmation statement date and chase any director who has not verified.",
+      "label": "A break-even calculator",
+      "detail": "Enter your fixed costs, your price and your cost per sale. It shows how many sales you need before you make a penny. Slide the price up and down and watch the number move.",
+      "start": "Ask: 'Build a break-even calculator with sliders for price and monthly fixed costs.'",
+      "icon": "data"
+    },
+    {
+      "type": "item",
+      "label": "A supplier quote comparison",
+      "detail": "Paste in three supplier quotes and ask for a side-by-side table with the total cost over twelve months, including delivery and any minimum order. The cheapest headline price is not always the cheapest.",
+      "start": "Ask: 'Compare these three quotes over 12 months, including delivery. Flag anything missing.'",
+      "icon": "cost"
+    },
+    {
+      "type": "item",
+      "label": "A 12-week cash chart",
+      "detail": "Type in expected money in and bills going out each week and ask for a chart. Weeks where the line dips below zero are the ones to sort out now, not on the day.",
+      "start": "Ask: 'Chart my cash week by week for 12 weeks from these inputs, and flag any dip below zero.'",
       "icon": "calendar"
     },
     {
       "type": "item",
-      "label": "Distrust any email about it",
-      "detail": "Companies House has warned that scammers are copying this rollout with fake emails and links. Genuine verification starts on gov.uk, never from a message telling you to act now.",
-      "start": "Tell your team: nobody clicks an ID verification link from an email. Type the address in.",
+      "label": "An enquiry form that asks your questions",
+      "detail": "Every new enquiry gets the same five questions from you. Ask for a form that captures them, so you can fill it in on the call and read back a clean summary at the end.",
+      "start": "Ask: 'Build a form for new enquiries: name, job type, address, timing, budget. Then summarise it.'",
+      "icon": "quote"
+    },
+    {
+      "type": "item",
+      "label": "Then check the sum before you trust it",
+      "detail": "Commentators have already warned that a tool built on the spot can still get the maths wrong. Run a job you have already priced through it. If the answer differs from yours, fix the prompt. Keep customer details out.",
+      "start": "Test every new tool on one job where you already know the right answer.",
       "icon": "alert"
     },
     {
-      "type": "item",
-      "label": "Do it now, not in the last week",
-      "detail": "At June's end only 55% of directors and 42% of PSCs had verified. Millions of people are queuing for the same deadline. Acting as an unverified director is an offence, so a late job is a risky one.",
-      "start": "Block fifteen minutes in your diary this week and verify before you do anything else.",
-      "icon": "target"
-    },
-    {
       "type": "end",
-      "title": ["Verify this week.", "Not the last week."],
-      "body": "This is the checklist we would hand a client who asked what to do before the Companies House deadline. Check your own due date on the register.",
-      "cta": "Does every director and PSC at your company have their personal code yet?",
-      "icon": "calendar"
+      "title": ["Ask it for the tool.", "Check the sum."],
+      "body": "This is the list we would try first, tested against a job we had already priced. Which plans get it, and exactly how it behaves, is still settling, so try it on yours.",
+      "cta": "Which sum do you redo most often that a little tool like this could do for you?",
+      "icon": "target"
     }
   ]
 }
