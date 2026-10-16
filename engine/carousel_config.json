@@ -3,65 +3,65 @@
   "slides": [
     {
       "type": "cover",
-      "kicker": "Build it in Claude",
+      "kicker": "Case study",
       "title": [
-        "Claude builds",
-        "working tools",
-        "in the chat"
+        "We automated",
+        "our own posting",
+        "for about £58 a month"
       ],
-      "subtitle": "ChatGPT added this on 7 October. Claude's Artifacts do it too. Here are five tools we would ask for first, and the catch.",
+      "subtitle": "A daily content job that took over an hour now runs as a draft we approve. Here is what it does, what it costs and where it still needs us.",
       "icon": "grid"
     },
     {
       "type": "item",
-      "label": "A quote calculator",
-      "detail": "Give it your hourly rate, materials markup and VAT, and ask for a calculator with boxes for hours and materials. Change the inputs per job instead of redoing the sum each time.",
-      "start": "Ask Claude: 'Build a quote calculator: hours x my rate, materials plus 15% markup, then 20% VAT.'",
-      "icon": "invoice"
+      "label": "The problem",
+      "detail": "Daily posting took too long and the results were inconsistent. Different tone on different days, a missed day when things got busy, and over an hour of work every time we did it properly.",
+      "start": "Time one week of your own posting. Count every step, not just the writing.",
+      "icon": "alert"
     },
     {
       "type": "item",
-      "label": "A break-even calculator",
-      "detail": "Enter your fixed costs, your price and your cost per sale. It shows how many sales you need before you make a penny. Slide the price up and down and watch the number move.",
-      "start": "Ask Claude: 'Build a break-even calculator with sliders for price and monthly fixed costs.'",
+      "label": "What we built",
+      "detail": "A daily routine that picks a topic, researches it, writes the blog post and the captions for each platform, makes the illustrations and a short video, then publishes everywhere in the same brand, theme and style.",
+      "start": "Write the steps of your own routine down first. You cannot automate what you have not described.",
       "icon": "data"
     },
     {
       "type": "item",
-      "label": "A supplier quote comparison",
-      "detail": "Paste in three supplier quotes and ask for a side-by-side table with the total cost over twelve months, including delivery and any minimum order. The cheapest headline price is not always the cheapest.",
-      "start": "Ask Claude: 'Compare these three quotes over 12 months, including delivery. Flag anything missing.'",
+      "label": "A human still approves it",
+      "detail": "Nothing goes live on its own. Every morning we review the draft, ask for changes or reject it. Some days we do reject it, and that check is the point, not a flaw.",
+      "start": "Decide where a person signs off before you build anything. Put that step in on day one.",
+      "icon": "target"
+    },
+    {
+      "type": "item",
+      "label": "What it costs to run",
+      "detail": "About £58 a month in tools: Claude £20, Zernio £20, n8n hosting £10, Higgsfield £5, Gemini £3. GitHub is free. These are tool costs only, and your own mix will differ.",
+      "start": "List the tools you would need and their monthly price before you start, so the bill is no surprise.",
       "icon": "cost"
     },
     {
       "type": "item",
-      "label": "A 12-week cash chart",
-      "detail": "Type in expected money in and bills going out each week and ask for a chart. Weeks where the line dips below zero are the ones to sort out now, not on the day.",
-      "start": "Ask Claude: 'Chart my cash week by week for 12 weeks from these inputs, and flag any dip below zero.'",
+      "label": "Time to build",
+      "detail": "One day for the first working version. We have kept adjusting it since, as the platforms and our own rules changed. Plan for upkeep, because an automation is a thing you maintain.",
+      "start": "Build the smallest version that works end to end, then improve it in short passes.",
       "icon": "calendar"
     },
     {
       "type": "item",
-      "label": "An enquiry form that asks your questions",
-      "detail": "Every new enquiry gets the same five questions from you. Ask for a form that captures them, so you can fill it in on the call and read back a clean summary at the end.",
-      "start": "Ask Claude: 'Build a form for new enquiries: name, job type, address, timing, budget. Then summarise it.'",
-      "icon": "quote"
-    },
-    {
-      "type": "item",
-      "label": "Then check the sum before you trust it",
-      "detail": "A tool built on the spot can still get the maths wrong. Run a job you have already priced through it. If the answer differs from yours, fix the prompt. Keep customer details out while testing.",
-      "start": "Test every new tool on one job where you already know the right answer.",
-      "icon": "alert"
+      "label": "What changed",
+      "detail": "Consistent, regular posting, and over 7 hours a week saved. We are not claiming it has grown our following. The honest result is time back and a steady output.",
+      "start": "Measure hours saved first. Audience growth takes longer and needs its own tracking.",
+      "icon": "invoice"
     },
     {
       "type": "end",
       "title": [
-        "Ask it for the tool.",
-        "Check the sum."
+        "Describe the routine.",
+        "Then automate it."
       ],
-      "body": "This is the list we would try first, tested against a job we had already priced. Features and limits vary by plan, so try it on yours.",
-      "cta": "Which sum do you redo most often that a little tool like this could do for you?",
+      "body": "This is our own system, built for ourselves. Results are ours and will vary for your business and your tools.",
+      "cta": "Which repeat job in your week takes over an hour and follows the same steps every time?",
       "icon": "target"
     }
   ]
