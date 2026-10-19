@@ -1,6 +1,7 @@
 # Pending publish: 2026-10-18 ChatGPT Chrome tabs draft (rebuilt 2026-10-19)
 
-Status: DRAFT, NOT APPROVED, nothing published. Assets were built on 2026-10-18 and
+Status: APPROVED in-session by Prad on 2026-10-19 ("proceed"), but NOT PUBLISHED: n8n connector unauthorised, WPvibe unavailable, so no WordPress or Google Business route. Socials were held back too because X, LinkedIn and Instagram/TikTok captions point at the blog post that does not exist yet. That approval is historical: show Prad the assets again before publishing in a later session.
+Original status line: Assets were built on 2026-10-18 and
 pushed to main but never logged or published; the text below was rewritten on
 2026-10-19. Publishing is blocked until the n8n connector is re-authorised (WordPress
 and Google Business go through n8n workflow `QkD45M0Zd1J7Seor`). Dynamic topic, no
