@@ -1069,6 +1069,37 @@ One real Kaizen case study every Friday, replacing the dynamic topic on that day
 
 Hard rules for case studies: only facts, numbers, timelines and quotes Prad has supplied or confirmed in writing. Never invent results, client quotes or time savings, per the presenter and voice rules. Name a client only once Prad confirms they agreed to it. Strip addresses, postcodes and third-party names (architects, suppliers) from screenshots and copy unless Prad clears them. Cost claims are tool costs only. Prad fills in the inputs in the artifact https://claude.ai/artifact/65vUJB3MMP9QQmKY1NeaTd (read them with `ArtifactData` action `list`, collection `answers`; one document per project: `decisions`, `routine`, `upway`, `estate`, `worktop`, `kati`, `walsh`). If the inputs for that Friday's case study are not there, in `case-studies/<slug>.md`, or recorded here, do not draft from guesswork: ask Prad in the session for the missing items and stop. Decisions recorded 2026-10-15 from the inputs table: case studies DO go to LinkedIn on Fridays (personal profile, then reshared from the Kaizen page, same as Playbook posts); format is both the carousel (PDF for LinkedIn) and a video cut for Instagram and TikTok; the running order above stands. Prad also asked to move the Thursday Playbook carousel to Wednesday, making the LinkedIn days Monday, Wednesday and Friday. Confirmed by Prad 2026-10-16: Wednesday's Reactive slot moves to Thursday. From 2026-10-19 Wednesday is a Playbook day (LinkedIn personal profile plus Kaizen reshare), Thursday is the Reactive dynamic-topic day (no LinkedIn post on Thursdays, confirmed by Prad 2026-10-16), Friday is a case study. LinkedIn days: Monday, Wednesday, Friday. Prad also confirmed the 2026-10-15 Instagram post published normally despite the jsDelivr 500. Keep client details from the inputs table out of this repository: it is public (jsDelivr serves it), so read the inputs from the artifact at run time instead of copying them here.
 
+## How-to series for LinkedIn Mondays and Wednesdays (set by Prad, 2026-10-21)
+
+Prad judged the 2026-10-21 open-weight cost post (news plus a data-risk angle) as weak on engagement and said people want information they can act on. This supersedes the LinkedIn "point of view first, news relay" guidance and the Monday/Wednesday Playbook topic calendar wherever they conflict. The 2026-10-15 "no legislation, compliance or deadline topics" direction stands.
+
+**Scope (confirmed by Prad).**
+- **Monday and Wednesday** LinkedIn posts (carousel PDF to Prad's personal profile, Kaizen page reshare, as before) become the how-to series below.
+- **Friday stays a case study day.** Thursday stays the Reactive day with no LinkedIn post.
+- **Instagram, TikTok and X keep posting daily**, and on Monday and Wednesday they carry the same how-to carousel video, with the blog post as the long-form version.
+
+**Audience.** Assume beginner to intermediate: not AI-savvy, running a small business. Keep the subject simple and tie it to a day-to-day task, as if we were sitting next to them helping. No jargon without a one-line plain explanation.
+
+**Post shape.**
+1. Hook is an outcome the reader gets ("Set up one Claude Project and stop re-explaining your business every morning"). Not a statistic, not news.
+2. One step per slide, with the exact words to click, type or paste. Every post carries at least one copy-paste prompt and ends on a question.
+3. Use real screenshots wherever they make a step easier to follow. Prad supplies them or confirms the ones used. Crop or blur anything private (client names, email addresses, account details) and never use a screenshot of someone else's account.
+4. No safety, risk or compliance framing as the main angle. One short "one thing to watch" line at most.
+5. Links stay in the first comment. Blog title is the how-to promise in plain words.
+
+**Accuracy rule.** The Claude app cannot be operated from the routine, so steps from third-party guides disagree on plan limits (Projects free or paid, Gmail connector read-only or not). Only publish steps Prad has confirmed on his own account or that were checked against Anthropic's own help pages on the day, and say so when presenting the draft. If a step cannot be verified, ask Prad rather than guess.
+
+**First series (Prad approved the topics 2026-10-21; first post is Projects).**
+1. Claude Projects: how to set one up (custom instructions, knowledge files, one project per job) and what you get from it.
+2. Connecting tools: the three connections a small business gets most from (Gmail, Calendar, Drive), with something each one can build. Do not cover the safety side.
+3. Our own stack: how Kaizen runs its social posting with connected tools. Confirmed by Prad 2026-10-21 as accurate and in use: Claude, Zernio, n8n, Higgsfield, Gemini, GitHub, Google Sheets, Google Business. Show each tool's job, what it produced and where a human approves. Facts only as already confirmed for the 2026-10-16 case study (about £58 a month in tools, over 7 hours a week saved, built in one day).
+4. A pack of copy-paste prompts built around real small-business jobs (quotes, follow-ups, product descriptions).
+5. Claude for Small Business: what it connects to and how to start. Verify the May 2026 launch details against Anthropic first.
+
+**Measurement.** Track saves, comments and impressions per LinkedIn post via `analytics_get_analytics` and log them in the Run log a few days later. Baseline: LinkedIn impressions of about 10 to 50 and almost no comments. Review after two weeks (about 2026-11-04) and keep, change or drop.
+
+**Open item.** Budget day (28 October, a Wednesday) is still the one dated topic to put to Prad before building.
+
 ## Business details
 
 Kaizen AI Consulting, 85 Great Portland Street, London. Phone 020 3432 0345,
