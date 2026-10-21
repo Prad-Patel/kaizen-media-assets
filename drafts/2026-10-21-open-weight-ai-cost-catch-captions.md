@@ -8,7 +8,7 @@ Hook type: brand-news/plain-English
 
 Price per token is the wrong thing to compare when you shop for an AI model.
 
-DeepSeek's latest Flash model is listed at $0.15 in and $0.60 out per million tokens off-peak. Claude Sonnet 5 is $2 and $10. That is roughly 7 to 17 times cheaper per token, depending on the time of day. On an illustrative 5 million tokens in and 1 million out, the bill is about $2.70 against $20.
+DeepSeek's latest Flash model is listed at 11p in and 45p out per million tokens off-peak ($0.15 and $0.60). Claude Sonnet 5 is £1.50 and £7.50 ($2 and $10). That is roughly 7 to 17 times cheaper per token, depending on the time of day. On an illustrative 5 million tokens in and 1 million out, the bill is about £2 ($2.70) against £15 ($20).
 
 Two catches we would give a client. Cheap per token is not cheap per task: one benchmark found the cheapest model per solved task was not the best scorer. And DeepSeek's own policy says data is stored in China, so a UK firm sending personal data through its API is likely the exporter.
 
