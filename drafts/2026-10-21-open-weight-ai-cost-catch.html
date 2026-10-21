@@ -1,0 +1,57 @@
+<p>Some of the AI models you can rent today cost a fraction of the ones most small businesses are using. DeepSeek's latest Flash model is listed at $0.15 per million input tokens and $0.60 per million output tokens at off-peak rates, and double that at peak. Claude Sonnet 5, a widely used mid-tier model, is listed at $2 and $10. Run the sums and the gap is roughly 7 to 17 times per token, depending on the time of day and whether you are counting input or output.</p>
+
+<p>That is a big enough number to make any owner who pays an AI bill stop and look. Here is what we would tell a client about it: the saving can be real, but the price per token is the least interesting part of the decision. Three other things matter more, and the first one is about where your customers' data ends up.</p>
+
+<h2>What "open-weight" actually means</h2>
+
+<p>An open-weight model is one whose trained model files are published, so anyone can download them and run them on their own hardware. DeepSeek, Alibaba's Qwen, Moonshot's Kimi and Zhipu's GLM are the names that lead the benchmarks right now. Because the files are public, many companies host them and sell access, which is one reason prices have fallen so far.</p>
+
+<p>Open-weight is not the same as open source. The licence decides whether you can use a model commercially, and the terms differ from one model to the next. One vendor in the current crop uses a custom licence with revenue thresholds and military-use restrictions, according to a recent <a href="https://pub.towardsai.net/best-open-weight-llms-tested-deepseek-v4-vs-qwen3-8-vs-kimi-k3-vs-glm-5-3-063e6e191ca2" target="_blank" rel="noopener">Towards AI comparison of the leading open models</a>. We could not confirm the licence on DeepSeek's latest Flash model from the sources we found, so read the licence on the model's own page before you build anything on it.</p>
+
+<h2>The price gap, with the arithmetic shown</h2>
+
+<p>Using the list prices reported by <a href="https://www.outlookbusiness.com/deeptech/chinas-ai-models-are-rewriting-the-cost-of-ai" target="_blank" rel="noopener">Outlook Business</a> and secondary pricing pages, here is an illustrative month. Say a small firm sends 5 million tokens in and gets 1 million tokens back. That is roughly 3.75 million words going in, which is a lot of customer emails, quotes and call notes.</p>
+
+<ul>
+<li><strong>Claude Sonnet 5 at $2 / $10:</strong> $10 for input plus $10 for output, so $20.</li>
+<li><strong>DeepSeek V4.1 Flash at peak rates, $0.30 / $1.20:</strong> $1.50 plus $1.20, so $2.70.</li>
+<li><strong>DeepSeek V4.1 Flash off-peak, $0.15 / $0.60:</strong> $0.75 plus $0.60, so $1.35.</li>
+</ul>
+
+<p>These are tool costs only, they will move, and the sources disagree slightly on the exact rates, so check the provider's own pricing page on the day. The point is the order of magnitude. For a firm with a small monthly volume the absolute saving is tens of pounds, not thousands. The gap only becomes serious money when you automate high-volume work such as sorting every inbound enquiry or summarising every call.</p>
+
+<h2>Cheap per token is not cheap per task</h2>
+
+<p>This is the first catch. A cheaper model that needs more retries, or gets the answer wrong more often, can cost more per finished job than a dearer one. The Towards AI write-up put numbers on it by measuring cost per solved task rather than cost per token. DeepSeek V4 Pro came out at $2.66 per solved task, GLM-5.3 at $5.78, Qwen at $6.49 and Kimi K3 at $6.79. The same article's quality scores ran the other way, with GLM-5.3 at 45 and DeepSeek V4 Pro at 36 on the Artificial Analysis index.</p>
+
+<p>Read that carefully. The cheapest model per task was not the highest scoring, and the author notes it is much closer to the leaders on coding than on knowledge and science questions. A benchmark on someone else's tickets tells you very little about your own quotes and emails, which is why we would always run your own test before switching (more on that below).</p>
+
+<h2>The catch most owners miss: where your data goes</h2>
+
+<p>This is the second catch, and for a UK business it is the one that matters most. DeepSeek's privacy policy says data is stored on servers in China under the control of two Chinese-registered companies. The ICO <a href="https://www.decisionmarketing.co.uk/top-story/ico-seeks-answers-from-deepseek-as-privacy-fears-grow" target="_blank" rel="noopener">wrote to DeepSeek asking about its approach to data protection for UK residents</a> when the app first took off, and we found no published outcome.</p>
+
+<p>A personal user trying the app is one thing. A business is different. Law firm Shoosmiths, in its <a href="https://www.shoosmiths.com/insights/articles/deepseek-and-personal-data-transfers-to-china" target="_blank" rel="noopener">analysis of DeepSeek and personal data transfers to China</a>, says a firm sending personal data to a Chinese provider through an API would likely be the exporter under the transfer rules. That means a transfer risk assessment, contract and retention checks, and a lawful basis, before a single customer name goes through.</p>
+
+<p>The UK government's line has been that using DeepSeek is a personal choice for members of the public. That is not guidance for a company handling other people's data, and we would not read it as permission.</p>
+
+<h2>Three ways to get the saving without the exposure</h2>
+
+<p>None of this means "never use them". It means choose the job carefully. Here is what we would do.</p>
+
+<ol>
+<li><strong>Start with work that contains no personal data.</strong> Drafting social posts from public facts, summarising a published report, reformatting a price list, writing first drafts of product descriptions. If a customer's name, address or health detail never enters the prompt, the transfer question mostly falls away.</li>
+<li><strong>Use a host you can name.</strong> Open weights can be run by UK or EU providers, so the model comes from China but your data does not go there. Ask the provider where the servers are, who can see the prompts and whether prompts are kept or used for training.</li>
+<li><strong>Consider running one locally.</strong> A small open model on your own machine keeps everything in the building. It will be slower and weaker than the frontier models, and local does not mean automatically compliant, but it is the cleanest answer for sensitive material. We will cover that in a separate post.</li>
+</ol>
+
+<h2>A two-week test you can run this afternoon</h2>
+
+<p>Pick one routine job that is safe to test, for example turning rough notes into a customer email in your house style. Write down the instruction once. Run the same ten real examples, with names removed, through your current model and through one open-weight model. Score each answer yourself out of five, and note the time and the cost.</p>
+
+<p>If the cheaper model scores within one point of the dearer one on most examples, you have found a job worth moving. If it needs rewriting every time, you have saved nothing. The honest result of a test like this is usually a split: some jobs move across, and the important ones stay where they are.</p>
+
+<p>We have not run a client workload on these models yet, so treat this as how we would approach it, not a verdict. If you want a second pair of eyes on which of your jobs are safe to move, we run a free 30 minute AI audit.</p>
+
+<h2>The short version</h2>
+
+<p>Open-weight models are genuinely cheaper, by roughly 7 to 17 times per token at list prices. Cheaper per token is not cheaper per task, and for a UK firm the bigger question is where the data goes. Test on jobs with no personal data, check the licence, ask the host where the servers are, and keep the sensitive work on a provider you can account for.</p>

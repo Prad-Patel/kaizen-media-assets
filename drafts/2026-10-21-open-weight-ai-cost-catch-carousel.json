@@ -1,0 +1,28 @@
+{
+  "footer": "kaizenaiconsulting.com",
+  "slides": [
+    {"type": "cover", "kicker": "Playbook", "title": ["AI models up to", "17x cheaper.", "Check this first."],
+     "subtitle": "Open-weight models like DeepSeek are listed far below Claude per token. Here is what to test before you move any work across.", "icon": "cost"},
+    {"type": "item", "label": "The price gap",
+     "detail": "Per million tokens, DeepSeek V4.1 Flash is listed at $0.15 in and $0.60 out off-peak. Claude Sonnet 5 is $2 and $10. Roughly 7 to 17 times cheaper, depending on the time of day.",
+     "start": "Check each provider's own pricing page today. These rates move and sources disagree.", "icon": "cost"},
+    {"type": "item", "label": "What it means in pounds",
+     "detail": "On 5 million tokens in and 1 million out, about $2.70 against $20. Real money only at high volume, such as sorting every enquiry or summarising every call.",
+     "start": "Estimate your monthly volume before you get excited about the saving.", "icon": "invoice"},
+    {"type": "item", "label": "Cheap is not cheap per task",
+     "detail": "One benchmark found the cheapest model per solved task was not the top scorer. Retries and wrong answers eat the saving.",
+     "start": "Measure cost per finished job on your own work, not per token.", "icon": "alert"},
+    {"type": "item", "label": "Where your data goes",
+     "detail": "DeepSeek's own policy says data is stored in China. A UK firm sending personal data through the API would likely be the exporter and needs a transfer risk assessment.",
+     "start": "Ask any provider where the servers are and whether prompts are kept or used for training.", "icon": "data"},
+    {"type": "item", "label": "Check the licence",
+     "detail": "Open-weight is not open source. Some licences limit commercial use or set revenue thresholds. We could not confirm DeepSeek Flash's licence from our sources.",
+     "start": "Read the licence on the model's own page before you build on it.", "icon": "target"},
+    {"type": "item", "label": "Test on safe jobs first",
+     "detail": "Drafts from public facts, price lists, product descriptions. Run ten real examples through both models, names removed, and score each one yourself out of five.",
+     "start": "Pick one routine job with no customer data and run the ten-example test this week.", "icon": "calendar"},
+    {"type": "end", "title": ["Test it on safe work.", "Then decide."],
+     "body": "We have not run a client workload on these models yet, so this is how we would approach it, not a verdict. Prices are tool costs and will change.",
+     "cta": "Which job in your business could you hand to a cheaper model tomorrow without a single customer name in the prompt?", "icon": "target"}
+  ]
+}
