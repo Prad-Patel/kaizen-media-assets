@@ -181,6 +181,21 @@ def build(cfg, w, h, animated=False, timing=None):
                     ('<div class="endbody"%s>%s</div>' % (anim("body", 0.42), H.escape(s.get("body", "")))) if s.get("body") else "",
                     ('<div class="cta"%s>%s</div>' % (anim("cta", 0.58), H.escape(s.get("cta", "")))) if s.get("cta") else "",
                     bar(dark=True)))
+        elif kind == "shot":
+            # A real screenshot on a white card, with a short heading above and a
+            # one-line caption below. Unnumbered, so it does not count as an item.
+            shot = "data:image/%s;base64,%s" % (
+                "png" if str(s.get("image", "")).lower().endswith(".png") else "jpeg",
+                base64.b64encode(pathlib.Path(s["image"]).read_bytes()).decode())
+            out.append(
+                '<section class="slide shot"><div class="fit">'
+                '<div class="label"%s>%s</div>'
+                '<div class="shotcard"%s><img src="%s"></div>'
+                '%s</div>%s</section>' % (
+                    anim("label", 0.14), H.escape(s.get("label", "")),
+                    anim("card", 0.28), shot,
+                    ('<div class="shotcap"%s>%s</div>' % (anim("cap", 0.5), H.escape(s["caption"]))) if s.get("caption") else "",
+                    bar()))
         else:
             idx += 1
             start = s.get("start", "")
@@ -234,10 +249,10 @@ window.__autofit=function(maxUp){
         t = timing or cfg.get("timing") or {}
         seek_js = """<script>
 (function(){
-  var COVER=%(cover)s, ITEM=%(item)s, END=%(end)s, XF=0.42;
+  var COVER=%(cover)s, ITEM=%(item)s, END=%(end)s, SHOT=%(shot)s, XF=0.42;
   var slides=[].slice.call(document.querySelectorAll('.slide'));
   var spans=slides.map(function(s){
-    return s.classList.contains('cover')?COVER:(s.classList.contains('end')?END:ITEM);
+    return s.classList.contains('cover')?COVER:(s.classList.contains('end')?END:(s.classList.contains('shot')?SHOT:ITEM));
   });
   var starts=[],acc=0;
   spans.forEach(function(d){starts.push(acc);acc+=d;});
@@ -269,7 +284,7 @@ window.__autofit=function(maxUp){
   };
   window.__seek(0);
 })();
-</script>""" % dict(cover=t.get("cover", 5.0), item=t.get("item", 6.6), end=t.get("end", 7.0))
+</script>""" % dict(cover=t.get("cover", 5.0), item=t.get("item", 6.6), end=t.get("end", 7.0), shot=t.get("shot", 4.6))
 
     prog = '<div id="progwrap"><div id="prog"></div></div>' if animated else ""
     # Animated slides overlay each other and are revealed by __seek; the PDF
@@ -318,6 +333,10 @@ html,body{margin:0;padding:0;background:%(paper)s;-webkit-print-color-adjust:exa
   line-height:1.4;color:%(navy)s;border-left:%(sbar)dpx solid %(teal)s;padding-left:%(spad)dpx}
 .start span{display:block;font-weight:600;font-size:%(startlbl)dpx;letter-spacing:.13em;
   text-transform:uppercase;color:#0FA47E;margin-bottom:%(startgap)dpx}
+.shotcard{background:#fff;border-radius:%(iconr)dpx;padding:%(shotpad)dpx;box-shadow:0 %(icons1)dpx %(icons2)dpx rgba(10,22,40,.14);
+  border:1px solid #D5DEEE;overflow:hidden}
+.shotcard img{display:block;width:100%%;max-height:%(shotmax)dpx;object-fit:contain;border-radius:%(shotr)dpx}
+.shotcap{font-family:'Inter',sans-serif;font-weight:600;font-size:%(startsz)dpx;line-height:1.4;color:#41526B;margin-top:%(sgap)dpx}
 .endbody{font-family:'Inter',sans-serif;font-weight:400;font-size:%(sub)dpx;line-height:1.5;
   color:#B9C9E2;max-width:92%%}
 .cta{font-family:'Inter',sans-serif;font-weight:600;font-size:%(cta)dpx;line-height:1.4;
@@ -332,7 +351,7 @@ html,body{margin:0;padding:0;background:%(paper)s;-webkit-print-color-adjust:exa
 """ % dict(
         fonts=fonts, w=w, h=h, slidepos=slidepos, paper=PAPER, navy=NAVY, blue=BLUE, teal=TEAL,
         pad=px(80), inbot=px(150), covbot=px(215), markw=px(132), markgap=px(44), icongap=px(36),
-        iconbox=px(152), iconr=px(32), icons1=px(12), icons2=px(34), iconbd=px(2),
+        iconbox=px(152), shotpad=px(10), shotmax=px(780), shotr=px(14), iconr=px(32), icons1=px(12), icons2=px(34), iconbd=px(2),
         kicker=px(27), kgap=px(22), big=px(74), rule=px(8), rulew=px(104), rgap=px(38),
         sub=px(30), swipe=px(150), swipetxt=px(24),
         count=px(34), countsm=px(24), cgap=px(22), label=px(62), lgap=px(26), detail=px(31),

@@ -4,7 +4,11 @@
     {
       "type": "cover",
       "kicker": "Case study",
-      "title": ["We planned a", "home extension", "in a week with Claude"],
+      "title": [
+        "We planned a",
+        "home extension",
+        "in a week with Claude"
+      ],
       "subtitle": "Plans in 2D and 3D, a tracker and a builder tender pack, from one tool. Here is what it does and what we cannot claim yet.",
       "icon": "grid"
     },
@@ -20,12 +24,30 @@
       "label": "What we built",
       "detail": "Floor plans in 2D with a live 3D model, a view of each wall for sockets and lights, and a tracker for budget, programme, materials and payments. One tool, built with Claude only.",
       "start": "Describe the tool you wish you had in plain English. That description is your first prompt.",
-      "icon": "data"
+      "icon": "task"
+    },
+    {
+      "type": "shot",
+      "label": "Plan and 3D, side by side",
+      "image": "/home/user/kaizen-media-assets/image/2026-10-23-extension-planner-built-with-claude-shot-split.jpg",
+      "caption": "Edit the floor plan on the left and the 3D model updates on the right."
+    },
+    {
+      "type": "shot",
+      "label": "The house in 3D",
+      "image": "/home/user/kaizen-media-assets/image/2026-10-23-extension-planner-built-with-claude-shot-3d.jpg",
+      "caption": "Orbit round it, hide the floors above, check what the extension will look like."
+    },
+    {
+      "type": "shot",
+      "label": "The plan in 2D",
+      "image": "/home/user/kaizen-media-assets/image/2026-10-23-extension-planner-built-with-claude-shot-plan.jpg",
+      "caption": "Walls, rooms, doors, plus every socket, switch and light placed before the builder arrives."
     },
     {
       "type": "item",
       "label": "One version of the truth",
-      "detail": "The family, trades and contractors work from the same drawings and numbers, not three versions in three inboxes. Fewer misunderstandings means fewer paid-for mistakes.",
+      "detail": "Everyone involved, from trades to contractors, works from the same drawings and numbers, not three versions in three inboxes. Fewer misunderstandings means fewer paid-for mistakes.",
       "start": "Pick one place where the current plan lives. Retire every other copy.",
       "icon": "team"
     },
@@ -39,7 +61,7 @@
     {
       "type": "item",
       "label": "Time to build",
-      "detail": "About a week, with Claude as the only tool. It is built for one house and one family, not a product we sell.",
+      "detail": "About a week, with Claude as the only tool. It is built for one personal development project, not a product we sell.",
       "start": "Build the smallest version that answers your biggest worry, then add to it.",
       "icon": "calendar"
     },
@@ -52,7 +74,10 @@
     },
     {
       "type": "end",
-      "title": ["Decide early.", "Price the same job."],
+      "title": [
+        "Decide early.",
+        "Price the same job."
+      ],
       "body": "This is our own project, built for ourselves. Results are ours and will vary for your business and your build.",
       "cta": "Which job in your business would be cheaper if every decision were made before the work started?",
       "icon": "target"

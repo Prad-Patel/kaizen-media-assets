@@ -8,7 +8,7 @@ Hook type: we-claim/plain-English
 
 Most of the cost on a build is not in the quote. It arrives afterwards, as add-ons nobody priced.
 
-We have done property developments before, and that is where the money went every time: a changed layout, a socket missing from the drawings, a wall that moved on site. So for a family home project we tried to make every decision at the start instead.
+We have done property developments before, and that is where the money went every time: a changed layout, a socket missing from the drawings, a wall that moved on site. So for a personal development project we tried to make every decision at the start instead.
 
 In about a week, using Claude and nothing else, we built one tool that holds the floor plans in 2D and 3D, a view of each wall for sockets and lights, and a tracker for budget, programme, materials and payments. It also generates a detailed tender pack, so every builder prices the same job. Three quotes have come back from that pack.
 
@@ -24,7 +24,7 @@ The full write-up, with sources: https://kaizenaiconsulting.com/extension-planne
 
 ## Kaizen page reshare (no media, no links)
 
-We built a planner for a family home project in about a week, with Claude only. The honest result so far: one set of plans and three quotes on the same tender pack. No saving claimed yet. Details in the first comment on this post.
+We built a planner for a personal development project in about a week, with Claude only. The honest result so far: one set of plans and three quotes on the same tender pack. No saving claimed yet. Details in the first comment on this post.
 
 ## X (with 4:5 cover)
 
@@ -52,4 +52,4 @@ We built a home extension planner in a week with just Claude. 3D plans, a budget
 
 ## Google Business
 
-We built a planning tool for a family home extension in about a week, using only Claude. It holds 2D and 3D plans, a budget and materials tracker, and a builder tender pack so every quote covers the same job. Three quotes have come back. We explain what it does and what we are not claiming.
+We built a planning tool for a personal home development in about a week, using only Claude. It holds 2D and 3D plans, a budget and materials tracker, and a builder tender pack so every quote covers the same job. Three quotes have come back. We explain what it does and what we are not claiming.
