@@ -1,0 +1,61 @@
+{
+  "footer": "kaizenaiconsulting.com",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "Case study",
+      "title": ["We planned a", "home extension", "in a week with Claude"],
+      "subtitle": "Plans in 2D and 3D, a tracker and a builder tender pack, from one tool. Here is what it does and what we cannot claim yet.",
+      "icon": "grid"
+    },
+    {
+      "type": "item",
+      "label": "The problem",
+      "detail": "On past developments the big costs came from unexpected add-ons, not the work we priced. A changed layout, a missing socket, a wall that moved once the builder was on site.",
+      "start": "List the last three surprise costs on any job you have run. Which decision, made earlier, would have avoided each?",
+      "icon": "alert"
+    },
+    {
+      "type": "item",
+      "label": "What we built",
+      "detail": "Floor plans in 2D with a live 3D model, a view of each wall for sockets and lights, and a tracker for budget, programme, materials and payments. One tool, built with Claude only.",
+      "start": "Describe the tool you wish you had in plain English. That description is your first prompt.",
+      "icon": "data"
+    },
+    {
+      "type": "item",
+      "label": "One version of the truth",
+      "detail": "The family, trades and contractors work from the same drawings and numbers, not three versions in three inboxes. Fewer misunderstandings means fewer paid-for mistakes.",
+      "start": "Pick one place where the current plan lives. Retire every other copy.",
+      "icon": "team"
+    },
+    {
+      "type": "item",
+      "label": "The tender pack",
+      "detail": "A detailed pack, generated from the design, goes to every builder, so they all price the same job. Three quotes have come back from it.",
+      "start": "Ask each builder for a written, itemised quote and read the exclusions first.",
+      "icon": "invoice"
+    },
+    {
+      "type": "item",
+      "label": "Time to build",
+      "detail": "About a week, with Claude as the only tool. It is built for one house and one family, not a product we sell.",
+      "start": "Build the smallest version that answers your biggest worry, then add to it.",
+      "icon": "calendar"
+    },
+    {
+      "type": "item",
+      "label": "What we are not claiming",
+      "detail": "We have not measured a saving, and we will not invent one. So far: one set of plans, one tender pack and three quotes. It does not replace an engineer or a measured survey.",
+      "start": "Keep a contingency anyway. Which? and others suggest around 10 to 15 per cent.",
+      "icon": "target"
+    },
+    {
+      "type": "end",
+      "title": ["Decide early.", "Price the same job."],
+      "body": "This is our own project, built for ourselves. Results are ours and will vary for your business and your build.",
+      "cta": "Which job in your business would be cheaper if every decision were made before the work started?",
+      "icon": "target"
+    }
+  ]
+}

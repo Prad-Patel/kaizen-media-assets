@@ -4,64 +4,57 @@
     {
       "type": "cover",
       "kicker": "Case study",
-      "title": [
-        "We automated",
-        "our own posting",
-        "for about £58 a month"
-      ],
-      "subtitle": "A daily content job that took over an hour now runs as a draft we approve. Here is what it does, what it costs and where it still needs us.",
+      "title": ["We planned a", "home extension", "in a week with Claude"],
+      "subtitle": "Plans in 2D and 3D, a tracker and a builder tender pack, from one tool. Here is what it does and what we cannot claim yet.",
       "icon": "grid"
     },
     {
       "type": "item",
       "label": "The problem",
-      "detail": "Daily posting took too long and the results were inconsistent. Different tone on different days, a missed day when things got busy, and over an hour of work every time we did it properly.",
-      "start": "Time one week of your own posting. Count every step, not just the writing.",
+      "detail": "On past developments the big costs came from unexpected add-ons, not the work we priced. A changed layout, a missing socket, a wall that moved once the builder was on site.",
+      "start": "List the last three surprise costs on any job you have run. Which decision, made earlier, would have avoided each?",
       "icon": "alert"
     },
     {
       "type": "item",
       "label": "What we built",
-      "detail": "A daily routine that picks a topic, researches it, writes the blog post and the captions for each platform, makes the illustrations and a short video, then publishes everywhere in the same brand, theme and style.",
-      "start": "Write the steps of your own routine down first. You cannot automate what you have not described.",
+      "detail": "Floor plans in 2D with a live 3D model, a view of each wall for sockets and lights, and a tracker for budget, programme, materials and payments. One tool, built with Claude only.",
+      "start": "Describe the tool you wish you had in plain English. That description is your first prompt.",
       "icon": "data"
     },
     {
       "type": "item",
-      "label": "A human still approves it",
-      "detail": "Nothing goes live on its own. Every morning we review the draft, ask for changes or reject it. Some days we do reject it, and that check is the point, not a flaw.",
-      "start": "Decide where a person signs off before you build anything. Put that step in on day one.",
-      "icon": "target"
+      "label": "One version of the truth",
+      "detail": "The family, trades and contractors work from the same drawings and numbers, not three versions in three inboxes. Fewer misunderstandings means fewer paid-for mistakes.",
+      "start": "Pick one place where the current plan lives. Retire every other copy.",
+      "icon": "team"
     },
     {
       "type": "item",
-      "label": "What it costs to run",
-      "detail": "About £58 a month in tools: Claude £20, Zernio £20, n8n hosting £10, Higgsfield £5, Gemini £3. GitHub is free. These are tool costs only, and your own mix will differ.",
-      "start": "List the tools you would need and their monthly price before you start, so the bill is no surprise.",
-      "icon": "cost"
+      "label": "The tender pack",
+      "detail": "A detailed pack, generated from the design, goes to every builder, so they all price the same job. Three quotes have come back from it.",
+      "start": "Ask each builder for a written, itemised quote and read the exclusions first.",
+      "icon": "invoice"
     },
     {
       "type": "item",
       "label": "Time to build",
-      "detail": "One day for the first working version. We have kept adjusting it since, as the platforms and our own rules changed. Plan for upkeep, because an automation is a thing you maintain.",
-      "start": "Build the smallest version that works end to end, then improve it in short passes.",
+      "detail": "About a week, with Claude as the only tool. It is built for one house and one family, not a product we sell.",
+      "start": "Build the smallest version that answers your biggest worry, then add to it.",
       "icon": "calendar"
     },
     {
       "type": "item",
-      "label": "What changed",
-      "detail": "Consistent, regular posting, and over 7 hours a week saved. We are not claiming it has grown our following. The honest result is time back and a steady output.",
-      "start": "Measure hours saved first. Audience growth takes longer and needs its own tracking.",
-      "icon": "invoice"
+      "label": "What we are not claiming",
+      "detail": "We have not measured a saving, and we will not invent one. So far: one set of plans, one tender pack and three quotes. It does not replace an engineer or a measured survey.",
+      "start": "Keep a contingency anyway. Which? and others suggest around 10 to 15 per cent.",
+      "icon": "target"
     },
     {
       "type": "end",
-      "title": [
-        "Describe the routine.",
-        "Then automate it."
-      ],
-      "body": "This is our own system, built for ourselves. Results are ours and will vary for your business and your tools.",
-      "cta": "Which repeat job in your week takes over an hour and follows the same steps every time?",
+      "title": ["Decide early.", "Price the same job."],
+      "body": "This is our own project, built for ourselves. Results are ours and will vary for your business and your build.",
+      "cta": "Which job in your business would be cheaper if every decision were made before the work started?",
       "icon": "target"
     }
   ]
