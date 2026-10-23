@@ -14,21 +14,21 @@ In about a week, using Claude and nothing else, we built one tool that holds the
 
 What we are not claiming: a saving. We have not measured one and the work has not finished, so we will not make one up.
 
-The lesson is smaller than the tool: decide early, keep one version of the plan, and send every builder the same pack.
+The lesson is smaller than the tool: decide early, keep one version of the plan, and send every builder the same pack. If you have an idea you want to bring to life, get in touch.
 
 Which job in your business would be cheaper if every decision were made before the work started?
 
 ## LinkedIn first comment
 
-The full write-up, with sources: https://kaizenaiconsulting.com/extension-planner-built-with-claude/ . If you have a repeat job that eats a week of your time and want a second opinion on whether a tool like this would fit, the free 30 minute AI audit is here: https://calendly.com/prad-kaizenaiconsulting/new-meeting
+The full write-up, with sources: https://kaizenaiconsulting.com/extension-planner-built-with-claude/ . If this interests you, or you have an idea you want to bring to life, contact us. A free 30 minute AI audit is the easiest way to start: https://calendly.com/prad-kaizenaiconsulting/new-meeting
 
 ## Kaizen page reshare (no media, no links)
 
-We built a planner for a personal development project in about a week, with Claude only. The honest result so far: one set of plans and three quotes on the same tender pack. No saving claimed yet. Details in the first comment on this post.
+We built a planner for a personal development project in about a week, with Claude only. The honest result so far: one set of plans and three quotes on the same tender pack. No saving claimed yet. If you have an idea to bring to life, contact us (details in the first comment).
 
 ## X (with 4:5 cover)
 
-We built a home extension planner in a week, using only Claude. 2D and 3D plans, a tracker and a builder tender pack. Three quotes back, no saving claimed yet. https://kaizenaiconsulting.com/extension-planner-built-with-claude/ Free audit: https://calendly.com/prad-kaizenaiconsulting/new-meeting
+We built a home extension planner in a week, using only Claude. 2D and 3D plans, a tracker and a builder tender pack. Three quotes back, no saving claimed yet. https://kaizenaiconsulting.com/extension-planner-built-with-claude/ Got an idea to bring to life? Talk to us: https://calendly.com/prad-kaizenaiconsulting/new-meeting
 
 ## Instagram
 
@@ -42,14 +42,14 @@ What it does:
 
 Three quotes have come back from that pack. We are not claiming a saving yet, because the work is not done.
 
-Full write-up on our blog, link in bio.
+Got an idea you want to bring to life? Contact us, link in bio.
 
 #aitools #uksmallbusiness #aiforbusiness #ukbusiness
 
 ## TikTok
 
-We built a home extension planner in a week with just Claude. 3D plans, a budget tracker and a builder tender pack. Three quotes back, no saving claimed yet. Full write-up, link in bio. #aitools #uksmallbusiness #aiforbusiness
+We built a home extension planner in a week with just Claude. 3D plans, a budget tracker and a builder tender pack. Three quotes back, no saving claimed yet. Got an idea you want to bring to life? Contact us, link in bio. #aitools #uksmallbusiness #aiforbusiness
 
 ## Google Business
 
-We built a planning tool for a personal home development in about a week, using only Claude. It holds 2D and 3D plans, a budget and materials tracker, and a builder tender pack so every quote covers the same job. Three quotes have come back. We explain what it does and what we are not claiming.
+We built a planning tool for a personal home development in about a week, using only Claude. It holds 2D and 3D plans, a budget and materials tracker, and a builder tender pack so every quote covers the same job. Three quotes have come back. Got an idea you want to bring to life? Contact us.
