@@ -1,0 +1,9 @@
+{
+  "hook": ["LOCK CHATS", "WITH A PIN."],
+  "points": [["Chat menu, Lock chat."], ["Set a 4-digit PIN."], ["Know what stays open."]],
+  "stat": {"pre": "FORGET THE PIN AND RESET IT:", "big": "ALL DELETED.", "post": "EVERY LOCKED CHAT, FOR GOOD."},
+  "cta": "FREE 30-MIN AI AUDIT",
+  "tagline": "Lock it. Know its limits.",
+  "url": "kaizenaiconsulting.com",
+  "labelFontSize": 34
+}
