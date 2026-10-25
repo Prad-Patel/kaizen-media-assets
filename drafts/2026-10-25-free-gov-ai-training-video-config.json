@@ -1,0 +1,9 @@
+{
+  "hook": ["DID YOU KNOW?", "FREE AI COURSES."],
+  "points": [["Search AI Skills Hub."], ["Pick one short course."], ["Use it on a real job."]],
+  "stat": {"pre": "SOME COURSES TAKE AS LITTLE AS", "big": "20 MINUTES.", "post": "FREE FOR EVERY UK ADULT."},
+  "cta": "FREE 30-MIN AI AUDIT",
+  "tagline": "Learn it free. Use it today.",
+  "url": "kaizenaiconsulting.com",
+  "labelFontSize": 34
+}
