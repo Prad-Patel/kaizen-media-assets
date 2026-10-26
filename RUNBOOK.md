@@ -1108,6 +1108,10 @@ Prad judged the 2026-10-23 case study as too negative on benefits ("what we are 
 - Keep the guardrails that protect accuracy: never invent a result, client quote or number we cannot source or derive; keep the working visible ("on these assumptions"); cost claims are still tool costs only; no income or earnings promises.
 - Drop the defensive habit: no standalone "what we are not claiming" section, no repeating "no saving claimed yet" in the hook or in every caption. One short plain-English qualifier where a figure is an estimate is enough. Case study posts still report confirmed facts only, but frame them by what they make possible.
 
+## Next-day topic request: Claude Duet (set by Prad, 2026-10-26)
+
+Prad asked for Tuesday 27 October's post to be about Claude Duet, to get ahead of a UK arrival even though it may not be available in the UK yet. Use it as the day's topic instead of researching a fresh one. The 2026-10-22 post ("Claude Now Messages You First. What UK Small Businesses Can Do Before It Arrives") already covered the launch, so do not retell it: read that draft and Run log entry first and take a new angle (for example a concrete "get ready now" how-to, what to set up so a proactive assistant is useful on day one, or whatever has changed since). Re-verify on the day, by web search, the current status: availability and any UK or waitlist news, plans, and what it can do. If it is still US-only, say so plainly in the hook or first line and do not imply UK readers can use it today. Tuesday means no LinkedIn post. The posting rules, voice rules and benefits framing above still apply.
+
 ## Business details
 
 Kaizen AI Consulting, 85 Great Portland Street, London. Phone 020 3432 0345,
