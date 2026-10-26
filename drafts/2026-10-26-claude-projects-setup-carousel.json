@@ -1,0 +1,31 @@
+{
+  "footer": "kaizenaiconsulting.com",
+  "slides": [
+    {"type": "cover", "kicker": "How-to", "title": ["Teach Claude your", "business once.", "Skip the re-explaining."],
+     "subtitle": "Set up one Claude Project in about 15 minutes, step by step.", "icon": "task"},
+    {"type": "item", "label": "1. Create the project",
+     "detail": "Open Claude, choose Projects in the left-hand menu, then create a new project. Name it after one job, such as Customer emails.",
+     "start": "One project per job, not one for the whole business.", "icon": "grid"},
+    {"type": "item", "label": "2. Let Claude write the briefing",
+     "detail": "In a normal chat, paste: I want to set up a Claude Project for answering customer emails. Ask me up to eight questions, one at a time, then write a briefing of no more than 300 words.",
+     "start": "Answer the questions, then copy the briefing.", "icon": "task"},
+    {"type": "item", "label": "3. Paste it into the instructions",
+     "detail": "Inside the project, find the option to set project instructions and paste the briefing in. Every chat in the project will follow it.",
+     "start": "Keep it short. 200 to 300 words is plenty.", "icon": "target"},
+    {"type": "item", "label": "4. Add two or three files",
+     "detail": "Upload your price list, your FAQ and a few real replies you were pleased with. Files are available to every chat in the project.",
+     "start": "Remove customer names and addresses first.", "icon": "invoice"},
+    {"type": "item", "label": "5. Test it",
+     "detail": "Open a new chat in the project and ask: A customer wants a quote by Friday and we are booked until Monday. Write a reply.",
+     "start": "If it misses, fix the instructions, not the chat.", "icon": "calendar"},
+    {"type": "item", "label": "What it could give back",
+     "detail": "Five minutes a day re-explaining is 25 minutes a week. Over 48 weeks that is 20 hours. Illustrative, so time your own week.",
+     "start": "Start with the job that eats the most time.", "icon": "cost"},
+    {"type": "item", "label": "One thing to watch",
+     "detail": "Plan limits change and Anthropic's pages do not all agree. Check what your own account offers before you rely on a feature.",
+     "start": "Free accounts are listed as up to five projects.", "icon": "alert"},
+    {"type": "end", "title": ["One job.", "One project.", "Done once."],
+     "body": "Want help setting up AI for your business? We offer a free 30 minute AI audit. Details in the first comment.",
+     "cta": "Which job do you explain to an AI from scratch most often?", "icon": "target"}
+  ]
+}
