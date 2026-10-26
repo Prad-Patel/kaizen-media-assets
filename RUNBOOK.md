@@ -1112,6 +1112,10 @@ Prad judged the 2026-10-23 case study as too negative on benefits ("what we are 
 
 Prad asked for Tuesday 27 October's post to be about Claude Duet, to get ahead of a UK arrival even though it may not be available in the UK yet. Use it as the day's topic instead of researching a fresh one. The 2026-10-22 post ("Claude Now Messages You First. What UK Small Businesses Can Do Before It Arrives") already covered the launch, so do not retell it: read that draft and Run log entry first and take a new angle (for example a concrete "get ready now" how-to, what to set up so a proactive assistant is useful on day one, or whatever has changed since). Re-verify on the day, by web search, the current status: availability and any UK or waitlist news, plans, and what it can do. If it is still US-only, say so plainly in the hook or first line and do not imply UK readers can use it today. Tuesday means no LinkedIn post. The posting rules, voice rules and benefits framing above still apply.
 
+## Name the tool in the headline (set by Prad, 2026-10-26)
+
+When a post is about a particular tool, put the tool's name in the headline and make it obvious, followed by the hook for why someone should read it. Pattern: "Claude Duet: what small businesses can do with it" or "Claude Duet: an intro to what is possible". This applies to the blog title, both covers, the video hook and the first line of every caption. It refines the 2026-10-07 plain-English-hook rule rather than replacing it: name first, then the reason to care. Check the exact product name against the vendor's own wording on the day (Prad's example said "Duo", the product is Claude Duet, so use Duet). For 2026-10-27 the headline should be along the lines of "Claude Duet: ..." with the hook after the colon, and say plainly if it is not yet in the UK.
+
 ## Business details
 
 Kaizen AI Consulting, 85 Great Portland Street, London. Phone 020 3432 0345,
