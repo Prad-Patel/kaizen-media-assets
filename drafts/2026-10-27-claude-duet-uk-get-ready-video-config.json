@@ -1,0 +1,9 @@
+{
+  "hook": ["CLAUDE DUET", "NOT IN UK YET."],
+  "points": [["Connect email, calendar, Drive."], ["Run a manual morning brief."], ["Write your approval rules."]],
+  "stat": {"pre": "HALVE A 20-MIN MORNING TRIAGE:", "big": "40 HOURS A YEAR.", "post": "ILLUSTRATIVE: 10 MIN x 5 DAYS x 48 WEEKS."},
+  "cta": "FREE 30-MIN AI AUDIT",
+  "tagline": "Be ready before it arrives.",
+  "url": "kaizenaiconsulting.com",
+  "labelFontSize": 34
+}
