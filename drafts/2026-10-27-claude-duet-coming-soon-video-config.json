@@ -1,0 +1,9 @@
+{
+  "hook": ["CLAUDE DUET", "COMING SOON."],
+  "points": [["A morning brief from your apps."], ["Works while you are away."], ["Asks before it acts."]],
+  "stat": {"pre": "ANTHROPIC SAYS DUET CAN USE", "big": "6,000+ CONNECTORS.", "post": "INCLUDING GMAIL, SLACK AND QUICKBOOKS. US WAITLIST FOR NOW."},
+  "cta": "FREE 30-MIN AI AUDIT",
+  "tagline": "Get ready before it lands.",
+  "url": "kaizenaiconsulting.com",
+  "labelFontSize": 34
+}
