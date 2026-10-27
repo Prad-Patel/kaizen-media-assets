@@ -1,0 +1,52 @@
+{
+  "kicker": "Coming soon \u00b7 US waitlist now",
+  "title": [
+    "What Claude Duet",
+    "can do for you"
+  ],
+  "items": [
+    {
+      "label": "Morning brief on what matters"
+    },
+    {
+      "label": "Checks your apps every few hours"
+    },
+    {
+      "label": "Messages you only when needed"
+    },
+    {
+      "label": "Works while you are away"
+    },
+    {
+      "label": "Runs on its own virtual browser"
+    },
+    {
+      "label": "Uses your Claude memory and skills"
+    },
+    {
+      "label": "Chat by typing or voice"
+    },
+    {
+      "label": "6,000+ connectors and plugins"
+    },
+    {
+      "label": "Schedules meetings and simple jobs"
+    },
+    {
+      "label": "Builds dashboards, forecasts, web apps"
+    },
+    {
+      "label": "Pays via Link or Shop Pay"
+    },
+    {
+      "label": "Asks before it sends, pays or signs"
+    },
+    {
+      "label": "Disconnect any app, any time"
+    },
+    {
+      "label": "Included with Claude Pro and Max"
+    }
+  ],
+  "footer": "Source: Anthropic  \u00b7  Kaizen AI Consulting"
+}
