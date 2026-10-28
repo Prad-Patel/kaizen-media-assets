@@ -1,0 +1,79 @@
+{
+ "footer": "kaizenaiconsulting.com",
+ "timing": {
+  "end": 8.2
+ },
+ "slides": [
+  {
+   "type": "explain",
+   "kicker": "Claude prompt",
+   "title": [
+    "Chasing late",
+    "invoices?"
+   ],
+   "bubble": "Awkward emails, written for you.",
+   "bubble_at": 0.6,
+   "dur": 5.34
+  },
+  {
+   "type": "explain",
+   "kicker": "Copy this",
+   "title": [
+    "The reminder",
+    "prompt"
+   ],
+   "prompt_label": "Paste into Claude",
+   "prompt": "Write a polite but firm payment reminder. Invoice [number], \u00a3[amount], due [date]. Under 80 words. Offer to answer any questions.",
+   "bubble": "Read it before you send.",
+   "bubble_at": 2.0,
+   "dur": 12.16
+  },
+  {
+   "type": "explain",
+   "kicker": "Level up",
+   "title": [
+    "Make it a",
+    "3 step ladder"
+   ],
+   "bubble": "All three in one go.",
+   "bubble_at": 0.8,
+   "dur": 8.49,
+   "rows": [
+    {
+     "text": "Day 1: a friendly nudge"
+    },
+    {
+     "text": "Day 7: a firm follow-up"
+    },
+    {
+     "text": "Day 14: a final reminder"
+    }
+   ]
+  },
+  {
+   "type": "explain",
+   "kicker": "What it could give back",
+   "title": [
+    "Four chasers",
+    "a month?"
+   ],
+   "bubble": "Time your own to check.",
+   "bubble_at": 4.5,
+   "dur": 9.56,
+   "bubble_bottom": 400,
+   "stat": "8 hrs",
+   "stat_note": "15 minutes each by hand, 5 with a saved prompt: 40 minutes a month, about 8 hours a year. Illustrative."
+  },
+  {
+   "type": "end",
+   "title": [
+    "Save it.",
+    "Reuse it.",
+    "Every month."
+   ],
+   "body": "Want help setting up AI for your business? We offer a free 30 minute AI audit.",
+   "cta": "How long do you wait before chasing an invoice?",
+   "icon": "target"
+  }
+ ]
+}

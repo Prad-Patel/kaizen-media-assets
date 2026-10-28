@@ -8,10 +8,10 @@ spec.json: {
   "base": "base.mp4",              # render_carousel_video.sh output, avatar omitted
   "out": "out.mp4",
   "bg": "0xE4EDFA",                # flat background colour of the avatar clips
-  "target_h": 640,                 # figure height in the 1080x1350 frame
+  "scale": 0.6,                    # output px per source-cell px (or "target_h" for a 950px figure)
   "items": [{"clip": "c1.mp4", "start": 0.1, "dur": 7.0,
              "bbox": [x, y, w, h],   # figure bbox inside the 1024px source cell
-             "cell": 1024}],         # source cell size the bbox was measured in
+             "cell_w": 840, "cell_h": 1128}],  # source still size ("cell" for a square)
   "tail_audio": [{"file": "a5.wav", "start": 45.2}]   # voice with no avatar clip
 }
 Clips are expected square; the figure's bottom lands on the frame bottom and is
@@ -21,7 +21,7 @@ import json, subprocess, sys
 spec = json.load(open(sys.argv[1]))
 H, FOOT = 1350, 116
 items, tails = spec["items"], spec.get("tail_audio", [])
-s = spec.get("target_h", 640) / 950.0
+s = spec.get("scale") or spec.get("target_h", 640) / 950.0
 inputs = ["-i", spec["base"]]
 for it in items:
     inputs += ["-i", it["clip"]]
@@ -30,13 +30,14 @@ for t in tails:
 fc, last = [], "0:v"
 for i, it in enumerate(items):
     x, y, w, h = it["bbox"]
-    size = round(it.get("cell", 1024) * s)
+    cw, chh = it.get("cell_w", it.get("cell", 1024)), it.get("cell_h", it.get("cell", 1024))
+    sw, sh = round(cw * s), round(chh * s)
     ox, oy = round(10 - x * s), round(H - (y + h) * s)
-    ch = H - FOOT - oy
+    ch = min(sh, H - FOOT - oy)
     st, en = it["start"], it["start"] + it["dur"]
     fc.append(f"[{i+1}:v]colorkey={spec.get('bg','0xE4EDFA')}:0.075:0.04,"
               f"fade=t=in:st=0:d=0.3:alpha=1,fade=t=out:st={it['dur']-0.3}:d=0.3:alpha=1,"
-              f"scale={size}:{size},crop={size}:{ch}:0:0,setpts=PTS-STARTPTS+{st}/TB[v{i}]")
+              f"scale={sw}:{sh},crop={sw}:{ch}:0:0,setpts=PTS-STARTPTS+{st}/TB[v{i}]")
     fc.append(f"[{last}][v{i}]overlay={ox}:{oy}:enable='between(t,{st},{en})':eof_action=pass[o{i}]")
     last = f"o{i}"
 aud = []

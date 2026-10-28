@@ -1,0 +1,66 @@
+{
+ "base": "/tmp/claude-0/v3/base.mp4",
+ "out": "/tmp/claude-0/v3/avatar-late-payment.mp4",
+ "bg": "0xA0BACF",
+ "scale": 0.6,
+ "items": [
+  {
+   "clip": "/tmp/claude-0/v3/f1.mp4",
+   "start": 0.1,
+   "dur": 5.04,
+   "bbox": [
+    95,
+    48,
+    0,
+    1080
+   ],
+   "cell_w": 840,
+   "cell_h": 1128
+  },
+  {
+   "clip": "/tmp/claude-0/v3/f2.mp4",
+   "start": 5.44,
+   "dur": 11.86,
+   "bbox": [
+    199,
+    44,
+    0,
+    1084
+   ],
+   "cell_w": 840,
+   "cell_h": 1128
+  },
+  {
+   "clip": "/tmp/claude-0/v3/f3.mp4",
+   "start": 17.6,
+   "dur": 8.19,
+   "bbox": [
+    100,
+    42,
+    0,
+    1086
+   ],
+   "cell_w": 840,
+   "cell_h": 1128
+  },
+  {
+   "clip": "/tmp/claude-0/v3/f4.mp4",
+   "start": 26.09,
+   "dur": 9.26,
+   "bbox": [
+    17,
+    45,
+    0,
+    1083
+   ],
+   "cell_w": 840,
+   "cell_h": 1128
+  }
+ ],
+ "tail_audio": [
+  {
+   "file": "/tmp/claude-0/v3/f5.wav",
+   "start": 36.05
+  }
+ ]
+}

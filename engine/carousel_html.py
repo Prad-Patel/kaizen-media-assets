@@ -207,6 +207,9 @@ def build(cfg, w, h, animated=False, timing=None):
                              % (" gate" if r.get("tag") else "", anim("row", 0.55 + 0.4 * j),
                                 "!" if r.get("tag") else "&#10003;", H.escape(r["text"]), pill))
                 panel = '<div class="xpanel"%s>%s</div>' % (anim("panel", 0.3), rows)
+            elif s.get("prompt"):
+                panel = ('<div class="xpanel prompt"%s><div class="plabel">%s</div><div class="ptext">%s</div></div>'
+                         % (anim("panel", 0.3), H.escape(s.get("prompt_label", "Copy this prompt")), H.escape(s["prompt"])))
             elif s.get("stat"):
                 panel = ('<div class="xpanel stat"%s><div class="bignum">%s</div><div class="statnote">%s</div></div>'
                          % (anim("panel", 0.3), H.escape(s["stat"]), H.escape(s.get("stat_note", ""))))
@@ -404,6 +407,9 @@ html,body{margin:0;padding:0;background:%(paper)s;-webkit-print-color-adjust:exa
 .xtxt{flex:1;font-family:'Inter',sans-serif;font-weight:600;font-size:%(xtx)dpx;line-height:1.25;color:%(navy)s}
 .pill{flex:none;font-family:'Inter',sans-serif;font-weight:600;font-size:%(pl)dpx;color:#fff;background:%(navy)s;
   border-radius:99px;padding:%(plv)dpx %(plh)dpx;white-space:nowrap}
+.xpanel.prompt{background:%(navy)s;border-color:%(navy)s;padding:%(xpad2)dpx %(xpad)dpx}
+.plabel{font-family:'Inter',sans-serif;font-weight:600;font-size:%(pl)dpx;letter-spacing:.14em;text-transform:uppercase;color:%(teal)s;margin-bottom:%(sng)dpx}
+.ptext{font-family:'Inter',sans-serif;font-weight:400;font-size:%(ptx)dpx;line-height:1.5;color:#EAF0F9}
 .xpanel.stat{text-align:center;padding:%(xpad2)dpx %(xpad)dpx}
 .bignum{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:%(bn)dpx;line-height:1;color:%(blue)s;letter-spacing:-0.03em}
 .statnote{font-family:'Inter',sans-serif;font-weight:400;font-size:%(sn)dpx;line-height:1.45;color:#41526B;margin-top:%(sng)dpx}
@@ -423,7 +429,7 @@ html,body{margin:0;padding:0;background:%(paper)s;-webkit-print-color-adjust:exa
         sgap=px(40), startsz=px(29), sbar=px(5), spad=px(24), startlbl=px(21), startgap=px(8),
         cta=px(31), ctagap=px(36), fh=px(116), barmark=px(196), ftxt=px(25), ph=px(9),
         exbot=px(660), extop=px(0), xt=px(60), xgap=px(30), xpad=px(34), xpad2=px(40), xg=px(22), xrp=px(22),
-        tk=px(50), tkf=px(30), xtx=px(33), pl=px(23), plv=px(9), plh=px(20), bn=px(190), sn=px(31), sng=px(22),
+        tk=px(50), tkf=px(30), ptx=px(35), xtx=px(33), pl=px(23), plv=px(9), plh=px(20), bn=px(190), sn=px(31), sng=px(22),
         avl=px(10), avh=px(640), bbot=px(250), bw=px(470), bf=px(38), bp=px(30), bp2=px(34), bpr=px(34))
 
     return ("<!doctype html><html><head><meta charset=\"utf-8\"><style>%s</style></head>"
