@@ -158,12 +158,15 @@ def build(cfg, w, h, animated=False, timing=None):
             sub = s.get("subtitle", "")
             out.append(
                 '<section class="slide cover"><div class="fit">'
-                '<img class="mark"%s src="%s">'
+                '<img class="mark"%s src="%s">%s'
                 '<div class="kicker"%s>%s</div>'
                 '<div class="bigtitle"%s>%s</div>'
                 '<div class="rule"%s></div>'
                 '%s</div>%s%s</section>' % (
                     anim("mark", 0.0), kmark,
+                    ('<img class="brandlogo"%s src="data:image/png;base64,%s">' % (
+                        anim("mark", 0.08), base64.b64encode(pathlib.Path(s["brand_image"]).read_bytes()).decode()))
+                    if s.get("brand_image") else "",
                     anim("kicker", 0.18), H.escape(s.get("kicker", "")),
                     anim("title", 0.30), title,
                     anim("rule", 0.48),
@@ -305,6 +308,7 @@ html,body{margin:0;padding:0;background:%(paper)s;-webkit-print-color-adjust:exa
 .fit{position:absolute;top:%(pad)dpx;left:%(pad)dpx;right:%(pad)dpx;bottom:%(inbot)dpx;
   transform-origin:top left;display:flex;flex-direction:column;justify-content:center}
 .mark{width:%(markw)dpx;margin-bottom:%(markgap)dpx}
+.brandlogo{width:%(brandw)dpx;display:block;margin:-%(branddy)dpx 0 %(markgap)dpx}
 .iconwrap{width:%(iconbox)dpx;height:%(iconbox)dpx;border-radius:%(iconr)dpx;background:#fff;
   display:flex;align-items:center;justify-content:center;margin-bottom:%(icongap)dpx;
   box-shadow:0 %(icons1)dpx %(icons2)dpx rgba(10,22,40,.10)}
@@ -350,7 +354,7 @@ html,body{margin:0;padding:0;background:%(paper)s;-webkit-print-color-adjust:exa
 #prog{height:100%%;width:0;background:linear-gradient(90deg,%(blue)s,%(teal)s)}
 """ % dict(
         fonts=fonts, w=w, h=h, slidepos=slidepos, paper=PAPER, navy=NAVY, blue=BLUE, teal=TEAL,
-        pad=px(80), inbot=px(150), covbot=px(215), markw=px(132), markgap=px(44), icongap=px(36),
+        pad=px(80), inbot=px(150), covbot=px(215), markw=px(132), brandw=px(420), branddy=px(10), markgap=px(44), icongap=px(36),
         iconbox=px(152), shotpad=px(10), shotmax=px(780), shotr=px(14), iconr=px(32), icons1=px(12), icons2=px(34), iconbd=px(2),
         kicker=px(27), kgap=px(22), big=px(74), rule=px(8), rulew=px(104), rgap=px(38),
         sub=px(30), swipe=px(150), swipetxt=px(24),
