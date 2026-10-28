@@ -194,7 +194,9 @@ def build(cfg, w, h, animated=False, timing=None):
             # panel (rows with an optional pill, or one big stat) in the middle,
             # the avatar bottom-left with a speech bubble. The avatar is a cutout
             # PNG; the bubble and panel are real type, so no lettering is painted.
-            av = "data:image/png;base64,%s" % base64.b64encode(pathlib.Path(s["avatar"]).read_bytes()).decode()
+            # "avatar" may be omitted when a talking clip is composited over the render afterwards.
+            av = ('<img class="avatar" src="data:image/png;base64,%s">' % base64.b64encode(
+                pathlib.Path(s["avatar"]).read_bytes()).decode()) if s.get("avatar") else ""
             title = "".join("<div>%s</div>" % H.escape(x) for x in s.get("title", []))
             panel = ""
             if s.get("rows"):
@@ -211,11 +213,13 @@ def build(cfg, w, h, animated=False, timing=None):
             out.append(
                 '<section class="slide explain" data-dur="%s"><div class="fit">'
                 '<div class="kicker"%s>%s</div><div class="xtitle"%s>%s</div>%s</div>'
-                '<img class="avatar" src="%s">'
-                '<div class="bubble"%s>%s</div>%s</section>' % (
+                '%s'
+                '<div class="bubble"%s%s>%s</div>%s</section>' % (
                     s.get("dur", ""), anim("kicker", 0.0), H.escape(s.get("kicker", "")),
                     anim("title", 0.14), title, panel, av,
-                    anim("bubble", s.get("bubble_at", 0.9)), H.escape(s.get("bubble", "")),
+                    anim("bubble", s.get("bubble_at", 0.9)),
+                    (' style="bottom:%dpx"' % px(s["bubble_bottom"])) if s.get("bubble_bottom") else "",
+                    H.escape(s.get("bubble", "")),
                     bar()))
         elif kind == "shot":
             # A real screenshot on a white card, with a short heading above and a

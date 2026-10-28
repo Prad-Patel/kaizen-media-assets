@@ -1,0 +1,91 @@
+{
+ "footer": "kaizenaiconsulting.com",
+ "slides": [
+  {
+   "type": "explain",
+   "kicker": "Claude + Gmail",
+   "title": [
+    "Can Claude send",
+    "emails without",
+    "asking you?"
+   ],
+   "bubble": "Not by default. Here is what it asks first.",
+   "bubble_at": 0.7,
+   "dur": 7.4
+  },
+  {
+   "type": "explain",
+   "kicker": "Gmail",
+   "title": [
+    "What needs",
+    "your OK"
+   ],
+   "bubble": "Three jobs, one gate.",
+   "bubble_at": 0.6,
+   "dur": 11.4,
+   "rows": [
+    {
+     "text": "Search and read emails"
+    },
+    {
+     "text": "Write drafts"
+    },
+    {
+     "text": "Send, reply, forward",
+     "tag": "Asks you first"
+    }
+   ]
+  },
+  {
+   "type": "explain",
+   "kicker": "Google Drive",
+   "title": [
+    "Same idea",
+    "for your files"
+   ],
+   "bubble": "Leave those defaults switched on.",
+   "bubble_at": 0.6,
+   "dur": 12.4,
+   "rows": [
+    {
+     "text": "Search and read Docs, Sheets, PDFs"
+    },
+    {
+     "text": "Save files Claude creates"
+    },
+    {
+     "text": "Share, move, trash",
+     "tag": "Asks you first"
+    }
+   ]
+  },
+  {
+   "type": "explain",
+   "kicker": "What it could give back",
+   "title": [
+    "Hunting for",
+    "things all day?"
+   ],
+   "bubble": "Time your own week first.",
+   "bubble_at": 0.8,
+   "dur": 13.4,
+   "stat": "40 hrs",
+   "stat_note": "10 minutes a day, 5 days a week, 48 weeks. Halve it and that is about 20 hours. Illustrative.",
+   "bubble_bottom": 400
+  },
+  {
+   "type": "end",
+   "title": [
+    "Connect one.",
+    "Try one job.",
+    "Keep what works."
+   ],
+   "body": "Want help setting up AI for your business? We offer a free 30 minute AI audit.",
+   "cta": "Which takes most of your week: the inbox, the diary or the paperwork?",
+   "icon": "target"
+  }
+ ],
+ "timing": {
+  "end": 11.6
+ }
+}
