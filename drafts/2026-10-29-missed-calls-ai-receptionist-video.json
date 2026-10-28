@@ -1,0 +1,89 @@
+{
+ "footer": "kaizenaiconsulting.com",
+ "timing": {
+  "end": 7.6
+ },
+ "slides": [
+  {
+   "type": "explain",
+   "kicker": "Missed calls",
+   "title": [
+    "\u00a33.7bn a year",
+    "lost to missed calls"
+   ],
+   "dur": 9.05,
+   "stat": "67%",
+   "stat_note": "of UK small firms say they miss at least one call a day that loses them business. BT research with Censuswide, 2026.",
+   "bubble": "That is work walking away.",
+   "bubble_at": 3.0
+  },
+  {
+   "type": "explain",
+   "kicker": "AI receptionist",
+   "title": [
+    "What it does",
+    "on every call"
+   ],
+   "dur": 10.46,
+   "rows": [
+    {
+     "text": "Answers 24/7, day or night"
+    },
+    {
+     "text": "Handles the routine questions"
+    },
+    {
+     "text": "Takes details and books the job"
+    }
+   ],
+   "bubble": "No more voicemail.",
+   "bubble_at": 1.0
+  },
+  {
+   "type": "explain",
+   "kicker": "Then",
+   "title": [
+    "You get",
+    "a summary"
+   ],
+   "dur": 9.97,
+   "rows": [
+    {
+     "text": "Who called"
+    },
+    {
+     "text": "What they need, and when"
+    },
+    {
+     "text": "Which jobs are worth a call back"
+    }
+   ],
+   "bubble": "Even while you are on site.",
+   "bubble_at": 1.0
+  },
+  {
+   "type": "explain",
+   "kicker": "The numbers",
+   "title": [
+    "Receptionist",
+    "or AI?"
+   ],
+   "dur": 10.11,
+   "bubble_bottom": 400,
+   "stat": "\u00a3150",
+   "stat_note": "a month is roughly where AI receptionist plans start, per UK vendor guides. A full-time receptionist averages about \u00a319,000 a year (Payscale). Get a quote for your call volume.",
+   "bubble": "Weigh it against one missed job.",
+   "bubble_at": 4.0
+  },
+  {
+   "type": "end",
+   "title": [
+    "Every call.",
+    "Answered."
+   ],
+   "body": "Want help setting one up? We offer a free 30 minute AI audit.",
+   "cta": "How many calls do you think you miss in a week?",
+   "icon": "target"
+  }
+ ]
+}

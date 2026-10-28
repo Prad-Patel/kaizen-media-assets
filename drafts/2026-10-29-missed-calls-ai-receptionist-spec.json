@@ -1,0 +1,66 @@
+{
+ "base": "/tmp/claude-0/mc/base.mp4",
+ "out": "/home/user/kaizen-media-assets/video/2026-10-29-missed-calls-ai-receptionist.mp4",
+ "bg": "0x9EBACF",
+ "scale": 0.6,
+ "items": [
+  {
+   "clip": "/tmp/claude-0/mc/f1.mp4",
+   "start": 0.1,
+   "dur": 8.83,
+   "bbox": [
+    95,
+    48,
+    0,
+    1080
+   ],
+   "cell_w": 840,
+   "cell_h": 1128
+  },
+  {
+   "clip": "/tmp/claude-0/mc/f2.mp4",
+   "start": 9.15,
+   "dur": 10.23,
+   "bbox": [
+    199,
+    44,
+    0,
+    1084
+   ],
+   "cell_w": 840,
+   "cell_h": 1128
+  },
+  {
+   "clip": "/tmp/claude-0/mc/f3.mp4",
+   "start": 19.61,
+   "dur": 9.73,
+   "bbox": [
+    100,
+    42,
+    0,
+    1086
+   ],
+   "cell_w": 840,
+   "cell_h": 1128
+  },
+  {
+   "clip": "/tmp/claude-0/mc/f4.mp4",
+   "start": 29.58,
+   "dur": 9.87,
+   "bbox": [
+    17,
+    45,
+    0,
+    1083
+   ],
+   "cell_w": 840,
+   "cell_h": 1128
+  }
+ ],
+ "tail_audio": [
+  {
+   "file": "/tmp/claude-0/mc/f5.wav",
+   "start": 40.09
+  }
+ ]
+}
