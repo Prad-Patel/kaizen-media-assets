@@ -295,13 +295,19 @@ Request body:
 ```
 title, slug, contentHtml, summary, imageUrl, imageFilename,
 imageExtension, imageMime, imageTitle, imageSlug, imageAlt,
-imageDescription, skipGoogleBusiness
+imageDescription, seoTitle, seoDescription, service, skipGoogleBusiness
 ```
 
 `imageUrl` is the raw.githubusercontent URL of the **3:2 cover**. Response:
-`{ ok, postId, postUrl, mediaId, mediaUrl, googleBusiness }`. The Google
+`{ ok, postId, postUrl, mediaId, mediaUrl, ignored, googleBusiness }`. The Google
 Business step is set to continue on error, so a GMB failure will not lose the
 blog post; check the `googleBusiness` field and report it.
+
+`seoTitle`, `seoDescription` and `service` (since 2026-10-28, website D145) are
+what Google shows for the article and which service page its "Where this fits"
+block links to; step 4 says how to write them. If one breaks a limit the
+website leaves it out and names it in `ignored`, and the article still
+publishes. Report anything in `ignored` to Prad so it can be fixed in Sanity.
 
 **Social publishing** — Zernio MCP. Accounts: Instagram
 `69f3414b985e734bf3e0697a`, TikTok `69f34133985e734bf3e06870`, X
@@ -403,6 +409,22 @@ those captions should point at the bio.
    reputable links, required). The publisher appends the Elementor booking
    button itself, so do not add a CTA button to the HTML. Write a 40 to 60
    word summary for Google Business.
+4a. Write the search appearance and pick the service (website D145):
+   - `seoTitle`: at most 60 characters including spaces. Lead with the
+     subject a small business owner would search for, then the angle; end
+     with " | Kaizen" only if it still fits. No clickbait, no year unless the
+     post is genuinely about that year.
+   - `seoDescription`: at most 160 characters, whole sentences. Say what the
+     reader gets (a figure, a check list, a how-to). Every figure must be in
+     the article with its source; never a number the article does not explain.
+   - `service`: the one service page the article sits under, exactly one of
+     `/automate/` (workflows, n8n, admin, AI agents), `/build/` (apps, Claude,
+     vibe coding, custom tools), `/grow/` (marketing, social, content),
+     `/grow/seo/` (search, AI search visibility), `/grow/google-ads/`,
+     `/advise/` (strategy, regulation, choosing tools, news for owners),
+     `/ai-training/`, `/ai-receptionist/` (calls, phone agents) or
+     `/quote-calculators/` (quotes, estimates, pricing tools).
+   Show all three to Prad with the drafts in step 8.
 5. Write per-platform copy. LinkedIn follows the LinkedIn rules below (600 to
    1,100 characters, point of view first, no links in the body, ends on a real
    question, opener never reused). Instagram gets the hook-first version with
