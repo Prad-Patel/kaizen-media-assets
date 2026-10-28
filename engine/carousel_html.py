@@ -189,6 +189,34 @@ def build(cfg, w, h, animated=False, timing=None):
                     ('<div class="endbody"%s>%s</div>' % (anim("body", 0.42), H.escape(s.get("body", "")))) if s.get("body") else "",
                     ('<div class="cta"%s>%s</div>' % (anim("cta", 0.58), H.escape(s.get("cta", "")))) if s.get("cta") else "",
                     bar(dark=True)))
+        elif kind == "explain":
+            # Cartoon presenter explainer: kicker and title on top, an infographic
+            # panel (rows with an optional pill, or one big stat) in the middle,
+            # the avatar bottom-left with a speech bubble. The avatar is a cutout
+            # PNG; the bubble and panel are real type, so no lettering is painted.
+            av = "data:image/png;base64,%s" % base64.b64encode(pathlib.Path(s["avatar"]).read_bytes()).decode()
+            title = "".join("<div>%s</div>" % H.escape(x) for x in s.get("title", []))
+            panel = ""
+            if s.get("rows"):
+                rows = ""
+                for j, r in enumerate(s["rows"]):
+                    pill = ('<span class="pill">%s</span>' % H.escape(r["tag"])) if r.get("tag") else ""
+                    rows += ('<div class="xrow%s"%s><div class="tick">%s</div><div class="xtxt">%s</div>%s</div>'
+                             % (" gate" if r.get("tag") else "", anim("row", 0.55 + 0.4 * j),
+                                "!" if r.get("tag") else "&#10003;", H.escape(r["text"]), pill))
+                panel = '<div class="xpanel"%s>%s</div>' % (anim("panel", 0.3), rows)
+            elif s.get("stat"):
+                panel = ('<div class="xpanel stat"%s><div class="bignum">%s</div><div class="statnote">%s</div></div>'
+                         % (anim("panel", 0.3), H.escape(s["stat"]), H.escape(s.get("stat_note", ""))))
+            out.append(
+                '<section class="slide explain" data-dur="%s"><div class="fit">'
+                '<div class="kicker"%s>%s</div><div class="xtitle"%s>%s</div>%s</div>'
+                '<img class="avatar" src="%s">'
+                '<div class="bubble"%s>%s</div>%s</section>' % (
+                    s.get("dur", ""), anim("kicker", 0.0), H.escape(s.get("kicker", "")),
+                    anim("title", 0.14), title, panel, av,
+                    anim("bubble", s.get("bubble_at", 0.9)), H.escape(s.get("bubble", "")),
+                    bar()))
         elif kind == "shot":
             # A real screenshot on a white card, with a short heading above and a
             # one-line caption below. Unnumbered, so it does not count as an item.
@@ -260,6 +288,7 @@ window.__autofit=function(maxUp){
   var COVER=%(cover)s, ITEM=%(item)s, END=%(end)s, SHOT=%(shot)s, XF=0.42;
   var slides=[].slice.call(document.querySelectorAll('.slide'));
   var spans=slides.map(function(s){
+    if(s.dataset.dur) return parseFloat(s.dataset.dur);
     return s.classList.contains('cover')?COVER:(s.classList.contains('end')?END:(s.classList.contains('shot')?SHOT:ITEM));
   });
   var starts=[],acc=0;
@@ -286,6 +315,8 @@ window.__autofit=function(maxUp){
         el.style.opacity=p;
         el.style.transform='translateY('+((1-p)*26).toFixed(2)+'px)';
       });
+      var av=s.querySelector('.avatar');
+      if(av){var q=ease(e/0.6);av.style.opacity=q;av.style.transform='translateY('+((1-q)*40+Math.sin(e*2.4)*5).toFixed(2)+'px)';}
       var ic=s.querySelector('.icon');
       if(ic){var p=ease(e/0.7);ic.style.transform='scale('+(0.84+0.16*p).toFixed(3)+')';}
     });
@@ -356,6 +387,26 @@ html,body{margin:0;padding:0;background:%(paper)s;-webkit-print-color-adjust:exa
 .bar.dark{background:transparent;border-top:1px solid rgba(255,255,255,.14)}
 .bar img{width:%(barmark)dpx}
 .bar div{font-family:'Inter',sans-serif;font-weight:600;font-size:%(ftxt)dpx;color:#9FB6DC;letter-spacing:.06em}
+.slide.explain .fit{bottom:%(exbot)dpx;justify-content:flex-start;padding-top:%(extop)dpx}
+.xtitle{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:%(xt)dpx;line-height:1.05;
+  letter-spacing:-0.02em;color:%(navy)s;margin-bottom:%(xgap)dpx}
+.xpanel{background:#fff;border:1px solid #D5DEEE;border-radius:%(iconr)dpx;padding:%(xpad)dpx;
+  box-shadow:0 %(icons1)dpx %(icons2)dpx rgba(10,22,40,.10)}
+.xrow{display:flex;align-items:center;gap:%(xg)dpx;padding:%(xrp)dpx 0;border-bottom:1px solid #E6ECF6}
+.xrow:last-child{border-bottom:0}
+.tick{flex:none;width:%(tk)dpx;height:%(tk)dpx;border-radius:99px;background:%(teal)s;color:%(navy)s;
+  font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:%(tkf)dpx;display:flex;align-items:center;justify-content:center}
+.xrow.gate .tick{background:%(blue)s;color:#fff}
+.xtxt{flex:1;font-family:'Inter',sans-serif;font-weight:600;font-size:%(xtx)dpx;line-height:1.25;color:%(navy)s}
+.pill{flex:none;font-family:'Inter',sans-serif;font-weight:600;font-size:%(pl)dpx;color:#fff;background:%(navy)s;
+  border-radius:99px;padding:%(plv)dpx %(plh)dpx;white-space:nowrap}
+.xpanel.stat{text-align:center;padding:%(xpad2)dpx %(xpad)dpx}
+.bignum{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:%(bn)dpx;line-height:1;color:%(blue)s;letter-spacing:-0.03em}
+.statnote{font-family:'Inter',sans-serif;font-weight:400;font-size:%(sn)dpx;line-height:1.45;color:#41526B;margin-top:%(sng)dpx}
+.avatar{position:absolute;left:%(avl)dpx;bottom:0;height:%(avh)dpx;width:auto;transform-origin:bottom center;opacity:0}
+.bubble{position:absolute;right:%(pad)dpx;bottom:%(bbot)dpx;width:%(bw)dpx;background:%(navy)s;color:#fff;
+  font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:%(bf)dpx;line-height:1.25;
+  padding:%(bp)dpx %(bp2)dpx;border-radius:%(bpr)dpx %(bpr)dpx %(bpr)dpx 6px}
 #progwrap{position:absolute;left:0;right:0;bottom:0;height:%(ph)dpx;background:rgba(10,22,40,.14);z-index:9}
 #prog{height:100%%;width:0;background:linear-gradient(90deg,%(blue)s,%(teal)s)}
 """ % dict(
@@ -366,7 +417,10 @@ html,body{margin:0;padding:0;background:%(paper)s;-webkit-print-color-adjust:exa
         sub=px(30), swipe=px(150), swipetxt=px(24),
         count=px(34), countsm=px(24), cgap=px(22), label=px(62), lgap=px(26), detail=px(31),
         sgap=px(40), startsz=px(29), sbar=px(5), spad=px(24), startlbl=px(21), startgap=px(8),
-        cta=px(31), ctagap=px(36), fh=px(116), barmark=px(196), ftxt=px(25), ph=px(9))
+        cta=px(31), ctagap=px(36), fh=px(116), barmark=px(196), ftxt=px(25), ph=px(9),
+        exbot=px(660), extop=px(0), xt=px(60), xgap=px(30), xpad=px(34), xpad2=px(40), xg=px(22), xrp=px(22),
+        tk=px(50), tkf=px(30), xtx=px(33), pl=px(23), plv=px(9), plh=px(20), bn=px(190), sn=px(31), sng=px(22),
+        avl=px(10), avh=px(640), bbot=px(250), bw=px(470), bf=px(38), bp=px(30), bp2=px(34), bpr=px(34))
 
     return ("<!doctype html><html><head><meta charset=\"utf-8\"><style>%s</style></head>"
             "<body>%s%s%s%s</body></html>" % (css, "".join(out), prog, fit_js, seek_js))
