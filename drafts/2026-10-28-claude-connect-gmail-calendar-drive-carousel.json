@@ -1,0 +1,69 @@
+{
+ "footer": "kaizenaiconsulting.com",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "How-to",
+   "title": [
+    "Connect Claude to",
+    "Gmail, Calendar",
+    "and Drive."
+   ],
+   "subtitle": "Three connections, three jobs to try this afternoon.",
+   "icon": "task"
+  },
+  {
+   "type": "item",
+   "label": "1. Connect your Google account",
+   "detail": "Open Claude settings, find Connectors, click Connect next to Gmail, Google Calendar and Google Drive, then sign in to Google and approve.",
+   "start": "Menu names move. Look for the word Connectors.",
+   "icon": "grid"
+  },
+  {
+   "type": "item",
+   "label": "2. Gmail: sort your inbox",
+   "detail": "Paste: List emails from the last two days that need a reply from me, most urgent first. Draft replies to the top three and save them as drafts. Do not send.",
+   "start": "You read the drafts and press send yourself.",
+   "icon": "task"
+  },
+  {
+   "type": "item",
+   "label": "3. Calendar: find the time",
+   "detail": "Paste: Look at my calendar next week. Find three one-hour slots with 30 minutes either side, between 9am and 5pm, and tell me the busiest day.",
+   "start": "Then ask Claude to add the one you pick.",
+   "icon": "calendar"
+  },
+  {
+   "type": "item",
+   "label": "4. Drive: draft a quote",
+   "detail": "Paste: Find my price list and my three latest quotes in Drive. Write a new quote for [customer] for [job]. Show where each price came from and flag guesses.",
+   "start": "Check every figure against your own price list.",
+   "icon": "invoice"
+  },
+  {
+   "type": "item",
+   "label": "What it could give back",
+   "detail": "Ten minutes a day hunting for emails, slots and files is 40 hours over 48 weeks. Halve that and it is about 20 hours. Illustrative, so time your own week.",
+   "start": "Start with the job that eats the most time.",
+   "icon": "cost"
+  },
+  {
+   "type": "item",
+   "label": "One thing to watch",
+   "detail": "Start with drafts and lists. Claude asks for your approval before sending email or sharing files by default, so leave that on.",
+   "start": "Check what your own plan shows.",
+   "icon": "alert"
+  },
+  {
+   "type": "end",
+   "title": [
+    "Connect one.",
+    "Try one job.",
+    "Keep what works."
+   ],
+   "body": "Want help setting up AI for your business? We offer a free 30 minute AI audit. Details in the first comment.",
+   "cta": "Which takes most of your week: the inbox, the diary or the paperwork?",
+   "icon": "target"
+  }
+ ]
+}
