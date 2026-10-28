@@ -154,7 +154,12 @@ def build(cfg, w, h, animated=False, timing=None):
         kind = s.get("type", "item")
         icon = _icon_svg(s.get("icon", ""), px(104))
         if kind == "cover":
-            title = "".join("<div>%s</div>" % H.escape(t) for t in s.get("title", []))
+            inline = ""
+            if s.get("inline_logo"):
+                inline = '<img class="inlinelogo" src="data:image/png;base64,%s">' % base64.b64encode(
+                    pathlib.Path(s["inline_logo"]).read_bytes()).decode()
+            title = "".join("<div>%s</div>" % H.escape(t).replace("{logo}", inline)
+                            for t in s.get("title", []))
             sub = s.get("subtitle", "")
             out.append(
                 '<section class="slide cover"><div class="fit">'
@@ -308,6 +313,7 @@ html,body{margin:0;padding:0;background:%(paper)s;-webkit-print-color-adjust:exa
 .fit{position:absolute;top:%(pad)dpx;left:%(pad)dpx;right:%(pad)dpx;bottom:%(inbot)dpx;
   transform-origin:top left;display:flex;flex-direction:column;justify-content:center}
 .mark{width:%(markw)dpx;margin-bottom:%(markgap)dpx}
+.inlinelogo{height:.86em;width:auto;vertical-align:-.12em;margin:0 .06em}
 .brandlogo{width:%(brandw)dpx;display:block;margin:-%(branddy)dpx 0 %(markgap)dpx}
 .iconwrap{width:%(iconbox)dpx;height:%(iconbox)dpx;border-radius:%(iconr)dpx;background:#fff;
   display:flex;align-items:center;justify-content:center;margin-bottom:%(icongap)dpx;

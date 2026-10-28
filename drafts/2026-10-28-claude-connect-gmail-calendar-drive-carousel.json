@@ -5,13 +5,13 @@
    "type": "cover",
    "kicker": "How-to",
    "title": [
-    "Connect Claude to",
-    "Gmail, Calendar",
+    "Connect {logo}",
+    "to Gmail, Calendar",
     "and Drive."
    ],
    "subtitle": "Three connections, three jobs to try this afternoon.",
    "icon": "task",
-   "brand_image": "/home/user/kaizen-media-assets/brand/claude-wordmark.png"
+   "inline_logo": "/home/user/kaizen-media-assets/brand/claude-wordmark.png"
   },
   {
    "type": "item",
