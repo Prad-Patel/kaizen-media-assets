@@ -1,14 +1,75 @@
 {
   "footer": "kaizenaiconsulting.com",
   "slides": [
-    {"type":"cover","kicker":"Case study","title":["We built a matching","platform with Claude","in one month"],"subtitle":"A tool that matches home sellers to the right estate agent, plus a CRM and a brand kit. About £90 a month in tools to run.","icon":"grid"},
-    {"type":"item","label":"The idea","detail":"Sellers pick an agent on fees and brochures. We wanted to match them on what they need and the personality they want, so the sale feels right.","start":"Write down who your tool is for and what a good result looks like, in two sentences.","icon":"target"},
-    {"type":"item","label":"The usual route","detail":"In our estimate, a first version built the traditional way would have cost tens of thousands of pounds and taken several months. That is our judgement, not a published figure.","start":"Ask yourself what your idea would cost if you only built the smallest working slice.","icon":"alert"},
-    {"type":"item","label":"Piece 1: the matching tool","detail":"A seller answers questions about their sale and the personality they want in an agent. The tool matches them to the agent who fits best.","start":"Start with the one feature people would use on day one.","icon":"task"},
-    {"type":"item","label":"Piece 2: a CRM for agents","detail":"Every lead is tracked in one back end, so agents see where each enquiry came from and what happens next.","start":"Give every lead one home. Retire the spreadsheets and inbox folders.","icon":"team"},
-    {"type":"item","label":"Piece 3: a brand kit","detail":"Colours, type and tone settled once, so marketing material and social posts come out consistent and good-looking every time.","start":"Pick two colours, two fonts and a tone of voice. Write them down.","icon":"grid"},
-    {"type":"item","label":"The tools and the cost","detail":"Claude, Postgres, Vercel, Apify and Firecrawl. About £500 in tools to build and about £90 a month to run. Tool costs only, not a fee and not our time.","start":"List the tools your idea would need. Price them per month, not per project.","icon":"invoice"},
-    {"type":"item","label":"The early signal","detail":"Strong feedback from the agents involved, and several leads so far, most of which went on to instruct. A small sample, so we draw no big conclusions.","start":"Show your first version to three real users this week and ask what is missing.","icon":"calendar"},
-    {"type":"end","title":["One month.","Real leads."],"body":"Our own venture, built for ourselves and a partner. Your costs and results will differ.","cta":"If this interests you, or you have an idea you want to bring to life, contact us.","icon":"target"}
+    {
+      "type": "cover",
+      "kicker": "Case study",
+      "title": [
+        "The equivalent of a",
+        "£20,000 build, made",
+        "with Claude in a month"
+      ],
+      "subtitle": "A tool that matches home sellers to the right estate agent, plus a CRM and a brand kit. About £90 a month in tools to run.",
+      "icon": "grid"
+    },
+    {
+      "type": "item",
+      "label": "The idea",
+      "detail": "Sellers pick an agent on fees and brochures. We wanted to match them on what they need and the personality they want, so the sale feels right.",
+      "start": "Write down who your tool is for and what a good result looks like, in two sentences.",
+      "icon": "target"
+    },
+    {
+      "type": "item",
+      "label": "The usual route",
+      "detail": "In our estimate, a first version built the traditional way would have been the equivalent of a £20,000 build and taken several months. That is our judgement, not a published figure.",
+      "start": "Ask yourself what your idea would cost if you only built the smallest working slice.",
+      "icon": "alert"
+    },
+    {
+      "type": "item",
+      "label": "Piece 1: the matching tool",
+      "detail": "A seller answers questions about their sale and the personality they want in an agent. The tool matches them to the agent who fits best.",
+      "start": "Start with the one feature people would use on day one.",
+      "icon": "task"
+    },
+    {
+      "type": "item",
+      "label": "Piece 2: a CRM for agents",
+      "detail": "Every lead is tracked in one back end, so agents see where each enquiry came from and what happens next.",
+      "start": "Give every lead one home. Retire the spreadsheets and inbox folders.",
+      "icon": "team"
+    },
+    {
+      "type": "item",
+      "label": "Piece 3: a brand kit",
+      "detail": "Colours, type and tone settled once, so marketing material and social posts come out consistent and good-looking every time.",
+      "start": "Pick two colours, two fonts and a tone of voice. Write them down.",
+      "icon": "grid"
+    },
+    {
+      "type": "item",
+      "label": "The tools and the cost",
+      "detail": "Claude, Postgres, Vercel, Apify and Firecrawl. About £500 in tools to build and about £90 a month to run. Tool costs only, not a fee and not our time.",
+      "start": "List the tools your idea would need. Price them per month, not per project.",
+      "icon": "invoice"
+    },
+    {
+      "type": "item",
+      "label": "The early signal",
+      "detail": "Strong feedback from the agents involved, and several leads so far, most of which went on to instruct. A small sample, so we draw no big conclusions.",
+      "start": "Show your first version to three real users this week and ask what is missing.",
+      "icon": "calendar"
+    },
+    {
+      "type": "end",
+      "title": [
+        "A £20,000 build.",
+        "One month."
+      ],
+      "body": "Our own venture, built for ourselves and a partner. Your costs and results will differ.",
+      "cta": "If this interests you, or you have an idea you want to bring to life, contact us.",
+      "icon": "target"
+    }
   ]
 }
