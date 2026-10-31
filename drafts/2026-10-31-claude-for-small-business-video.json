@@ -1,0 +1,26 @@
+{
+ "hook": [
+  "CLAUDE FOR",
+  "SMALL BUSINESS"
+ ],
+ "points": [
+  [
+   "Sort leads."
+  ],
+  [
+   "Chase invoices."
+  ],
+  [
+   "Check margins."
+  ]
+ ],
+ "stat": {
+  "pre": "READY-MADE JOBS:",
+  "big": "15.",
+  "post": "COPY 3 TODAY. NO UK DATE YET."
+ },
+ "cta": "FREE 30-MIN AI AUDIT",
+ "tagline": "Start with one job.",
+ "url": "kaizenaiconsulting.com",
+ "labelFontSize": 32
+}
