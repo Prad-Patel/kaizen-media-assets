@@ -33,5 +33,31 @@ Claude for Small Business has 43 workflows. We ranked the top 10, most useful fi
 
 Claude for Small Business has 43 workflows. We ranked the ten that matter most, from answering enquiries out of hours to chasing late invoices, with the tools it connects to and three prompts you can try in a normal Claude chat today.
 
-## LinkedIn
-Not posted today.
+## LinkedIn [926 characters] (for the held post, Monday 2 Nov: personal profile 6ab38cfa8d284ffb213313ab, then Kaizen page reshare)
+
+PDF via jsDelivr: https://cdn.jsdelivr.net/gh/Prad-Patel/kaizen-media-assets/doc/2026-11-01-claude-small-business-ranked.pdf (550,975 bytes). documentTitle: Claude for Small Business: 10 workflows, ranked
+
+We would not switch on all 43 Claude for Small Business workflows. We would start with one: the one that answers an enquiry at 9pm.
+
+Anthropic says the plugin now has 43 workflows. We ranked the ten we think matter most for a small firm, using only what Anthropic has published:
+
+1. Speed to lead
+2. Chase invoices
+3. Close the month
+4. Monday brief
+5. Proposal builder
+6. Plan payroll
+7. Check margins
+8. Social content engine
+9. Grow pipeline
+10. Build agent
+
+Our logic: the jobs that cost you money when they go wrong come first. A missed enquiry and a late invoice both do. A draft content calendar is easy to redo.
+
+Two honest caveats. There is no UK date or UK pricing yet, and we have not used it ourselves. But the invoice and margin jobs work as copy-paste prompts in a normal Claude chat today, and the full post has them.
+
+Swipe for the ranking, one workflow per slide. Which of these ten would you hand over first?
+
+First comment: Full ranking, the 37 tools it connects to and the three copy-paste prompts: https://kaizenaiconsulting.com/claude-small-business-workflows-ranked/
+
+Kaizen page reshare line: (write fresh on the day, no links, no em dashes, opener not reused)
