@@ -1,0 +1,106 @@
+{
+ "footer": "kaizenaiconsulting.com",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "Ranked",
+   "title": [
+    "Claude for",
+    "Small Business:",
+    "10 workflows, ranked"
+   ],
+   "subtitle": "Most useful first. Our ranking, from Anthropic's own list.",
+   "icon": "grid"
+  },
+  {
+   "type": "item",
+   "label": "Speed to lead",
+   "detail": "Answers new enquiries on nights and weekends with real meeting times, and logs them in your CRM. Nothing sends until you approve.",
+   "start": "The customer who messages at 9pm goes to whoever replies first.",
+   "icon": "phone",
+   "start_label": "Why it ranks here"
+  },
+  {
+   "type": "item",
+   "label": "Chase invoices",
+   "detail": "Checks who owes you money and drafts the reminders. Plan payroll also chases overdue invoices before it readies the run.",
+   "start": "Money owed is money you cannot spend.",
+   "icon": "invoice",
+   "start_label": "Why it ranks here"
+  },
+  {
+   "type": "item",
+   "label": "Close the month",
+   "detail": "Reconciles your books against payment processors, flags what does not match and writes a plain-English profit and loss for your accountant.",
+   "start": "Needs a connected accounting tool to be at its best.",
+   "icon": "calendar",
+   "start_label": "Why it ranks here"
+  },
+  {
+   "type": "item",
+   "label": "Monday brief",
+   "detail": "Cash, sales, pipeline, your calendar and your top priority on one page. Anthropic's example posts it to Slack at 6:30am.",
+   "start": "Start the week knowing the numbers.",
+   "icon": "task",
+   "start_label": "Why it ranks here"
+  },
+  {
+   "type": "item",
+   "label": "Proposal builder",
+   "detail": "Turns a voice memo and site photos into a proposal in your format, priced from your last three deals.",
+   "start": "You check the price before it goes anywhere.",
+   "icon": "quote",
+   "start_label": "Why it ranks here"
+  },
+  {
+   "type": "item",
+   "label": "Plan payroll",
+   "detail": "Checks you will have the cash, chases overdue invoices and readies the payroll run for you to submit.",
+   "start": "Staged for you. You press the button.",
+   "icon": "team",
+   "start_label": "Why it ranks here"
+  },
+  {
+   "type": "item",
+   "label": "Check margins",
+   "detail": "The margin analyser is named in the May launch. Paste what you sold and what it cost and see which lines earn least.",
+   "start": "You can try a rough version in a normal chat today.",
+   "icon": "cost",
+   "start_label": "Why it ranks here"
+  },
+  {
+   "type": "item",
+   "label": "Social content engine",
+   "detail": "Plans next week's content, for example a two-week posting calendar with captions for your approval.",
+   "start": "Useful, but a draft calendar is easier to replace than a late invoice.",
+   "icon": "followup",
+   "start_label": "Why it ranks here"
+  },
+  {
+   "type": "item",
+   "label": "Grow pipeline",
+   "detail": "Finds prospects who resemble your best customers and writes outreach in your voice.",
+   "start": "Read every message before it goes out.",
+   "icon": "target",
+   "start_label": "Why it ranks here"
+  },
+  {
+   "type": "item",
+   "label": "Build agent",
+   "detail": "Turns a recurring manual task into a workflow you can run by name or on a schedule.",
+   "start": "Last because you need to know what to automate first.",
+   "icon": "repeat",
+   "start_label": "Why it ranks here"
+  },
+  {
+   "type": "end",
+   "title": [
+    "43 workflows.",
+    "Start with one."
+   ],
+   "body": "No UK date or UK pricing yet, and we have not used it ourselves. Want help choosing? We offer a free 30 minute AI audit.",
+   "cta": "Which of these would you hand over first?",
+   "icon": "target"
+  }
+ ]
+}

@@ -252,8 +252,8 @@ def build(cfg, w, h, animated=False, timing=None):
                     anim("count", 0.14), idx, n_items,
                     anim("label", 0.24), H.escape(s.get("label", "")),
                     anim("detail", 0.38), H.escape(s.get("detail", "")),
-                    ('<div class="start"%s><span>Start with</span>%s</div>'
-                     % (anim("start", 0.54), H.escape(start))) if start else "",
+                    ('<div class="start"%s><span>%s</span>%s</div>'
+                     % (anim("start", 0.54), H.escape(s.get("start_label", "Start with")), H.escape(start))) if start else "",
                     bar()))
 
     # Auto-fit runs in both directions: grow a sparse slide until it fills the
