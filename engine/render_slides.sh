@@ -20,7 +20,13 @@ cfg = json.load(open(sys.argv[1]))
 tpl = pathlib.Path("index.template.html").read_text().replace('dist/bundle.js', 'dist/bundle_slides.js')
 pathlib.Path("index_slides.html").write_text(tpl.replace("/*__CONFIG__*/", json.dumps(cfg, ensure_ascii=False)))
 PY
-rm -rf frames_slides && ENTRY=index_slides.html DUR="$DUR" OUT=frames_slides FPS="$FPS" node capture.js
+# PARTIAL="from-to,from-to" re-captures only those second ranges (fixes without a full re-render)
+if [ -n "${PARTIAL:-}" ]; then
+  IFS=, read -ra RANGES <<< "$PARTIAL"
+  for r in "${RANGES[@]}"; do ENTRY=index_slides.html DUR="$DUR" OUT=frames_slides FPS="$FPS" FROM="${r%-*}" TO="${r#*-}" node capture.js; done
+else
+  rm -rf frames_slides && ENTRY=index_slides.html DUR="$DUR" OUT=frames_slides FPS="$FPS" node capture.js
+fi
 ffmpeg -y -loglevel error -i "$BASE" -framerate "$FPS" -i frames_slides/f%04d.png \
   -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 \
   -filter_complex "[0:v]fps=${FPS},tpad=stop_mode=clone:stop_duration=${DUR}[b];[b][1:v]overlay=format=auto:shortest=1,format=yuv420p[v]" \

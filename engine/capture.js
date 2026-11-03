@@ -21,7 +21,9 @@ const ENTRY = path.join(__dirname, process.env.ENTRY || 'index.html');
   await page.evaluate(() => document.fonts.ready);
   await page.waitForTimeout(400);
   const total = Math.round(FPS * DUR);
-  for (let i = 0; i < total; i++) {
+  const from = Math.round(FPS * parseFloat(process.env.FROM || '0'));
+  const to = process.env.TO ? Math.min(total, Math.round(FPS * parseFloat(process.env.TO))) : total;
+  for (let i = from; i < to; i++) {
     await page.evaluate((tt) => window.__seek(tt), i / FPS);
     await page.waitForTimeout(8);
     // omitBackground keeps the canvas transparent so ffmpeg can composite this

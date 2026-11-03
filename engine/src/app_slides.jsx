@@ -71,12 +71,12 @@ function Hook() {
   const big = useTransform(T, (t) => 0.9 + 0.1 * seg(t, 0.2, 0.9, easeOutBack));
   return (
     <>
-      <R t0={0.2} t1={t1} x={84} y={150} w={912} dy={30}>
+      <R t0={0.2} t1={t1} x={84} y={190} w={912} dy={30}>
         <div style={{ ...HL, fontSize: 36, letterSpacing: "0.12em", color: TEAL, textTransform: "uppercase" }}>{h.kicker}</div>
       </R>
-      <motion.div style={{ position: "absolute", left: 84, top: 215, width: 912, ...HL, fontSize: 132, color: INK, scale: big, transformOrigin: "0 50%",
+      <motion.div style={{ position: "absolute", left: 84, top: 250, width: 912, ...HL, fontSize: 104, color: INK, scale: big, transformOrigin: "0 50%",
         opacity: useTransform(T, (t) => seg(t, 0.2, 0.7) * (1 - seg(t, t1, t1 + 0.35, easeInCubic))) }}>{h.big}</motion.div>
-      <Head t0={0.9} t1={t1} y={375} text={h.line} color={INK} size={54} step={0.07} />
+      <Head t0={0.9} t1={t1} y={380} text={h.line} color={INK} size={54} step={0.07} />
     </>
   );
 }
@@ -181,8 +181,8 @@ function BarsSlide() {
       <Bar x={170} wd={300} v={34} k={k} base={base} t0={a + 1.6} t1={b - 0.3} color={ACCENT} label={c.b1} sub={c.b1sub} />
       <Bar x={610} wd={300} v={22} k={k} base={base} t0={a + 2.5} t1={b - 0.3} color="#5B7096" label={c.b2} sub={c.b2sub} />
       <Line y={lineY} t0={a + 3.6} t1={b - 0.3} label={c.line} />
-      <Para t0={a + 5.0} t1={b - 0.3} y={1350} text={c.p1} color="#DCE8FF" size={44} />
-      <Para t0={a + 6.6} t1={b - 0.3} y={1560} text={c.p2} color={TEAL} size={42} />
+      <Para t0={a + 5.0} t1={b - 0.3} y={1410} text={c.p1} color="#DCE8FF" size={44} />
+      <Para t0={a + 6.6} t1={b - 0.3} y={1610} text={c.p2} color={TEAL} size={42} />
     </>
   );
 }
