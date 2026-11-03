@@ -7,3 +7,9 @@ engine/music.wav
 engine/package-lock.json
 engine/clip.mp4
 engine/carousel_anim.html
+engine/frames_layers/
+engine/frames_slides/
+engine/index_layers.html
+engine/index_slides.html
+engine/pingpong.mp4
+engine/textplan.json

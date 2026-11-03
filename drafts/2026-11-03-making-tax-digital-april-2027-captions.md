@@ -10,7 +10,7 @@ Sources: gov.uk MTD for Income Tax guidance (could not be opened in-session, gov
 
 ## X [231 weighted]
 
-Almost 3 million UK sole traders and landlords will file quarterly tax updates by 2028. Over £30k income? Your April 2027 start is already decided by last tax year. Guide: https://kaizenaiconsulting.com/making-tax-digital-april-2027/ Free audit: https://calendly.com/prad-kaizenaiconsulting/new-meeting
+Almost 3 million UK sole traders and landlords will be on Making Tax Digital by 2028. Over £30k income? Your April 2027 start is already decided by last tax year. Guide: https://kaizenaiconsulting.com/making-tax-digital-april-2027/ Free audit: https://calendly.com/prad-kaizenaiconsulting/new-meeting
 
 ## Instagram [~650]
 

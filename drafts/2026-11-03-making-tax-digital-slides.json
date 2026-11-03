@@ -1,0 +1,21 @@
+{
+ "duration": 58,
+ "times": [0, 8.4, 17.6, 27.0, 35.6, 43.0, 50.4],
+ "hook": {"kicker": "Making Tax Digital", "big": "Almost 3 million", "line": "UK sole traders and landlords will be on Making Tax Digital by 2028."},
+ "split": {"title": "Five filings, not one.", "before": "Today: one return a year", "p1": "Four quarterly updates of income and expenses, then a final declaration once the tax year ends.", "p2": "Records kept digitally and sent through HMRC-compatible software. A spreadsheet alone does not count."},
+ "stairs": {"title": "Who is next?",
+   "steps": [{"when": "April 2026", "amount": "£50k+", "tag": "LIVE", "h": 200, "color": "#12A583"}, {"when": "April 2027", "amount": "£30k+", "tag": "YOU?", "h": 340, "color": "#E8454B", "hot": true}, {"when": "April 2028", "amount": "£20k+", "tag": "NEXT", "h": 480, "color": "#2E7CF6"}],
+   "meter": {"label": "HMRC's first-wave estimate, then 2028", "from": "864,000 people", "to": "Almost 3 million"},
+   "p1": "Qualifying income is gross: self-employment plus property income, before expenses."},
+ "bars": {"title": "Your 2025/26 income decides.", "b1": "£34,000", "b1sub": "Turnover (example)", "b2": "£22,000", "b2sub": "Profit", "line": "£30k line",
+   "p1": "The test uses gross income, not profit. This example is over the line.", "p2": "That tax year ended on 5 April 2026, so your number is already fixed."},
+ "points": {"title": "Then the points start.",
+   "p1": {"year": "2026/27", "sub": "First year", "tag": "No points"}, "p2": {"year": "2027/28", "sub": "Points begin", "tag": "1 per miss"},
+   "t1": "Each missed quarterly deadline earns a point. Enough points means a financial penalty.", "t2": "Early easements may not cover people joining for the first time in 2027 or 2028."},
+ "list": {"title": "Do this before April.", "items": [
+   {"h": "Find your number.", "d": "Add up your 2025/26 gross income from self-employment and property."},
+   {"h": "Ask who files.", "d": "Check whether your accountant will do the quarterly updates, and the cost."},
+   {"h": "Run a practice quarter.", "d": "Pick HMRC-compatible software and keep digital records from now."}],
+   "foot": "General information, not tax advice. Check dates on gov.uk."},
+ "end": {"tagline": "We tidy your records with AI before they reach your software.", "cta": "FREE 30-MIN AI AUDIT"}
+}
