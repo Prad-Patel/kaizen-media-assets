@@ -26,9 +26,16 @@ echo "==> bundling"
   --loader:.jsx=jsx --define:process.env.NODE_ENV='"production"' >/dev/null
 
 echo "==> building ping-pong base from clip"
+if [ "${NO_PINGPONG:-0}" = "1" ]; then
+  # layered-animation base (render_layers.sh): a one-way story, not a loop
+  ffmpeg -y -loglevel error -i "$CLIP" \
+    -vf "fps=${FPS},scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920" \
+    -an -c:v libx264 -preset fast -crf 18 pingpong.mp4
+else
 ffmpeg -y -loglevel error -i "$CLIP" \
   -filter_complex "[0:v]fps=${FPS},scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,split[a][b];[b]reverse[r];[a][r]concat=n=2:v=1[v]" \
   -map "[v]" -an -c:v libx264 -preset fast -crf 18 pingpong.mp4
+fi
 
 echo "==> picking text tones from the footage"
 python3 pick_text_style.py pingpong.mp4 > textplan.json

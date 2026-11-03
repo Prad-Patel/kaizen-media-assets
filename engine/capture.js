@@ -7,7 +7,7 @@ const fs = require('fs');
 const FPS = parseInt(process.env.FPS || '30', 10);
 const DUR = parseFloat(process.env.DUR || '22.0');
 const OUT = path.join(__dirname, process.env.OUT || 'frames');
-const ENTRY = path.join(__dirname, 'index.html');
+const ENTRY = path.join(__dirname, process.env.ENTRY || 'index.html');
 
 (async () => {
   fs.mkdirSync(OUT, { recursive: true });
