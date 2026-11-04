@@ -7,7 +7,7 @@
    {"h": "Separate bank account.", "d": "Every pound in and out is a business pound."},
    {"h": "Set a tax pot.", "d": "Move a fixed share of every payment aside."}]},
  "stat": {"title": "Know your VAT line.", "big": "£90,000", "sub": "turnover in a rolling 12 months", "from": "Under the line", "to": "Register for VAT", "p1": "It is turnover, not profit.", "p2": "Check monthly once you pass £60,000."},
- "listB": {"title": "Then set up for growth.", "start": 4, "items": [
+ "listB": {"title": "Then set up for growth.", "start": 5, "items": [
    {"h": "Digital records.", "d": "Start clean now, Making Tax Digital is coming."},
    {"h": "Ask customers.", "d": "What proof or paperwork do they need to see?"},
    {"h": "Hand dull admin to AI.", "d": "Quotes and chasers. 2 hrs a week is about 96 hrs a year."}],
