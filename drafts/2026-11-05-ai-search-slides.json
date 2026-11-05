@@ -1,0 +1,16 @@
+{
+ "duration": 50.0,
+ "times": [0, 11.0, 23.2, 31.7, 44.0],
+ "hook": {"kicker": "AI search", "big": "45%", "line": "now ask AI who to call. Is your business named?"},
+ "listA": {"title": "Three checks this week.", "start": 1, "items": [
+   {"h": "Ask AI about you.", "d": "Try ChatGPT and Gemini, in your customers' words."},
+   {"h": "Complete Google Business Profile.", "d": "Hours, services and categories filled in."},
+   {"h": "Identical details everywhere.", "d": "Same name, address and phone on every site."}]},
+ "stat": {"title": "Fewer names get picked.", "big": "1.2%", "sub": "of local locations recommended by ChatGPT in one study", "from": "Google 3-Pack: about 36%", "to": "ChatGPT: 1.2%", "p1": "SOCi study: big brands, mostly not UK.", "p2": "Fewer names, less room to be second."},
+ "listB": {"title": "Then keep it up.", "start": 4, "items": [
+   {"h": "Clear answers on your site.", "d": "Cover areas and prices in the first sentence."},
+   {"h": "Real reviews, replied to.", "d": "Ask for honest ones. Never buy them."},
+   {"h": "Re-check monthly.", "d": "AI answers move around, so keep notes."}],
+  "foot": "Illustration only: 5 enquiries x £150 = £750 a month. Not a promise."},
+ "end": {"tagline": "We check how AI describes your business.", "cta": "FREE 30-MIN AI AUDIT"}
+}
