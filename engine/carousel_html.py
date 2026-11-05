@@ -242,13 +242,18 @@ def build(cfg, w, h, animated=False, timing=None):
         else:
             idx += 1
             start = s.get("start", "")
+            logo_cls = ""
+            if s.get("logo"):
+                icon = ('<img class="toollogo" src="data:image/png;base64,%s">' % base64.b64encode(
+                    pathlib.Path(s["logo"]).read_bytes()).decode())
+                logo_cls = " logo"
             out.append(
                 '<section class="slide item"><div class="fit">'
                 '%s'
                 '<div class="count"%s>%02d <span>/ %02d</span></div>'
                 '<div class="label"%s>%s</div>'
                 '<div class="detail"%s>%s</div>%s</div>%s</section>' % (
-                    ('<div class="iconwrap"%s>%s</div>' % (anim("icon", 0.0), icon)) if icon else "",
+                    ('<div class="iconwrap%s"%s>%s</div>' % (logo_cls, anim("icon", 0.0), icon)) if icon else "",
                     anim("count", 0.14), idx, n_items,
                     anim("label", 0.24), H.escape(s.get("label", "")),
                     anim("detail", 0.38), H.escape(s.get("detail", "")),
@@ -358,6 +363,8 @@ html,body{margin:0;padding:0;background:%(paper)s;-webkit-print-color-adjust:exa
   box-shadow:0 %(icons1)dpx %(icons2)dpx rgba(10,22,40,.10)}
 .iconwrap.end{background:rgba(255,255,255,.07);box-shadow:none;
   border:%(iconbd)dpx solid rgba(255,255,255,.14)}
+.iconwrap.logo{overflow:hidden;background:none}
+.toollogo{width:100%%;height:100%%;object-fit:cover;display:block}
 .icon{transform-origin:center}
 .kicker{font-family:'Inter',sans-serif;font-weight:600;font-size:%(kicker)dpx;letter-spacing:.15em;
   text-transform:uppercase;color:#0FA47E;margin-bottom:%(kgap)dpx}
