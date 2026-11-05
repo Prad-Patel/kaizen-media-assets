@@ -116,7 +116,8 @@ function Step({ i, it, n, t0, t1 }) {
 }
 function StatSlide() {
   const c = C.stat, a = S[2], b = S[3];
-  const fill = useTransform(T, (t) => 0.2 + 0.8 * ease(easeOutCubic, (t - a - 2.6) / 1.8));
+  const b0 = c.barStart ?? 0.2, b1 = c.barEnd ?? 1;
+  const fill = useTransform(T, (t) => b0 + (b1 - b0) * ease(easeOutCubic, (t - a - 2.6) / 1.8));
   const w = useTransform(fill, (f) => `${f * 100}%`);
   const num = useTransform(T, (t) => (t < a + 2.6 ? c.from : c.to));
   return (

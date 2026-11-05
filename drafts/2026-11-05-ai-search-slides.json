@@ -6,7 +6,7 @@
    {"h": "Ask AI about you.", "d": "Try ChatGPT and Gemini, in your customers' words."},
    {"h": "Complete Google Business Profile.", "d": "Hours, services and categories filled in."},
    {"h": "Identical details everywhere.", "d": "Same name, address and phone on every site."}]},
- "stat": {"title": "Fewer names get picked.", "big": "1.2%", "sub": "of local locations recommended by ChatGPT in one study", "from": "Google 3-Pack: about 36%", "to": "ChatGPT: 1.2%", "p1": "SOCi study: big brands, mostly not UK.", "p2": "Fewer names, less room to be second."},
+ "stat": {"title": "Fewer names get picked.", "big": "1.2%", "sub": "of local locations recommended by ChatGPT in one study", "from": "Google 3-Pack: about 36%", "to": "ChatGPT: 1.2%", "barStart": 0.36, "barEnd": 0.012, "p1": "SOCi study: big brands, mostly not UK.", "p2": "Fewer names, less room to be second."},
  "listB": {"title": "Then keep it up.", "start": 4, "items": [
    {"h": "Clear answers on your site.", "d": "Cover areas and prices in the first sentence."},
    {"h": "Real reviews, replied to.", "d": "Ask for honest ones. Never buy them."},
