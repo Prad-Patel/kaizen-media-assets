@@ -2963,3 +2963,5 @@ Usage: Kai appears once in a while, not in every video, and gives advice only (n
 ## Voiceover style decision (set by Prad, 2026-11-05)
 
 After the 2026-11-05 expressiveness test, Prad chose **option 2**: the "Prad Clone Voice" on the default model (`eleven_multilingual_v2`, no `modelId`), with the narration scripted for delivery (short beats, a number on its own line, ellipses, a question to land the point), not the `eleven_v3` emotion-cue model. Generate each line as it comes and then **speed it up in the edit**, not in the script or the TTS call: Prad wants a quicker pace. Use ffmpeg `atempo` (pitch-preserving), applied per line before it is delayed into position (about 1.25x was the first value offered; Prad picks the exact speed), then compute the slide start times from the sped-up line lengths so lip movement or slide beats stay in step. Keep the on-screen text working with the sound off. Test clips are in `drafts/voice-test/`.
+
+Speed chosen by Prad, 2026-11-05: **1.15x**. Apply `atempo=1.15` to every narration line in the edit (a 7.5s read becomes about 6.5s), then set slide start times from the sped-up lengths.
