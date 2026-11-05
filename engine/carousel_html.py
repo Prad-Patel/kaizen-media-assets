@@ -121,6 +121,16 @@ def _font_face(fam, weight, path):
             "src:url(data:font/woff2;base64,%s) format('woff2');}" % (fam, weight, data))
 
 
+def _with_dur(out, slides):
+    """Honour a per-slide "dur" (seconds) on any slide type in the animated cut."""
+    res = []
+    for html_, sl in zip(out, slides):
+        if sl.get("dur") and 'data-dur=' not in html_.split(">", 1)[0]:
+            html_ = html_.replace("<section ", '<section data-dur="%s" ' % sl["dur"], 1)
+        res.append(html_)
+    return res
+
+
 def build(cfg, w, h, animated=False, timing=None):
     scale = w / 1080.0
     px = lambda v: round(v * scale)
@@ -440,4 +450,4 @@ html,body{margin:0;padding:0;background:%(paper)s;-webkit-print-color-adjust:exa
         avl=px(10), avh=px(640), bbot=px(250), bw=px(470), bf=px(38), bp=px(30), bp2=px(34), bpr=px(34))
 
     return ("<!doctype html><html><head><meta charset=\"utf-8\"><style>%s</style></head>"
-            "<body>%s%s%s%s</body></html>" % (css, "".join(out), prog, fit_js, seek_js))
+            "<body>%s%s%s%s</body></html>" % (css, "".join(_with_dur(out, slides)), prog, fit_js, seek_js))

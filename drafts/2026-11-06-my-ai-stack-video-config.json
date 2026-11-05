@@ -1,0 +1,108 @@
+{
+ "footer": "kaizenaiconsulting.com",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "My stack",
+   "title": [
+    "The 9 AI tools",
+    "I rely on"
+   ],
+   "subtitle": "What each one does, and why I like it.",
+   "icon": "grid",
+   "dur": 5.43
+  },
+  {
+   "type": "item",
+   "label": "Claude",
+   "detail": "AI chatbot. I use it to think through ideas, draft copy and work through tasks.",
+   "start": "It remembers our business context through Projects and connects to Gmail, Calendar and Drive.",
+   "start_label": "Why I like it",
+   "logo": "/home/user/kaizen-media-assets/brand/logos/claude.png",
+   "dur": 7.86
+  },
+  {
+   "type": "item",
+   "label": "Granola",
+   "detail": "Note taking. It writes up my meetings so I can stay in the conversation.",
+   "start": "No bot joins the call, and I get the notes afterwards.",
+   "start_label": "Why I like it",
+   "logo": "/home/user/kaizen-media-assets/brand/logos/granola.png",
+   "dur": 5.0
+  },
+  {
+   "type": "item",
+   "label": "Wispr Flow",
+   "detail": "Voice transcription. I speak and it types, in whichever app I am using.",
+   "start": "Talking is faster than typing, and it tidies up what I say.",
+   "start_label": "Why I like it",
+   "logo": "/home/user/kaizen-media-assets/brand/logos/wisprflow.png",
+   "dur": 5.54
+  },
+  {
+   "type": "item",
+   "label": "Claude Code",
+   "detail": "Coding. Where we build our own tools and automations.",
+   "start": "We built our daily content routine with it, from plain-English prompts.",
+   "start_label": "Why I like it",
+   "logo": "/home/user/kaizen-media-assets/brand/logos/claude.png",
+   "dur": 5.56
+  },
+  {
+   "type": "item",
+   "label": "Higgsfield",
+   "detail": "Media generation. Images and video in one place.",
+   "start": "We use it for animated clips and our character images, including Kai.",
+   "start_label": "Why I like it",
+   "logo": "/home/user/kaizen-media-assets/brand/logos/higgsfield.png",
+   "dur": 5.43
+  },
+  {
+   "type": "item",
+   "label": "ElevenLabs",
+   "detail": "Text to voice. It turns a script into a natural voiceover.",
+   "start": "British voices that sound like a person, not a robot.",
+   "start_label": "Why I like it",
+   "logo": "/home/user/kaizen-media-assets/brand/logos/elevenlabs.png",
+   "dur": 5.04
+  },
+  {
+   "type": "item",
+   "label": "Zernio",
+   "detail": "Social media scheduling. One place to post to LinkedIn, Instagram, TikTok and X.",
+   "start": "One request publishes everywhere, and I can check each post landed.",
+   "start_label": "Why I like it",
+   "logo": "/home/user/kaizen-media-assets/brand/logos/zernio.png",
+   "dur": 5.9
+  },
+  {
+   "type": "item",
+   "label": "n8n",
+   "detail": "Automation. It connects our tools with no code.",
+   "start": "It runs our website and Google Business publishing and our spreadsheet updates.",
+   "start_label": "Why I like it",
+   "logo": "/home/user/kaizen-media-assets/brand/logos/n8n.png",
+   "dur": 5.72
+  },
+  {
+   "type": "item",
+   "label": "Calendly",
+   "detail": "Booking. How people book a call with us.",
+   "start": "A free 30 minute AI audit is a few taps away.",
+   "start_label": "Why I like it",
+   "logo": "/home/user/kaizen-media-assets/brand/logos/calendly.png",
+   "dur": 5.04
+  },
+  {
+   "type": "end",
+   "title": [
+    "9 tools.",
+    "One stack."
+   ],
+   "body": "These are the ones we lean on every week. Want help choosing yours? We offer a free 30 minute AI audit.",
+   "cta": "Which tool in your stack could you not drop?",
+   "icon": "target",
+   "dur": 5.84
+  }
+ ]
+}
