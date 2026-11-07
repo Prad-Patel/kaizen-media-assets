@@ -1,0 +1,16 @@
+{
+ "duration": 34.0,
+ "times": [0, 6.0, 14.0, 20.5, 27.5],
+ "hook": {"kicker": "Fast replies", "big": "70%", "line": "of UK customers pick the first to reply. Are you first?"},
+ "listA": {"title": "Three checks this week.", "start": 1, "items": [
+   {"h": "Time your own replies.", "d": "Message your form, email and page from a second phone."},
+   {"h": "Send an instant \"got it\".", "d": "An auto-reply that promises a proper answer by a set time."},
+   {"h": "One inbox for everything.", "d": "Forms, email, Facebook and WhatsApp in one place."}]},
+ "stat": {"title": "Silence loses the job.", "big": "23%", "sub": "say they would keep trying if they heard nothing back", "from": "Heard nothing: 100%", "to": "Keep trying: 23%", "barStart": 1.0, "barEnd": 0.23, "p1": "Moneypenny, Jan 2026, 5,001 UK consumers.", "p2": "Most simply move on to the next business."},
+ "listB": {"title": "Then make it routine.", "start": 4, "items": [
+   {"h": "Write 3 replies once.", "d": "Quote, availability and out-of-area, in your voice."},
+   {"h": "Promise a reply time.", "d": "\"By 9am\" beats silence overnight."},
+   {"h": "Keep the promise.", "d": "Check at that time every day for a fortnight."}],
+  "foot": "Illustration only: 4 lost enquiries x £200 = £800 a month. Not a promise."},
+ "end": {"tagline": "We help small firms reply faster.", "cta": "FREE 30-MIN AI AUDIT"}
+}
