@@ -211,47 +211,30 @@ function Spark({ x, y, t0, t1 }) {
     <svg viewBox="0 0 60 60"><path d="M30 0 L36 24 L60 30 L36 36 L30 60 L24 36 L0 30 L24 24 Z" fill={TEAL} /></svg></motion.div>;
 }
 
-const MPOS = [[760, 1450], [770, 1470], [770, 1520], [770, 1300]]; // hook, listA, stat, listB
+const MPOS = [[60, 1380], [600, 1380], [600, 1420], [600, 1330]]; // hook, listA, stat, listB
+const KAI = ["point", "present", "shrug", "celebrate"]; // Kai D1 poses, one per slide (brand/kai/poses)
 function Mascot() {
   const slide = (t) => { let i = 0; for (let k = 0; k < MPOS.length; k++) if (t >= S[k] + 0.2) i = k; return i; };
   const pos = (t) => {
     const i = slide(t); const cur = MPOS[i]; const prev = MPOS[Math.max(0, i - 1)];
     const p = i === 0 ? 1 : seg(t, S[i] + 0.2, S[i] + 1.0, easeOutCubic);
-    const arc = i === 0 ? 0 : Math.sin(p * Math.PI) * 220;
+    const arc = i === 0 ? 0 : Math.sin(p * Math.PI) * 200;
     return { x: prev[0] + (cur[0] - prev[0]) * p, y: prev[1] + (cur[1] - prev[1]) * p - arc, i };
   };
   const tx = useTransform(T, (t) => pos(t).x);
-  const ty = useTransform(T, (t) => pos(t).y + Math.sin(t * 5) * 6 + (t < 1.9 ? (1 - bounce(Math.min(1, Math.max(0, (t - 0.9) / 1.0)))) * -700 : 0));
+  const ty = useTransform(T, (t) => pos(t).y + Math.sin(t * 2.6) * 14 + (t < 1.9 ? (1 - bounce(Math.min(1, Math.max(0, (t - 0.9) / 1.0)))) * -700 : 0));
   const sc = useTransform(T, (t) => seg(t, 0.9, 1.6, easeOutBack) * (1 - seg(t, S[4] - 0.4, S[4] + 0.2, easeInCubic)));
-  const tilt = useTransform(T, (t) => Math.sin(t * 3.2) * 4);
-  const arm = (side) => useTransform(T, (t) => {
-    const i = slide(t); const w = Math.sin(t * 9);
-    let a;
-    if (i === 0) a = side === "r" ? -140 + w * 22 : 8;
-    else if (i === 1) a = side === "r" ? 98 + Math.sin(t * 4) * 8 : 6;
-    else if (i === 2) a = side === "r" ? -62 + Math.sin(t * 5) * 8 : 62 - Math.sin(t * 5) * 8;
-    else a = side === "r" ? -150 + w * 16 : 150 - w * 16;
-    return `rotate(${a} ${side === "r" ? 142 : 58} 168)`;
-  });
-  const blink = useTransform(T, (t) => (t % 3.1 < 0.12 ? 0.1 : 1));
-  const eyeT = useTransform(blink, (b) => `translate(0 95) scale(1 ${b}) translate(0 -95)`);
+  const tilt = useTransform(T, (t) => Math.sin(t * 1.9) * 2.5);
   return (
-    <motion.div style={{ position: "absolute", left: 0, top: 0, width: 240, height: 312, x: tx, y: ty, scale: sc, rotate: tilt, transformOrigin: "50% 100%" }}>
-      <svg viewBox="0 0 200 260" width="100%" height="100%">
-        <line x1={100} y1={22} x2={100} y2={52} stroke="#0A1628" strokeWidth={6} />
-        <circle cx={100} cy={16} r={11} fill={TEAL} /><circle cx={100} cy={16} r={18} fill={TEAL} opacity={0.25} />
-        <motion.g transform={arm("l")}><rect x={44} y={160} width={16} height={62} rx={8} fill={TEAL} stroke="#0A1628" strokeWidth={3} /></motion.g>
-        <motion.g transform={arm("r")}><rect x={140} y={160} width={16} height={62} rx={8} fill={TEAL} stroke="#0A1628" strokeWidth={3} /></motion.g>
-        <rect x={58} y={146} width={84} height={80} rx={22} fill={ACCENT} stroke="#0A1628" strokeWidth={5} />
-        <rect x={78} y={164} width={44} height={30} rx={8} fill="#0A1628" /><circle cx={92} cy={179} r={5} fill={TEAL} /><circle cx={108} cy={179} r={5} fill={RED} />
-        <rect x={66} y={226} width={26} height={22} rx={8} fill={TEAL} stroke="#0A1628" strokeWidth={3} /><rect x={108} y={226} width={26} height={22} rx={8} fill={TEAL} stroke="#0A1628" strokeWidth={3} />
-        <rect x={40} y={50} width={120} height={90} rx={28} fill={ACCENT} stroke="#0A1628" strokeWidth={5} />
-        <rect x={56} y={66} width={88} height={58} rx={18} fill="#0A1628" />
-        <motion.g transform={eyeT}><circle cx={82} cy={95} r={9} fill={TEAL} /><circle cx={118} cy={95} r={9} fill={TEAL} /></motion.g>
-        <path d="M86 112 Q100 124 114 112" stroke={TEAL} strokeWidth={5} fill="none" strokeLinecap="round" />
-      </svg>
+    <motion.div style={{ position: "absolute", left: 0, top: 0, width: 400, height: 400, x: tx, y: ty, scale: sc, rotate: tilt, transformOrigin: "50% 100%" }}>
+      {KAI.map((n, k) => <KaiPose key={n} name={n} k={k} slide={slide} />)}
     </motion.div>
   );
+}
+function KaiPose({ name, k, slide }) {
+  const o = useTransform(T, (t) => (slide(t) === k ? 1 : 0));
+  const pop = useTransform(T, (t) => { const i = slide(t); if (i !== k) return 0.9; return 1 + 0.08 * Math.max(0, 1 - (t - S[k] - 0.2) * 3); });
+  return <motion.img src={`brand/kai-${name}.png`} style={{ position: "absolute", left: 0, top: 0, width: 400, height: 400, opacity: o, scale: pop }} />;
 }
 
 function App() {

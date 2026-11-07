@@ -2984,3 +2984,5 @@ Analysis on 2026-11-06 (97 LinkedIn posts via `analytics_get_analytics`): person
 4. **Format.** One of the two weekly personal posts is a plain text post (no PDF), the other stays a carousel. Log which.
 5. **Fixed slot.** Schedule every personal post for 07:30 UTC (07:30 UK in winter; recheck after the clocks change) so timing is not a variable.
 6. **Needs Prad, not the pipeline:** reply to every comment in the first hour, and comment on other people's posts for about 10 minutes before and after each post. The run should remind him at draft time, not claim it was done.
+
+- 2026-11-07 — Kai built into the engine: `Mascot` in `engine/src/app_checklist.jsx` now draws the locked Kai D1 orb from 520px pose PNGs in `engine/brand/kai-{point,present,shrug,celebrate}.png` (downscaled from `brand/kai/poses/`), one pose per slide, instead of the rejected robot. The first 2026-11-07 draft (`first-to-reply-wins.mp4`) wrongly used the old robot and was superseded by `-r2`. Check any checklist build for the right character before presenting.
