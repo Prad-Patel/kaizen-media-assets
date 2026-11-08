@@ -1,16 +1,73 @@
 {
  "duration": 33.0,
- "times": [0, 7.0, 14.5, 20.5, 27.5],
- "hook": {"kicker": "AI adoption", "big": "47%", "line": "of UK small businesses now use AI. Double last year."},
- "listA": {"title": "Three jobs to start with.", "start": 1, "items": [
-   {"h": "Save your best replies.", "d": "Turn past enquiry answers into three reusable templates."},
-   {"h": "Chase the quiet quote.", "d": "Draft a polite two-line nudge for every quote over a week old."},
-   {"h": "Summarise long threads.", "d": "Paste in a thread, ask for the decision, the date and your promises."}]},
- "stat": {"title": "Using it is not the same as using it well.", "big": "19%", "sub": "feel very confident using AI day to day", "from": "Use AI tools: 47%", "to": "Very confident: 19%", "barStart": 0.47, "barEnd": 0.19, "p1": "Simply Business 2026 SME Insights Report, 1,842 UK small businesses.", "p2": "A further 13% plan to start within a year."},
- "listB": {"title": "Then pick one and stick with it.", "start": 4, "items": [
-   {"h": "Write your service description once.", "d": "Three facts in, 60 plain-English words out."},
-   {"h": "Plan next week in five minutes.", "d": "Paste your jobs and deadlines, ask for a day-by-day plan."},
-   {"h": "Run it daily for a fortnight.", "d": "Keep it if it saves time. Swap it if not."}],
-  "foot": "Illustration only: 20 min a day x 240 days = 80 hours a year. Our arithmetic, not a promise."},
- "end": {"tagline": "We help small firms find their first win.", "cta": "FREE 30-MIN AI AUDIT"}
+ "times": [
+  0,
+  7.0,
+  14.5,
+  20.5,
+  27.5
+ ],
+ "hook": {
+  "scene": false,
+  "kicker": "AI adoption",
+  "big": "47%",
+  "line": "of UK small businesses now use AI. Double last year."
+ },
+ "listA": {
+  "title": "Three jobs to start with.",
+  "start": 1,
+  "items": [
+   {
+    "h": "Save your best replies.",
+    "d": "Turn past enquiry answers into three reusable templates."
+   },
+   {
+    "h": "Chase the quiet quote.",
+    "d": "Draft a polite two-line nudge for every quote over a week old."
+   },
+   {
+    "h": "Summarise long threads.",
+    "d": "Paste in a thread, ask for the decision, the date and your promises."
+   }
+  ],
+  "lead": 1.4,
+  "gap": 1.7
+ },
+ "stat": {
+  "title": "Using it is not the same as using it well.",
+  "big": "19%",
+  "sub": "feel very confident using AI day to day",
+  "from": "Use AI tools: 47%",
+  "to": "Very confident: 19%",
+  "barStart": 0.47,
+  "barEnd": 0.19,
+  "p1": "Simply Business 2026 SME Insights Report, 1,842 UK small businesses.",
+  "p2": "A further 13% plan to start within a year."
+ },
+ "listB": {
+  "title": "Then pick one and stick with it.",
+  "start": 4,
+  "items": [
+   {
+    "h": "Write your service description once.",
+    "d": "Three facts in, 60 plain-English words out."
+   },
+   {
+    "h": "Plan next week in five minutes.",
+    "d": "Paste your jobs and deadlines, ask for a day-by-day plan."
+   },
+   {
+    "h": "Run it daily for a fortnight.",
+    "d": "Keep it if it saves time. Swap it if not."
+   }
+  ],
+  "foot": "Illustration only: 20 min a day x 240 days = 80 hours a year. Our arithmetic, not a promise.",
+  "lead": 1.4,
+  "gap": 1.7,
+  "footAt": 5.6
+ },
+ "end": {
+  "tagline": "We help small firms find their first win.",
+  "cta": "FREE 30-MIN AI AUDIT"
+ }
 }

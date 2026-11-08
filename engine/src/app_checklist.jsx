@@ -81,7 +81,7 @@ function Hook() {
       </R>
       <motion.div style={{ opacity: fade }}><CountUp text={h.big} t0={0.3} dur={1.3} style={{ position: "absolute", left: 84, top: 250, ...HL, fontSize: 150, color: INK }} /></motion.div>
       <Head t0={1.0} t1={t1} y={430} text={h.line} color={INK} size={58} step={0.09} />
-      <HookScene />
+      {C.hook.scene !== false && <HookScene />}
     </>
   );
 }
@@ -92,7 +92,7 @@ function ListA() {
   return (
     <>
       <Head t0={a + 0.5} t1={b - 0.3} y={190} text={c.title} color={WHITE} size={100} />
-      {c.items.map((it, i) => <Step key={i} i={i} it={it} n={c.start + i} t0={a + 1.8 + i * 2.6} t1={b - 0.3} />)}
+      {c.items.map((it, i) => <Step key={i} i={i} it={it} n={c.start + i} t0={a + (c.lead ?? 1.8) + i * (c.gap ?? 2.6)} t1={b - 0.3} />)}
     </>
   );
 }
@@ -101,8 +101,8 @@ function ListB() {
   return (
     <>
       <Head t0={a + 0.5} t1={b - 0.3} y={190} text={c.title} color={WHITE} size={100} />
-      {c.items.map((it, i) => <Step key={i} i={i} it={it} n={c.start + i} t0={a + 1.8 + i * 2.6} t1={b - 0.3} />)}
-      <Para t0={a + 9.0} t1={b - 0.3} y={1640} text={c.foot} color="#9FB6DC" size={34} />
+      {c.items.map((it, i) => <Step key={i} i={i} it={it} n={c.start + i} t0={a + (c.lead ?? 1.8) + i * (c.gap ?? 2.6)} t1={b - 0.3} />)}
+      <Para t0={a + (c.footAt ?? 9.0)} t1={b - 0.3} y={1700} text={c.foot} color="#9FB6DC" size={34} />
     </>
   );
 }
@@ -211,22 +211,36 @@ function Spark({ x, y, t0, t1 }) {
     <svg viewBox="0 0 60 60"><path d="M30 0 L36 24 L60 30 L36 36 L30 60 L24 36 L0 30 L24 24 Z" fill={TEAL} /></svg></motion.div>;
 }
 
-const MPOS = [[60, 1380], [600, 1380], [600, 1420], [600, 1330]]; // hook, listA, stat, listB
+// Kai follows the content: beside the hook art, under each list item as it lands, by the stat card.
 const KAI = ["point", "present", "shrug", "celebrate"]; // Kai D1 poses, one per slide (brand/kai/poses)
+const KFLIP = [true, true, false, false]; // mirror so he gestures toward the content
+const KS = 300; // Kai size in px
+const rowKai = (k) => [700, 500 + k * 340 + 235];
+const WAYPOINTS = (() => {
+  const w = [{ t: 0, p: [700, 1400] }];
+  w.push({ t: S[1] + 0.2, p: rowKai(0) });
+  for (let k = 1; k < 3; k++) w.push({ t: S[1] + (C.listA.lead ?? 1.8) + k * (C.listA.gap ?? 2.6) - 0.1, p: rowKai(k) });
+  w.push({ t: S[2] + 0.2, p: [690, 1500] });
+  w.push({ t: S[3] + 0.2, p: rowKai(0) });
+  for (let k = 1; k < 3; k++) w.push({ t: S[3] + (C.listB.lead ?? 1.8) + k * (C.listB.gap ?? 2.6) - 0.1, p: rowKai(k) });
+  w.push({ t: S[4] - 0.5, p: rowKai(2) });
+  return w;
+})();
 function Mascot() {
-  const slide = (t) => { let i = 0; for (let k = 0; k < MPOS.length; k++) if (t >= S[k] + 0.2) i = k; return i; };
+  const slide = (t) => { let i = 0; for (let k = 0; k < KAI.length; k++) if (t >= S[k] + 0.2) i = k; return i; };
   const pos = (t) => {
-    const i = slide(t); const cur = MPOS[i]; const prev = MPOS[Math.max(0, i - 1)];
-    const p = i === 0 ? 1 : seg(t, S[i] + 0.2, S[i] + 1.0, easeOutCubic);
-    const arc = i === 0 ? 0 : Math.sin(p * Math.PI) * 200;
-    return { x: prev[0] + (cur[0] - prev[0]) * p, y: prev[1] + (cur[1] - prev[1]) * p - arc, i };
+    let j = 0; for (let k = 0; k < WAYPOINTS.length; k++) if (t >= WAYPOINTS[k].t) j = k;
+    const cur = WAYPOINTS[j], prev = WAYPOINTS[Math.max(0, j - 1)];
+    const p = j === 0 ? 1 : seg(t, cur.t, cur.t + 0.8, easeOutCubic);
+    const arc = j === 0 ? 0 : Math.sin(p * Math.PI) * 120;
+    return { x: prev.p[0] + (cur.p[0] - prev.p[0]) * p, y: prev.p[1] + (cur.p[1] - prev.p[1]) * p - arc };
   };
   const tx = useTransform(T, (t) => pos(t).x);
-  const ty = useTransform(T, (t) => pos(t).y + Math.sin(t * 2.6) * 14 + (t < 1.9 ? (1 - bounce(Math.min(1, Math.max(0, (t - 0.9) / 1.0)))) * -700 : 0));
+  const ty = useTransform(T, (t) => pos(t).y + Math.sin(t * 2.6) * 10 + (t < 1.9 ? (1 - bounce(Math.min(1, Math.max(0, (t - 0.9) / 1.0)))) * -700 : 0));
   const sc = useTransform(T, (t) => seg(t, 0.9, 1.6, easeOutBack) * (1 - seg(t, S[4] - 0.4, S[4] + 0.2, easeInCubic)));
   const tilt = useTransform(T, (t) => Math.sin(t * 1.9) * 2.5);
   return (
-    <motion.div style={{ position: "absolute", left: 0, top: 0, width: 400, height: 400, x: tx, y: ty, scale: sc, rotate: tilt, transformOrigin: "50% 100%" }}>
+    <motion.div style={{ position: "absolute", left: 0, top: 0, width: KS, height: KS, x: tx, y: ty, scale: sc, rotate: tilt, transformOrigin: "50% 100%" }}>
       {KAI.map((n, k) => <KaiPose key={n} name={n} k={k} slide={slide} />)}
     </motion.div>
   );
@@ -234,7 +248,7 @@ function Mascot() {
 function KaiPose({ name, k, slide }) {
   const o = useTransform(T, (t) => (slide(t) === k ? 1 : 0));
   const pop = useTransform(T, (t) => { const i = slide(t); if (i !== k) return 0.9; return 1 + 0.08 * Math.max(0, 1 - (t - S[k] - 0.2) * 3); });
-  return <motion.img src={`brand/kai-${name}.png`} style={{ position: "absolute", left: 0, top: 0, width: 400, height: 400, opacity: o, scale: pop }} />;
+  return <motion.img src={`brand/kai-${name}.png`} style={{ position: "absolute", left: 0, top: 0, width: KS, height: KS, opacity: o, scale: pop, rotateY: KFLIP[k] ? 180 : 0 }} />;
 }
 
 function App() {
