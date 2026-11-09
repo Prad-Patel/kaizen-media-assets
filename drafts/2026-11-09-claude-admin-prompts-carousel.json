@@ -1,0 +1,69 @@
+{
+ "footer": "kaizenaiconsulting.com",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "Copy and paste",
+   "title": ["{logo} prompts", "for the admin", "eating your week."],
+   "subtitle": "Five jobs, five prompts, ready to paste.",
+   "icon": "task",
+   "inline_logo": "/home/user/kaizen-media-assets/brand/claude-wordmark.png"
+  },
+  {
+   "type": "item",
+   "label": "1. Chase a quote",
+   "detail": "Paste: Write a friendly two-line follow-up to [customer] about the [job] quote I sent on [date]. Keep it warm, no pressure, and ask if they have any questions.",
+   "start": "Add the price if you want it in the email.",
+   "icon": "invoice"
+  },
+  {
+   "type": "item",
+   "label": "2. Answer an enquiry",
+   "detail": "Paste: Here is an enquiry: [paste it]. Write a reply that thanks them, answers the questions and suggests a call on [two days]. Under 100 words, plain English.",
+   "start": "Reply while you are the first to answer.",
+   "icon": "team"
+  },
+  {
+   "type": "item",
+   "label": "3. Reply to a review",
+   "detail": "Paste: Here is a review: [paste it]. Write a short, polite reply in my voice. If it is negative, own the issue and offer to put it right by phone.",
+   "start": "Use the same prompt for good and bad reviews.",
+   "icon": "alert"
+  },
+  {
+   "type": "item",
+   "label": "4. Describe what you sell",
+   "detail": "Paste: Write a 50-word description of [service or product] for my website. Customers are [who]. Mention [one thing we do better]. No jargon.",
+   "start": "Ask for three versions and pick your favourite.",
+   "icon": "grid"
+  },
+  {
+   "type": "item",
+   "label": "5. Turn notes into a to-do list",
+   "detail": "Paste: Here are my rough notes from today: [paste them]. Turn them into a to-do list, most urgent first, with who needs to do what.",
+   "start": "Voice-to-text notes work fine.",
+   "icon": "task"
+  },
+  {
+   "type": "item",
+   "label": "What it could give back",
+   "detail": "UK owners say they spend about 11 hours a week on admin (Amex survey). Save 10 minutes on each of these five jobs weekly and that is about 40 hours over 48 weeks. Illustrative, so time your own.",
+   "start": "Start with the job you keep putting off.",
+   "icon": "cost"
+  },
+  {
+   "type": "item",
+   "label": "One thing to watch",
+   "detail": "Read every draft before it goes out, and check names, dates and prices. Leave out passwords and card numbers.",
+   "start": "Claude drafts, you decide.",
+   "icon": "alert"
+  },
+  {
+   "type": "end",
+   "title": ["Pick one.", "Paste it today.", "Keep what works."],
+   "body": "Want help setting up AI for your business? We offer a free 30 minute AI audit. Details in the first comment.",
+   "cta": "Which of these five jobs do you keep putting off?",
+   "icon": "target"
+  }
+ ]
+}
