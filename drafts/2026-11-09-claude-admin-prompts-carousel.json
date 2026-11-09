@@ -4,8 +4,12 @@
   {
    "type": "cover",
    "kicker": "Copy and paste",
-   "title": ["{logo} prompts", "for the admin", "eating your week."],
-   "subtitle": "Five jobs, five prompts, ready to paste.",
+   "title": [
+    "{logo} prompts",
+    "for the admin",
+    "eating your week."
+   ],
+   "subtitle": "Five prompts. Don't miss slide 7, the secret ingredient.",
    "icon": "task",
    "inline_logo": "/home/user/kaizen-media-assets/brand/claude-wordmark.png"
   },
@@ -46,6 +50,13 @@
   },
   {
    "type": "item",
+   "label": "The secret ingredient",
+   "detail": "After every prompt, add this line: If there is anything you are unsure of, ask me follow-up questions before you start. Claude then asks for what it is missing instead of guessing.",
+   "start": "Answer its questions, then read the draft.",
+   "icon": "target"
+  },
+  {
+   "type": "item",
    "label": "What it could give back",
    "detail": "UK owners say they spend about 11 hours a week on admin (Amex survey). Save 10 minutes on each of these five jobs weekly and that is about 40 hours over 48 weeks. Illustrative, so time your own.",
    "start": "Start with the job you keep putting off.",
@@ -60,7 +71,11 @@
   },
   {
    "type": "end",
-   "title": ["Pick one.", "Paste it today.", "Keep what works."],
+   "title": [
+    "Pick one.",
+    "Paste it today.",
+    "Keep what works."
+   ],
    "body": "Want help setting up AI for your business? We offer a free 30 minute AI audit. Details in the first comment.",
    "cta": "Which of these five jobs do you keep putting off?",
    "icon": "target"

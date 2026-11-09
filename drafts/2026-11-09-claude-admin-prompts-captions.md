@@ -10,7 +10,7 @@ Sources: American Express SME Business Barometer (1,000 UK owners, about 11 hour
 
 ## LinkedIn (personal profile, carousel PDF; first comment about an hour after posting, per the reach tests)
 
-Five Claude prompts you can paste in today to clear the admin you keep putting off.
+Five Claude prompts you can paste in today to clear the admin you keep putting off, plus the one line on slide 7 that makes every prompt better.
 
 1. Chase a quote: "Write a friendly two-line follow-up to [customer] about the [job] quote I sent on [date]. Keep it warm, no pressure, and ask if they have any questions."
 2. Answer an enquiry while you are first to reply.
@@ -18,7 +18,7 @@ Five Claude prompts you can paste in today to clear the admin you keep putting o
 4. Describe what you sell in 50 words.
 5. Turn messy notes into a to-do list.
 
-Prompts 2 to 5 are on the slides. UK owners say they spend about 11 hours a week on admin (American Express survey). As an illustration, saving 10 minutes on each of these five jobs a week is about 40 hours over 48 weeks. Time your own week to check.
+Prompts 2 to 5 are on the slides, and slide 7 has the secret ingredient: end every prompt with "If you are unsure of anything, ask me follow-up questions before you start." UK owners say they spend about 11 hours a week on admin (American Express survey). As an illustration, saving 10 minutes on each of these five jobs a week is about 40 hours over 48 weeks. Time your own week to check.
 
 Claude drafts, you read it and decide.
 
@@ -28,7 +28,7 @@ Which of these five jobs do you keep putting off?
 Full write-up with all five prompts: https://kaizenaiconsulting.com/claude-admin-prompts/
 
 ## X
-5 Claude prompts you can paste in today for quotes, enquiries, reviews, descriptions and notes. UK owners say they spend about 11 hours a week on admin (Amex survey). https://kaizenaiconsulting.com/claude-admin-prompts/ Free AI audit: https://calendly.com/prad-kaizenaiconsulting/new-meeting
+5 Claude prompts for quotes, enquiries, reviews and notes, plus one secret ingredient that improves them all. UK owners say they spend about 11 hours a week on admin (Amex survey). https://kaizenaiconsulting.com/claude-admin-prompts/ Free AI audit: https://calendly.com/prad-kaizenaiconsulting/new-meeting
 
 ## Instagram
 Five Claude prompts for the admin you keep putting off. Paste them in as they are. 👇
@@ -41,12 +41,12 @@ Five Claude prompts for the admin you keep putting off. Paste them in as they ar
 
 UK owners say they spend about 11 hours a week on admin (Amex survey). Save 10 minutes on each job weekly and that is about 40 hours over 48 weeks. That is our illustration, so time your own.
 
-Save this and try one today. Full prompts on our blog, link in bio.
+Don't miss slide 7: the secret ingredient that makes every prompt better. Save this and try one today. Full prompts on our blog, link in bio.
 
 #aitools #uksmallbusiness #aiforbusiness #smallbusinessuk
 
 ## TikTok
-5 Claude prompts you can copy and paste today: chase a quote, answer an enquiry, reply to a review, describe what you sell, turn notes into a to-do list. Full prompts on our blog, link in bio. #aitools #uksmallbusiness #aiforbusiness
+5 Claude prompts you can copy and paste today, plus the secret ingredient that improves every one: chase a quote, answer an enquiry, reply to a review, describe what you sell, turn notes into a to-do list. Full prompts on our blog, link in bio. #aitools #uksmallbusiness #aiforbusiness
 
 ## Google Business
-Five copy-and-paste Claude prompts for everyday admin: quote follow-ups, enquiry replies, review replies, service descriptions and to-do lists. UK owners say they spend about 11 hours a week on admin, and our guide shows a worked example of how 40 hours a year could come back.
+Five copy-and-paste Claude prompts for everyday admin, plus a one-line trick that makes each better: quote follow-ups, enquiry replies, review replies, service descriptions and to-do lists. UK owners say they spend about 11 hours a week on admin, and our guide shows a worked example of how 40 hours a year could come back.
