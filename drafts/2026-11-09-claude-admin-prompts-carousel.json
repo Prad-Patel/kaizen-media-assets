@@ -9,9 +9,10 @@
     "for the admin",
     "eating your week."
    ],
-   "subtitle": "Five prompts. Don't miss slide 7, the secret ingredient.",
+   "subtitle": "Five prompts, ready to paste.",
    "icon": "task",
-   "inline_logo": "/home/user/kaizen-media-assets/brand/claude-wordmark.png"
+   "inline_logo": "/home/user/kaizen-media-assets/brand/claude-wordmark.png",
+   "highlight": "Don't miss slide 6: the secret ingredient"
   },
   {
    "type": "item",
@@ -51,9 +52,12 @@
   {
    "type": "item",
    "label": "The secret ingredient",
-   "detail": "After every prompt, add this line: If there is anything you are unsure of, ask me follow-up questions before you start. Claude then asks for what it is missing instead of guessing.",
-   "start": "Answer its questions, then read the draft.",
-   "icon": "target"
+   "detail": "After every prompt, add this line:",
+   "start": "Claude asks for what it is missing instead of guessing. Answer, then read the draft.",
+   "icon": "target",
+   "feature": true,
+   "quote": "If there is anything you are unsure of, ask me follow-up questions before you start.",
+   "start_label": "Why it works"
   },
   {
    "type": "item",

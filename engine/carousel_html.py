@@ -185,7 +185,8 @@ def build(cfg, w, h, animated=False, timing=None):
                     anim("kicker", 0.18), H.escape(s.get("kicker", "")),
                     anim("title", 0.30), title,
                     anim("rule", 0.48),
-                    ('<div class="subtitle"%s>%s</div>' % (anim("sub", 0.58), H.escape(sub))) if sub else "",
+                    (('<div class="subtitle"%s>%s</div>' % (anim("sub", 0.58), H.escape(sub))) if sub else "")
+                    + (('<div class="hl"%s>%s</div>' % (anim("hl", 0.72), H.escape(s["highlight"]))) if s.get("highlight") else ""),
                     ('<div class="swipe"%s>Swipe &rsaquo;&rsaquo;</div>' % anim("swipe", 0.8)) if not animated else "",
                     bar()))
         elif kind == "end":
@@ -257,19 +258,25 @@ def build(cfg, w, h, animated=False, timing=None):
                 icon = ('<img class="toollogo" src="data:image/png;base64,%s">' % base64.b64encode(
                     pathlib.Path(s["logo"]).read_bytes()).decode())
                 logo_cls = " logo"
+            feat = bool(s.get("feature"))
+            if feat and icon and not logo_cls:
+                logo_cls = " end"
+            quote = ('<div class="quote"%s>%s</div>' % (anim("quote", 0.46), H.escape(s["quote"]))) if s.get("quote") else ""
             out.append(
-                '<section class="slide item"><div class="fit">'
+                '<section class="slide item%s"><div class="fit">'
                 '%s'
                 '<div class="count"%s>%02d <span>/ %02d</span></div>'
                 '<div class="label"%s>%s</div>'
-                '<div class="detail"%s>%s</div>%s</div>%s</section>' % (
+                '<div class="detail"%s>%s</div>%s%s</div>%s</section>' % (
+                    " feature" if feat else "",
                     ('<div class="iconwrap%s"%s>%s</div>' % (logo_cls, anim("icon", 0.0), icon)) if icon else "",
                     anim("count", 0.14), idx, n_items,
                     anim("label", 0.24), H.escape(s.get("label", "")),
                     anim("detail", 0.38), H.escape(s.get("detail", "")),
+                    quote,
                     ('<div class="start"%s><span>%s</span>%s</div>'
                      % (anim("start", 0.54), H.escape(s.get("start_label", "Start with")), H.escape(start))) if start else "",
-                    bar()))
+                    bar(dark=feat)))
 
     # Auto-fit runs in both directions: grow a sparse slide until it fills the
     # frame, shrink a long one until it clears the footer. Width and height are
@@ -411,6 +418,19 @@ html,body{margin:0;padding:0;background:%(paper)s;-webkit-print-color-adjust:exa
 .bar.dark{background:transparent;border-top:1px solid rgba(255,255,255,.14)}
 .bar img{width:%(barmark)dpx}
 .bar div{font-family:'Inter',sans-serif;font-weight:600;font-size:%(ftxt)dpx;color:#9FB6DC;letter-spacing:.06em}
+.hl{align-self:flex-start;margin-top:%(sgap)dpx;background:%(teal)s;color:%(navy)s;
+  font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:%(startsz)dpx;line-height:1.2;
+  padding:.55em 1.1em;border-radius:99px;box-shadow:0 0 0 %(sbar)dpx rgba(52,211,166,.28)}
+.slide.feature{background:radial-gradient(110%% 70%% at 82%% 6%%, #16305A, transparent 62%%),%(navy)s}
+.slide.feature .count{color:%(teal)s}
+.slide.feature .count span{color:#7F93B4}
+.slide.feature .label{color:#F2F6FC}
+.slide.feature .detail{color:#B9C9E2}
+.quote{margin-top:%(sgap)dpx;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:%(startsz)dpx;
+  line-height:1.3;color:#F2F6FC;background:rgba(52,211,166,.14);border:%(sbar)dpx solid %(teal)s;
+  border-radius:%(iconr)dpx;padding:%(xpad)dpx}
+.slide.feature .start{color:#F2F6FC}
+.slide.feature .start span{color:%(teal)s}
 .slide.explain .fit{bottom:%(exbot)dpx;justify-content:flex-start;padding-top:%(extop)dpx}
 .xtitle{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:%(xt)dpx;line-height:1.05;
   letter-spacing:-0.02em;color:%(navy)s;margin-bottom:%(xgap)dpx}

@@ -10,7 +10,7 @@ Sources: American Express SME Business Barometer (1,000 UK owners, about 11 hour
 
 ## LinkedIn (personal profile, carousel PDF; first comment about an hour after posting, per the reach tests)
 
-Five Claude prompts you can paste in today to clear the admin you keep putting off, plus the one line on slide 7 that makes every prompt better.
+Five Claude prompts you can paste in today to clear the admin you keep putting off, plus the one line on slide 6 that makes every prompt better.
 
 1. Chase a quote: "Write a friendly two-line follow-up to [customer] about the [job] quote I sent on [date]. Keep it warm, no pressure, and ask if they have any questions."
 2. Answer an enquiry while you are first to reply.
@@ -18,7 +18,7 @@ Five Claude prompts you can paste in today to clear the admin you keep putting o
 4. Describe what you sell in 50 words.
 5. Turn messy notes into a to-do list.
 
-Prompts 2 to 5 are on the slides, and slide 7 has the secret ingredient: end every prompt with "If you are unsure of anything, ask me follow-up questions before you start." UK owners say they spend about 11 hours a week on admin (American Express survey). As an illustration, saving 10 minutes on each of these five jobs a week is about 40 hours over 48 weeks. Time your own week to check.
+Prompts 2 to 5 are on the slides, and slide 6 has the secret ingredient: end every prompt with "If you are unsure of anything, ask me follow-up questions before you start." UK owners say they spend about 11 hours a week on admin (American Express survey). As an illustration, saving 10 minutes on each of these five jobs a week is about 40 hours over 48 weeks. Time your own week to check.
 
 Claude drafts, you read it and decide.
 
@@ -41,7 +41,7 @@ Five Claude prompts for the admin you keep putting off. Paste them in as they ar
 
 UK owners say they spend about 11 hours a week on admin (Amex survey). Save 10 minutes on each job weekly and that is about 40 hours over 48 weeks. That is our illustration, so time your own.
 
-Don't miss slide 7: the secret ingredient that makes every prompt better. Save this and try one today. Full prompts on our blog, link in bio.
+Don't miss slide 6: the secret ingredient that makes every prompt better. Save this and try one today. Full prompts on our blog, link in bio.
 
 #aitools #uksmallbusiness #aiforbusiness #smallbusinessuk
 
