@@ -1,0 +1,81 @@
+{
+ "footer": "kaizenaiconsulting.com",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "New in ChatGPT",
+   "title": [
+    "{logo} ChatGPT",
+    "now lets you claim",
+    "your business."
+   ],
+   "subtitle": "What launched, who can claim, and the four steps.",
+   "icon": "target",
+   "highlight": "UK firms: check slide 2 first",
+   "inline_logo": "/home/user/kaizen-media-assets/brand/logos/openai-knot-navy.png"
+  },
+  {
+   "type": "item",
+   "label": "What launched",
+   "detail": "Businesses in ChatGPT, in beta from 10 November. Claim your listing, fix your details and see how often ChatGPT mentions you. OpenAI says 1.2 billion people use ChatGPT each week.",
+   "start": "Think of it as Google Business Profile, but for ChatGPT.",
+   "icon": "grid"
+  },
+  {
+   "type": "item",
+   "label": "Who can claim today",
+   "detail": "Businesses with a website, in countries where ChatGPT is available, which includes UK online businesses. Local shops and restaurants can only claim existing US listings for now.",
+   "start": "Sell or book online? You can likely try it today.",
+   "icon": "target",
+   "feature": true,
+   "quote": "Have a website? You can probably claim yours now.",
+   "start_label": "In short"
+  },
+  {
+   "type": "item",
+   "label": "Step 1: Open Business Hub",
+   "detail": "Start from OpenAI's Businesses in ChatGPT page, open Business Hub and choose to claim your business. You do not need an ads account or an Enterprise plan.",
+   "start": "Have your website address and business phone to hand.",
+   "icon": "task"
+  },
+  {
+   "type": "item",
+   "label": "Step 2: Prove it is yours",
+   "detail": "Verify with your business phone number, business email, a TXT record on your website's domain, or your Shopify store.",
+   "start": "A TXT record is a one-line note your web host adds for you. Ask them, it takes minutes.",
+   "icon": "phone"
+  },
+  {
+   "type": "item",
+   "label": "Step 3: Check your details",
+   "detail": "Make sure your name, description, contact details and services are right. Retailers can add a product feed with prices and stock.",
+   "start": "Copy the wording from your Google Business Profile so they match.",
+   "icon": "quote"
+  },
+  {
+   "type": "item",
+   "label": "Step 4: Read your numbers",
+   "detail": "Business Hub shows the last 28 days: how often ChatGPT mentioned you, clicks to your website and the topics people asked about.",
+   "start": "Note the figures today, then check again in a month.",
+   "icon": "cost"
+  },
+  {
+   "type": "item",
+   "label": "One thing to watch",
+   "detail": "Claim it before someone else tries to. Business Agents (your own agent inside ChatGPT) are US only for now, and OpenAI says paying does not change how often you are recommended.",
+   "start": "No ad spend needed. Worth ten minutes this week.",
+   "icon": "alert"
+  },
+  {
+   "type": "end",
+   "title": [
+    "Claim it.",
+    "Check it.",
+    "Watch the clicks."
+   ],
+   "body": "Want help getting found in ChatGPT and Google? We offer a free 30 minute AI audit. Details in the first comment.",
+   "cta": "Have you asked ChatGPT what it says about your business?",
+   "icon": "target"
+  }
+ ]
+}
