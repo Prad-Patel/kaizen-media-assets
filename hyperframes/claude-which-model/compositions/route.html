@@ -1,0 +1,91 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Kaizen Inter", sans-serif; color: var(--navy, #0A1628); }
+    #rt-title { position: absolute; left: 80px; top: 200px; right: 80px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 66px; line-height: 1.05; letter-spacing: -.015em; }
+    #rt-title .b { color: var(--blue, #2E7CF6); }
+    #rt-spine { position: absolute; left: 100px; top: 470px; width: 12px; height: 744px; border-radius: 99px; background: var(--navy, #0A1628); transform-origin: 50% 0%; }
+    .rt-dot { position: absolute; left: 86px; width: 40px; height: 40px; border-radius: 50%; background: var(--paper, #EAF0F9); border: 9px solid; z-index: 2; }
+    .rt-card { position: absolute; left: 160px; width: 770px; height: 200px; background: #fff; border-radius: 26px; padding: 26px 32px 0 46px; overflow: hidden;
+      box-shadow: 0 2px 0 rgba(10,22,40,.06), 0 12px 30px rgba(10,22,40,.10); }
+    .rt-bar { position: absolute; left: 0; top: 0; bottom: 0; width: 14px; }
+    .rt-head { display: flex; align-items: center; gap: 22px; }
+    .rt-name { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 54px; line-height: 1; letter-spacing: -.01em; }
+    .rt-chip { font-weight: 600; font-size: 28px; padding: 8px 18px; border-radius: 99px; white-space: nowrap; }
+    .rt-job { font-weight: 600; font-size: 34px; margin-top: 14px; }
+    .rt-why { font-size: 28px; color: #4A5A74; margin-top: 8px; }
+    .rt-q { position: absolute; left: 160px; font-weight: 600; font-size: 28px; color: var(--navy, #0A1628); white-space: nowrap; }
+  </style>
+  <div id="root" data-composition-id="route" data-width="1080" data-height="1920">
+    <div id="rt-title">Which Claude model<br /><span class="b">for which job?</span></div>
+    <div id="rt-spine"></div>
+
+    <!-- Stops: card top y = 370 + i*248; centre = top + 100 -->
+    <div class="rt-dot" id="rt-d1" style="top: 450px; border-color: var(--blue, #2E7CF6)"></div>
+    <div class="rt-card" id="rt-c1" style="top: 370px">
+      <div class="rt-bar" style="background: var(--blue, #2E7CF6)"></div>
+      <div class="rt-head"><span class="rt-name">Opus 5.5</span><span class="rt-chip" id="rt-k1" style="background:#DCE8FD;color:#1A55B5">Start here</span></div>
+      <div class="rt-job" id="rt-j1">Quotes, emails, contracts</div>
+      <div class="rt-why" id="rt-w1">Claude's pick for everyday work</div>
+    </div>
+
+    <div class="rt-q" id="rt-q2" style="top: 574px">&#8627; Opus breezing through it?</div>
+    <div class="rt-dot" id="rt-d2" style="top: 698px; border-color: var(--teal, #34D3A6)"></div>
+    <div class="rt-card" id="rt-c2" style="top: 618px">
+      <div class="rt-bar" style="background: var(--teal, #34D3A6)"></div>
+      <div class="rt-head"><span class="rt-name">Sonnet 5.5</span><span class="rt-chip" id="rt-k2" style="background:#D3F6EC;color:#0B6B53">Faster</span></div>
+      <div class="rt-job" id="rt-j2">Quick replies, rewrites, posts</div>
+      <div class="rt-why" id="rt-w2">Easy on your usage</div>
+    </div>
+
+    <div class="rt-q" id="rt-q3" style="top: 822px">&#8627; Big, open-ended question?</div>
+    <div class="rt-dot" id="rt-d3" style="top: 946px; border-color: var(--navy, #0A1628)"></div>
+    <div class="rt-card" id="rt-c3" style="top: 866px">
+      <div class="rt-bar" style="background: var(--navy, #0A1628)"></div>
+      <div class="rt-head"><span class="rt-name">Fable 5.2</span><span class="rt-chip" id="rt-k3" style="background:var(--navy, #0A1628);color:#fff">Deepest</span></div>
+      <div class="rt-job" id="rt-j3">Research, a business plan</div>
+      <div class="rt-why" id="rt-w3">The heaviest on your usage</div>
+    </div>
+
+    <div class="rt-q" id="rt-q4" style="top: 1070px">&#8627; Running it in an automation?</div>
+    <div class="rt-dot" id="rt-d4" style="top: 1194px; border-color: var(--red, #FF5A5F)"></div>
+    <div class="rt-card" id="rt-c4" style="top: 1114px">
+      <div class="rt-bar" style="background: var(--red, #FF5A5F)"></div>
+      <div class="rt-head"><span class="rt-name">Haiku 5.5</span><span class="rt-chip" id="rt-k4" style="background:#FFE1E2;color:#B3262B">Automations</span></div>
+      <div class="rt-job" id="rt-j4">Sorting enquiries in bulk</div>
+      <div class="rt-why" id="rt-w4">Fastest, for high volume</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // Local times: each stop lands just before its narration line (scene starts at 5.0s).
+    const stops = [0.05, 6.1, 10.75, 15.55];
+    const jobAt = [1.5, 1.6, 1.0, 1.1];
+    const whyAt = [3.6, 2.6, 2.6, 2.7];
+    const spineTo = [0.0, 248 / 744, 496 / 744, 1];
+
+    tl.fromTo("#rt-title", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 0);
+    tl.fromTo("#rt-spine", { scaleY: 0 }, { scaleY: 0, duration: 0.01 }, 0);
+
+    stops.forEach((t, i) => {
+      const n = i + 1;
+      if (i > 0) {
+        // The line runs down to the next stop, the question appears in the gap
+        tl.fromTo("#rt-spine", { scaleY: spineTo[i - 1] }, { scaleY: spineTo[i], duration: 0.5, ease: "power2.inOut" }, t - 0.55);
+        tl.fromTo("#rt-q" + n, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15, ease: "power4.out" }, t - 0.45);
+        // Previous card steps back so the new one has focus
+        tl.to("#rt-c" + i, { opacity: 0.45, duration: 0.3, ease: "power2.out" }, t);
+      }
+      tl.fromTo("#rt-d" + n, { scale: 0 }, { scale: 1, duration: 0.4, ease: "back.out(2)" }, t);
+      tl.fromTo("#rt-c" + n, { opacity: 0, x: 90, filter: "blur(10px)" },
+        { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, t + 0.05);
+      tl.fromTo("#rt-k" + n, { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.8)" }, t + 0.4);
+      // The job and the trade-off arrive as the narrator says them
+      tl.fromTo("#rt-j" + n, { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.15, ease: "power4.out" }, t + jobAt[i]);
+      tl.fromTo("#rt-w" + n, { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.35, ease: "expo.out" }, t + whyAt[i]);
+    });
+
+    // Recap: all four back to full strength for the closing hold
+    tl.to(["#rt-c1", "#rt-c2", "#rt-c3"], { opacity: 1, duration: 0.35, ease: "power2.out" }, 19.4);
+    window.__timelines["route"] = tl;
+  </script>
+</template>

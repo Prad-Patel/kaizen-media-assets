@@ -1,0 +1,42 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Kaizen Inter", sans-serif; color: var(--navy, #0A1628); }
+    #hook-logo { position: absolute; left: 80px; top: 220px; height: 110px; }
+    #hook-kicker { position: absolute; left: 80px; top: 420px; font-weight: 600; font-size: 34px; letter-spacing: .14em; text-transform: uppercase; color: #0B8F6C; }
+    #hook-title { position: absolute; left: 80px; top: 480px; right: 80px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 132px; line-height: 1.02; letter-spacing: -.02em; }
+    #hook-title .w { display: inline-block; }
+    #hook-title .b { color: var(--blue, #2E7CF6); }
+    #hook-sub { position: absolute; left: 80px; top: 950px; font-size: 40px; color: #3B4A63; }
+    #hook-pills { position: absolute; left: 80px; top: 1040px; display: flex; flex-wrap: wrap; gap: 20px; width: 760px; }
+    .hook-pill { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 44px; padding: 14px 30px; border-radius: 99px; color: #fff; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+    <img id="hook-logo" src="assets/kaizen-k.png" alt="Kaizen" />
+    <div id="hook-kicker">Claude &middot; picking a model</div>
+    <div id="hook-title">
+      <span class="w" id="hw1">Claude:</span><br />
+      <span class="w" id="hw2">which</span> <span class="w" id="hw3">model</span><br />
+      <span class="w b" id="hw4">for</span> <span class="w b" id="hw5">which</span> <span class="w b" id="hw6">job?</span>
+    </div>
+    <div id="hook-sub">Four models. One for each kind of job.</div>
+    <div id="hook-pills">
+      <span class="hook-pill" id="hp1" style="background: var(--blue, #2E7CF6)">Opus</span>
+      <span class="hook-pill" id="hp2" style="background: #0E8F6B">Sonnet</span>
+      <span class="hook-pill" id="hp3" style="background: var(--navy, #0A1628)">Fable</span>
+      <span class="hook-pill" id="hp4" style="background: var(--red, #FF5A5F)">Haiku</span>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // Frame 0 is the thumbnail: the first line is already on screen.
+    // Frame 0 already shows the whole hook; the blue half lands a beat later in colour, no position change.
+    tl.fromTo(["#hw4", "#hw5", "#hw6"], { color: "#0A1628" }, { color: "#2E7CF6", duration: 0.3, stagger: 0.08, ease: "power2.out" }, 0.4);
+    tl.fromTo("#hook-sub", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 0.9);
+    // Four pills pop on "four models"
+    tl.fromTo(["#hp1", "#hp2", "#hp3", "#hp4"], { opacity: 0, scale: 0.6 },
+      { opacity: 1, scale: 1, duration: 0.45, stagger: 0.12, ease: "back.out(1.6)" }, 1.1);
+    // Exit: blur-out before the cut to the route
+    tl.to(["#hook-title", "#hook-kicker", "#hook-sub", "#hook-pills", "#hook-logo"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 4.7);
+    window.__timelines["hook"] = tl;
+  </script>
+</template>

@@ -1,0 +1,29 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Kaizen Inter", sans-serif; }
+    #ot-flood { position: absolute; inset: 0; background: var(--navy, #0A1628); transform-origin: 50% 100%; }
+    #ot-line1, #ot-line2 { position: absolute; left: 80px; right: 80px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 104px; line-height: 1.04; letter-spacing: -.02em; }
+    #ot-line1 { top: 520px; color: #fff; }
+    #ot-line2 { top: 650px; color: var(--teal, #34D3A6); }
+    #ot-brand { position: absolute; left: 80px; top: 1040px; display: flex; align-items: center; gap: 26px; }
+    #ot-brand img { height: 84px; }
+    #ot-url { font-size: 38px; color: #CFDCF2; letter-spacing: .02em; }
+    #ot-src { position: absolute; left: 80px; top: 1170px; font-size: 28px; color: #8FA6CC; }
+  </style>
+  <div id="root" data-composition-id="outro" data-width="1080" data-height="1920">
+    <div id="ot-flood"></div>
+    <div id="ot-line1">Start on Opus.</div>
+    <div id="ot-line2">Switch when the job tells you.</div>
+    <div id="ot-brand"><img src="assets/kaizen-k.png" alt="Kaizen" /><span id="ot-url">kaizenaiconsulting.com</span></div>
+    <div id="ot-src">Source: Claude on LinkedIn, 11 Nov 2026</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // Colour flood rises from the bottom, then the line lands and holds still
+    tl.fromTo("#ot-flood", { scaleY: 0 }, { scaleY: 1, duration: 0.4, ease: "power2.inOut" }, 0);
+    tl.fromTo("#ot-line1", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 0.4);
+    tl.fromTo("#ot-line2", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 1.15);
+    tl.fromTo(["#ot-brand", "#ot-src"], { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.1, ease: "power2.out" }, 1.6);
+    window.__timelines["outro"] = tl;
+  </script>
+</template>
