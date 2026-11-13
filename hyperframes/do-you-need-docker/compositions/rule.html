@@ -1,0 +1,36 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Kaizen Inter", sans-serif; color: var(--navy, #0A1628); }
+    #ru-kicker { position: absolute; left: 80px; top: 230px; font-weight: 600; font-size: 34px; letter-spacing: .14em; text-transform: uppercase; color: #0B8F6C; }
+    #ru-card { position: absolute; left: 80px; top: 300px; width: 820px; background: var(--navy, #0A1628); color: #fff; border-radius: 34px; padding: 50px 50px 56px; }
+    #ru-q { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 70px; line-height: 1.1; letter-spacing: -.015em; }
+    #ru-q .t { color: var(--teal, #34D3A6); }
+    .ru-ans { position: absolute; left: 80px; width: 820px; border-radius: 26px; padding: 30px 36px; display: flex; align-items: center; gap: 28px; }
+    .ru-big { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 64px; min-width: 120px; }
+    .ru-txt { font-weight: 600; font-size: 40px; line-height: 1.2; }
+    #ru-yes { top: 900px; background: #fff; border-left: 14px solid var(--blue, #2E7CF6); box-shadow: 0 12px 30px rgba(10,22,40,.10); }
+    #ru-yes .ru-big { color: var(--blue, #2E7CF6); }
+    #ru-no { top: 1100px; background: #fff; border-left: 14px solid #0B8F6C; box-shadow: 0 12px 30px rgba(10,22,40,.10); }
+    #ru-no .ru-big { color: #0B8F6C; }
+  </style>
+  <div id="root" data-composition-id="rule" data-width="1080" data-height="1920">
+    <div id="ru-kicker">The one-question rule</div>
+    <div id="ru-card">
+      <div id="ru-q">&ldquo;If the AI makes a mistake here, could it damage <span class="t">data I care about?</span>&rdquo;</div>
+    </div>
+    <div class="ru-ans" id="ru-yes"><span class="ru-big">Yes</span><span class="ru-txt">Use Docker, or a separate test project</span></div>
+    <div class="ru-ans" id="ru-no"><span class="ru-big">No</span><span class="ru-txt">Keep it simple. Skip it.</span></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#ru-kicker", { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "power2.out" }, 0.1);
+    tl.fromTo("#ru-card", { opacity: 0, y: 60, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "expo.out" }, 1.4);
+    // The phrase that matters lights up as the narrator says it
+    tl.fromTo("#ru-q .t", { backgroundColor: "rgba(52,211,166,0)" }, { backgroundColor: "rgba(52,211,166,0.18)", duration: 0.4, ease: "power2.out" }, 3.4);
+    tl.to("#ru-card", { scale: 1.03, duration: 0.5, ease: "power2.inOut", yoyo: true, repeat: 1 }, 3.5);
+    tl.fromTo("#ru-yes", { opacity: 0, x: 90 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, 5.5);
+    tl.fromTo("#ru-no", { opacity: 0, x: 90 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, 6.6);
+    tl.to(["#ru-kicker", "#ru-card", "#ru-yes", "#ru-no"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 8.65);
+    window.__timelines["rule"] = tl;
+  </script>
+</template>

@@ -1,0 +1,36 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Kaizen Inter", sans-serif; color: var(--navy, #0A1628); }
+    .us-head { position: absolute; left: 80px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 70px; letter-spacing: -.015em; display: flex; align-items: center; gap: 22px; }
+    .us-pill { font-size: 34px; padding: 8px 22px; border-radius: 99px; color: #fff; font-weight: 700; }
+    #us-h1 { top: 200px; }
+    #us-h2 { top: 760px; }
+    .us-row { position: absolute; left: 80px; width: 790px; background: #fff; border-radius: 22px; padding: 22px 30px; font-weight: 600; font-size: 38px; box-shadow: 0 8px 24px rgba(10,22,40,.08); }
+    .us-row.use { border-left: 12px solid var(--blue, #2E7CF6); }
+    .us-row.skip { border-left: 12px solid #8FA6CC; color: #3B4A63; }
+  </style>
+  <div id="root" data-composition-id="useskip" data-width="1080" data-height="1920">
+    <div class="us-head" id="us-h1">Use it <span class="us-pill" style="background: var(--blue, #2E7CF6)">Docker</span></div>
+    <div class="us-row use" id="us-u1" style="top: 330px">A database you test against</div>
+    <div class="us-row use" id="us-u2" style="top: 450px">Several pieces running together</div>
+    <div class="us-row use" id="us-u3" style="top: 570px">Deploying as a container</div>
+
+    <div class="us-head" id="us-h2">Skip it <span class="us-pill" style="background: #4A5A74">Keep it simple</span></div>
+    <div class="us-row skip" id="us-s1" style="top: 890px">Landing pages and static sites</div>
+    <div class="us-row skip" id="us-s2" style="top: 1010px">Simple scripts and quick prototypes</div>
+    <div class="us-row skip" id="us-s3" style="top: 1130px">Frontend-only, Vercel or Netlify</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#us-h1", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 0.05);
+    ["#us-u1", "#us-u2", "#us-u3"].forEach((id, i) => {
+      tl.fromTo(id, { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 0.45, ease: "expo.out" }, [0.6, 1.9, 3.0][i]);
+    });
+    tl.fromTo("#us-h2", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 4.0);
+    ["#us-s1", "#us-s2", "#us-s3"].forEach((id, i) => {
+      tl.fromTo(id, { opacity: 0, x: 80 }, { opacity: 1, x: 0, duration: 0.45, ease: "expo.out" }, [4.5, 5.05, 5.6][i]);
+    });
+    tl.to(["#us-h1", "#us-h2", "#us-u1", "#us-u2", "#us-u3", "#us-s1", "#us-s2", "#us-s3"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 7.65);
+    window.__timelines["useskip"] = tl;
+  </script>
+</template>

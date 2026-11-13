@@ -1,0 +1,93 @@
+{
+ "footer": "kaizenaiconsulting.com",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "A vibe coder's guide",
+   "title": [
+    "Docker:",
+    "do you actually",
+    "need it?"
+   ],
+   "subtitle": "Your AI tool says “install Docker”. Here is when to listen.",
+   "icon": "grid",
+   "highlight": "Don't miss the one-question rule"
+  },
+  {
+   "type": "item",
+   "label": "The pain",
+   "detail": "Your AI coding tool says “install Docker” and you have no idea why. Or the app works on your laptop and breaks everywhere else.",
+   "start": "Both have the same fix, and you might not need it.",
+   "icon": "alert",
+   "start_label": "The good news"
+  },
+  {
+   "type": "item",
+   "label": "Docker is a lunchbox",
+   "detail": "A toy brick castle falls apart at a friend's house: different bricks, wobbly table. Pack it in a lunchbox with every brick and its own little table, and it stands up anywhere.",
+   "start": "Docker packs your app with everything it needs, so it runs the same on any computer.",
+   "start_label": "In software",
+   "icon": "grid"
+  },
+  {
+   "type": "item",
+   "label": "Why your AI asks for it",
+   "detail": "Your AI tool does not need Docker. Some of your project's tools do. Supabase runs a full copy of your backend (database, logins, storage) on your laptop using Docker.",
+   "start": "If Docker is not running, that setup fails, so the AI asks you to install it.",
+   "start_label": "So",
+   "icon": "data"
+  },
+  {
+   "type": "item",
+   "label": "A safe practice copy",
+   "detail": "On the copy, the AI can test, break things and reset without touching your real users or live data.",
+   "start": "Mistakes happen on the copy. Only finished, tested changes go live.",
+   "start_label": "The point",
+   "icon": "repeat"
+  },
+  {
+   "type": "item",
+   "label": "The one-question rule",
+   "detail": "Ask this at the start of every project:",
+   "quote": "If the AI makes a mistake here, could it damage data I care about?",
+   "start": "Yes: use Docker or a separate test project. No: keep it simple and skip it.",
+   "start_label": "Your answer",
+   "icon": "target",
+   "feature": true
+  },
+  {
+   "type": "item",
+   "label": "Use it when you have",
+   "detail": "A database you will test against (Supabase, Postgres, MySQL, Redis). Several pieces running together (website, API, database). Plans to deploy as a container (Fly.io, Railway, Cloud Run, a VPS).",
+   "start": "The database is the big one.",
+   "icon": "task",
+   "start_label": "Most of all"
+  },
+  {
+   "type": "item",
+   "label": "Skip it for",
+   "detail": "Landing pages and static sites. Frontend-only apps that call hosted APIs. Simple scripts and automations. Quick prototypes. Sites on Vercel or Netlify.",
+   "start": "Add it later if the project grows a real database.",
+   "icon": "followup",
+   "start_label": "Tip"
+  },
+  {
+   "type": "item",
+   "label": "Two honest caveats",
+   "detail": "Docker Desktop can use a few GB of memory, so quit it when a project does not need it. The local copy starts empty: it is for testing, not a replacement for your real database or hosting.",
+   "start": "Docker is a practice space, not your live app.",
+   "start_label": "Remember",
+   "icon": "cost"
+  },
+  {
+   "type": "end",
+   "title": [
+    "One question.",
+    "Then build."
+   ],
+   "body": "Building with AI and not sure which side of the line your project sits? Our first conversation is free.",
+   "cta": "What's the most confusing thing your AI coding tool has asked you to install?",
+   "icon": "target"
+  }
+ ]
+}

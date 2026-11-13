@@ -1,0 +1,49 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Kaizen Inter", sans-serif; color: var(--navy, #0A1628); }
+    #wy-kicker { position: absolute; left: 80px; top: 210px; font-weight: 600; font-size: 34px; letter-spacing: .14em; text-transform: uppercase; color: #0B8F6C; }
+    #wy-title { position: absolute; left: 80px; top: 270px; right: 150px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 80px; line-height: 1.05; letter-spacing: -.02em; }
+    #wy-title .b { color: var(--blue, #2E7CF6); }
+    .wy-box { position: absolute; left: 80px; width: 790px; border-radius: 28px; padding: 30px 36px; }
+    .wy-label { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 50px; line-height: 1.1; }
+    .wy-note { font-size: 34px; margin-top: 10px; }
+    #wy-live { top: 640px; background: #fff; box-shadow: 0 12px 30px rgba(10,22,40,.10); border-left: 14px solid var(--navy, #0A1628); }
+    #wy-live .wy-note { color: #4A5A74; }
+    #wy-copy { top: 900px; background: var(--navy, #0A1628); color: #fff; border-left: 14px solid var(--teal, #34D3A6); }
+    #wy-copy .wy-note { color: #CFDCF2; }
+    #wy-arrow { position: absolute; left: 150px; top: 838px; font-size: 48px; color: var(--blue, #2E7CF6); font-weight: 800; }
+    #wy-pay { position: absolute; left: 80px; top: 1170px; right: 150px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 58px; line-height: 1.1; }
+    #wy-pay .t { color: #0B8F6C; }
+    #wy-crack { display: inline-block; }
+  </style>
+  <div id="root" data-composition-id="why" data-width="1080" data-height="1920">
+    <div id="wy-kicker">Why your AI asks for it</div>
+    <div id="wy-title">Your AI doesn't need Docker.<br /><span class="b">Tools like Supabase do.</span></div>
+    <div class="wy-box" id="wy-live">
+      <div class="wy-label">Your real database</div>
+      <div class="wy-note">Live users. Live data.</div>
+    </div>
+    <div id="wy-arrow">&#8595; copy</div>
+    <div class="wy-box" id="wy-copy">
+      <div class="wy-label">A practice copy on your laptop</div>
+      <div class="wy-note">Runs in Docker. Break it, reset it.</div>
+    </div>
+    <div id="wy-pay">Mistakes happen on <span class="t">the copy</span>, not on your real data.</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#wy-kicker", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, 0.05);
+    tl.fromTo("#wy-title", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 0.1);
+    // "They use it to run a practice copy of your database"
+    tl.fromTo("#wy-live", { opacity: 0, x: 90, filter: "blur(10px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, 2.7);
+    tl.fromTo("#wy-arrow", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }, 3.6);
+    tl.fromTo("#wy-copy", { opacity: 0, y: 60, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.6, ease: "expo.out" }, 3.9);
+    // A little shake on the copy: the AI breaks something, and that is fine
+    tl.to("#wy-copy", { x: 10, duration: 0.06, repeat: 5, yoyo: true, ease: "none" }, 5.6);
+    tl.to("#wy-live", { opacity: 0.6, duration: 0.3 }, 6.3);
+    tl.fromTo("#wy-pay", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power4.out" }, 6.5);
+    tl.to("#wy-live", { opacity: 1, duration: 0.3 }, 9.0);
+    tl.to(["#wy-kicker", "#wy-title", "#wy-live", "#wy-arrow", "#wy-copy", "#wy-pay"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 10.55);
+    window.__timelines["why"] = tl;
+  </script>
+</template>

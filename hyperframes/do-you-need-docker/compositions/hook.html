@@ -1,0 +1,27 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Kaizen Inter", sans-serif; color: var(--navy, #0A1628); }
+    #hook-logo { position: absolute; left: 80px; top: 220px; height: 110px; }
+    #hook-kicker { position: absolute; left: 80px; top: 420px; font-weight: 600; font-size: 34px; letter-spacing: .14em; text-transform: uppercase; color: #0B8F6C; }
+    #hook-title { position: absolute; left: 80px; top: 480px; right: 150px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 116px; line-height: 1.02; letter-spacing: -.02em; }
+    #hook-title .b { color: var(--blue, #2E7CF6); }
+    #hook-bubble { position: absolute; left: 80px; top: 1000px; background: var(--navy, #0A1628); color: #fff; border-radius: 28px 28px 28px 6px; padding: 26px 36px; font-family: "Space Grotesk", sans-serif; font-weight: 500; font-size: 46px; }
+    #hook-bubble .p { color: var(--teal, #34D3A6); font-weight: 700; }
+    #hook-sub { position: absolute; left: 80px; top: 1150px; font-size: 40px; color: #3B4A63; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+    <img id="hook-logo" src="assets/kaizen-k.png" alt="Kaizen" />
+    <div id="hook-kicker">A vibe coder's guide</div>
+    <div id="hook-title">Docker:<br /><span class="b">do you actually need it?</span></div>
+    <div id="hook-bubble"><span class="p">AI:</span> &ldquo;Please install Docker&rdquo;</div>
+    <div id="hook-sub">One question decides it.</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // Frame 0 is the thumbnail: the whole hook is already on screen.
+    tl.fromTo("#hook-bubble", { opacity: 0.0, y: 30, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "back.out(1.7)" }, 0.35);
+    tl.fromTo("#hook-sub", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 2.2);
+    tl.to(["#hook-title", "#hook-kicker", "#hook-sub", "#hook-bubble", "#hook-logo"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 3.55);
+    window.__timelines["hook"] = tl;
+  </script>
+</template>

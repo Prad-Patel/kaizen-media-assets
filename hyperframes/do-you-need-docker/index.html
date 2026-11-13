@@ -1,0 +1,76 @@
+<!doctype html>
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"navy","type":"color","label":"Navy","default":"#0A1628"},
+    {"id":"blue","type":"color","label":"Electric blue","default":"#2E7CF6"},
+    {"id":"teal","type":"color","label":"Teal","default":"#34D3A6"},
+    {"id":"red","type":"color","label":"Alert red","default":"#FF5A5F"},
+    {"id":"paper","type":"color","label":"Paper","default":"#EAF0F9"}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Space Grotesk"; font-weight: 700; src: url("assets/fonts/space-grotesk-latin-700-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Space Grotesk"; font-weight: 500; src: url("assets/fonts/space-grotesk-latin-500-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Kaizen Inter"; font-weight: 400; src: url("assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Kaizen Inter"; font-weight: 600; src: url("assets/fonts/inter-latin-600-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Kaizen Inter"; font-weight: 800; src: url("assets/fonts/inter-latin-800-normal.woff2") format("woff2"); }
+      :root {
+        --navy: #0A1628;
+        --blue: #2E7CF6;
+        --teal: #34D3A6;
+        --red: #FF5A5F;
+        --paper: #EAF0F9;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: var(--paper); }
+      #root { position: relative; width: 100%; height: 100%; }
+      #bg { position: absolute; inset: 0; background: var(--paper); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="42.2" data-width="1080" data-height="1920">
+      <div id="bg"></div>
+
+      <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html"
+        data-start="0" data-duration="3.8" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+
+      <div id="lunchbox" data-composition-id="lunchbox" data-composition-src="compositions/lunchbox.html"
+        data-start="3.8" data-duration="6.8" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+
+      <div id="why" data-composition-id="why" data-composition-src="compositions/why.html"
+        data-start="10.6" data-duration="10.8" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+
+      <div id="useskip" data-composition-id="useskip" data-composition-src="compositions/useskip.html"
+        data-start="21.4" data-duration="7.9" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+
+      <div id="rule" data-composition-id="rule" data-composition-src="compositions/rule.html"
+        data-start="29.3" data-duration="8.9" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+
+      <div id="outro" data-composition-id="outro" data-composition-src="compositions/outro.html"
+        data-start="38.2" data-duration="4.0" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+
+      <!-- Narration: ElevenLabs "Archer", trimmed and sped up 1.15x -->
+      <audio id="vo-1" class="clip" src="assets/voice/line-1.mp3" data-duration="2.95" data-start="0.3" data-track-index="2" data-volume="1"></audio>
+      <audio id="vo-2" class="clip" src="assets/voice/line-2.mp3" data-duration="6.03" data-start="4.0" data-track-index="2" data-volume="1"></audio>
+      <audio id="vo-3" class="clip" src="assets/voice/line-3.mp3" data-duration="10.21" data-start="10.8" data-track-index="2" data-volume="1"></audio>
+      <audio id="vo-4" class="clip" src="assets/voice/line-4.mp3" data-duration="7.37" data-start="21.6" data-track-index="2" data-volume="1"></audio>
+      <audio id="vo-5" class="clip" src="assets/voice/line-5.mp3" data-duration="7.94" data-start="29.5" data-track-index="2" data-volume="1"></audio>
+      <audio id="vo-6" class="clip" src="assets/voice/line-6.mp3" data-duration="2.74" data-start="38.5" data-track-index="2" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

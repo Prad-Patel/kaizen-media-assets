@@ -1,0 +1,30 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Kaizen Inter", sans-serif; color: var(--navy, #0A1628); }
+    #lb-title { position: absolute; left: 80px; top: 200px; right: 150px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 86px; line-height: 1.04; letter-spacing: -.02em; }
+    #lb-title .b { color: var(--blue, #2E7CF6); }
+    #lb-art { position: absolute; left: 90px; top: 520px; width: 700px; height: 869px; object-fit: cover; border-radius: 36px; }
+    #lb-tags { position: absolute; left: 80px; top: 1210px; display: flex; flex-direction: column; gap: 18px; }
+    .lb-tag { align-self: flex-start; background: #fff; border-radius: 22px; padding: 18px 30px; font-weight: 600; font-size: 38px; box-shadow: 0 10px 28px rgba(10,22,40,.14); }
+    .lb-tag .t { color: #0B8F6C; }
+  </style>
+  <div id="root" data-composition-id="lunchbox" data-width="1080" data-height="1920">
+    <div id="lb-title">Docker is a<br /><span class="b">lunchbox for your app.</span></div>
+    <img id="lb-art" src="assets/lunchbox.jpg" alt="" />
+    <div id="lb-tags" data-layout-allow-overlap>
+      <div class="lb-tag" id="lb-t1"><span class="t">+</span> Everything it needs</div>
+      <div class="lb-tag" id="lb-t2"><span class="t">=</span> Runs the same on any computer</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#lb-title", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out" }, 0.05);
+    tl.fromTo("#lb-art", { opacity: 0, scale: 0.9, y: 40 }, { opacity: 1, scale: 1, y: 0, duration: 0.7, ease: "expo.out" }, 0.2);
+    // Slow push in on the art while the narrator talks
+    tl.to("#lb-art", { scale: 1.04, duration: 5.4, ease: "none" }, 0.95);
+    tl.fromTo("#lb-t1", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.4, ease: "expo.out" }, 2.4);
+    tl.fromTo("#lb-t2", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.4, ease: "expo.out" }, 3.9);
+    tl.to(["#lb-title", "#lb-art", "#lb-tags"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 6.55);
+    window.__timelines["lunchbox"] = tl;
+  </script>
+</template>
