@@ -1,0 +1,37 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Kaizen Inter", sans-serif; color: var(--navy, #0A1628); }
+    #st-title { position: absolute; left: 80px; right: 150px; top: 200px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 80px; line-height: 1.04; letter-spacing: -.02em; }
+    #st-card { position: absolute; left: 80px; width: 840px; top: 470px; background: #fff; border-radius: 30px; padding: 48px 48px 52px; box-shadow: 0 14px 36px rgba(10,22,40,.10); }
+    #st-big { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 220px; line-height: 1; letter-spacing: -.04em; color: var(--red, #FF5A5F); }
+    #st-sub { margin-top: 10px; font-size: 44px; font-weight: 600; line-height: 1.2; }
+    .st-bar { margin-top: 40px; }
+    .st-lab { font-size: 32px; font-weight: 600; color: #3B4A63; display: flex; justify-content: space-between; }
+    .st-track { margin-top: 12px; height: 30px; border-radius: 15px; background: #E3EAF5; overflow: hidden; }
+    .st-fill { height: 100%; border-radius: 15px; transform-origin: 0% 50%; }
+    #st-src { position: absolute; left: 80px; right: 150px; top: 1240px; font-size: 30px; line-height: 1.35; color: #3B4A63; }
+  </style>
+  <div id="root" data-composition-id="stat" data-width="1080" data-height="1920">
+    <div id="st-title">Often nobody has the full list.</div>
+    <div id="st-card">
+      <div id="st-big">0%</div>
+      <div id="st-sub">found AI tools running that nobody approved.</div>
+      <div class="st-bar"><div class="st-lab"><span>Got a surprise AI bill</span><span>39%</span></div><div class="st-track"><div class="st-fill" id="st-f1" style="width: 39%; background: var(--blue, #2E7CF6)"></div></div></div>
+      <div class="st-bar"><div class="st-lab"><span>Found unapproved AI</span><span>24%</span></div><div class="st-track"><div class="st-fill" id="st-f2" style="width: 24%; background: var(--red, #FF5A5F)"></div></div></div>
+    </div>
+    <div id="st-src">Pax8 Q3 2026 SMB AI Pulse Report, 350 UK business leaders.</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const big = document.querySelector("#st-big");
+    const n = { v: 0 };
+    tl.fromTo("#st-title", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power4.out" }, 0.05);
+    tl.fromTo("#st-card", { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, 0.6);
+    tl.fromTo(n, { v: 0 }, { v: 24, duration: 0.9, ease: "power2.out", onUpdate: () => { big.textContent = Math.round(n.v) + "%"; } }, 1.4);
+    tl.fromTo("#st-f1", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.out" }, 1.6);
+    tl.fromTo("#st-f2", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.out" }, 2.4);
+    tl.fromTo("#st-src", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 0.9);
+    tl.to(["#st-title", "#st-card", "#st-src"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 5.15);
+    window.__timelines["stat"] = tl;
+  </script>
+</template>

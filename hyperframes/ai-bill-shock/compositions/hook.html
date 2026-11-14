@@ -1,0 +1,31 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Kaizen Inter", sans-serif; color: var(--navy, #0A1628); }
+    #hk-logo { position: absolute; left: 80px; top: 200px; height: 100px; }
+    #hk-kicker { position: absolute; left: 80px; top: 360px; font-weight: 600; font-size: 34px; letter-spacing: .14em; text-transform: uppercase; color: #0B8F6C; }
+    #hk-big { position: absolute; left: 70px; top: 400px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 270px; line-height: 1; letter-spacing: -.04em; color: var(--blue, #2E7CF6); transform-origin: 0% 60%; }
+    #hk-line { position: absolute; left: 80px; top: 690px; right: 150px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 62px; line-height: 1.1; letter-spacing: -.015em; }
+    #hk-line .r { position: relative; white-space: nowrap; }
+    #hk-under { position: absolute; left: 0; right: 0; bottom: -4px; height: 12px; background: var(--red, #FF5A5F); border-radius: 6px; transform-origin: 0% 50%; }
+    #hk-artbox { position: absolute; left: 60px; right: 60px; top: 920px; height: 620px; overflow: hidden; border-radius: 28px; }
+    #hk-art { width: 100%; height: 100%; object-fit: cover; object-position: 50% 82%; transform-origin: 60% 70%; }
+    #hk-src { position: absolute; left: 80px; top: 1590px; font-size: 30px; color: #3B4A63; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+    <img id="hk-logo" src="assets/kaizen-k.png" alt="Kaizen" />
+    <div id="hk-kicker">AI costs</div>
+    <div id="hk-big">39%</div>
+    <div id="hk-line">of UK firms paying for AI got a <span class="r">bigger bill<span id="hk-under"></span></span> than expected.</div>
+    <div id="hk-artbox"><img id="hk-art" src="assets/art.jpg" alt="" /></div>
+    <div id="hk-src">Pax8 SMB AI Pulse Report, Q3 2026</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // Frame 0 is the thumbnail: the full hook line is already on screen.
+    tl.fromTo("#hk-art", { scale: 1.0 }, { scale: 1.07, duration: 5.6, ease: "none" }, 0);
+    tl.fromTo("#hk-big", { scale: 1 }, { scale: 1.08, duration: 0.25, ease: "power2.out", yoyo: true, repeat: 1 }, 0.3);
+    tl.fromTo("#hk-under", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, 2.4);
+    tl.to(["#hk-logo", "#hk-kicker", "#hk-big", "#hk-line", "#hk-artbox", "#hk-src"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 5.35);
+    window.__timelines["hook"] = tl;
+  </script>
+</template>
