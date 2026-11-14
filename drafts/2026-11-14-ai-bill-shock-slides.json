@@ -1,0 +1,49 @@
+{
+ "duration": 34.0,
+ "times": [0, 5.6, 13.2, 18.6, 28.0],
+ "hook": {
+  "scene": false,
+  "kicker": "AI costs",
+  "big": "39%",
+  "line": "of UK firms paying for AI got a bigger bill than expected."
+ },
+ "listA": {
+  "title": "Three checks this weekend.",
+  "start": 1,
+  "items": [
+   {"h": "Find every AI charge.", "d": "Every card, PayPal and app store. Ask the team what they pay for."},
+   {"h": "Cancel the duplicates.", "d": "One everyday assistant is usually enough for a small team."},
+   {"h": "Cap anything metered.", "d": "Spending limits and alerts on usage-based tools. Auto top-up off."}
+  ],
+  "lead": 1.3,
+  "gap": 1.9
+ },
+ "stat": {
+  "title": "Often nobody has the full list.",
+  "big": "24%",
+  "sub": "found AI tools running that nobody approved",
+  "from": "Surprise AI bill: 39%",
+  "to": "Unapproved AI found: 24%",
+  "barStart": 0.39,
+  "barEnd": 0.24,
+  "p1": "Pax8 Q3 2026 SMB AI Pulse Report, 350 UK business leaders.",
+  "p2": "Only 23% of UK firms building AI formally review it."
+ },
+ "listB": {
+  "title": "Then two more.",
+  "start": 4,
+  "items": [
+   {"h": "Remove unused seats.", "d": "Check last activity in each team plan. Take leavers off today."},
+   {"h": "Diary every renewal.", "d": "Annual plans and free trials, two weeks before they roll over."},
+   {"h": "Keep one list.", "d": "Any new paid AI tool goes on it before the card details do."}
+  ],
+  "foot": "Illustration only: 2 duplicate £20 subscriptions x 12 months = £480 a year. Our arithmetic.",
+  "lead": 0.6,
+  "gap": 1.9,
+  "footAt": 4.6
+ },
+ "end": {
+  "tagline": "We help small firms see what their AI really costs.",
+  "cta": "FREE 30-MIN AI AUDIT"
+ }
+}
