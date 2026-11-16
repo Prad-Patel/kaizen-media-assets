@@ -1,0 +1,88 @@
+{
+ "footer": "kaizenaiconsulting.com",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "ChatGPT how-to",
+   "title": [
+    "{logo} ChatGPT:",
+    "reply to every",
+    "Google review."
+   ],
+   "subtitle": "10 minutes a week. Prompts included.",
+   "icon": "quote",
+   "highlight": "Bad review? Step 4 has the prompt",
+   "inline_logo": "/home/user/kaizen-media-assets/brand/logos/openai-knot-navy.png"
+  },
+  {
+   "type": "item",
+   "label": "Why bother",
+   "detail": "85% of UK shoppers check at least one review site before they buy (Feefo and Censuswide, 3,000 UK consumers). People read the stars, then they read how you replied.",
+   "start": "Google tells the reviewer when you reply, so the thank-you lands.",
+   "icon": "data"
+  },
+  {
+   "type": "item",
+   "label": "Step 1: Write your house style",
+   "detail": "Paste: You write Google review replies for [business], a [what you do] in [town]. Tone: [friendly and plain]. Under 60 words. Thank them by first name, mention one thing they said, sign off as [name].",
+   "start": "Add: never say \"we value your feedback\". Save it in a note.",
+   "icon": "task"
+  },
+  {
+   "type": "item",
+   "label": "Step 2: Gather the week's reviews",
+   "detail": "Pick one slot a week. Open your Business Profile, select Read reviews, and copy the new ones with each reviewer's first name and stars.",
+   "start": "Five reviews take about two minutes to gather.",
+   "icon": "calendar"
+  },
+  {
+   "type": "item",
+   "label": "Step 3: Paste the batch prompt",
+   "detail": "Paste your house style, then: Here are this week's reviews. Write one reply for each, numbered to match. Short and warm for 4 and 5 stars. If anything is unclear, ask me first.",
+   "start": "You get every draft in seconds. Edit, do not rewrite.",
+   "icon": "repeat"
+  },
+  {
+   "type": "item",
+   "label": "Step 4: The bad review",
+   "detail": "Paste this when a review stings:",
+   "start": "Wait ten minutes before you post it.",
+   "icon": "alert",
+   "feature": true,
+   "quote": "Thank them, own what we got wrong without arguing, no private details, invite them to call [number]. No excuses. Under 70 words.",
+   "start_label": "Then"
+  },
+  {
+   "type": "item",
+   "label": "Step 5: Post the replies",
+   "detail": "In Business Profile, select Reply next to each review, paste the edited draft, select Reply. Your profile must be verified, and Google checks replies before they show.",
+   "start": "You can edit or delete a reply later.",
+   "icon": "followup"
+  },
+  {
+   "type": "item",
+   "label": "What it could give back",
+   "detail": "Five reviews a week at four minutes each by hand is 20 minutes. With the house style and one batch prompt, about 10. That is roughly 8 hours a year, and every review answered. Illustrative, so time your own.",
+   "start": "The bigger win: the next customer sees you answer.",
+   "icon": "cost"
+  },
+  {
+   "type": "item",
+   "label": "One thing to watch",
+   "detail": "Read every reply before it goes out. ChatGPT can miss sarcasm or promise something you would not. Works on the free plan, because you only paste text.",
+   "start": "ChatGPT drafts, you decide.",
+   "icon": "alert"
+  },
+  {
+   "type": "end",
+   "title": [
+    "Save the style.",
+    "Batch the week.",
+    "Answer them all."
+   ],
+   "body": "Want help setting AI up for your business? We offer a free 30 minute AI audit. Details in the first comment.",
+   "cta": "How many of your Google reviews are still waiting for a reply?",
+   "icon": "target"
+  }
+ ]
+}
