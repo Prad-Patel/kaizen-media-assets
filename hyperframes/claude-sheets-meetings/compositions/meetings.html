@@ -1,0 +1,33 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Kaizen Inter", sans-serif; color: var(--navy, #0A1628); }
+    .ck-row { position: absolute; left: 80px; width: 840px; display: flex; gap: 30px; align-items: flex-start; background: #fff; border-radius: 26px; padding: 32px 34px; box-shadow: 0 10px 28px rgba(10,22,40,.08); }
+    .ck-num { flex: 0 0 76px; height: 76px; border-radius: 50%; background: var(--blue, #2E7CF6); color: #fff; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 42px; display: flex; align-items: center; justify-content: center; }
+    .ck-h { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 50px; letter-spacing: -.01em; line-height: 1.1; }
+    .ck-d { margin-top: 10px; font-size: 34px; line-height: 1.3; color: #3B4A63; }
+    .ck-title { position: absolute; left: 80px; right: 150px; top: 200px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 80px; line-height: 1.04; letter-spacing: -.02em; }
+    .ck-title .b { color: var(--blue, #2E7CF6); }
+    #m-card { position: absolute; left: 80px; width: 840px; top: 800px; background: var(--navy, #0A1628); color: #fff; border-radius: 28px; padding: 40px 44px; }
+    #m-q { font-size: 40px; font-weight: 600; color: #CFDCF2; }
+    #m-a { margin-top: 14px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 58px; letter-spacing: -.02em; color: var(--teal, #34D3A6); line-height: 1.1; }
+    #m-foot { position: absolute; left: 80px; right: 150px; top: 1260px; font-size: 32px; line-height: 1.35; color: #3B4A63; }
+  </style>
+  <div id="root" data-composition-id="meetings" data-width="1080" data-height="1920">
+    <div class="ck-title" id="m-title">Then <span class="b">Claude Meetings.</span></div>
+    <div class="ck-row" id="m-r1" style="top: 470px"><div class="ck-num">3</div><div><div class="ck-h">Joins your Google Meet</div><div class="ck-d">Writes the notes and action items before you hang up.</div></div></div>
+    <div id="m-card"><div id="m-q">The catch</div><div id="m-a">Beta. Team plans. Google Meet only, for now.</div></div>
+    <div id="m-foot">Docs and whiteboards made in meetings are free until 10 February 2027.</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#m-title", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power4.out" }, 0.05);
+    tl.fromTo("#m-r1", { opacity: 0, x: 90 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, 0.3);
+    tl.fromTo("#m-card", { opacity: 0, y: 60, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "back.out(1.6)" }, 4.9);
+    tl.fromTo("#m-a", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)" }, 5.1);
+    tl.fromTo("#m-foot", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 5.5);
+    tl.fromTo("#m-a", { scale: 1 }, { scale: 1.05, duration: 0.3, ease: "power2.out", yoyo: true, repeat: 1 }, 8.0);
+    tl.fromTo("#m-r1 .ck-num", { scale: 1 }, { scale: 1.15, duration: 0.25, ease: "power2.out", yoyo: true, repeat: 1 }, 2.6);
+    tl.to(["#m-title", "#m-r1", "#m-card", "#m-foot"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 9.75);
+    window.__timelines["meetings"] = tl;
+  </script>
+</template>

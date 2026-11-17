@@ -1,0 +1,29 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Kaizen Inter", sans-serif; color: var(--navy, #0A1628); }
+    .ck-row { position: absolute; left: 80px; width: 840px; display: flex; gap: 30px; align-items: flex-start; background: #fff; border-radius: 26px; padding: 32px 34px; box-shadow: 0 10px 28px rgba(10,22,40,.08); }
+    .ck-num { flex: 0 0 76px; height: 76px; border-radius: 50%; background: var(--blue, #2E7CF6); color: #fff; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 42px; display: flex; align-items: center; justify-content: center; }
+    .ck-h { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 50px; letter-spacing: -.01em; line-height: 1.1; }
+    .ck-d { margin-top: 10px; font-size: 34px; line-height: 1.3; color: #3B4A63; }
+    .ck-title { position: absolute; left: 80px; right: 150px; top: 200px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 80px; line-height: 1.04; letter-spacing: -.02em; }
+    .ck-title .b { color: var(--blue, #2E7CF6); }
+    #t-foot { position: absolute; left: 80px; right: 150px; top: 1140px; font-size: 32px; line-height: 1.35; color: #3B4A63; }
+  </style>
+  <div id="root" data-composition-id="tools" data-width="1080" data-height="1920">
+    <div class="ck-title" id="t-title">Two new apps. <span class="b">In beta now.</span></div>
+    <div class="ck-row" id="t-r1" style="top: 470px"><div class="ck-num">1</div><div><div class="ck-h">Claude Sheets</div><div class="ck-d">Describe the spreadsheet. Claude builds the tabs and formulas. Export to Excel.</div></div></div>
+    <div class="ck-row" id="t-r2" style="top: 800px"><div class="ck-num">2</div><div><div class="ck-h">Claude Whiteboards</div><div class="ck-d">Talk through a plan. Get a board with owners and dates.</div></div></div>
+    <div id="t-foot">On all paid Claude plans. Web, desktop and mobile.</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#t-title", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power4.out" }, 0.05);
+    tl.fromTo("#t-r1", { opacity: 0, x: 90 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, 0.3);
+    tl.fromTo("#t-r2", { opacity: 0, x: 90 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, 4.9);
+    tl.fromTo("#t-foot", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 5.8);
+    tl.fromTo("#t-r2 .ck-num", { scale: 1 }, { scale: 1.15, duration: 0.25, ease: "power2.out", yoyo: true, repeat: 1 }, 7.4);
+    tl.fromTo("#t-r1 .ck-num", { scale: 1 }, { scale: 1.15, duration: 0.25, ease: "power2.out", yoyo: true, repeat: 1 }, 2.6);
+    tl.to(["#t-title", "#t-r1", "#t-r2", "#t-foot"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 9.15);
+    window.__timelines["tools"] = tl;
+  </script>
+</template>
