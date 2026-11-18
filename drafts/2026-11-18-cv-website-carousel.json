@@ -1,0 +1,92 @@
+{
+ "footer": "kaizenaiconsulting.com",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "Job hunting? Try this",
+   "title": [
+    "Looking for a job?",
+    "Make yourself",
+    "found."
+   ],
+   "subtitle": "Build your own CV website this afternoon. Free.",
+   "icon": "target",
+   "highlight": "Copy-paste prompt in step 2"
+  },
+  {
+   "type": "shot",
+   "label": "This took an afternoon. And £0.",
+   "image": "/home/user/kaizen-media-assets/drafts/cv-site-example/shots/devices-card.png",
+   "caption": "Our example site for a made-up job hunter. Works on a phone too."
+  },
+  {
+   "type": "item",
+   "label": "Why bother",
+   "detail": "141 applications for every graduate job (Institute of Student Employers). And 3 in 4 UK recruiters think AI writes at least half the CVs they see (TestGorilla).",
+   "start": "When every CV looks polished, proof stands out.",
+   "icon": "data"
+  },
+  {
+   "type": "item",
+   "label": "Step 1: Gather three things",
+   "detail": "Your CV. Three results with a number (\"grew followers from 2,000 to 12,000\"). One line on the job you want and where.",
+   "start": "The numbers do the selling.",
+   "icon": "task"
+  },
+  {
+   "type": "item",
+   "label": "Step 2: Ask an AI to build it",
+   "detail": "Open Claude, ChatGPT or Gemini (free plans work) and paste:",
+   "start": "Fill in the brackets with your CV and target role.",
+   "icon": "quote",
+   "feature": true,
+   "quote": "Build me a one-page CV website as a single index.html file. Here is my CV: [paste]. I want [role] in [town]. Bold headline, three results with numbers, experience, skills, buttons to download my CV and email me. Works on a phone. No home address. Ask me if unsure.",
+   "start_label": "Then"
+  },
+  {
+   "type": "item",
+   "label": "Step 3: Save it, open it, tweak it",
+   "detail": "Paste the code into a file called index.html in a new folder, with your CV PDF beside it. Double-click to open it in your browser.",
+   "start": "Ask for changes in plain words: \"make the headline bigger\".",
+   "icon": "repeat"
+  },
+  {
+   "type": "item",
+   "label": "Step 4: Put it online, free",
+   "detail": "Go to Netlify Drop and drag your folder onto the page. You get a live link in seconds. Claim it with a free account so it stays up.",
+   "start": "GitHub Pages and Cloudflare Pages work too.",
+   "icon": "grid"
+  },
+  {
+   "type": "shot",
+   "label": "Show proof, not promises",
+   "image": "/home/user/kaizen-media-assets/drafts/cv-site-example/shots/desktop-work.png",
+   "caption": "Three results with numbers do more than a page of adjectives."
+  },
+  {
+   "type": "item",
+   "label": "Step 5: Put the link everywhere",
+   "detail": "Top of your CV. Your LinkedIn contact info and Featured section. Your email signature. Every application with a portfolio box.",
+   "start": "Optional: a yourname.co.uk domain for a small yearly fee.",
+   "icon": "followup"
+  },
+  {
+   "type": "item",
+   "label": "One thing to watch",
+   "detail": "Only claim what you can talk through in an interview. Leave your home address and personal phone off the page. Read every line the AI writes.",
+   "start": "On a CV site, accuracy is the whole point.",
+   "icon": "alert"
+  },
+  {
+   "type": "end",
+   "title": [
+    "Build it today.",
+    "Share the link.",
+    "Get found."
+   ],
+   "body": "Know someone job hunting? Send them this. Full step-by-step guide in the first comment.",
+   "cta": "Would you hire someone faster if they sent you a link like this?",
+   "icon": "target"
+  }
+ ]
+}

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jordan Ashby, Marketing Coordinator</title>
+<style>
+@font-face{font-family:"SG";src:url(../../engine/fonts/space-grotesk-latin-500-normal.woff2) format("woff2");font-weight:500}
+@font-face{font-family:"SG";src:url(../../engine/fonts/space-grotesk-latin-700-normal.woff2) format("woff2");font-weight:700}
+@font-face{font-family:"IN";src:url(../../engine/fonts/inter-latin-400-normal.woff2) format("woff2");font-weight:400}
+@font-face{font-family:"IN";src:url(../../engine/fonts/inter-latin-500-normal.woff2) format("woff2");font-weight:500}
+@font-face{font-family:"IN";src:url(../../engine/fonts/inter-latin-600-normal.woff2) format("woff2");font-weight:600}
+:root{--bg:#F6F3EE;--ink:#15171C;--mute:#5E6470;--line:#E3DED5;--card:#FFFFFF;--acc:#FF5B3A;--acc2:#6C5CE7;--soft:#FFE9E3}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 "IN",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0}
+.logo{font:700 20px "SG";letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+.logo i{width:34px;height:34px;border-radius:10px;background:var(--ink);color:#fff;display:grid;place-items:center;font:700 15px "SG";font-style:normal}
+.links{display:flex;gap:30px;font-weight:500;font-size:15px;color:var(--mute)}
+.links b{color:var(--ink);font-weight:600}
+.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:center;padding:56px 0 64px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:7px 14px;font:600 13px "IN";margin-bottom:26px}
+.pill:before{content:"";width:8px;height:8px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 4px #DCFCE7}
+h1{font:700 76px/1 "SG";letter-spacing:-.045em}
+h1 span{color:var(--acc)}
+.lede{font-size:20px;color:var(--mute);margin:24px 0 34px;max-width:540px}
+.btns{display:flex;gap:14px}
+.btn{padding:15px 24px;border-radius:12px;font:600 15px "IN";display:inline-flex;gap:10px;align-items:center}
+.btn.p{background:var(--ink);color:#fff}
+.btn.s{background:#fff;border:1px solid var(--line)}
+.photo{aspect-ratio:4/5;border-radius:28px;background:linear-gradient(150deg,#FF8A6B 0%,#FF5B3A 45%,#6C5CE7 100%);position:relative;overflow:hidden;box-shadow:0 30px 60px -25px rgba(108,92,231,.55)}
+.photo:after{content:"JA";position:absolute;inset:0;display:grid;place-items:center;font:700 140px "SG";color:rgba(255,255,255,.92);letter-spacing:-.06em}
+.photo .tag{position:absolute;left:18px;bottom:18px;right:18px;background:rgba(255,255,255,.95);border-radius:16px;padding:14px 16px;font:500 14px/1.4 "IN";z-index:2;display:flex;justify-content:space-between}
+.photo .tag b{font:700 22px "SG";display:block;color:var(--acc)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:84px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 28px}
+.stat b{font:700 44px "SG";letter-spacing:-.04em;display:block}
+.stat b em{font-style:normal;color:var(--acc)}
+.stat span{color:var(--mute);font-size:15px}
+h2{font:700 40px "SG";letter-spacing:-.035em;margin-bottom:28px}
+h2 small{display:block;font:600 13px "IN";letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:10px}
+.work{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:84px}
+.case{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.thumb{height:170px;position:relative}
+.t1{background:radial-gradient(circle at 30% 30%,#FFD3C7,transparent 55%),linear-gradient(135deg,#FF5B3A,#FF9B6A)}
+.t2{background:radial-gradient(circle at 70% 40%,#D9D3FF,transparent 55%),linear-gradient(135deg,#6C5CE7,#A29BFE)}
+.t3{background:radial-gradient(circle at 40% 70%,#C9F2E1,transparent 55%),linear-gradient(135deg,#0F9D74,#5DD6A8)}
+.thumb i{position:absolute;left:22px;bottom:20px;background:#fff;border-radius:10px;padding:6px 12px;font:600 12px "IN";font-style:normal}
+.case div.b{padding:22px 24px 26px}
+.case h3{font:700 21px/1.25 "SG";letter-spacing:-.02em;margin-bottom:8px}
+.case p{color:var(--mute);font-size:15px;line-height:1.5}
+.two{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;margin-bottom:84px}
+.job{display:grid;grid-template-columns:130px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line)}
+.job .d{color:var(--mute);font:500 14px "IN";padding-top:3px}
+.job h4{font:700 19px "SG"}
+.job h4 span{color:var(--mute);font-weight:500}
+.job p{color:var(--mute);font-size:15px;margin-top:4px}
+.skills{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.chips span{background:var(--bg);border:1px solid var(--line);border-radius:99px;padding:8px 14px;font:500 14px "IN"}
+.chips span.h{background:var(--soft);border-color:#FFC9BB;color:#B5361C}
+.skills h4{font:700 18px "SG";margin:22px 0 8px}
+.skills h4:first-child{margin-top:0}
+.cta{background:var(--ink);color:#fff;border-radius:28px;padding:56px;display:flex;justify-content:space-between;align-items:center;margin-bottom:40px}
+.cta h2{margin:0;font-size:46px}
+.cta h2 span{color:var(--acc)}
+.cta p{color:#AEB4BF;margin-top:10px}
+.cta .btn.p{background:var(--acc)}
+footer{padding:10px 0 40px;color:var(--mute);font-size:13px;display:flex;justify-content:space-between}
+@media (max-width:760px){
+ .wrap{padding:0 20px}.links{display:none}
+ .hero{grid-template-columns:1fr;gap:28px;padding:20px 0 36px}
+ h1{font-size:50px}.lede{font-size:17px;margin:18px 0 24px}
+ .photo{aspect-ratio:16/11;order:-1;border-radius:22px}.photo:after{font-size:78px;inset:0 0 74px 0}
+ .photo .tag{padding:11px 14px;font-size:13px}.photo .tag b{font-size:19px}
+ .btns{flex-direction:column}.btn{justify-content:center}
+ .stats,.work,.two{grid-template-columns:1fr;gap:14px;margin-bottom:52px}
+ .stat b{font-size:36px}h2{font-size:32px}
+ .job{grid-template-columns:1fr;gap:4px}
+ .cta{flex-direction:column;align-items:flex-start;gap:22px;padding:34px}.cta h2{font-size:34px}
+ footer{flex-direction:column;gap:6px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <nav>
+  <a class="logo" href="#"><i>JA</i>Jordan Ashby</a>
+  <div class="links"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><b>Contact</b></div>
+ </nav>
+
+ <section class="hero">
+  <div>
+   <div class="pill">Open to marketing roles from January</div>
+   <h1>I turn small budgets into <span>big results.</span></h1>
+   <p class="lede">Marketing coordinator with four years in independent retail and hospitality. I plan the campaign, write the copy, and show you the numbers after.</p>
+   <div class="btns">
+    <a class="btn p" href="#">Download my CV &darr;</a>
+    <a class="btn s" href="#">Book a 15 minute call</a>
+   </div>
+  </div>
+  <div class="photo"><div class="tag"><span>Based in Manchester<br>Hybrid or remote</span><span style="text-align:right"><b>4 yrs</b>experience</span></div></div>
+ </section>
+
+ <section class="stats">
+  <div class="stat"><b>+38<em>%</em></b><span>newsletter sign-ups in six months</span></div>
+  <div class="stat"><b>12<em>k</em></b><span>Instagram followers grown from 2,000</span></div>
+  <div class="stat"><b>3<em>x</em></b><span>return on a &pound;1,500 launch budget</span></div>
+ </section>
+
+ <section id="work">
+  <h2><small>Selected work</small>Proof, not just promises</h2>
+  <div class="work">
+   <div class="case"><div class="thumb t1"><i>Email</i></div><div class="b"><h3>Rebuilt a caf&eacute; chain's newsletter</h3><p>New welcome series and a monthly story-led issue. Sign-ups up 38% in six months.</p></div></div>
+   <div class="case"><div class="thumb t2"><i>Social</i></div><div class="b"><h3>Launched a homeware shop on Instagram</h3><p>Reels, creator gifting and a weekly drop. 2,000 to 12,000 followers in a year.</p></div></div>
+   <div class="case"><div class="thumb t3"><i>Paid ads</i></div><div class="b"><h3>Opened a second store on &pound;1,500</h3><p>Local Meta ads and a launch-week offer, tracked to a 3x return.</p></div></div>
+  </div>
+ </section>
+
+ <section class="two">
+  <div id="experience">
+   <h2><small>Experience</small>Where I have worked</h2>
+   <div class="job"><div class="d">2023 to now</div><div><h4>Marketing Coordinator <span>&middot; Brightwell Home</span></h4><p>Own social, email and launch campaigns for a five-store homeware brand.</p></div></div>
+   <div class="job"><div class="d">2021 to 2023</div><div><h4>Marketing Assistant <span>&middot; Copper Kettle Caf&eacute;s</span></h4><p>Ran the newsletter, menus and local partnerships across three sites.</p></div></div>
+   <div class="job"><div class="d">2018 to 2021</div><div><h4>BA Marketing <span>&middot; First-class honours</span></h4><p>Dissertation on small-brand loyalty on social media.</p></div></div>
+  </div>
+  <div class="skills" id="skills">
+   <h4>What I am best at</h4>
+   <div class="chips"><span class="h">Campaign planning</span><span class="h">Copywriting</span><span class="h">Email marketing</span><span>Instagram and TikTok</span><span>Meta Ads</span><span>Canva</span><span>Google Analytics</span><span>AI tools</span></div>
+   <h4>How I work</h4>
+   <div class="chips"><span>Test, measure, repeat</span><span>Clear weekly updates</span><span>Happy on camera</span></div>
+  </div>
+ </section>
+
+ <section class="cta">
+  <div><h2>Hiring? <span>Let's talk.</span></h2><p>I reply within a day. References on request.</p></div>
+  <a class="btn p" href="#">Email me &rarr;</a>
+ </section>
+
+ <footer><span>&copy; Jordan Ashby</span><span>Example site made by Kaizen AI Consulting. Jordan and every company here are fictional.</span></footer>
+</div>
+</body>
+</html>
