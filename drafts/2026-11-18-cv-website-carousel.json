@@ -20,6 +20,12 @@
    "caption": "Our example site for a made-up job hunter. Works on a phone too."
   },
   {
+   "type": "shot",
+   "label": "And the CV it links to",
+   "image": "/home/user/kaizen-media-assets/drafts/cv-site-example/shots/cv-card.png",
+   "caption": "Same look, same numbers. One click from the site."
+  },
+  {
    "type": "item",
    "label": "Why bother",
    "detail": "141 applications for every graduate job (Institute of Student Employers). And 3 in 4 UK recruiters think AI writes at least half the CVs they see (TestGorilla).",
