@@ -1,0 +1,87 @@
+{
+ "footer": "kaizenaiconsulting.com",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "Gemini how-to",
+   "title": [
+    "Gemini in Gmail:",
+    "read less,",
+    "reply faster."
+   ],
+   "subtitle": "5 steps. Prompts included.",
+   "icon": "followup",
+   "highlight": "Rough notes to email: step 4"
+  },
+  {
+   "type": "item",
+   "label": "Why now",
+   "detail": "The average worker gets about 117 emails a day (Microsoft Work Trend Index). From 10 November, Google began switching on Gemini summaries and Help me write for Workspace accounts.",
+   "start": "The rollout can take up to 15 days to reach you.",
+   "icon": "data"
+  },
+  {
+   "type": "item",
+   "label": "Step 1: Switch on smart features",
+   "detail": "In Gmail on a computer, select the gear icon, then See all settings. On the General tab, make sure smart features are switched on, then save.",
+   "start": "Still nothing? Ask whoever manages your Workspace account.",
+   "icon": "task"
+  },
+  {
+   "type": "item",
+   "label": "Step 2: Read the overview, not the thread",
+   "detail": "Open a long email chain. Gemini adds an AI Overview at the top: who asked for what, what was agreed, what is still open.",
+   "start": "Then read only the one message that matters.",
+   "icon": "grid"
+  },
+  {
+   "type": "item",
+   "label": "Step 3: Reply with Help me write",
+   "detail": "Select Reply, then Help me write, and paste:",
+   "start": "Nothing sends until you press Send.",
+   "icon": "quote",
+   "feature": true,
+   "quote": "Reply to [name]. Confirm we can do [job] on [date] for [price]. Ask them to confirm by [day]. Friendly, under 80 words.",
+   "start_label": "Then"
+  },
+  {
+   "type": "item",
+   "label": "Step 4: Rough notes to email",
+   "detail": "Type it like a text: \"can do tues not weds, price same, need deposit first\". Once you pass about a dozen words, choose Polish. Gemini turns it into a tidy email.",
+   "start": "Formalise, Elaborate and Shorten sit alongside it.",
+   "icon": "repeat"
+  },
+  {
+   "type": "item",
+   "label": "Step 5: Save three prompts",
+   "detail": "Chase a quote: friendly follow-up, no pressure, under 60 words. Say no: decline, give the reason, suggest an alternative. Move a booking: apologise once, offer a new date, ask them to confirm.",
+   "start": "Full wording for all three is on our blog.",
+   "icon": "calendar"
+  },
+  {
+   "type": "item",
+   "label": "What it could give back",
+   "detail": "Save 15 minutes a day on threads you no longer read end to end and replies you no longer start from scratch. Five days a week, 48 weeks: about 60 hours a year. Illustrative, so time your own.",
+   "start": "The bigger win: the quote you chase on time.",
+   "icon": "cost"
+  },
+  {
+   "type": "item",
+   "label": "One thing to watch",
+   "detail": "Read every draft. Gemini only knows what is in the email, so it can sound surer about a date or price than you are. Free personal Gmail accounts got these tools in the US first.",
+   "start": "Gemini drafts, you decide.",
+   "icon": "alert"
+  },
+  {
+   "type": "end",
+   "title": [
+    "Skim the overview.",
+    "Draft with notes.",
+    "Send it today."
+   ],
+   "body": "Want help setting AI up for your business? We offer a free 30 minute AI audit. Details in the first comment.",
+   "cta": "Which email do you put off writing every week?",
+   "icon": "target"
+  }
+ ]
+}
