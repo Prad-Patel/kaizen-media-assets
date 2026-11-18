@@ -1,0 +1,17 @@
+{
+ "footer": "kaizenaiconsulting.com",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "Job hunting? Try this",
+   "title": [
+    "Looking for a job?",
+    "Make yourself",
+    "found."
+   ],
+   "subtitle": "Build your own CV website this afternoon. Free.",
+   "icon": "target",
+   "highlight": "Copy-paste prompt in step 2"
+  }
+ ]
+}
