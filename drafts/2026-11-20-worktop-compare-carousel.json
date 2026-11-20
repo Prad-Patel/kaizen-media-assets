@@ -4,7 +4,11 @@
     {
       "type": "cover",
       "kicker": "Case study",
-      "title": ["Worktop Compare:", "a 3D price calculator", "that sends better leads"],
+      "title": [
+        "Worktop Compare:",
+        "a 3D price calculator",
+        "that sends better leads"
+      ],
       "subtitle": "Built with Claude in a month. An earlier version generated £7m worth of leads in 11 months.",
       "icon": "quote"
     },
@@ -22,11 +26,10 @@
       "icon": "followup"
     },
     {
-      "type": "item",
-      "label": "A live 3D preview",
-      "detail": "As the homeowner types their measurements, a 3D model of their own layout builds on screen. Drag to rotate, zoom in, watch it update with every number.",
-      "start": "Seeing their own job is what keeps people going to the end.",
-      "icon": "grid"
+      "type": "shot",
+      "label": "Your own layout, live in 3D",
+      "image": "/home/user/kaizen-media-assets/image/2026-11-20-worktop-compare-shot-3d-canvas.png",
+      "caption": "A U-shape with an island, built from the homeowner's own measurements. Drag to rotate."
     },
     {
       "type": "item",
@@ -58,7 +61,10 @@
     },
     {
       "type": "end",
-      "title": ["Better leads.", "Built in a month."],
+      "title": [
+        "Better leads.",
+        "Built in a month."
+      ],
       "body": "Worktop Compare is not live yet. Any business that quotes made-to-measure work could use the same idea.",
       "cta": "What do you always have to chase before you can quote? Tell us in the comments.",
       "icon": "target"
