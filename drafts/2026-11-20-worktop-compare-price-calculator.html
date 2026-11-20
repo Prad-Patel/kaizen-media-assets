@@ -1,72 +1,71 @@
-<p>An earlier version of this tool, built for one of our clients, generated £7m worth of leads in 11 months. So when we set out to build Worktop Compare, an instant price calculator for kitchen worktops, we already knew the idea worked. The job was to rebuild it properly, for homeowners and suppliers across the country, and we did it with Claude and a handful of AI tools in one month.</p>
+<p>An earlier version of this tool, built for one of our clients, generated £7m worth of leads in 11 months. Worktop Compare is the rebuild, and this time we went after two things: a better lead for the supplier, and an experience for the homeowner that, until recently, only a big budget could buy. A live 3D preview of their own worktop layout, inside a six-step price calculator, built by us with Claude and a handful of AI tools in one month.</p>
 
-<p>This is the fourth in our Friday series of real Kaizen builds. Here is what the calculator does, why it matters to anyone who quotes for a living, and what you could take from it for your own business.</p>
+<p>This is the fourth in our Friday series of real Kaizen builds. Here is what we built, why the leads it produces are better than a form fill, and what you could take from it for your own business.</p>
 
-<h2>The problem: quoting by email and site visit</h2>
+<h2>The problem: vague enquiries and slow quotes</h2>
 
-<p>Buying a kitchen worktop has always been slow. A homeowner emails a floor plan to a supplier, waits, and often has to book a site visit before anyone will put a number on the job. Then they do it again with a second supplier, and a third, to see whether the first price was fair.</p>
+<p>Buying a stone worktop has always been slow. A homeowner emails a floor plan, waits, and often has to book a site visit before anyone will put a number on the job. Then they repeat it with two more suppliers to check the first price was fair.</p>
 
-<p>On the supplier side it is just as painful. Every enquiry needs someone to read a plan, work out the run of worktop, and sometimes drive out to measure, all before they know whether the customer is serious. Good leads are hard to come by, and plenty of the time spent quoting goes on people who were only browsing.</p>
+<p>For the fabricator, the problem is the quality of what lands in the inbox. A typical web enquiry says "how much for a quartz worktop?" and little else. Someone has to chase the measurements, the material, the colour and the edge detail before they can even work out whether the job is worth quoting. Plenty of that time goes on people who were only browsing.</p>
 
-<p>The price spread makes it worse. Published UK guides put quartz worktops at roughly <a href="https://www.myjobquote.co.uk/costs/quartz-worktop" target="_blank" rel="noopener">£250 to £600 per linear metre supplied and fitted</a>, depending on the stone, the edges and the cut-outs. With a range that wide, a homeowner has no real idea what their kitchen should cost until someone quotes it.</p>
-
-<h2>Why a realistic first price matters</h2>
-
-<p>Checkatrade's renoflation research, published in spring 2026, found that <a href="https://www.checkatrade.com/blog/news/renoflation/" target="_blank" rel="noopener">41% of home improvement jobs end up costing more than the original quote</a>, by 12% on average, which came to £1,325. It also found that only 38% of homeowners whose bill came in higher had a formal written quote, and 36% had relied on their own online research to judge the cost (<a href="https://www.insightdiy.co.uk/news/checkatrade-talks-home-improvement-renoflation/16276.htm" target="_blank" rel="noopener">coverage via Insight DIY</a>).</p>
-
-<p>That tells you two things. Homeowners are already trying to price jobs online before they speak to anyone. And when the number they find is vague, surprises follow. A tool that gives a sensible indication up front, from the details of the actual kitchen, serves both sides: the homeowner gets a realistic budget, and the supplier gets an enquiry from someone who has already seen roughly what it will cost.</p>
+<p>The price spread does not help. Published UK guides put quartz at roughly <a href="https://www.myjobquote.co.uk/costs/quartz-worktop" target="_blank" rel="noopener">£250 to £600 per linear metre supplied and fitted</a>. Checkatrade's 2026 renoflation research found <a href="https://www.checkatrade.com/blog/news/renoflation/" target="_blank" rel="noopener">41% of home improvement jobs end up costing more than the original quote</a>, by £1,325 on average, and 36% of the homeowners affected had judged the cost from their own online research (<a href="https://www.insightdiy.co.uk/news/checkatrade-talks-home-improvement-renoflation/16276.htm" target="_blank" rel="noopener">coverage via Insight DIY</a>). People already price jobs online. The question is whether they find a realistic number.</p>
 
 <h2>What we built</h2>
 
-<p>Worktop Compare does two jobs.</p>
+<p>Worktop Compare walks the homeowner through six short steps: stone type, brand, colour, dimensions, extras and their details. It covers seven stone types, from quartz and granite to Dekton, marble, sintered stone, quartzite and onyx, with real swatches for each. Extras include the edge profile (from a simple pencil edge to ogee and shark nose) and details such as waterfall ends.</p>
+
+<p>The standout is the dimensions step. As the homeowner types in their measurements, a live 3D model of their worktop layout builds on screen. They can drag to rotate it and zoom in, and it updates every time a number changes. They are not filling in a form; they are designing their kitchen and watching the price follow.</p>
+
+<p>At the end they get an estimated price range straight away, and their enquiry goes to up to five local fabricators.</p>
+
+<h2>Why the leads are better</h2>
+
+<p>This is the part we care about most, because it is where an earlier version of this idea earned its £7m.</p>
 
 <ul>
-<li><strong>An instant price indication.</strong> The homeowner answers a few questions about their kitchen and the worktop they want, and the calculator gives an indication of the cost straight away. No emailing plans, no waiting for a call back, no site visit just to get a ballpark.</li>
-<li><strong>A match to the right suppliers.</strong> Once the homeowner has a figure, the tool connects them with suitable suppliers who can give them the best value for that job.</li>
+<li><strong>Every lead arrives fully specified.</strong> Stone type, brand, colour, measurements for each piece, edge profile and extras, all captured before the fabricator sees it. No chasing for a floor plan, no "can you send the sizes?" email.</li>
+<li><strong>The homeowner has already seen a price.</strong> They have watched an estimate form against their own layout, so the people who complete the six steps are serious and know roughly what to expect. That filters out the browsers before they cost anyone time.</li>
+<li><strong>Matched on fit, not first come.</strong> Each enquiry is matched to up to five local fabricators based on their postcode coverage and the stone types they actually work with, so a fabricator only sees jobs they can do, in an area they cover.</li>
+<li><strong>Vetted on both sides.</strong> Fabricators are reviewed for workmanship, accreditations, insurance and reliability before they join, so the homeowner is handed to someone credible.</li>
 </ul>
 
-<p>It is built for two audiences at once. Homeowners who want the best deal on their worktops get a price and a shortlist in minutes. Suppliers who want genuine warm leads get enquiries from people who have already engaged with a real number, rather than a cold email with a floor plan attached.</p>
+<p>Compare that with a contact form. One gives you a name and a vague question. The other gives you a priced, measured, visualised job from a homeowner who has already committed three minutes to it.</p>
 
-<h2>The tools behind it</h2>
+<h2>Why AI made the 3D possible</h2>
 
-<p>We built Worktop Compare in one month using five tools:</p>
+<p>A live 3D configurator used to be a specialist project. Sketchfab's own guide puts an end-to-end custom 3D configurator at <a href="https://sketchfab.com/blogs/enterprise/?p=6686" target="_blank" rel="noopener">$15,000 to $50,000</a>, before the rest of the website. For a lead-generation site in a niche like worktops, that budget would rarely stack up, so most comparison sites settle for a form and a stock photo.</p>
+
+<p>We built the whole platform, 3D preview included, in one month with five tools:</p>
 
 <ul>
-<li><strong>Claude</strong>, the AI model we use for most of our build work, for planning, writing and checking the code.</li>
+<li><strong>Claude</strong>, which did most of the heavy lifting on planning, writing and checking the code, including the 3D scene.</li>
 <li><strong>Lovable</strong>, an AI app builder that turns a written description into a working web app.</li>
 <li><strong>Supabase</strong>, a hosted database with user accounts built in.</li>
 <li><strong>Apify</strong>, a web data tool for collecting publicly available information at scale.</li>
 <li><strong>ChatGPT</strong>, used alongside Claude where a second model helped.</li>
 </ul>
 
-<p>None of these needs a development team to start with. Each has a free or low-cost entry plan, and together they cover what used to take a front-end developer, a back-end developer and a data specialist.</p>
+<p>The point is not that the code writes itself. It is that a polished, interactive interface is no longer reserved for businesses with an agency budget. The design quality that used to separate the big players from everyone else is now within reach of a small team.</p>
 
 <h2>What the earlier version showed</h2>
 
-<p>Worktop Compare is not live yet, so we are not quoting results for it. What we can share is what happened with the earlier calculator we built for a client: it generated £7m worth of leads in 11 months.</p>
-
-<p>That number is the reason we think the model is worth rebuilding at a national scale. When people can see a realistic price before they pick up the phone, more of them get in touch, and the ones who do are further along in deciding. For a supplier, that is the difference between chasing enquiries and choosing between them.</p>
-
-<p>The figure is the value of leads generated, not sales closed, and your market and results will differ. But it shows how much demand sits behind a simple "what will this cost me?" question when you answer it instantly.</p>
+<p>Worktop Compare is not live yet, so we are not quoting results for it. The earlier calculator we built for a client generated £7m worth of leads in 11 months. That is the value of the leads, not sales closed, and your market will differ. But it shows how much demand sits behind a simple "what will this cost me?" question when you answer it instantly, and answer it well.</p>
 
 <h2>What this could mean for your business</h2>
 
-<p>You do not need to sell worktops for this to apply. Any business that quotes for work has the same pattern: a customer wants a rough price before they commit, and someone at your end spends time producing it. Kitchens, bathrooms, flooring, landscaping, windows, cleaning contracts, signage, printing, event hire. If you regularly answer "how much would it be?", a calculator could do the first answer for you.</p>
+<p>You do not need to sell worktops for this to apply. Kitchens, bathrooms, flooring, windows, garden rooms, signage, furniture: any business that quotes for made-to-measure work could let the customer build the job themselves, see it, and see a price, before a single call.</p>
 
-<p>To give a sense of the time involved, here is an illustration on our own assumptions, not a measured result. If you price five jobs a week and each takes about two hours once you count reading the plan, travel and writing it up, that is ten hours a week, around 480 hours over a working year. A calculator will not replace every quote, and complex jobs still need a visit. But if it handles the ballpark for the enquiries that were never going to buy, much of that time comes back.</p>
+<p>Here is an illustration on our own assumptions, not a measured result. If you price five jobs a week and each takes about two hours once you count chasing details, travel and writing it up, that is ten hours a week, around 480 hours over a working year. If a calculator hands you the details up front and screens out the browsers, much of that time comes back, and the jobs you do quote are ones the customer has already priced.</p>
 
 <h2>How to start on your own</h2>
 
-<p>If the idea appeals, three steps get you from thought to first version:</p>
-
 <ol>
-<li><strong>Write down your pricing logic.</strong> List the handful of things that really drive your price (size, material, extras, location) and the rough rate for each. If you can price a job on the back of an envelope, a calculator can do it too.</li>
-<li><strong>Decide what happens after the price.</strong> Do you want a phone number, a booking, or a match to a partner? The number gets attention; the next step is what turns it into a lead.</li>
-<li><strong>Build the smallest version first.</strong> Describe the calculator in plain English to an AI app builder or to Claude, test it on five past jobs where you know the real price, and adjust until the indication is close.</li>
+<li><strong>Write down your pricing logic.</strong> List the handful of things that really drive your price and a rough rate for each. If you can price a job on the back of an envelope, a calculator can do it too.</li>
+<li><strong>List what you always have to chase.</strong> Those questions become the steps. Every one you answer in the calculator is one less email later.</li>
+<li><strong>Add one thing the customer can see.</strong> A preview, a swatch, a drawing of their layout. It does not have to be 3D on day one, but seeing their own job is what keeps people going to the end.</li>
+<li><strong>Test it on five past jobs</strong> where you know the real price, and adjust until the estimate is close. Call it an estimate and make it easy to ask for a full quote.</li>
 </ol>
-
-<p>Keep the calculator honest. Call it an indication, show what it includes and excludes, and make it easy to ask for a full quote. That is what protects you from the surprise-bill problem Checkatrade found, rather than adding to it.</p>
 
 <h2>The takeaway</h2>
 
-<p>An earlier version of this idea generated £7m worth of leads in 11 months for a client. The rebuild took us one month with Claude, Lovable, Supabase, Apify and ChatGPT. The idea behind it is simple: answer the price question instantly, and send the customer to someone who can do the job. If your business spends hours each week pricing work for people who may never buy, that is a problem worth building your way out of.</p>
+<p>An earlier version of this idea generated £7m worth of leads in 11 months. The rebuild adds what used to cost an agency budget: a live 3D preview, real swatches and a guided price, built in a month with Claude. The result is a better lead, fully specified and pre-priced, matched to the right fabricator. If your business spends hours chasing details for people who may never buy, that is a problem worth building your way out of.</p>
