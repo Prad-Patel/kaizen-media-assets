@@ -28,8 +28,9 @@
     {
       "type": "shot",
       "label": "Your own layout, live in 3D",
-      "image": "/home/user/kaizen-media-assets/image/2026-11-20-worktop-compare-shot-3d-canvas.png",
-      "caption": "A U-shape with an island, built from the homeowner's own measurements. Drag to rotate."
+      "image": "/home/user/kaizen-media-assets/image/2026-11-20-worktop-compare-shot-3d-canvas-r2.png",
+      "caption": "A U-shape with an island, built from the homeowner's own measurements. Drag to rotate.",
+      "dur": 8
     },
     {
       "type": "item",
