@@ -1,0 +1,61 @@
+{
+  "footer": "kaizenaiconsulting.com",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "Case study",
+      "title": ["Worktop Compare:", "an instant price", "calculator in a month"],
+      "subtitle": "An earlier version we built for a client generated £7m worth of leads in 11 months.",
+      "icon": "quote"
+    },
+    {
+      "type": "item",
+      "label": "The old way",
+      "detail": "Email a floor plan. Wait. Book a site visit just to get a number. Then repeat with two more suppliers to check the first price was fair.",
+      "start": "Count how many hours a week you spend on quotes that never turn into work.",
+      "icon": "followup"
+    },
+    {
+      "type": "item",
+      "label": "Why it matters",
+      "detail": "41% of UK home improvement jobs cost more than the original quote, by £1,325 on average (Checkatrade, 2026). 36% of those homeowners had priced the job from online research.",
+      "start": "People already price online. Give them a realistic number to find.",
+      "icon": "alert"
+    },
+    {
+      "type": "item",
+      "label": "Piece 1: an instant price",
+      "detail": "A homeowner answers a few questions about their kitchen and the worktop they want, and gets an indication of the cost straight away. No plans to email, no visit for a ballpark.",
+      "start": "Write down the four or five things that really drive your price.",
+      "icon": "invoice"
+    },
+    {
+      "type": "item",
+      "label": "Piece 2: the right suppliers",
+      "detail": "With a figure in hand, the homeowner is matched to suitable suppliers who can give the best value. Suppliers get warm leads from people who have already seen a real number.",
+      "start": "Decide what happens after the price: a call, a booking or a match.",
+      "icon": "team"
+    },
+    {
+      "type": "item",
+      "label": "The tools",
+      "detail": "Claude, Lovable, Supabase, Apify and ChatGPT. Built in one month, no development team.",
+      "start": "Describe your calculator in plain English to an AI app builder and test it on five past jobs.",
+      "icon": "grid"
+    },
+    {
+      "type": "item",
+      "label": "What the earlier version did",
+      "detail": "The calculator we built before this one, for a client, generated £7m worth of leads in 11 months. That is lead value, not sales, and your results will differ.",
+      "start": "Answer \"how much would it be?\" instantly and more people get in touch.",
+      "icon": "target"
+    },
+    {
+      "type": "end",
+      "title": ["£7m in leads.", "Now rebuilt in a month."],
+      "body": "Worktop Compare is not live yet. Any business that quotes for work could use the same idea.",
+      "cta": "What would your customers want priced instantly? Tell us in the comments.",
+      "icon": "target"
+    }
+  ]
+}

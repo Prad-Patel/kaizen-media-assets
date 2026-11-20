@@ -1,0 +1,72 @@
+<p>An earlier version of this tool, built for one of our clients, generated £7m worth of leads in 11 months. So when we set out to build Worktop Compare, an instant price calculator for kitchen worktops, we already knew the idea worked. The job was to rebuild it properly, for homeowners and suppliers across the country, and we did it with Claude and a handful of AI tools in one month.</p>
+
+<p>This is the fourth in our Friday series of real Kaizen builds. Here is what the calculator does, why it matters to anyone who quotes for a living, and what you could take from it for your own business.</p>
+
+<h2>The problem: quoting by email and site visit</h2>
+
+<p>Buying a kitchen worktop has always been slow. A homeowner emails a floor plan to a supplier, waits, and often has to book a site visit before anyone will put a number on the job. Then they do it again with a second supplier, and a third, to see whether the first price was fair.</p>
+
+<p>On the supplier side it is just as painful. Every enquiry needs someone to read a plan, work out the run of worktop, and sometimes drive out to measure, all before they know whether the customer is serious. Good leads are hard to come by, and plenty of the time spent quoting goes on people who were only browsing.</p>
+
+<p>The price spread makes it worse. Published UK guides put quartz worktops at roughly <a href="https://www.myjobquote.co.uk/costs/quartz-worktop" target="_blank" rel="noopener">£250 to £600 per linear metre supplied and fitted</a>, depending on the stone, the edges and the cut-outs. With a range that wide, a homeowner has no real idea what their kitchen should cost until someone quotes it.</p>
+
+<h2>Why a realistic first price matters</h2>
+
+<p>Checkatrade's renoflation research, published in spring 2026, found that <a href="https://www.checkatrade.com/blog/news/renoflation/" target="_blank" rel="noopener">41% of home improvement jobs end up costing more than the original quote</a>, by 12% on average, which came to £1,325. It also found that only 38% of homeowners whose bill came in higher had a formal written quote, and 36% had relied on their own online research to judge the cost (<a href="https://www.insightdiy.co.uk/news/checkatrade-talks-home-improvement-renoflation/16276.htm" target="_blank" rel="noopener">coverage via Insight DIY</a>).</p>
+
+<p>That tells you two things. Homeowners are already trying to price jobs online before they speak to anyone. And when the number they find is vague, surprises follow. A tool that gives a sensible indication up front, from the details of the actual kitchen, serves both sides: the homeowner gets a realistic budget, and the supplier gets an enquiry from someone who has already seen roughly what it will cost.</p>
+
+<h2>What we built</h2>
+
+<p>Worktop Compare does two jobs.</p>
+
+<ul>
+<li><strong>An instant price indication.</strong> The homeowner answers a few questions about their kitchen and the worktop they want, and the calculator gives an indication of the cost straight away. No emailing plans, no waiting for a call back, no site visit just to get a ballpark.</li>
+<li><strong>A match to the right suppliers.</strong> Once the homeowner has a figure, the tool connects them with suitable suppliers who can give them the best value for that job.</li>
+</ul>
+
+<p>It is built for two audiences at once. Homeowners who want the best deal on their worktops get a price and a shortlist in minutes. Suppliers who want genuine warm leads get enquiries from people who have already engaged with a real number, rather than a cold email with a floor plan attached.</p>
+
+<h2>The tools behind it</h2>
+
+<p>We built Worktop Compare in one month using five tools:</p>
+
+<ul>
+<li><strong>Claude</strong>, the AI model we use for most of our build work, for planning, writing and checking the code.</li>
+<li><strong>Lovable</strong>, an AI app builder that turns a written description into a working web app.</li>
+<li><strong>Supabase</strong>, a hosted database with user accounts built in.</li>
+<li><strong>Apify</strong>, a web data tool for collecting publicly available information at scale.</li>
+<li><strong>ChatGPT</strong>, used alongside Claude where a second model helped.</li>
+</ul>
+
+<p>None of these needs a development team to start with. Each has a free or low-cost entry plan, and together they cover what used to take a front-end developer, a back-end developer and a data specialist.</p>
+
+<h2>What the earlier version showed</h2>
+
+<p>Worktop Compare is not live yet, so we are not quoting results for it. What we can share is what happened with the earlier calculator we built for a client: it generated £7m worth of leads in 11 months.</p>
+
+<p>That number is the reason we think the model is worth rebuilding at a national scale. When people can see a realistic price before they pick up the phone, more of them get in touch, and the ones who do are further along in deciding. For a supplier, that is the difference between chasing enquiries and choosing between them.</p>
+
+<p>The figure is the value of leads generated, not sales closed, and your market and results will differ. But it shows how much demand sits behind a simple "what will this cost me?" question when you answer it instantly.</p>
+
+<h2>What this could mean for your business</h2>
+
+<p>You do not need to sell worktops for this to apply. Any business that quotes for work has the same pattern: a customer wants a rough price before they commit, and someone at your end spends time producing it. Kitchens, bathrooms, flooring, landscaping, windows, cleaning contracts, signage, printing, event hire. If you regularly answer "how much would it be?", a calculator could do the first answer for you.</p>
+
+<p>To give a sense of the time involved, here is an illustration on our own assumptions, not a measured result. If you price five jobs a week and each takes about two hours once you count reading the plan, travel and writing it up, that is ten hours a week, around 480 hours over a working year. A calculator will not replace every quote, and complex jobs still need a visit. But if it handles the ballpark for the enquiries that were never going to buy, much of that time comes back.</p>
+
+<h2>How to start on your own</h2>
+
+<p>If the idea appeals, three steps get you from thought to first version:</p>
+
+<ol>
+<li><strong>Write down your pricing logic.</strong> List the handful of things that really drive your price (size, material, extras, location) and the rough rate for each. If you can price a job on the back of an envelope, a calculator can do it too.</li>
+<li><strong>Decide what happens after the price.</strong> Do you want a phone number, a booking, or a match to a partner? The number gets attention; the next step is what turns it into a lead.</li>
+<li><strong>Build the smallest version first.</strong> Describe the calculator in plain English to an AI app builder or to Claude, test it on five past jobs where you know the real price, and adjust until the indication is close.</li>
+</ol>
+
+<p>Keep the calculator honest. Call it an indication, show what it includes and excludes, and make it easy to ask for a full quote. That is what protects you from the surprise-bill problem Checkatrade found, rather than adding to it.</p>
+
+<h2>The takeaway</h2>
+
+<p>An earlier version of this idea generated £7m worth of leads in 11 months for a client. The rebuild took us one month with Claude, Lovable, Supabase, Apify and ChatGPT. The idea behind it is simple: answer the price question instantly, and send the customer to someone who can do the job. If your business spends hours each week pricing work for people who may never buy, that is a problem worth building your way out of.</p>
