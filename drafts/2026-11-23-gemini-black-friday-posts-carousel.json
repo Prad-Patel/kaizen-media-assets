@@ -1,0 +1,87 @@
+{
+ "footer": "kaizenaiconsulting.com",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "Gemini how-to",
+   "title": [
+    "Gemini: a week of",
+    "on-brand posts",
+    "in one sitting."
+   ],
+   "subtitle": "Black Friday is Friday. Prompts included.",
+   "icon": "calendar",
+   "highlight": "The prompt is on slide 4"
+  },
+  {
+   "type": "item",
+   "label": "Why bother",
+   "detail": "76% of UK small business owners and tradespeople make or edit social posts every week, and 54% spend one to three hours on it (Markel Direct, 501 owners).",
+   "start": "Black Friday week is when that time is scarcest.",
+   "icon": "data"
+  },
+  {
+   "type": "item",
+   "label": "Step 1: Open the business page",
+   "detail": "Google is rolling out a business page inside the Gemini app, with brand, finances and customer insights in one place. Update the app and look for it in the menu.",
+   "start": "Not there yet? Every prompt here still works in a normal chat.",
+   "icon": "task"
+  },
+  {
+   "type": "item",
+   "label": "Step 2: Save your brand style once",
+   "detail": "Upload your logo, colours and fonts, or a clean brand sheet. A website alone can pull in old banners and colours. Gemini keeps the style for later images.",
+   "start": "Name the style after your business so it is easy to call up.",
+   "icon": "repeat"
+  },
+  {
+   "type": "item",
+   "label": "Step 3: Plan the week",
+   "detail": "Paste this, with your details filled in:",
+   "start": "Edit the plan before you make a single image.",
+   "icon": "quote",
+   "feature": true,
+   "quote": "Plan 5 posts for [business] for Black Friday week, Monday to Friday. Our offer: [offer, price, dates]. For each: a hook line, a caption under 60 words, one image idea in our brand style. No prices I have not given you. Ask me anything you are unsure of first.",
+   "start_label": "Then"
+  },
+  {
+   "type": "item",
+   "label": "Step 4: Make the images",
+   "detail": "Paste: Make the image for post 1 in our saved brand style, square, with clear space at the top for text. Then post 2, and so on.",
+   "start": "Put prices and dates in as real text afterwards, not in the picture.",
+   "icon": "followup"
+  },
+  {
+   "type": "item",
+   "label": "Step 5: Schedule it all",
+   "detail": "Load the five posts into your scheduler, or Meta Business Suite for Facebook and Instagram, in one go. Add the offer to your Google Business Profile as well.",
+   "start": "Then the week runs itself while you serve customers.",
+   "icon": "calendar"
+  },
+  {
+   "type": "item",
+   "label": "What it could give back",
+   "detail": "If posting eats two hours across a normal week and one 30 minute sitting covers it, that is about an hour and a half back each week, roughly 70 hours a year. Illustrative, so time your own.",
+   "start": "The bigger win: posts that all look like you.",
+   "icon": "cost"
+  },
+  {
+   "type": "item",
+   "label": "One thing to watch",
+   "detail": "AI images can mangle small text and logos, and captions can invent details. Check every price against your till before anything goes out. Free accounts may get a different image model.",
+   "start": "Gemini drafts, you decide.",
+   "icon": "alert"
+  },
+  {
+   "type": "end",
+   "title": [
+    "Save the style.",
+    "Plan the week.",
+    "Post on time."
+   ],
+   "body": "Want help setting AI up for your business? We offer a free 30 minute AI audit. Details in the first comment.",
+   "cta": "How long does a week of posts take you right now?",
+   "icon": "target"
+  }
+ ]
+}
