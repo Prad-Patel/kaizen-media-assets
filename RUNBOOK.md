@@ -70,6 +70,37 @@ already use), "how I used AI to save" stories, and how-to tips with a measurable
 result. If nothing new has launched, a proven trick with a strong payoff beats a
 fresh statistic every time.
 
+## Topic queue: three payoff topics (approved by Prad, 2026-11-24)
+
+Prad approved these three topics under the READ FIRST rule and asked for them to
+run over the next few days, in this order, on the non-carousel days. They do not
+replace the Monday and Wednesday how-to carousels or the Friday case study (27 Nov
+is the Self Assessment reminder tool). Planned slots: Tue 24 Nov (if built that
+day; otherwise it moves to the next free slot), Thu 26 Nov, Sat 28 Nov, then Sun
+29 Nov as spare. Take the first one not yet logged as published in the Run log.
+Re-verify every fact on the day.
+
+1. **"ChatGPT now does your bookkeeping: receipts in, Xero and QuickBooks entries
+   out."** ChatGPT for Accounting, launched 18 Nov 2026 (secondary sources: ANI,
+   Business Upturn, i-scoop): drafts ledger entries from receipts and invoices,
+   suggests categories, flags unclear items, partner plugins incl. QuickBooks,
+   Xero, NetSuite, BILL, FreshBooks, a person confirms any write. Reports say it
+   may be US-only and on Business/Work plans: confirm UK availability and plans
+   first and say plainly in the hook or first line if it is not in the UK yet.
+   Payoff: our own labelled worked example of bookkeeping hours saved a month.
+   Service `/automate/`.
+2. **"Build a website from one sentence and skip the £X agency bill."** Bluehost
+   and Cloudways AI website builders (November 2026): text prompt to a WordPress /
+   WooCommerce site. Payoff: published UK agency price ranges against the tool's
+   own price. Verify both launches and prices on the day; name the tools first.
+   Service `/build/`.
+3. **"Cut a 1-hour quote to 5 minutes with one prompt."** Evergreen trick: a
+   copy-and-paste prompt (Claude or ChatGPT) that turns a customer enquiry into a
+   finished, itemised quote in the business's own format. Payoff: labelled worked
+   example (for example 5 quotes a week x 55 minutes saved). Not a retread of the
+   2026-10-29 late-payment or 2026-11-09 admin-prompts posts: this one is the
+   single quote job end to end. Service `/quote-calculators/`.
+
 ## Systems and identifiers
 
 **Topic queue** — Google Sheet "Kaizen AI Blog Automation", document
