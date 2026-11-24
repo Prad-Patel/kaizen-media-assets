@@ -75,11 +75,15 @@ fresh statistic every time.
 Prad approved these three topics under the READ FIRST rule and asked for them to
 run over the next few days, in this order, on the non-carousel days. They do not
 replace the Monday and Wednesday how-to carousels or the Friday case study (27 Nov
-is the Self Assessment reminder tool). Planned slots (updated 2026-11-24 after Prad
-added topics 4 and 5): Tue 24 Nov topic 1 (built that day), Thu 26 Nov topic 4
-(the Christmas price watch, moved ahead because it is worth most the day before
-Black Friday), Sat 28 Nov topic 2, Sun 29 Nov topic 3, then topic 5 on the next
-free non-carousel day. Take the first one not yet logged as published in the Run log.
+is the Self Assessment reminder tool). Planned slots (updated again 2026-11-24 by Prad): Tue 24 Nov topic 4 (Christmas
+price watch, built that day with Grok as the example, to give maximum notice
+before Black Friday; Prad wants it sponsored as a paid boost, confirm budget,
+platforms, audience and duration with him before spending anything). Thu 26 Nov
+topic 1 (ChatGPT receipts to Xero: already built on 24 Nov, reuse the assets
+`drafts/2026-11-24-chatgpt-receipts-to-xero*`, `image/2026-11-24-chatgpt-receipts-to-xero-*`,
+`video/2026-11-24-chatgpt-receipts-to-xero.mp4`; re-check UK availability and
+present for approval again). Sat 28 Nov topic 2, Sun 29 Nov topic 3, then topic 5
+on the next free non-carousel day once Prad has pasted his book outputs.
 Re-verify every fact on the day.
 
 1. **"ChatGPT now does your bookkeeping: receipts in, Xero and QuickBooks entries
@@ -117,19 +121,21 @@ Re-verify every fact on the day.
    real current UK price range only if sourced. Service `/automate/`.
 5. **"I made my kids a custom picture book with AI: the storyboard trick that
    keeps every page consistent."** Prad's own build, first person allowed because
-   he supplied it (2026-11-24): (a) write the story script with Claude; (b) once
-   the script is agreed, have Claude write the illustration descriptions and the
-   style (Prad uses a 3D Pixar-style look; say "3D animated style", not
-   "Pixar", in copy and prompts); (c) **the trick:** generate the whole
-   storyboard, every page as tiles, in ONE image with a high-resolution image
-   model (latest Nano Banana or GPT image model) so the characters stay
-   consistent across pages; (d) upscale that image; (e) have AI cut it into
-   tiles and lay each tile out as a page. Ask Prad at draft time for: whether
-   any of his real book pages can be shown (no children's faces or names
-   without his explicit yes), how long it took, the tools and models he used,
-   and how he printed it. If no real pages, build a demo book with an invented
-   character. Payoff angle: a personalised book for the cost of the tools
-   against a bespoke illustrated book. Service `/build/`.
+   he supplied it (2026-11-24): (a) write the story script with Claude, talking
+   through ideas until the story works; (b) once the script is agreed, have Claude
+   write the illustration descriptions and the style (Prad uses a 3D animated
+   look; say "3D animated style", never "Pixar", in copy and prompts); (c) **the
+   trick:** generate the whole storyboard, every page as tiles, in ONE image with
+   a high-resolution image model (Nano Banana) so the characters stay consistent
+   across pages; (d) upscale that image with any AI upscaler (Prad does not
+   remember which one he used, so name it generically); (e) have AI cut it into
+   tiles and lay each tile out as a page; (f) print it (Prad said he used
+   "Maxim"; confirm the exact company name with him, it may be Mixam, before
+   naming it). Answers from Prad, 2026-11-24: the real book CAN be shown; he will
+   paste the outputs closer to the time (wait for them, do not build a demo
+   book); it took about 2 hours. Still ask before showing any child's face or
+   name. Payoff angle: a personalised, printed picture book in about 2 hours
+   for the cost of the tools and printing. Service `/build/`.
 
 ## Systems and identifiers
 
