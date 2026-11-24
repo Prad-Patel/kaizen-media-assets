@@ -25,6 +25,51 @@ One topic from the queue becomes six pieces of output:
 Prad approves the drafts before anything goes live. Nothing publishes
 unattended.
 
+## READ FIRST: topic and hook rule (set by Prad, 2026-11-24, overrides everything below)
+
+Prad rejected the 2026-11-24 draft ("AI use doubled, savings didn't", built on the
+government AI adoption survey) and said this kind of post does not work. This rule
+overrides every older topic, hook, calendar and series instruction in this file,
+including the 2026-11-03 fear-hook series (retired), the 2026-09-26 number-first
+rule and the trending-topic default in step 2.
+
+**Never again:** adoption and usage statistics ("X% of UK firms now use AI"),
+surveys about attitudes or confidence, market or industry reports, legislation,
+compliance, deadlines, regulation and legal notices. Prad's words: "this whole kind
+of AI has this many adopters and UK usage and stuff like that... it's not engaging
+and people aren't really interested in it." A statistic can appear inside a post
+as support, never as the post itself.
+
+**Every post must give the viewer something to use**, one of:
+- a tip or trick they can try today (a prompt, a setting, a shortcut, a workflow);
+- a tool or feature that has just come out and what it lets them do ("this new
+  tool does X so you can stop doing Y");
+- a concrete build or use case: what someone did with AI and what it got them.
+
+**The headline is the payoff, and it has to grab.** Lead with the money saved, the
+time saved or the output multiplied: "save £X", "people are saving N hours a
+week", "how one shop cut £X off its bill", "10x your output on Y". The blog title,
+both covers, the video hook and the first line of every caption all carry that
+payoff. Name the tool when there is one (2026-10-26 rule still applies: tool
+first, then the payoff).
+
+**Before building, run the scroll test on the headline:** would a busy owner stop
+scrolling because it promises them money, time or output, and can the post
+deliver it in the next 30 seconds? If the honest answer is "it tells them a fact
+about other businesses", pick another topic.
+
+**Accuracy still holds.** The savings figure must be real: from a named source
+(a vendor's published case, a news report of a real business, a documented test),
+or our own worked example clearly labelled as illustrative ("on these numbers,
+that's about £X a year"). Never invent a person, business or result, and no
+income or earnings promises. Bold is fine; made up is not.
+
+**Where to look each morning:** new tool and feature launches from the last few
+days (Claude, ChatGPT, Gemini, Copilot, Canva, n8n, Zapier and the apps owners
+already use), "how I used AI to save" stories, and how-to tips with a measurable
+result. If nothing new has launched, a proven trick with a strong payoff beats a
+fresh statistic every time.
+
 ## Systems and identifiers
 
 **Topic queue** — Google Sheet "Kaizen AI Blog Automation", document
@@ -368,7 +413,7 @@ those captions should point at the bio.
    gone live, clear that first. Rebuild and present it for approval in the
    current session before drafting anything new. The approval recorded in that
    file is a historical record, not live consent.
-2. **From 2026-09-11 the day's trending topic leads by default** (see the
+2. **Superseded in part by the READ FIRST rule at the top (2026-11-24): the topic must be a tip, a new tool or a use case with a money, time or output payoff; never an adoption statistic, survey or legislation story.** **From 2026-09-11 the day's trending topic leads by default** (see the
    2026-09-11 content direction section): research what is trending and build
    from it, rather than treating this as a tiebreak against a queue row. The
    rest of this step still governs how a candidate is sense-checked and how a
@@ -3008,6 +3053,8 @@ hands it over.
 
 ## Fear-hook series (set by Prad, 2026-11-03)
 
+**Retired 2026-11-24** by the READ FIRST topic and hook rule at the top of this file. Do not continue this list.
+
 The next 10 non-carousel posts use fear-of-missing-out hooks (deadline, "if you do not do this you miss out", professional-tool angles; LinkedIn-friendly). Prad will compare their traction against earlier posts, so log each post's Zernio ids and later pull analytics against the prior ten. Topic list: 1 Making Tax Digital from April 2027 (drafted 2026-11-03), 2 seven things to do before starting a business, 3 AI search visibility for local firms, 4 first-to-reply and missed enquiries (new angle, missed calls covered 29 Oct), 5 AI tools professionals already use, 6 the weekly email time cost (our own illustration, labelled), 7 three things AI cannot do for you (confidentiality, GDPR), 8 staff pasting client data into AI (cyber survey figure), 9 late-payment cost. Every figure must be sourced and exactly worded.
 
 **Character animation (Prad, 2026-11-03):** videos should feel like conventional character animation, not flat pictures sliding about. Use an original Kaizen robot mascot (navy body, electric blue panels, teal antenna bulb; do not copy Anthropic's Clawd) generated as the 9:16 base, then animate it with kling3_0_turbo, prompting acting and squash and stretch. First used 2026-11-03.
@@ -3081,3 +3128,4 @@ Analysis on 2026-11-06 (97 LinkedIn posts via `analytics_get_analytics`): person
 - 2026-11-21 — ninety-first run (Saturday), verify only, per the Saturday note: no new topic, no Gemini or Higgsfield credits spent, no n8n publisher run. No `PENDING-PUBLISH.md`. Push dry-run first failed only on a stale local `main` (not auth), clean after fast-forward. The Hampden Road sales site video (`video/2026-11-21-hampden-road-sales-site-r2.mp4`) fired at 08:30 UTC and all three posts confirmed published by 08:34: X `6b00558d157f1a179e8bfc27` https://twitter.com/i/web/status/2124058451902877820, Instagram `6b005587e4bc053f06860d29` https://www.instagram.com/reel/Df_z0isAqiK/, TikTok `6b00558b606b78c1b502b83c` https://www.tiktok.com/@kaizenaiconsulting/video/7710540109765938454. Instagram and TikTok showed `processing` at 08:33 and `published` by the 08:38 check. No Sheet row.
 - 2026-11-21 (midday, same session) — Prad asked for the Hampden Road video on his personal LinkedIn with music and a stronger CTA, approved in session. Built `video/2026-11-21-hampden-road-linkedin-music-r1.mp4` (47.2s, 11.6 MB): original cut to 39.17s, new 8s navy CTA card rendered with Playwright ("Looking to sell land? Let's talk.", "Get in touch to find out more", "Book a call: link in the comments" pill), new Archer CTA line via n8n 55693 (atempo 1.15, +4 dB to match), in-house `musicgen_daily.py` 124 BPM bed (needed `python3 -m pip install numpy`) at -13 dB with sidechain ducking under the voice, loudnorm -14 (measured -15.8 LUFS integrated, -1.4 dBTP). jsDelivr returned 403 for about 90s after the push, then validate_media passed at the full byte count. LinkedIn personal `6b018e3898b22844eee975bd` https://www.linkedin.com/feed/update/urn:li:ugcPost:7529883280314302465/ (969 chars, no links or hashtags, firstComment with the public artifact link and Calendly), Kaizen page reshare `6b018e4f98b22844eee97656` (urn:li:ugcPost:7529883313075888128), both published. Saturday LinkedIn post by Prad's explicit request, not a change to the day rule. Prad liked music on this one; consider `MUSIC=1` beds again if he asks.
 - 2026-11-23 — ninety-second run (Monday, how-to day, LinkedIn day), dynamic how-to: "Gemini: Make a Week of On-Brand Black Friday Posts in One Sitting" (slug `gemini-black-friday-posts`, service `/grow/`). Google's Gemini small-business tools (business page, saved brand style, connected apps incl. Business Profile, Canva, Shopify, Wix, Xero; announced 20 Oct 2026, gradual global rollout) via search summaries, blog.google and support.google.com both unreachable in-session (ENOTFOUND), so menu names rest on coverage and early guides; the post says labels may differ. Stat: Markel Direct, 501 UK small business owners and tradespeople, 76% create or edit social content weekly, 54% spend 1 to 3 hours (Markel UK page and HJI reprint). 70 hours a year is our own illustrative arithmetic (1.5 h x 48 weeks). Hook type: plain-English outcome (how-to), tool named first, Black Friday as the reason for now. No `PENDING-PUBLISH.md`, no Pending Sheet rows; push dry-run first failed only on a stale local `main`. Flagged: the 2026-11-22 Black Friday AI-shoppers draft (`drafts/2026-11-22-black-friday-ai-*`, `video/2026-11-22-black-friday-ai-hyperframes.mp4`) was built but never approved or published; Prad has not decided on it. Carousel PDF 10 pages and 64.8s carousel video; Gemini stills clean first time (executions 55713/55714), 3:2 art shrunk 72% to the bottom-right so the right-aligned headline cleared the post tiles. No Higgsfield credits, no voiceover. All four asset URLs validated straight after the push (no jsDelivr 403 this time). Approved in-session ("Proceed"; first-comment and reshare questions unanswered, so the runbook default firstComment was used, reach-test fortnight being over, and no Kaizen reshare). WPvibe not available, n8n used: execution 55715, blog https://kaizenaiconsulting.com/gemini-black-friday-posts/ (URL from the GBP call to action), Google Business post PROCESSING. LinkedIn personal carousel `6b03f698b9c62f66b642a51a` (urn:li:ugcPost:7530545274293907456, documentTitle and firstComment set, posted 08:18 UTC); X `6b03f696d6fce2b205efbde5` (https://twitter.com/i/web/status/2124779347433119916); Instagram reel `6b03f67dc8b04d8169df3861` (https://www.instagram.com/reel/DgE7ssplTIM/); TikTok `6b03f680b9c62f66b642a472` (https://www.tiktok.com/@kaizenaiconsulting/video/7711278149291609366), 4:5 cover on both; all confirmed published with posts_get_post. No 409s. No Sheet row (dynamic topic).
+- 2026-11-24 — ninety-third run (Tuesday, no LinkedIn), dynamic topic "AI Use Has Doubled in UK Firms. Only 1 in 4 Saw Their Costs Fall" (DSIT AI adoption survey 2026, exec summary read in full via n8n fetch 55725). Built and pushed (commit c70f52d): blog, captions, Gemini stills (n8n 55726 to 55728), covers, HyperFrames video `hyperframes/ai-use-doubled/` (36.2s, Archer n8n 55729 to 55733, -15.1 LUFS), all URLs validated. **Rejected by Prad, not published**: adoption-statistics posts do not engage. New READ FIRST topic and hook rule added at the top of this file (tips, new tools and use cases with a money, time or output payoff in the headline; no adoption stats, surveys or legislation). Fear-hook series retired.
