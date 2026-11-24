@@ -75,9 +75,11 @@ fresh statistic every time.
 Prad approved these three topics under the READ FIRST rule and asked for them to
 run over the next few days, in this order, on the non-carousel days. They do not
 replace the Monday and Wednesday how-to carousels or the Friday case study (27 Nov
-is the Self Assessment reminder tool). Planned slots: Tue 24 Nov (if built that
-day; otherwise it moves to the next free slot), Thu 26 Nov, Sat 28 Nov, then Sun
-29 Nov as spare. Take the first one not yet logged as published in the Run log.
+is the Self Assessment reminder tool). Planned slots (updated 2026-11-24 after Prad
+added topics 4 and 5): Tue 24 Nov topic 1 (built that day), Thu 26 Nov topic 4
+(the Christmas price watch, moved ahead because it is worth most the day before
+Black Friday), Sat 28 Nov topic 2, Sun 29 Nov topic 3, then topic 5 on the next
+free non-carousel day. Take the first one not yet logged as published in the Run log.
 Re-verify every fact on the day.
 
 1. **"ChatGPT now does your bookkeeping: receipts in, Xero and QuickBooks entries
@@ -100,6 +102,34 @@ Re-verify every fact on the day.
    example (for example 5 quotes a week x 55 minutes saved). Not a retread of the
    2026-10-29 late-payment or 2026-11-09 admin-prompts posts: this one is the
    single quote job end to end. Service `/quote-calculators/`.
+
+4. **"Set an AI to watch a Christmas present's price and ping you when it drops."**
+   Prad's idea, 2026-11-24. Use an AI assistant with scheduled tasks or proactive
+   updates to set a recurring lookout on a gift (example: a Nintendo Switch for a
+   child; made-up example, say so): it checks the current price, notes past
+   prices, and notifies you on Black Friday or in any sale when it drops. Set it
+   up for a few items at once. Payoff: money saved on Christmas presents,
+   automatically. Prad suggested Meta's Muse for variety, or ChatGPT ("ChatGPT
+   dots", likely ChatGPT Pulse or Tasks: check the real product name). On the
+   day verify which assistants can actually run a recurring web price check and
+   notify you, and whether each works in the UK (Meta Muse for Small Business
+   was US and Canada only on 2026-10-06). Show the exact prompt to paste. Use a
+   real current UK price range only if sourced. Service `/automate/`.
+5. **"I made my kids a custom picture book with AI: the storyboard trick that
+   keeps every page consistent."** Prad's own build, first person allowed because
+   he supplied it (2026-11-24): (a) write the story script with Claude; (b) once
+   the script is agreed, have Claude write the illustration descriptions and the
+   style (Prad uses a 3D Pixar-style look; say "3D animated style", not
+   "Pixar", in copy and prompts); (c) **the trick:** generate the whole
+   storyboard, every page as tiles, in ONE image with a high-resolution image
+   model (latest Nano Banana or GPT image model) so the characters stay
+   consistent across pages; (d) upscale that image; (e) have AI cut it into
+   tiles and lay each tile out as a page. Ask Prad at draft time for: whether
+   any of his real book pages can be shown (no children's faces or names
+   without his explicit yes), how long it took, the tools and models he used,
+   and how he printed it. If no real pages, build a demo book with an invented
+   character. Payoff angle: a personalised book for the cost of the tools
+   against a bespoke illustrated book. Service `/build/`.
 
 ## Systems and identifiers
 
