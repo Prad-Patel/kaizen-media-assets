@@ -70,6 +70,13 @@ already use), "how I used AI to save" stories, and how-to tips with a measurable
 result. If nothing new has launched, a proven trick with a strong payoff beats a
 fresh statistic every time.
 
+## Prompts: simple on the slide, detailed in the blog (set by Prad, 2026-11-25, all posts going forward)
+
+Prad judged the 2026-11-25 slide prompt too vague and against how he teaches clients to prompt. From now on, on every post that carries a prompt:
+
+- **Slide, video and captions carry the simple prompt only**: two or three short sentences a reader can paste as is, then the line "The detailed prompt is on our blog." Keep that line platform-neutral, because the same slides go into the Instagram and TikTok video (link in bio) as well as the LinkedIn PDF (link in the first comment). Cover highlights and captions say "simple prompt on slide N, detailed prompt on the blog".
+- **The blog carries both**: the simple version first, then a detailed, client-grade prompt written the way Prad teaches prompting: role and goal, the reader's own context and data as labelled blocks to fill in, hard rules kept separate from preferences, the exact output layout, and an "ask me up to five questions before you start, do not guess" step, followed by a short paragraph on why it is built that way. The detailed prompt does not count towards the 900 to 1,400 word limit.
+
 ## Topic queue: three payoff topics (approved by Prad, 2026-11-24)
 
 Prad approved these three topics under the READ FIRST rule and asked for them to

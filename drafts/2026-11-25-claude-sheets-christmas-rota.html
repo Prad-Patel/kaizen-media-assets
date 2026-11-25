@@ -29,13 +29,27 @@
 </ul>
 <p>If you already have last year's rota or a staff list in Excel, import it. Claude builds better from your real data than from a blank page.</p>
 
-<h2>Step 2: Paste one prompt</h2>
+<h2>Step 2: Paste the prompt</h2>
 
-<p>Open Claude, start a sheet, and paste this with your details filled in:</p>
+<p>There are two versions. The simple one on our social posts will get you a working rota:</p>
 
-<blockquote><p>Build a staff rota for [business] from Monday 21 December to Sunday 3 January. Staff, contracted hours and days they never work: [list]. Holiday requests: [list]. Opening hours: [each day]. We are closed on [dates]. Each shift needs at least [number] people, and at least one of [names] on every shift. Make three tabs: Rota (days across, staff down, shift times in each cell), Hours (each person's total per week against their contracted hours, using formulas) and Gaps (any shift that is short, and any holiday request you could not give). Spread the late and weekend shifts fairly. Ask me anything you are unsure of before you build it.</p></blockquote>
+<blockquote><p>Build a Christmas staff rota for my [type of business] from 21 December to 3 January, with tabs for Rota, Hours and Gaps. Here are my staff, their hours, their requests and our opening times: [paste]. Ask me questions before you build it.</p></blockquote>
 
-<p>The last line matters. A good assistant will come back with a question or two ("Does Priya count as a keyholder?") rather than guess, and that is cheaper to answer now than to untangle later.</p>
+<p>The detailed one below is what we would actually give a client. It takes two more minutes to fill in and saves far more than that in corrections, because it tells Claude who it is working for, what the hard rules are, what "good" looks like and exactly how to lay out each tab. Open Claude, start a sheet (Artifacts tab, then the Sheets tile, or just ask in a chat), and paste this with the square brackets filled in:</p>
+
+<blockquote>
+<p><strong>Role and goal</strong><br>You are helping me, the owner of [business name], a [type of business, for example independent café with 8 staff], build the staff rota for Monday 21 December to Sunday 3 January. The goal is a rota I can send to the team today that covers every shift, keeps everyone within their contracted hours and shares the unpopular shifts fairly.</p>
+<p><strong>Staff</strong> (one line each: name, role, contracted hours a week, days they never work, any skills such as keyholder, first aider or trained on the till)<br>[paste your list]</p>
+<p><strong>Requests already agreed</strong> (name, dates, whole or part day)<br>[paste your list]</p>
+<p><strong>Opening hours</strong> (each day in the period, including late nights and early closes)<br>[paste your list]<br>We are closed on: [for example 25 December, 26 December, 1 January].</p>
+<p><strong>Cover needed</strong><br>Shifts are [for example 8:00 to 14:00 and 14:00 to 20:00]. Each shift needs at least [number] people, and our busiest days, [days], need [number]. Every shift must have at least one of: [keyholders or trained staff].</p>
+<p><strong>Hard rules, never break these</strong><br>1. Nobody works on a day they never work or on an agreed request.<br>2. Nobody goes over their contracted hours unless I have said they want overtime: [names, or "nobody"].<br>3. Nobody works a close followed by an open the next morning.<br>4. Under-18s ([names, or "none"]) finish by [time].</p>
+<p><strong>Preferences, follow where you can</strong><br>Spread late, weekend and Christmas Eve and New Year's Eve shifts evenly. Keep each person's days off together where possible. Put [name] and [name] on different shifts.</p>
+<p><strong>How to lay out the sheet</strong><br>Tab 1, Rota: dates across the top, staff down the side, shift times in each cell, closed days greyed out.<br>Tab 2, Hours: for each person, hours per week and in total, worked out by formula from the Rota tab, next to their contracted hours, with anyone over or more than 4 hours under highlighted.<br>Tab 3, Gaps: every shift below the cover needed, every shift without a keyholder, and every request you could not meet, each with the reason.<br>Tab 4, Notes: any assumption you made.</p>
+<p><strong>Before you build it</strong><br>Read everything above and ask me up to five questions about anything missing or contradictory. Do not guess. Once I have answered, build the sheet, then tell me in three lines how you shared out the unpopular shifts and anything you could not solve.</p>
+</blockquote>
+
+<p>Why it is built like that: the role and goal tell Claude what a good answer is for; the hard rules are separated from the preferences so it knows what it can bend; the layout section means you get the same tabs every time; and the "ask me first" step catches the gap you forgot before it turns into a wrong rota. Save your filled-in version, and next year it is a two-minute job.</p>
 
 <h2>Step 3: Let the Hours and Gaps tabs do the checking</h2>
 
