@@ -1,0 +1,71 @@
+<p>Claude Sheets can now build a working staff rota, with tabs, formulas and a running total of everyone's hours, from a single message. December is the month that job hurts most: extra opening hours, holiday requests, two bank holidays and somebody always off sick on the 23rd. Here is how we would set up a Christmas rota for a client this morning, with the prompt to copy and the follow-up questions that do the juggling for you.</p>
+
+<p>The time it eats is real. Legion's 2025 State of the UK Hourly Workforce report found that <a href="https://legion.co/2025-state-of-the-uk-hourly-workforce-report/" target="_blank" rel="noopener">65% of UK retail managers spend more than three hours a week on scheduling, and 42% still do it on paper or in Excel</a>, with nearly half ringing or texting staff to fill last-minute gaps. It is a vendor survey of retail managers, but anyone who has built a hospitality or salon rota in December will recognise the number. The work is not hard. It is fiddly: checking who asked for which day off, who is near their hours, and whether every shift has enough people on it.</p>
+
+<p>That fiddly checking is exactly what a spreadsheet with an assistant attached is good at.</p>
+
+<h2>What Claude Sheets is</h2>
+
+<p>On 10 November Anthropic put <a href="https://claude.com/resources/articles/sheets-whiteboards-data" target="_blank" rel="noopener">Claude Sheets into beta on its paid plans</a>, on web, desktop and mobile. You describe the sheet you want and Claude builds it: multiple tabs, formulas, styling and dropdowns. When it changes a cell it marks the change, so you can see what it touched. Anthropic's <a href="https://support.claude.com/en/articles/18324300" target="_blank" rel="noopener">help article</a> adds the practical details:</p>
+
+<ul>
+<li><strong>Plans:</strong> Pro, Max, Ultra, Team and Enterprise. It is on by default for Team; on Enterprise an admin has to switch it on.</li>
+<li><strong>Getting in:</strong> ask for a sheet in any chat, or go to the Artifacts tab and pick the Sheets tile.</li>
+<li><strong>Import and export:</strong> start from a CSV, an Excel file, a Google Sheet or a paste, and download as .xlsx or CSV when you are done.</li>
+<li><strong>Not yet:</strong> PDF export and multi-select dropdowns. Work in a sheet counts towards your plan's usage.</li>
+</ul>
+
+<p>On the free plan you can still paste the same prompt into a normal chat and ask for the rota as a table to paste into Excel. You lose the live sheet and the follow-up edits, but the thinking is the same.</p>
+
+<h2>Step 1: Gather what you already know</h2>
+
+<p>Five minutes with a notepad saves twenty minutes of back and forth. Write down:</p>
+<ul>
+<li>Everyone's name, their contracted hours a week and any days they never work.</li>
+<li>Holiday and day-off requests for the period.</li>
+<li>Your opening hours for each day, including late nights and early closes.</li>
+<li>How many people you need on each shift, and whether any shift needs a keyholder or a trained person.</li>
+<li>The days you are shut. In England and Wales this year, <a href="https://www.gov.uk/bank-holidays" target="_blank" rel="noopener">Christmas Day falls on Friday 25 December and the Boxing Day bank holiday moves to Monday 28 December</a>, because the 26th is a Saturday.</li>
+</ul>
+<p>If you already have last year's rota or a staff list in Excel, import it. Claude builds better from your real data than from a blank page.</p>
+
+<h2>Step 2: Paste one prompt</h2>
+
+<p>Open Claude, start a sheet, and paste this with your details filled in:</p>
+
+<blockquote><p>Build a staff rota for [business] from Monday 21 December to Sunday 3 January. Staff, contracted hours and days they never work: [list]. Holiday requests: [list]. Opening hours: [each day]. We are closed on [dates]. Each shift needs at least [number] people, and at least one of [names] on every shift. Make three tabs: Rota (days across, staff down, shift times in each cell), Hours (each person's total per week against their contracted hours, using formulas) and Gaps (any shift that is short, and any holiday request you could not give). Spread the late and weekend shifts fairly. Ask me anything you are unsure of before you build it.</p></blockquote>
+
+<p>The last line matters. A good assistant will come back with a question or two ("Does Priya count as a keyholder?") rather than guess, and that is cheaper to answer now than to untangle later.</p>
+
+<h2>Step 3: Let the Hours and Gaps tabs do the checking</h2>
+
+<p>This is where the time comes back. Instead of adding up hours with a pen, the Hours tab shows each person's total against their contract, worked out by formula, so it updates when the rota changes. The Gaps tab is your to-do list: short shifts and requests you could not meet. If both tabs are clear, the rota is done. If not, you fix the gaps rather than re-checking the whole grid.</p>
+
+<p>Check the formulas once, though. Click a total and make sure it is adding the right row. It is a beta, and a spreadsheet you have not checked is just a confident guess.</p>
+
+<h2>Step 4: Ask, do not rebuild</h2>
+
+<p>December rotas never survive the first week. When something changes, you ask in plain English and Claude edits the sheet, marking what it changed:</p>
+<ul>
+<li>"Sam is off sick on the 23rd. Who can cover without going over their contracted hours?"</li>
+<li>"Highlight anyone over their contracted hours in red."</li>
+<li>"Swap Jo and Alex on the 31st and show me what that does to the Hours tab."</li>
+<li>"We are now opening until 8pm on the 23rd. Add the extra shift and tell me who is short."</li>
+</ul>
+<p>Each of those used to be ten minutes of rubbing out, recounting and phoning round. Now it is a sentence and a check.</p>
+
+<h2>Step 5: Get it to your team</h2>
+
+<p>Sharing needs a little thought. Claude's share link only opens for people signed in to Claude, and view-only links do not suit a team that does not use it. The simple route is to download the rota as .xlsx or CSV and send it the way you always do, or use "Send to" to carry on in another app. If you print it, export to Excel first, because PDF export is not there yet.</p>
+
+<h2>What it could give back</h2>
+
+<p>On our own illustrative numbers: if your rota normally takes three hours a week to build and patch, and one prompt plus a few follow-ups gets it to half an hour, that is about two and a half hours back each week. Across the four busiest weeks of December that is around ten hours, in the month you have the least of them. Time yours this week and see.</p>
+
+<p>The bigger win is fewer mistakes. A rota where the totals are worked out by formula, and the gaps are listed for you, is less likely to leave you one person short on Christmas Eve.</p>
+
+<h2>One thing to watch</h2>
+
+<p>Claude builds the rota, you sign it off. Check every shift against the requests you agreed in person, and keep an eye on young staff and anyone with set hours in their contract, because the assistant only knows what you told it. It is a beta, so if a label in your app looks different from the one here, the steps are the same.</p>
+
+<p>If you would like help setting AI up for jobs like this across your business, we offer a free 30 minute AI audit.</p>

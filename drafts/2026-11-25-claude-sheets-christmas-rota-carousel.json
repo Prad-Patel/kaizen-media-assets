@@ -1,0 +1,87 @@
+{
+ "footer": "kaizenaiconsulting.com",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "Claude how-to",
+   "title": [
+    "Claude Sheets:",
+    "a Christmas rota",
+    "in one message."
+   ],
+   "subtitle": "Hours of juggling, down to one prompt and a check.",
+   "icon": "grid",
+   "highlight": "The prompt is on slide 4"
+  },
+  {
+   "type": "item",
+   "label": "Why bother",
+   "detail": "65% of UK retail managers spend more than three hours a week on scheduling, and 42% still do it on paper or in Excel (Legion, 2025 UK Hourly Workforce report).",
+   "start": "December is when those hours hurt most.",
+   "icon": "data"
+  },
+  {
+   "type": "item",
+   "label": "Step 1: Gather what you know",
+   "detail": "Names, contracted hours, days people never work, holiday requests, opening hours, staff needed per shift. Closed days too: Christmas Day is Fri 25 Dec, the Boxing Day bank holiday is Mon 28 Dec.",
+   "start": "Got last year's rota in Excel? Import it.",
+   "icon": "team"
+  },
+  {
+   "type": "item",
+   "label": "Step 2: Paste one prompt",
+   "detail": "In Claude, start a sheet (Artifacts tab, Sheets tile) and paste:",
+   "start": "Answer its questions before it builds.",
+   "icon": "quote",
+   "feature": true,
+   "quote": "Build a staff rota for [business], 21 Dec to 3 Jan. Staff, hours and days off: [list]. Holiday requests: [list]. Opening hours: [each day]. Closed: [dates]. Each shift needs [number] people. Tabs: Rota, Hours (totals vs contract, by formula), Gaps (short shifts, refused requests). Ask me anything unclear first.",
+   "start_label": "Then"
+  },
+  {
+   "type": "item",
+   "label": "Step 3: Let the tabs check it",
+   "detail": "Hours shows each person's total against their contract, by formula, so it updates as you edit. Gaps lists short shifts and requests it could not give. Both clear means the rota is done.",
+   "start": "Click one total and check the formula once.",
+   "icon": "task"
+  },
+  {
+   "type": "item",
+   "label": "Step 4: Ask, don't rebuild",
+   "detail": "\"Sam is off sick on the 23rd. Who can cover without going over their hours?\" Claude edits the sheet and marks every cell it changed.",
+   "start": "Also try: \"Highlight anyone over their contracted hours.\"",
+   "icon": "followup"
+  },
+  {
+   "type": "item",
+   "label": "Step 5: Send it to the team",
+   "detail": "Claude share links only open for people signed in to Claude, so download the rota as .xlsx or CSV and send it the way you always do. PDF export is not there yet.",
+   "start": "Printing? Export to Excel first.",
+   "icon": "calendar"
+  },
+  {
+   "type": "item",
+   "label": "What it could give back",
+   "detail": "If a rota takes three hours a week to build and patch, and a prompt plus follow-ups gets it to 30 minutes, that is about 2.5 hours a week, around 10 hours across December. Illustrative, so time yours.",
+   "start": "Plus fewer short-staffed shifts on Christmas Eve.",
+   "icon": "cost"
+  },
+  {
+   "type": "item",
+   "label": "One thing to watch",
+   "detail": "It only knows what you tell it. Check every shift against requests you agreed in person, and anyone with set hours in their contract. Sheets is a beta on paid plans (Pro and up).",
+   "start": "Claude builds it, you sign it off.",
+   "icon": "alert"
+  },
+  {
+   "type": "end",
+   "title": [
+    "Gather it.",
+    "Prompt it.",
+    "Check it."
+   ],
+   "body": "Want help setting AI up for jobs like this? We offer a free 30 minute AI audit. Details in the first comment.",
+   "cta": "How long does your Christmas rota take you?",
+   "icon": "target"
+  }
+ ]
+}
