@@ -1,0 +1,74 @@
+<p>ChatGPT can now do bookkeeping. On 18 November OpenAI launched ChatGPT for Accounting, which turns receipts and invoices into draft ledger entries for QuickBooks, Xero and other accounting apps. The catch for UK owners is that it is US-only for now. The good news is that you can get most of the benefit today with the ChatGPT you already have: a month of receipts turned into a spreadsheet ready for Xero in about 20 minutes, instead of an afternoon of typing. Here is what launched, and the UK version we would set up for a client this week.</p>
+
+<h2>What ChatGPT for Accounting does</h2>
+
+<p>According to launch coverage, ChatGPT for Accounting pairs a free Accounting plugin with eight partner connections, including Intuit QuickBooks, Xero, Oracle NetSuite, BILL and FreshBooks. It is aimed at the jobs that eat a bookkeeper's week: <a href="https://cryptobriefing.com/openai-chatgpt-for-accounting-plugin-launch/" target="_blank" rel="noopener">invoice processing, bank reconciliation, month-end reports, data entry and audit prep</a>.</p>
+
+<ul>
+<li><strong>Receipts in, entries out.</strong> You give it receipts and invoices, and it drafts the entries with a suggested account category for each one.</li>
+<li><strong>It flags what it is not sure of.</strong> Anything unclear, such as a blurry total or a supplier it cannot match, is marked for a person to check rather than guessed.</li>
+<li><strong>A person stays in charge.</strong> Some connections can write to your books, but changes need a person to confirm them first.</li>
+</ul>
+
+<p>Availability is the sticking point. Xero has said its connection is <a href="https://www.i-scoop.eu/chatgpt-for-accounting-europe/" target="_blank" rel="noopener">available in the United States only for now</a>, and reports point to ChatGPT's Business and Enterprise plans rather than personal ones. OpenAI has not said when it will reach the UK. If you run your books in Xero here, you cannot switch it on yet.</p>
+
+<p>One partner is the exception. FreshBooks says its plugin <a href="https://www.freshbooks.com/ai/chatgpt" target="_blank" rel="noopener">works in the United States, Canada and the United Kingdom</a>, but it is read-only: it can answer questions about your FreshBooks data, not post entries for you. So if you use FreshBooks you can try it now, and if you use Xero, the method below is how you get the time back today.</p>
+
+<h2>The UK version you can use today</h2>
+
+<p>The hard part of bookkeeping is not the software. It is reading each receipt, working out the supplier, date, amount, VAT and category, and typing it in. ChatGPT already does that reading well from a photo or a PDF. What the new launch adds is the direct connection to your books. You can do that last step yourself with a spreadsheet import, which Xero has supported for years.</p>
+
+<h3>Step 1: Gather a month of receipts in one place</h3>
+
+<p>Photograph paper receipts on your phone, one per photo, flat and in good light. Save emailed receipts and supplier invoices as PDFs. Put them all in one folder. If you have more than about 20, split them into batches, because large uploads can time out.</p>
+
+<h3>Step 2: Download two files from Xero</h3>
+
+<p>In Xero, go to Bills, open the menu next to New Bill and choose Import from CSV, then download the template. Also export your chart of accounts so you have your real account codes and tax rate names. These matter: Xero rejects any row whose account code or tax rate does not exactly match what is set up in your organisation. Menu names can vary slightly by Xero version, so look for "Import" under bills if the path differs.</p>
+
+<h3>Step 3: Paste one prompt into ChatGPT</h3>
+
+<p>Upload the receipts, the template and your chart of accounts to a new ChatGPT chat. If you want to start quickly, paste this simple version:</p>
+
+<blockquote><p>Read each receipt I have uploaded and fill one row per receipt in the Xero bill import template, using only the account codes and tax types in my chart of accounts. Mark any row you are not sure of with CHECK and a short reason. Give me the finished file as a CSV to download.</p></blockquote>
+
+<p>That works. For the version we would set up for a client, use the detailed prompt below. Fill in the parts in square brackets first.</p>
+
+<blockquote>
+<p><strong>Role and goal.</strong> You are an experienced UK bookkeeper. Your goal is to turn the receipts and invoices I have uploaded into a CSV I can import straight into Xero as draft bills, with anything uncertain clearly flagged for me to check.</p>
+<p><strong>My business.</strong> [What the business does, for example: a two-van plumbing firm in Leeds.] VAT status: [VAT registered on the standard scheme / flat rate scheme / not VAT registered]. Month covered: [for example, November 2026].</p>
+<p><strong>My files.</strong> Receipts and invoices: [number] uploaded as photos and PDFs. Xero bill import template: uploaded. Chart of accounts export: uploaded.</p>
+<p><strong>Suppliers I use often and how I code them.</strong> [For example: Screwfix and Toolstation to 310 Cost of Goods Sold; Shell and BP fuel to 449 Motor Vehicle Expenses; anything else, suggest.]</p>
+<p><strong>Hard rules.</strong> Use only AccountCode values and TaxType names that appear exactly in my chart of accounts. Never invent a total, date or invoice number; if you cannot read it, leave it blank and flag the row. One row per receipt. UnitAmount is the total before VAT and Quantity is 1. If there is no invoice number, use the date plus the supplier name.</p>
+<p><strong>Preferences.</strong> Keep descriptions under eight words. Use the supplier's trading name, not the company registration name. Where a receipt mixes items, use the category that covers most of the cost and say so in the check column.</p>
+<p><strong>Output.</strong> First, a CSV that matches the template's columns exactly, plus a final column called Check: blank if you are confident, or "CHECK" and a short reason if not. Second, a short table of the flagged rows with the receipt filename and what I need to look at. Third, a one-line total of all rows before and after VAT so I can compare it with my bank statement.</p>
+<p><strong>Before you start.</strong> Ask me up to five questions about anything you need to know to code these correctly. Do not guess. Wait for my answers, then do the work.</p>
+</blockquote>
+
+<p>Why it is built this way: the role and goal tell ChatGPT what good looks like, and the labelled blocks give it your context instead of leaving it to assume. Hard rules are kept apart from preferences so it knows which ones it must never break, such as inventing a total, and which ones it can bend. A fixed output layout means you get the same file every month, and the questions at the start catch the gaps, such as your VAT scheme, before they turn into wrong rows.</p>
+
+<h3>Step 4: Check the flagged rows</h3>
+
+<p>Open the spreadsheet and go straight to the rows marked CHECK. Look at those receipts yourself and correct them. Then skim the rest for anything odd, such as a category you would not use or a total that looks too high. This takes a few minutes and it is the step that keeps your books right.</p>
+
+<h3>Step 5: Import it</h3>
+
+<p>Back in Xero, use Import from CSV and upload the finished file. Xero creates draft bills, so nothing is final until you approve it. If you use a bookkeeper or accountant, send them the spreadsheet and the receipt folder instead. It saves them typing, which can save you money on their bill.</p>
+
+<h2>What it could save you</h2>
+
+<p>An illustration, on our own assumptions. Say you have 60 receipts a month and each takes about 3 minutes to read, categorise and type in. That is 3 hours a month, or 36 hours a year. With the prompt above, the same month becomes about 20 minutes of photographing, uploading and checking flagged rows, which gives you back roughly 2 hours 40 minutes a month, or about 32 hours a year. The more receipts you have, the bigger the gap.</p>
+
+<p>That matters because admin is where owners' time goes. In the American Express SME Business Barometer, owners of 1,000 UK small and medium businesses estimated they spend <a href="https://retailtimes.co.uk/amex-sme-barometer-small-business-owners-spend-nearly-twice-the-time-on-admin-than-growing-their-business/" target="_blank" rel="noopener">about 11 hours a week on admin and finance tasks</a>. Receipts are one of the easiest parts of that to hand over.</p>
+
+<h2>Three things to watch</h2>
+
+<ul>
+<li><strong>Your data.</strong> Receipts carry supplier names and sometimes card details. Use a ChatGPT Business plan, or switch off model training in your settings, before uploading financial documents.</li>
+<li><strong>VAT.</strong> ChatGPT reads what the receipt says. It does not know whether you can reclaim the VAT or whether a cost is allowable. If in doubt, mark it for your accountant.</li>
+<li><strong>Keep the originals.</strong> The spreadsheet is not your record. Keep the receipt photos and PDFs, which you are required to keep for HMRC.</li>
+</ul>
+
+<h2>When the full version reaches the UK</h2>
+
+<p>When ChatGPT for Accounting arrives here, the import step goes away: it will write draft entries straight into your books for you to approve. Setting up the habit now, with receipts in one folder each month, a clean chart of accounts and a quick check of anything flagged, means you will be ready to switch it on the day it lands.</p>
