@@ -1,0 +1,99 @@
+<p>About a million people missed the Self Assessment deadline in January 2026, by HMRC's own estimate, and every late return starts with an automatic £100 penalty. For an accounting firm, a lot of that risk sits in one place: clients who have not sent their paperwork. So we built one of our accounting clients a tool that chases it for them. We built it with Claude in about two hours.</p>
+
+<p>This is a case study, so here is the honest bit first. The tool is built and working, but the firm has not loaded any clients yet. There are no results to report, no hours saved and no client quotes. Everything you see in the video is made-up demo data, and the firm's name is blurred. What we can show you is exactly how it works, and what it could do for a practice like yours.</p>
+
+<h2>The problem: January is a chasing job</h2>
+
+<p>For the 2025/26 tax year, online returns are due by 11:59pm on <a href="https://www.gov.uk/self-assessment-tax-return-deadlines" target="_blank" rel="noopener">31 January 2027</a>. Miss it and HMRC charges a £100 penalty straight away, even if there is no tax to pay, and <a href="https://www.gov.uk/self-assessment-tax-returns/penalties" target="_blank" rel="noopener">further penalties build up</a> after three months, six months and twelve months.</p>
+
+<p>Most accountants are not short of skill in January. They are short of paperwork. The P60 has not arrived, the rental figures are in a shoebox, the pension statement is "somewhere in my emails". Someone in the office spends weeks writing polite, then less polite, emails to the same people. According to <a href="https://www.gov.uk/government/news/1148-million-beat-the-self-assessment-deadline" target="_blank" rel="noopener">HMRC's figures for last season</a>, 11.48 million returns came in by the deadline and an estimated one million people still missed it.</p>
+
+<p>Chasing is the kind of work that is easy to describe and tedious to do: who still owes us what, when did we last ask, and how firmly should we ask this time? That makes it a good job for a small, focused tool.</p>
+
+<h2>What we built</h2>
+
+<p>The tool is a single page, built as a Claude artifact, that the firm opens in the browser. It does five things.</p>
+
+<p><strong>One ledger of clients.</strong> Every Self Assessment client sits on one list. Four tiles across the top show the total, how many have sent their paperwork (with a progress bar), how many are still outstanding, and the days left to 31 January. Each client has a "still waiting for" list, for example P60 or rental statements, and that list is written into their emails, so the client sees exactly what is missing.</p>
+
+<p><strong>Clients straight from Excel.</strong> The firm can paste rows from Excel or Google Sheets: name, email, how often to remind them, the first reminder date, an optional "paperwork due by" date and the missing items. Only name and email are required.</p>
+
+<p><strong>Reminders that tighten on their own.</strong> Each client gets their own rhythm, from every three days to monthly. As the deadline gets closer the tool overrides that rhythm: from 31 days out nobody waits more than a week between reminders, and from 10 days out it is every two days. Weekends are skipped by default, with a catch-up on Monday, and there is an optional cap on how many reminders anyone gets.</p>
+
+<p><strong>Wording that changes with the deadline.</strong> There are three email versions. Standard is a friendly nudge. From 21 days out it switches to Urgent, which names the days left and the automatic £100 late filing penalty. After the deadline it switches to Overdue. The firm can rewrite all three, and the right one is picked automatically.</p>
+
+<p><strong>One button a day.</strong> A "Due today" tab shows who will be emailed, with a preview of each email. One press of "Send today's reminders" sends them through the firm's own mailbox (Gmail, Outlook or IMAP through Zernio, or a scheduled n8n run at about 9am), then records every email in a Sent log. There is an optional summary email after each run and an optional BCC for the firm's records.</p>
+
+<h2>The safety rails</h2>
+
+<p>A tool that emails clients needs guard rails, so we built them in from the start.</p>
+
+<ul>
+<li><strong>Test mode is on by default.</strong> While it is on, at most five sample emails go to a test address and nothing is recorded against any client. The firm sees exactly what clients would receive before a single one goes out.</li>
+<li><strong>No double sends.</strong> If two people press Send at once, only one run goes ahead, and each client is checked again just before their email is sent.</li>
+<li><strong>Received and Paused ticks.</strong> Tick Received and the chasing stops. Tick Paused for a client who has rung to say they are on holiday.</li>
+<li><strong>Open tracking is off unless the firm turns it on.</strong> It uses an invisible image, and under the UK's <a href="https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guide-to-pecr/cookies-and-similar-technologies/" target="_blank" rel="noopener">PECR rules on similar technologies</a> the firm needs clients' consent first, so the setting says so in plain English.</li>
+</ul>
+
+<h2>What it could do for a practice</h2>
+
+<p>We cannot give you this firm's numbers, because it has not gone live. So here is an illustrative example, our own arithmetic rather than a result. Say a practice has 150 Self Assessment clients and a third of them are slow with paperwork. If each of those 50 needs five chasers between December and January, and each chaser takes three minutes to look up, write and send, that is 750 minutes, or about 12.5 hours of someone's time in the busiest weeks of the year. With the tool, it is one button a morning and a glance at the list.</p>
+
+<p>The bigger win is consistency. Nobody gets forgotten because they fell off a spreadsheet, and nobody gets a stern email the day after they sent everything in.</p>
+
+<h2>Why it only took two hours</h2>
+
+<p>The tool does one job for one type of business, and that is why it was quick. We described the job to Claude in plain English: the deadline, the escalation rules, the three wordings, the safety rails. Then we tested it with fake clients until every state behaved: received, paused, due today, past their own due date. Claude handled the code. We handled the decisions about how an accountant actually works.</p>
+
+<p>If you want to try something similar yourself, here is a simple prompt to start with:</p>
+
+<blockquote><p>Build me a one-page tool to chase clients for their tax return paperwork before 31 January. I need a client list I can paste from Excel, reminders that get more frequent as the deadline gets closer, and a test mode so nothing goes to clients until I am ready.</p></blockquote>
+
+<p>And here is the detailed version, the way we would write it for a client build:</p>
+
+<pre>ROLE AND GOAL
+You are building a small internal web tool for a UK accounting practice.
+Goal: chase Self Assessment clients for missing paperwork before the HMRC
+online deadline, with as little staff time as possible.
+
+OUR CONTEXT (fill in)
+- Number of Self Assessment clients: [e.g. 150]
+- Where the client list lives now: [Excel / practice software export]
+- Mailbox we send from: [Gmail / Outlook / other]
+- Who presses Send each day: [name or role]
+- Our tone with clients: [e.g. friendly, first names]
+
+HARD RULES (must follow)
+- Deadline for 2025/26 returns: 31 January 2027.
+- Test mode on by default: emails go only to a test address, max 5 per run,
+  nothing recorded against clients.
+- Never email a client marked Received or Paused.
+- No tracking pixels unless I switch them on, with a consent warning.
+- Every email sent is logged with date, client, wording and result.
+
+PREFERENCES (nice to have)
+- Skip weekends and catch up on Monday.
+- Optional cap on reminders per client.
+- Optional BCC and a summary email after each run.
+
+ESCALATION
+- Each client has a frequency: every 3 days, weekly, fortnightly, monthly.
+- From [31] days out: at most 7 days between reminders.
+- From [10] days out: every [2] days.
+- Wording: Standard, then Urgent from [21] days out (mention the £100
+  late filing penalty), then Overdue after the deadline.
+
+OUTPUT LAYOUT
+- Summary tiles: clients, received, outstanding, days to deadline.
+- Tabs: Clients, Due today, Email wording, Settings, Sent log.
+- One "Send today's reminders" button with a confirm step.
+
+BEFORE YOU START
+Ask me up to five questions about anything above that is unclear.
+Do not guess.</pre>
+
+<p>Why it is built that way: the hard rules are kept apart from the preferences so the model never trades a safety rail for a nice-to-have, the context block makes it build for your practice rather than a generic one, and the questions at the end stop it filling gaps with assumptions that end up in a client's inbox.</p>
+
+<h2>Where this fits</h2>
+
+<p>Most of the admin that eats a practice's January is rules plus repetition. That is exactly where a small, purpose-built tool pays off, and it does not need to be a big software project. If you are still chasing clients by hand, book a free 30 minute call and we will tell you honestly whether a tool like this would earn its keep in your practice.</p>
