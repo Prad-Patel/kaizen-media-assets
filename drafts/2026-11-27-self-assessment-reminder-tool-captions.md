@@ -5,7 +5,7 @@ Slug: self-assessment-reminder-tool
 seoTitle: Self Assessment Paperwork Reminders Built With Claude
 seoDescription: About 1 million missed the 31 January deadline. See the reminder tool we built with Claude in 2 hours that chases clients for their tax paperwork.
 service: /automate/
-Assets: video/2026-11-27-self-assessment-reminder-tool-r2.mp4 (54.3s, Archer single take on eleven_v3, accountant hook, no test mode, demo data, firm and client names blurred; r1 superseded), image/2026-11-27-self-assessment-reminder-tool-3x2.jpg, image/2026-11-27-self-assessment-reminder-tool-4x5.jpg
+Assets: video/2026-11-27-self-assessment-reminder-tool-r3.mp4 (60.9s, Archer single take on eleven_v3 via n8n 55803, burned-in subtitles, automatic-plus-one-click framing, accountant hook, no test mode, demo data, names blurred; r1 and r2 superseded), image/2026-11-27-self-assessment-reminder-tool-3x2.jpg, image/2026-11-27-self-assessment-reminder-tool-4x5.jpg
 Sources: HMRC press release (11.48m filed, estimated 1m missed 31 Jan 2026), gov.uk deadlines (31 Jan 2027 for 2025/26), gov.uk penalties (£100), ICO PECR guidance.
 Firm not named anywhere (Prad, 2026-11-23). No results, usage or savings claims: not live with clients. 12.5 hours is our own labelled illustration.
 
@@ -18,7 +18,7 @@ January isn't short of skill. It's short of paperwork. The P60 that never arrive
 
 So we built an accounting firm a tool that does the chasing. With Claude, in about 2 hours.
 
-Every client on one list. Paste them in from Excel. Reminders get closer together as 31 January nears, and the wording moves from friendly to urgent to overdue on its own. One button each morning sends the day's emails and logs every one.
+Every client on one list. Paste them in from Excel. Reminders get closer together as 31 January nears, and the wording moves from friendly to urgent to overdue on its own. The reminders go out automatically, and if you want them out sooner, one click sends them. Every email is logged.
 
 To be straight: it isn't live with clients yet, so there are no results to share. The video uses demo data.
 
@@ -40,7 +40,7 @@ So we built an accounting firm a tool that chases client paperwork for them. Wit
 ✅ Every client on one list, pasted from Excel
 ✅ Reminders tighten as 31 January gets closer
 ✅ Wording goes friendly, then urgent, then overdue
-✅ One button a day, every email logged
+✅ Automatic, or one click to send sooner
 
 Demo data in the video: the tool is built but not live with clients yet. Think your business could do with something like this? Get in touch, link in bio.
 
