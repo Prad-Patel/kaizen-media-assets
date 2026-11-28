@@ -1,0 +1,26 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Kaizen Inter", sans-serif; color: var(--navy, #0A1628); }
+    #ch-big { position: absolute; left: 70px; top: 200px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 190px; line-height: 1; letter-spacing: -.04em; color: var(--blue, #2E7CF6); }
+    #ch-sub { position: absolute; left: 80px; right: 150px; top: 410px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 56px; line-height: 1.1; }
+    #ch-src { position: absolute; left: 80px; top: 560px; font-size: 30px; color: #3B4A63; }
+    .ck-row { position: absolute; left: 80px; width: 840px; display: flex; gap: 28px; align-items: flex-start; background: #fff; border-radius: 26px; padding: 28px 32px; box-shadow: 0 10px 28px rgba(10,22,40,.08); }
+    .ck-num { flex: 0 0 70px; height: 70px; border-radius: 50%; background: var(--teal, #34D3A6); color: var(--navy, #0A1628); font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 40px; display: flex; align-items: center; justify-content: center; }
+    .ck-h { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 46px; line-height: 1.1; }
+    .ck-d { margin-top: 8px; font-size: 32px; line-height: 1.3; color: #3B4A63; }
+  </style>
+  <div id="root" data-composition-id="check" data-width="1080" data-height="1920">
+    <div id="ch-big">~4 min</div>
+    <div id="ch-sub">to build a site, on average.</div>
+    <div id="ch-src">Cloudways, public preview figure</div>
+    <div class="ck-row" id="ch-r4" style="top: 700px"><div class="ck-num">4</div><div><div class="ck-h">Your photos. Your words.</div><div class="ck-d">Swap the stock images, check every line, then go live.</div></div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#ch-big", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 0.1);
+    tl.fromTo(["#ch-sub", "#ch-src"], { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.2 }, 0.3);
+    tl.fromTo("#ch-r4", { opacity: 0, x: 90 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, 2.8);
+    tl.to(["#ch-big", "#ch-sub", "#ch-src", "#ch-r4"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 6.85);
+    window.__timelines["check"] = tl;
+  </script>
+</template>

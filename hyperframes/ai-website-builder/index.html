@@ -1,0 +1,52 @@
+<!doctype html>
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"navy","type":"color","label":"Navy","default":"#0A1628"},
+    {"id":"blue","type":"color","label":"Electric blue","default":"#2E7CF6"},
+    {"id":"teal","type":"color","label":"Teal","default":"#34D3A6"},
+    {"id":"red","type":"color","label":"Alert red","default":"#FF5A5F"},
+    {"id":"paper","type":"color","label":"Paper","default":"#EAF0F9"}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Space Grotesk"; font-weight: 700; src: url("assets/fonts/space-grotesk-latin-700-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Space Grotesk"; font-weight: 500; src: url("assets/fonts/space-grotesk-latin-500-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Kaizen Inter"; font-weight: 400; src: url("assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Kaizen Inter"; font-weight: 600; src: url("assets/fonts/inter-latin-600-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Kaizen Inter"; font-weight: 800; src: url("assets/fonts/inter-latin-800-normal.woff2") format("woff2"); }
+      :root {
+        --navy: #0A1628;
+        --blue: #2E7CF6;
+        --teal: #34D3A6;
+        --red: #FF5A5F;
+        --paper: #EAF0F9;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: var(--paper); }
+      #root { position: relative; width: 100%; height: 100%; }
+      #bg { position: absolute; inset: 0; background: var(--paper); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="44.0" data-width="1080" data-height="1920">
+      <div id="bg"></div>
+      <div id="hook" data-composition-id="hook" data-composition-src="compositions/hook.html" data-start="0" data-duration="10.4" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      <div id="steps" data-composition-id="steps" data-composition-src="compositions/steps.html" data-start="10.4" data-duration="13.9" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      <div id="check" data-composition-id="check" data-composition-src="compositions/check.html" data-start="24.3" data-duration="7.1" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      <div id="stat" data-composition-id="stat" data-composition-src="compositions/stat.html" data-start="31.4" data-duration="9.2" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      <div id="outro" data-composition-id="outro" data-composition-src="compositions/outro.html" data-start="40.6" data-duration="3.4" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      <div id="subs" data-composition-id="subs" data-composition-src="compositions/subs.html" data-start="0" data-duration="44.0" data-track-index="3" data-track-kind="graphics" data-width="1080" data-height="1920"></div>
+      <!-- Narration: ElevenLabs "Archer", eleven_v3 single take, trimmed and sped up 1.2x -->
+      <audio id="vo" class="clip" src="assets/voice/vo.mp3" data-duration="42.24" data-start="0.2" data-track-index="2" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

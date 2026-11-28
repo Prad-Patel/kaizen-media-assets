@@ -1,0 +1,29 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Kaizen Inter", sans-serif; color: var(--navy, #0A1628); }
+    .ck-title { position: absolute; left: 80px; right: 150px; top: 190px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 80px; line-height: 1.04; letter-spacing: -.02em; }
+    .ck-title .b { color: var(--blue, #2E7CF6); }
+    .ck-row { position: absolute; left: 80px; width: 840px; display: flex; gap: 28px; align-items: flex-start; background: #fff; border-radius: 26px; padding: 28px 32px; box-shadow: 0 10px 28px rgba(10,22,40,.08); }
+    .ck-num { flex: 0 0 70px; height: 70px; border-radius: 50%; background: var(--blue, #2E7CF6); color: #fff; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 40px; display: flex; align-items: center; justify-content: center; }
+    .ck-h { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 46px; letter-spacing: -.01em; line-height: 1.1; }
+    .ck-d { margin-top: 8px; font-size: 32px; line-height: 1.3; color: #3B4A63; }
+    #st-prompt { position: absolute; left: 80px; width: 840px; top: 560px; background: var(--navy, #0A1628); color: #fff; border-radius: 26px; padding: 30px 36px; font-size: 32px; line-height: 1.38; }
+    #st-prompt .lab { font-weight: 600; font-size: 28px; letter-spacing: .12em; text-transform: uppercase; color: var(--teal, #34D3A6); margin-bottom: 10px; }
+    #st-prompt .f { color: #8FB8FF; }
+  </style>
+  <div id="root" data-composition-id="steps" data-width="1080" data-height="1920">
+    <div class="ck-title" id="s-title">Here&rsquo;s <span class="b">how.</span></div>
+    <div class="ck-row" id="s-r1" style="top: 330px"><div class="ck-num">1</div><div><div class="ck-h">Write down four things.</div><div class="ck-d">What you sell, where, who buys, and the one action you want.</div></div></div>
+    <div id="st-prompt"><div class="lab">2. Paste the simple prompt</div>&ldquo;Build a website for <span class="f">[business]</span>, a <span class="f">[what you do]</span> in <span class="f">[town]</span>. Pages: Home, Services, About, Reviews, Contact. Goal: get visitors to <span class="f">[call / book / quote]</span>, with that button on every page.&rdquo;</div>
+    <div class="ck-row" id="s-r3" style="top: 960px"><div class="ck-num">3</div><div><div class="ck-h">A real WordPress site.</div><div class="ck-d">Pages written, ready to edit.</div></div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#s-title", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power4.out" }, 0.05);
+    tl.fromTo("#s-r1", { opacity: 0, x: 90 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, 1.6);
+    tl.fromTo("#st-prompt", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, 5.4);
+    tl.fromTo("#s-r3", { opacity: 0, x: 90 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, 9.8);
+    tl.to(["#s-title", "#s-r1", "#st-prompt", "#s-r3"], { opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power3.in" }, 13.65);
+    window.__timelines["steps"] = tl;
+  </script>
+</template>
